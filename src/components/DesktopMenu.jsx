@@ -31,7 +31,7 @@ const DesktopMenu = () => {
           <li>
             <button
               onClick={() => scrollToSection("home")}
-              className="w-full py-5 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors"
+              className="w-full py-7 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               Home
@@ -42,7 +42,7 @@ const DesktopMenu = () => {
           <li>
             <button
               onClick={() => scrollToSection("about")}
-              className="w-full py-5 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors"
+              className="w-full py-7 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               About Me
@@ -53,7 +53,7 @@ const DesktopMenu = () => {
           <li>
             <button
               onClick={() => setIsChildrensOpen(!isChildrensOpen)}
-              className="w-full py-5 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors flex items-center justify-center gap-2"
+              className="w-full py-7 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors flex items-center justify-center gap-2"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               <span>{isChildrensOpen ? "▼" : "►"}</span>
@@ -73,7 +73,7 @@ const DesktopMenu = () => {
                     <li key={project.id}>
                       <button
                         onClick={() => scrollToSection(project.id)}
-                        className="w-full py-3 text-[#C9A86C] text-sm text-center hover:text-white hover:bg-[#C9A86C]/10 transition-colors"
+                        className="w-full py-4 text-[#C9A86C] text-sm text-center hover:text-white hover:bg-[#C9A86C]/10 transition-colors"
                         style={{ fontFamily: "'Cormorant Garamond', serif" }}
                       >
                         {project.title}
@@ -89,7 +89,7 @@ const DesktopMenu = () => {
           <li>
             <button
               onClick={() => scrollToSection("label-design")}
-              className="w-full py-5 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors"
+              className="w-full py-7 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               Label design
@@ -100,7 +100,7 @@ const DesktopMenu = () => {
           <li>
             <button
               onClick={() => scrollToSection("logos")}
-              className="w-full py-5 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors"
+              className="w-full py-7 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               Logos
@@ -111,7 +111,7 @@ const DesktopMenu = () => {
           <li>
             <button
               onClick={() => scrollToSection("branding")}
-              className="w-full py-5 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors"
+              className="w-full py-7 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               Print and Digital Branding
@@ -122,7 +122,7 @@ const DesktopMenu = () => {
           <li>
             <button
               onClick={() => scrollToSection("contact")}
-              className="w-full py-5 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors"
+              className="w-full py-7 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               Contact Me
