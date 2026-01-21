@@ -1,6 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 

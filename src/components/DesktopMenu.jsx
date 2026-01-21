@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const navItems = [
   { path: "/", label: "Home" },
