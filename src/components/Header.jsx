@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-20 bg-[#F5EFE6] py-4 px-6 lg:px-8 border-b border-[#D4C4A8]/50">
+    <header className="sticky top-0 z-10 bg-[#F5EFE6] py-4 px-6 lg:px-8 border-b border-[#D4C4A8]/50">
       <div className="flex items-center">
         {/* Logo - Left */}
         <Link to="/" className="flex-shrink-0">
@@ -22,7 +22,7 @@ const Header = () => {
         </Link>
 
         {/* Title - Centered in remaining space */}
-        <div className="flex-1 flex justify-center">
+        <div className="flex-1 flex justify-center pr-4">
           <h1
             className="text-[#8B5A3C] text-[10px] sm:text-xs lg:text-sm tracking-[0.15em] lg:tracking-[0.2em] uppercase whitespace-nowrap"
             style={{

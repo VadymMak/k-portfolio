@@ -16,20 +16,20 @@ const navItems = [
 
 const DesktopMenu = () => {
   return (
-    <nav className="hidden lg:flex fixed right-0 top-0 h-screen w-[320px] bg-[#2D4A43] flex-col items-center justify-center px-6">
+    <nav className="hidden lg:flex fixed right-0 top-0 h-screen w-[320px] bg-[#2D4A43] flex-col items-center justify-center px-8 z-30">
       <ul className="w-full max-w-[280px]">
         {navItems.map((item) => (
           <li key={item.path}>
             <NavLink
               to={item.path}
               className={({ isActive }) =>
-                `h-[72px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
+                `flex items-center justify-center h-[72px] text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
                   isActive ? "text-white" : "text-[#C9A86C] hover:text-white"
                 }`
               }
             >
               <span
-                className="text-[20px] tracking-wide leading-tight"
+                className="text-[20px] tracking-wide"
                 style={{
                   fontFamily: "'Cormorant Garamond', serif",
                   fontWeight: 400,
