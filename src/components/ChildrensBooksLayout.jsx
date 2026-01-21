@@ -13,98 +13,84 @@ const bookProjects = [
 const ChildrensBooksLayout = () => {
   return (
     <div className="min-h-screen">
-      {/* Content Area */}
-      <div className="w-full lg:w-[50%] bg-[#F5EFE6] min-h-screen pb-48 lg:pb-0">
+      {/* Content Area - with padding for mobile bottom menu */}
+      <div className="w-full bg-[#F5EFE6] min-h-screen pb-24 lg:pb-0">
         <Outlet />
       </div>
 
-      {/* Sticky Submenu - Fixed bottom on mobile, Fixed right on desktop */}
-      <div
-        className="
-          fixed bottom-0 left-0 right-0 z-30
-          lg:right-[320px] lg:left-auto lg:top-0 lg:bottom-0 lg:w-[250px]
-          overflow-x-auto lg:overflow-y-auto
-        "
+      {/* Mobile: Fixed bottom horizontal submenu */}
+      <nav
+        className="lg:hidden fixed bottom-0 left-0 right-0 z-30 overflow-x-auto"
         style={{
           backgroundColor: "rgba(45, 74, 67, 0.95)",
           backdropFilter: "blur(10px)",
           WebkitBackdropFilter: "blur(10px)",
         }}
       >
-        {/* Mobile: Horizontal scroll */}
-        <nav className="lg:hidden">
-          <ul className="flex whitespace-nowrap px-4 py-3">
-            {bookProjects.map((project, index) => (
-              <motion.li
-                key={project.id}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.03 }}
-                className="flex-shrink-0"
+        <ul className="flex whitespace-nowrap px-2 py-3">
+          {bookProjects.map((project, index) => (
+            <motion.li
+              key={project.id}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.03 }}
+              className="flex-shrink-0"
+            >
+              <NavLink
+                to={`/childrens-books/${project.id}`}
+                className={({ isActive }) =>
+                  `block px-3 py-2 mx-1 rounded-full text-xs transition-all duration-300 ${
+                    isActive
+                      ? "bg-[#C9A86C] text-[#2D4A43]"
+                      : "text-[#C9A86C] border border-[#C9A86C]/50"
+                  }`
+                }
+                style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontWeight: 500,
+                }}
               >
-                <NavLink
-                  to={`/childrens-books/${project.id}`}
-                  className={({ isActive }) =>
-                    `block px-4 py-2 mx-1 rounded-full text-sm transition-all duration-300 ${
-                      isActive
-                        ? "bg-[#C9A86C] text-[#2D4A43]"
-                        : "text-[#C9A86C] hover:text-white border border-[#C9A86C]/50"
-                    }`
-                  }
+                {project.title.length > 15
+                  ? project.title.substring(0, 15) + "..."
+                  : project.title}
+              </NavLink>
+            </motion.li>
+          ))}
+        </ul>
+      </nav>
+
+      {/* Desktop: Fixed right submenu - SAME SIZE as main menu (320px) */}
+      <nav className="hidden lg:flex fixed right-[320px] top-0 h-screen w-[320px] bg-[#2D4A43] flex-col items-center justify-center px-8">
+        <ul className="w-full max-w-[280px]">
+          {bookProjects.map((project, index) => (
+            <motion.li
+              key={project.id}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: index * 0.05 }}
+            >
+              <NavLink
+                to={`/childrens-books/${project.id}`}
+                className={({ isActive }) =>
+                  `block h-[72px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
+                    isActive ? "text-white" : "text-[#C9A86C] hover:text-white"
+                  }`
+                }
+              >
+                <span
+                  className="text-[20px] tracking-wide"
                   style={{
                     fontFamily: "'Cormorant Garamond', serif",
-                    fontWeight: 500,
+                    fontWeight: 400,
                   }}
                 >
-                  {project.title.length > 20
-                    ? project.title.substring(0, 20) + "..."
-                    : project.title}
-                </NavLink>
-              </motion.li>
-            ))}
-          </ul>
-        </nav>
-
-        {/* Desktop: Vertical list */}
-        <nav className="hidden lg:block">
-          <div className="p-6 lg:p-8 flex flex-col justify-center min-h-full">
-            <ul>
-              {bookProjects.map((project, index) => (
-                <motion.li
-                  key={project.id}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.05 }}
-                >
-                  <NavLink
-                    to={`/childrens-books/${project.id}`}
-                    className={({ isActive }) =>
-                      `block py-5 text-center border-b border-[#C9A86C]/40 transition-all duration-300 ${
-                        isActive
-                          ? "text-white"
-                          : "text-[#C9A86C] hover:text-white"
-                      }`
-                    }
-                  >
-                    <span
-                      className="text-[17px] tracking-wide"
-                      style={{
-                        fontFamily: "'Cormorant Garamond', serif",
-                        fontWeight: 400,
-                      }}
-                    >
-                      {project.title}
-                    </span>
-                  </NavLink>
-                </motion.li>
-              ))}
-            </ul>
-          </div>
-        </nav>
-      </div>
-
-      {/* Spacer for desktop main menu */}
-      <div className="hidden lg:block lg:w-[320px]" />
+                  {project.title}
+                </span>
+              </NavLink>
+            </motion.li>
+          ))}
+        </ul>
+      </nav>
     </div>
   );
 };
