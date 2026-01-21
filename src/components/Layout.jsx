@@ -12,9 +12,6 @@ const Layout = () => {
   // Check if we're in children's books section
   const isChildrensBooks = location.pathname.startsWith("/childrens-books");
 
-  // Check if we're on home page (don't show header on home)
-  const isHomePage = location.pathname === "/";
-
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -25,8 +22,8 @@ const Layout = () => {
       <main
         className={`${isChildrensBooks ? "lg:mr-[640px]" : "lg:mr-[320px]"}`}
       >
-        {/* Header - only on inner pages, not on home */}
-        {!isHomePage && <Header />}
+        {/* Header - on ALL pages */}
+        <Header />
 
         <AnimatePresence mode="wait">
           <motion.div
