@@ -92,6 +92,25 @@ const Layout = () => {
       {/* Desktop Navigation - Fixed Right Sidebar (hidden on home page) */}
       {!isHomePage && (
         <nav className="hidden lg:flex fixed right-0 top-0 h-screen w-[320px] bg-[#2D4A43] flex-col items-center justify-center px-6">
+          {/* Logo - link to home */}
+          <NavLink to="/" className="mb-10">
+            <motion.div
+              className="w-24 h-24 rounded-full bg-[#D4C4A8] border-[3px] border-[#B8A888]/50 flex items-center justify-center"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span
+                className="text-[#8B5A3C] text-3xl tracking-wide"
+                style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontWeight: 500,
+                }}
+              >
+                AK
+              </span>
+            </motion.div>
+          </NavLink>
+
           <MenuItems />
         </nav>
       )}
@@ -132,6 +151,25 @@ const Layout = () => {
             transition={{ type: "tween", duration: 0.3 }}
             className="lg:hidden fixed inset-0 bg-[#2D4A43] z-40 flex flex-col items-center justify-center px-8"
           >
+            {/* Logo - link to home */}
+            <NavLink
+              to="/"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="mb-8"
+            >
+              <div className="w-20 h-20 rounded-full bg-[#D4C4A8] border-[3px] border-[#B8A888]/50 flex items-center justify-center">
+                <span
+                  className="text-[#8B5A3C] text-2xl tracking-wide"
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontWeight: 500,
+                  }}
+                >
+                  AK
+                </span>
+              </div>
+            </NavLink>
+
             <MenuItems
               onItemClick={() => setIsMobileMenuOpen(false)}
               isMobile={true}
