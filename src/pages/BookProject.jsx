@@ -4,39 +4,27 @@ import { motion } from "framer-motion";
 const bookData = {
   nutcracker: {
     title: "The Nutcracker and the Mouse King",
-    image: "/images/11.png",
-    description:
-      "A magical Christmas tale brought to life through warm, enchanting illustrations that capture the wonder and fantasy of this beloved story.",
+    image: "/gallery/nutcracker.png",
   },
   "wild-swans": {
     title: "The Wild Swans",
-    image: "/images/6.png",
-    description:
-      "Hans Christian Andersen's fairy tale reimagined with ethereal watercolors and delicate linework, following Elisa's journey to save her brothers.",
+    image: "/gallery/wild-swans.png",
   },
   "winter-adventures": {
     title: "Winter Adventures",
-    image: "/images/12.png",
-    description:
-      "A cozy collection of winter stories featuring snowy landscapes, warm firesides, and the magic of the holiday season.",
+    image: "/gallery/winter-adventures.png",
   },
   "star-team": {
     title: "Star Team",
-    image: "/images/7.png",
-    description:
-      "An adventurous space journey with lovable characters exploring the cosmos, designed to spark curiosity and imagination in young readers.",
+    image: "/gallery/star-team.png",
   },
   "sigurd-dragon": {
     title: "Sigurd Fights the Dragon",
-    image: "/images/9.png",
-    description:
-      "A Norse legend retold with dramatic, atmospheric illustrations that bring ancient mythology to life for modern young readers.",
+    image: "/gallery/sigurd.png",
   },
   "secrets-sea": {
     title: "Secrets of the Sea for Little Explorers",
-    image: "/images/13.png",
-    description:
-      "An underwater educational adventure featuring marine life illustrations designed to teach children about ocean ecosystems.",
+    image: "/gallery/sea-secrets.png",
   },
 };
 
@@ -46,43 +34,61 @@ const BookProject = () => {
 
   if (!book) {
     return (
-      <div className="p-8 lg:p-16">
-        <h1 className="text-[#8B5A3C] text-2xl">Project not found</h1>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "50vh",
+          fontFamily: "'Cormorant Garamond', serif",
+          fontSize: "24px",
+          color: "#8B5A3C",
+        }}
+      >
+        Project not found
       </div>
     );
   }
 
   return (
-    <div className="p-8 lg:p-16">
+    <div
+      style={{
+        padding: "40px",
+        paddingTop: "50px",
+      }}
+    >
+      {/* Title */}
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
-        className="text-[#8B5A3C] text-xl lg:text-2xl tracking-[0.15em] uppercase font-light mb-6"
-        style={{ fontFamily: "'Cormorant Garamond', serif" }}
+        style={{
+          fontFamily: "'Cormorant Garamond', serif",
+          fontSize: "26px",
+          fontWeight: 400,
+          letterSpacing: "0.2em",
+          color: "#8B5A3C",
+          textTransform: "uppercase",
+          textAlign: "center",
+          marginBottom: "30px",
+        }}
       >
         {book.title}
       </motion.h1>
 
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3 }}
-        className="text-[#2D4A43]/80 text-sm lg:text-base leading-relaxed mb-8"
-      >
-        {book.description}
-      </motion.p>
-
+      {/* Image */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
-        className="rounded-lg overflow-hidden shadow-lg"
       >
         <img
           src={book.image}
           alt={book.title}
-          className="w-full h-auto object-cover"
+          style={{
+            width: "100%",
+            height: "auto",
+          }}
         />
       </motion.div>
     </div>
