@@ -18,11 +18,13 @@ const Layout = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Main Content Area */}
-      <main
-        className={`${isChildrensBooks ? "lg:mr-[640px]" : "lg:mr-[320px]"}`}
+      {/* Main Content Area - with fixed width excluding side menu */}
+      <div
+        className={`fixed top-0 left-0 bottom-0 overflow-y-auto bg-[#F5EFE6] ${
+          isChildrensBooks ? "lg:right-[640px]" : "lg:right-[320px]"
+        } right-0`}
       >
-        {/* Header - on ALL pages */}
+        {/* Header - only in content area */}
         <Header />
 
         <AnimatePresence mode="wait">
@@ -36,7 +38,7 @@ const Layout = () => {
             <Outlet />
           </motion.div>
         </AnimatePresence>
-      </main>
+      </div>
 
       {/* Desktop Menu - visible on ALL pages */}
       <DesktopMenu />
