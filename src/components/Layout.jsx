@@ -3,10 +3,17 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
+import Header from "./Header";
 
 const Layout = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+
+  // Check if we're in children's books section
+  const isChildrensBooks = location.pathname.startsWith("/childrens-books");
+
+  // Check if we're on home page (don't show header on home)
+  const isHomePage = location.pathname === "/";
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -14,8 +21,13 @@ const Layout = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Main Content Area - always has margin for desktop menu */}
-      <main className="lg:mr-[320px]">
+      {/* Main Content Area */}
+      <main
+        className={`${isChildrensBooks ? "lg:mr-[640px]" : "lg:mr-[320px]"}`}
+      >
+        {/* Header - only on inner pages, not on home */}
+        {!isHomePage && <Header />}
+
         <AnimatePresence mode="wait">
           <motion.div
             key={location.pathname}
@@ -32,7 +44,7 @@ const Layout = () => {
       {/* Desktop Menu - visible on ALL pages */}
       <DesktopMenu />
 
-      {/* Mobile Menu - visible on all pages */}
+      {/* Mobile Menu */}
       <MobileMenu isOpen={isMobileMenuOpen} onClose={toggleMobileMenu} />
     </div>
   );
