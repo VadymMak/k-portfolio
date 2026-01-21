@@ -1,15 +1,18 @@
-import { NavLink } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { NavLink } from "react-router-dom";
 
 const navItems = [
-  { path: '/', label: 'Home' },
-  { path: '/about', label: 'About Me' },
-  { path: '/childrens-books', label: "Children's book", label2: "illustrations" },
-  { path: '/label-design', label: 'Label design' },
-  { path: '/logos', label: 'Logos' },
-  { path: '/branding', label: 'Print and Digital', label2: 'Branding' },
-  { path: '/contact', label: 'Contact Me' },
-]
+  { path: "/", label: "Home" },
+  { path: "/about", label: "About Me" },
+  {
+    path: "/childrens-books",
+    label: "Children's book",
+    label2: "illustrations",
+  },
+  { path: "/label-design", label: "Label design" },
+  { path: "/logos", label: "Logos" },
+  { path: "/branding", label: "Print and Digital", label2: "Branding" },
+  { path: "/contact", label: "Contact Me" },
+];
 
 const DesktopMenu = () => {
   return (
@@ -26,22 +29,28 @@ const DesktopMenu = () => {
               to={item.path}
               className={({ isActive }) =>
                 `block py-5 text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
-                  isActive ? 'text-white' : 'text-[#C9A86C] hover:text-white'
+                  isActive ? "text-white" : "text-[#C9A86C] hover:text-white"
                 }`
               }
             >
-              <span 
+              <span
                 className="text-[17px] tracking-wide"
-                style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400 }}
+                style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontWeight: 400,
+                }}
               >
                 {item.label}
               </span>
               {item.label2 && (
                 <>
                   <br />
-                  <span 
+                  <span
                     className="text-[17px] tracking-wide"
-                    style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400 }}
+                    style={{
+                      fontFamily: "'Cormorant Garamond', serif",
+                      fontWeight: 400,
+                    }}
                   >
                     {item.label2}
                   </span>
@@ -52,7 +61,7 @@ const DesktopMenu = () => {
         ))}
       </ul>
     </nav>
-  )
-}
+  );
+};
 
-export default DesktopMenu
+export default DesktopMenu;
