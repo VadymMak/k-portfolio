@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-10 bg-[#F5EFE6] py-5 px-6 lg:px-10 border-b border-[#D4C4A8]/50">
+    <header className="sticky top-0 z-10 bg-[#F5EFE6] py-20 px-6 lg:px-10 border-b border-[#D4C4A8]/50">
       <div className="flex items-center">
         {/* Logo - Left */}
         <Link to="/" className="flex-shrink-0">
