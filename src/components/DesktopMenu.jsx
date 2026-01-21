@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import { motion } from "framer-motion";
 
 const navItems = [
   { path: "/", label: "Home" },
@@ -19,46 +18,33 @@ const DesktopMenu = () => {
   return (
     <nav className="hidden lg:flex fixed right-0 top-0 h-screen w-[320px] bg-[#2D4A43] flex-col items-center justify-center px-6">
       <ul className="w-full max-w-[280px]">
-        {navItems.map((item, index) => (
-          <motion.li
-            key={item.path}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.08 }}
-          >
+        {navItems.map((item) => (
+          <li key={item.path}>
             <NavLink
               to={item.path}
               className={({ isActive }) =>
-                `block py-5 text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
+                `h-[72px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
                   isActive ? "text-white" : "text-[#C9A86C] hover:text-white"
                 }`
               }
             >
               <span
-                className="text-[17px] tracking-wide"
+                className="text-[20px] tracking-wide leading-tight"
                 style={{
                   fontFamily: "'Cormorant Garamond', serif",
                   fontWeight: 400,
                 }}
               >
                 {item.label}
-              </span>
-              {item.label2 && (
-                <>
-                  <br />
-                  <span
-                    className="text-[17px] tracking-wide"
-                    style={{
-                      fontFamily: "'Cormorant Garamond', serif",
-                      fontWeight: 400,
-                    }}
-                  >
+                {item.label2 && (
+                  <>
+                    <br />
                     {item.label2}
-                  </span>
-                </>
-              )}
+                  </>
+                )}
+              </span>
             </NavLink>
-          </motion.li>
+          </li>
         ))}
       </ul>
     </nav>

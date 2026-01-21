@@ -62,7 +62,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
                     to={item.path}
                     onClick={onClose}
                     className={({ isActive }) =>
-                      `block py-4 text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
+                      `h-[65px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
                         isActive
                           ? "text-white"
                           : "text-[#C9A86C] hover:text-white"
@@ -70,28 +70,20 @@ const MobileMenu = ({ isOpen, onClose }) => {
                     }
                   >
                     <span
-                      className="text-lg tracking-wide"
+                      className="text-xl tracking-wide leading-tight"
                       style={{
                         fontFamily: "'Cormorant Garamond', serif",
                         fontWeight: 400,
                       }}
                     >
                       {item.label}
-                    </span>
-                    {item.label2 && (
-                      <>
-                        <br />
-                        <span
-                          className="text-lg tracking-wide"
-                          style={{
-                            fontFamily: "'Cormorant Garamond', serif",
-                            fontWeight: 400,
-                          }}
-                        >
+                      {item.label2 && (
+                        <>
+                          <br />
                           {item.label2}
-                        </span>
-                      </>
-                    )}
+                        </>
+                      )}
+                    </span>
                   </NavLink>
                 </motion.li>
               ))}
