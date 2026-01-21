@@ -13,7 +13,7 @@ const About = () => {
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "#C9B99A",
-        padding: "40px",
+        padding: "20px",
       }}
     >
       <img

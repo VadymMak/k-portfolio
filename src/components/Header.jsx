@@ -1,14 +1,20 @@
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const Header = () => {
+  const scrollToTop = () => {
+    const element = document.getElementById("home");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <header
       className="sticky top-0 z-10 bg-[#F5EFE6] border-b border-[#D4C4A8]/50 relative"
       style={{ padding: "24px 40px" }}
     >
       {/* Logo - Left */}
-      <Link to="/" className="flex-shrink-0 relative z-10">
+      <button onClick={scrollToTop} className="flex-shrink-0 relative z-10">
         <motion.div
           className="w-14 h-14 lg:w-16 lg:h-16 rounded-full bg-[#D4C4A8] border-2 border-[#9f988b]/50 flex items-center justify-center shadow-sm"
           whileHover={{ scale: 1.05 }}
@@ -21,7 +27,7 @@ const Header = () => {
             AK
           </span>
         </motion.div>
-      </Link>
+      </button>
 
       {/* Title - Centered in content area */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">

@@ -1,73 +1,293 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import heroImage from "../assets/images/1.png";
+import Footer from "../components/Footer";
+
+const bookProjects = [
+  {
+    id: "nutcracker",
+    title: "The Nutcracker and the Mouse King",
+    image: "/gallery/nutcracker.png",
+  },
+  {
+    id: "wild-swans",
+    title: "The Wild Swans",
+    image: "/gallery/wild-swans.png",
+  },
+  {
+    id: "winter-adventures",
+    title: "Winter Adventures",
+    image: "/gallery/winter-adventures.png",
+  },
+  { id: "star-team", title: "Star Team", image: "/gallery/star-team.png" },
+  {
+    id: "sigurd-dragon",
+    title: "Sigurd Fights the Dragon",
+    image: "/gallery/sigurd.png",
+  },
+  {
+    id: "secrets-sea",
+    title: "Secrets of the Sea for Little Explorers",
+    image: "/gallery/sea-secrets.png",
+  },
+];
+
+const SectionTitle = ({ children }) => (
+  <h2
+    style={{
+      fontFamily: "'Cormorant Garamond', serif",
+      fontSize: "28px",
+      fontWeight: 400,
+      letterSpacing: "0.2em",
+      color: "#8B5A3C",
+      textTransform: "uppercase",
+      textAlign: "center",
+      marginBottom: "30px",
+    }}
+  >
+    {children}
+  </h2>
+);
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-[#F5EFE6] flex flex-col items-center justify-center px-8 lg:px-16 py-12">
-      {/* Logo */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6 }}
-        className="mb-6"
+    <div>
+      {/* ==================== HOME SECTION ==================== */}
+      <section
+        id="home"
+        style={{
+          minHeight: "calc(100vh - 114px)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "40px",
+        }}
       >
-        <Link to="/">
-          <div className="w-32 h-32 lg:w-36 lg:h-36 rounded-full bg-[#D4C4A8] border-[3px] border-[#B8A888]/50 flex items-center justify-center">
-            <span
-              className="text-[#8B5A3C] text-5xl lg:text-[3.5rem] tracking-wide"
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontWeight: 500,
-              }}
-            >
-              AK
-            </span>
-          </div>
-        </Link>
-      </motion.div>
-
-      {/* Title */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className="text-center mb-8"
-      >
-        <h1
-          className="text-[#8B5A3C] text-base lg:text-lg tracking-[0.3em] uppercase mb-1"
-          style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500 }}
-        >
-          Professional
-        </h1>
-        <h2
-          className="text-[#8B5A3C] text-base lg:text-lg tracking-[0.2em] uppercase"
-          style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500 }}
-        >
-          Illustrator/Grafik Designer
-        </h2>
-      </motion.div>
-
-      {/* Hero Image - Landscape */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-        className="w-full max-w-md lg:max-w-lg"
-      >
-        <div
-          className="relative overflow-hidden"
+        <motion.img
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          src="/gallery/home.png"
+          alt="AK Portfolio"
           style={{
-            borderRadius: "50% 50% 5% 5% / 35% 35% 5% 5%",
+            maxWidth: "100%",
+            maxHeight: "calc(100vh - 200px)",
+            objectFit: "contain",
+          }}
+        />
+      </section>
+
+      {/* ==================== ABOUT SECTION ==================== */}
+      <section
+        id="about"
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor: "#C9B99A",
+          padding: "40px",
+        }}
+      >
+        <motion.img
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          src="/gallery/about-me.png"
+          alt="About Anastasiia Kolisnyk"
+          style={{
+            maxWidth: "100%",
+            maxHeight: "calc(100vh - 100px)",
+            objectFit: "contain",
+          }}
+        />
+      </section>
+
+      {/* ==================== CHILDREN'S BOOKS SECTION ==================== */}
+      <section
+        id="childrens-books"
+        style={{
+          padding: "80px 40px",
+        }}
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle>Children's Book Illustrations</SectionTitle>
+        </motion.div>
+
+        {/* Description */}
+        <div
+          style={{
+            maxWidth: "650px",
+            margin: "0 auto 60px",
+            textAlign: "center",
           }}
         >
-          <img
-            src={heroImage}
-            alt="Landscape with mountains and cypress trees"
-            className="w-full h-auto object-cover"
-          />
+          <h3
+            style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              fontSize: "20px",
+              fontWeight: 700,
+              color: "#2D4A43",
+              marginBottom: "20px",
+            }}
+          >
+            What I Put Into My Illustrations?
+          </h3>
+          <p
+            style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              fontSize: "16px",
+              color: "#2D4A43",
+              lineHeight: 1.8,
+              textAlign: "justify",
+            }}
+          >
+            I pour sincerity, emotion, and quiet storytelling into every
+            illustration I create. My work is built on intuition — on the rhythm
+            of lines, the warmth of color, and the small details that make an
+            image feel alive. I strive to capture moments that breathe: gentle
+            gestures, subtle expressions, and the atmosphere that surrounds a
+            story.
+          </p>
         </div>
-      </motion.div>
+
+        {/* Book Projects */}
+        {bookProjects.map((project) => (
+          <div
+            key={project.id}
+            id={project.id}
+            style={{
+              marginBottom: "80px",
+              scrollMarginTop: "120px",
+            }}
+          >
+            <motion.h3
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: "24px",
+                fontWeight: 400,
+                letterSpacing: "0.15em",
+                color: "#8B5A3C",
+                textTransform: "uppercase",
+                textAlign: "center",
+                marginBottom: "30px",
+              }}
+            >
+              {project.title}
+            </motion.h3>
+            <motion.img
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              src={project.image}
+              alt={project.title}
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+            />
+          </div>
+        ))}
+      </section>
+
+      {/* ==================== LABEL DESIGN SECTION ==================== */}
+      <section
+        id="label-design"
+        style={{
+          padding: "80px 40px",
+          scrollMarginTop: "120px",
+        }}
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle>Label Design</SectionTitle>
+        </motion.div>
+        <motion.img
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          src="/gallery/label-design.png"
+          alt="Label Design Portfolio"
+          style={{
+            width: "100%",
+            height: "auto",
+          }}
+        />
+      </section>
+
+      {/* ==================== LOGOS SECTION ==================== */}
+      <section
+        id="logos"
+        style={{
+          padding: "80px 40px",
+          scrollMarginTop: "120px",
+        }}
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle>Logos</SectionTitle>
+        </motion.div>
+        <motion.img
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          src="/gallery/logos.png"
+          alt="Logo Design Portfolio"
+          style={{
+            width: "100%",
+            height: "auto",
+          }}
+        />
+      </section>
+
+      {/* ==================== BRANDING SECTION ==================== */}
+      <section
+        id="branding"
+        style={{
+          padding: "80px 40px",
+          scrollMarginTop: "120px",
+        }}
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle>Print and Digital Branding</SectionTitle>
+        </motion.div>
+        <motion.img
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          src="/gallery/branding.png"
+          alt="Print and Digital Branding Portfolio"
+          style={{
+            width: "100%",
+            height: "auto",
+          }}
+        />
+      </section>
+
+      {/* ==================== CONTACT SECTION ==================== */}
+      <section id="contact">
+        <Footer />
+      </section>
     </div>
   );
 };

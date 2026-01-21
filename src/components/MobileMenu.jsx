@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const bookProjects = [
@@ -11,8 +11,17 @@ const bookProjects = [
 ];
 
 const MobileMenu = ({ isOpen, onClose }) => {
-  const location = useLocation();
-  const isChildrensBooks = location.pathname.startsWith("/childrens-books");
+  const [isChildrensOpen, setIsChildrensOpen] = useState(false);
+
+  const scrollToSection = (id) => {
+    onClose();
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 300);
+  };
 
   return (
     <>
@@ -55,27 +64,13 @@ const MobileMenu = ({ isOpen, onClose }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.05 }}
               >
-                <NavLink
-                  to="/"
-                  onClick={onClose}
-                  className={({ isActive }) =>
-                    `h-[60px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
-                      isActive
-                        ? "text-white"
-                        : "text-[#C9A86C] hover:text-white"
-                    }`
-                  }
+                <button
+                  onClick={() => scrollToSection("home")}
+                  className="w-full h-[60px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 text-[#C9A86C] hover:text-white transition-colors"
+                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
-                  <span
-                    className="text-xl tracking-wide"
-                    style={{
-                      fontFamily: "'Cormorant Garamond', serif",
-                      fontWeight: 400,
-                    }}
-                  >
-                    Home
-                  </span>
-                </NavLink>
+                  <span className="text-xl tracking-wide">Home</span>
+                </button>
               </motion.li>
 
               {/* About Me */}
@@ -84,27 +79,13 @@ const MobileMenu = ({ isOpen, onClose }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
               >
-                <NavLink
-                  to="/about"
-                  onClick={onClose}
-                  className={({ isActive }) =>
-                    `h-[60px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
-                      isActive
-                        ? "text-white"
-                        : "text-[#C9A86C] hover:text-white"
-                    }`
-                  }
+                <button
+                  onClick={() => scrollToSection("about")}
+                  className="w-full h-[60px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 text-[#C9A86C] hover:text-white transition-colors"
+                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
-                  <span
-                    className="text-xl tracking-wide"
-                    style={{
-                      fontFamily: "'Cormorant Garamond', serif",
-                      fontWeight: 400,
-                    }}
-                  >
-                    About Me
-                  </span>
-                </NavLink>
+                  <span className="text-xl tracking-wide">About Me</span>
+                </button>
               </motion.li>
 
               {/* Children's Books with Accordion */}
@@ -113,29 +94,19 @@ const MobileMenu = ({ isOpen, onClose }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.15 }}
               >
-                <NavLink
-                  to="/childrens-books"
-                  onClick={!isChildrensBooks ? onClose : undefined}
-                  className={`h-[60px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
-                    isChildrensBooks
-                      ? "text-white"
-                      : "text-[#C9A86C] hover:text-white"
-                  }`}
+                <button
+                  onClick={() => setIsChildrensOpen(!isChildrensOpen)}
+                  className="w-full h-[60px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 text-[#C9A86C] hover:text-white transition-colors"
+                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
-                  <span
-                    className="text-xl tracking-wide"
-                    style={{
-                      fontFamily: "'Cormorant Garamond', serif",
-                      fontWeight: 400,
-                    }}
-                  >
-                    {isChildrensBooks ? "▼" : "►"} Children's book illustrations
+                  <span className="text-xl tracking-wide">
+                    {isChildrensOpen ? "▼" : "►"} Children's book illustrations
                   </span>
-                </NavLink>
+                </button>
 
                 {/* Accordion Submenu */}
                 <AnimatePresence>
-                  {isChildrensBooks && (
+                  {isChildrensOpen && (
                     <motion.ul
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
@@ -145,27 +116,17 @@ const MobileMenu = ({ isOpen, onClose }) => {
                     >
                       {bookProjects.map((project) => (
                         <li key={project.id}>
-                          <NavLink
-                            to={`/childrens-books/${project.id}`}
-                            onClick={onClose}
-                            className={({ isActive }) =>
-                              `flex items-center justify-center h-[48px] text-center border-b border-[#C9A86C]/20 transition-colors duration-300 ${
-                                isActive
-                                  ? "text-white bg-[#C9A86C]/20"
-                                  : "text-[#C9A86C]/80 hover:text-white"
-                              }`
-                            }
+                          <button
+                            onClick={() => scrollToSection(project.id)}
+                            className="w-full h-[48px] flex items-center justify-center text-center border-b border-[#C9A86C]/20 text-[#C9A86C]/80 hover:text-white transition-colors"
+                            style={{
+                              fontFamily: "'Cormorant Garamond', serif",
+                            }}
                           >
-                            <span
-                              className="text-[15px] tracking-wide"
-                              style={{
-                                fontFamily: "'Cormorant Garamond', serif",
-                                fontWeight: 400,
-                              }}
-                            >
+                            <span className="text-[15px] tracking-wide">
                               {project.title}
                             </span>
-                          </NavLink>
+                          </button>
                         </li>
                       ))}
                     </motion.ul>
@@ -179,27 +140,13 @@ const MobileMenu = ({ isOpen, onClose }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                <NavLink
-                  to="/label-design"
-                  onClick={onClose}
-                  className={({ isActive }) =>
-                    `h-[60px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
-                      isActive
-                        ? "text-white"
-                        : "text-[#C9A86C] hover:text-white"
-                    }`
-                  }
+                <button
+                  onClick={() => scrollToSection("label-design")}
+                  className="w-full h-[60px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 text-[#C9A86C] hover:text-white transition-colors"
+                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
-                  <span
-                    className="text-xl tracking-wide"
-                    style={{
-                      fontFamily: "'Cormorant Garamond', serif",
-                      fontWeight: 400,
-                    }}
-                  >
-                    Label design
-                  </span>
-                </NavLink>
+                  <span className="text-xl tracking-wide">Label design</span>
+                </button>
               </motion.li>
 
               {/* Logos */}
@@ -208,27 +155,13 @@ const MobileMenu = ({ isOpen, onClose }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.25 }}
               >
-                <NavLink
-                  to="/logos"
-                  onClick={onClose}
-                  className={({ isActive }) =>
-                    `h-[60px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
-                      isActive
-                        ? "text-white"
-                        : "text-[#C9A86C] hover:text-white"
-                    }`
-                  }
+                <button
+                  onClick={() => scrollToSection("logos")}
+                  className="w-full h-[60px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 text-[#C9A86C] hover:text-white transition-colors"
+                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
-                  <span
-                    className="text-xl tracking-wide"
-                    style={{
-                      fontFamily: "'Cormorant Garamond', serif",
-                      fontWeight: 400,
-                    }}
-                  >
-                    Logos
-                  </span>
-                </NavLink>
+                  <span className="text-xl tracking-wide">Logos</span>
+                </button>
               </motion.li>
 
               {/* Branding */}
@@ -237,27 +170,15 @@ const MobileMenu = ({ isOpen, onClose }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                <NavLink
-                  to="/branding"
-                  onClick={onClose}
-                  className={({ isActive }) =>
-                    `h-[60px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
-                      isActive
-                        ? "text-white"
-                        : "text-[#C9A86C] hover:text-white"
-                    }`
-                  }
+                <button
+                  onClick={() => scrollToSection("branding")}
+                  className="w-full h-[60px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 text-[#C9A86C] hover:text-white transition-colors"
+                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
-                  <span
-                    className="text-xl tracking-wide"
-                    style={{
-                      fontFamily: "'Cormorant Garamond', serif",
-                      fontWeight: 400,
-                    }}
-                  >
+                  <span className="text-xl tracking-wide">
                     Print and Digital Branding
                   </span>
-                </NavLink>
+                </button>
               </motion.li>
 
               {/* Contact */}
@@ -266,27 +187,13 @@ const MobileMenu = ({ isOpen, onClose }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.35 }}
               >
-                <NavLink
-                  to="/contact"
-                  onClick={onClose}
-                  className={({ isActive }) =>
-                    `h-[60px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
-                      isActive
-                        ? "text-white"
-                        : "text-[#C9A86C] hover:text-white"
-                    }`
-                  }
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="w-full h-[60px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 text-[#C9A86C] hover:text-white transition-colors"
+                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
-                  <span
-                    className="text-xl tracking-wide"
-                    style={{
-                      fontFamily: "'Cormorant Garamond', serif",
-                      fontWeight: 400,
-                    }}
-                  >
-                    Contact Me
-                  </span>
-                </NavLink>
+                  <span className="text-xl tracking-wide">Contact Me</span>
+                </button>
               </motion.li>
             </ul>
           </motion.nav>

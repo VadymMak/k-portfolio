@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const bookProjects = [
@@ -11,208 +11,125 @@ const bookProjects = [
 ];
 
 const DesktopMenu = () => {
-  const location = useLocation();
-  const isChildrensBooks = location.pathname.startsWith("/childrens-books");
+  const [isChildrensOpen, setIsChildrensOpen] = useState(false);
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
-    <nav className="hidden lg:flex fixed right-0 top-0 h-screen w-[320px] bg-[#2D4A43] flex-col items-center justify-center px-8 z-30">
-      <ul className="w-full max-w-[280px]">
-        {/* Home */}
-        <li>
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              `flex items-center justify-center h-[72px] text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
-                isActive ? "text-white" : "text-[#C9A86C] hover:text-white"
-              }`
-            }
-          >
-            <span
-              className="text-[20px] tracking-wide"
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontWeight: 400,
-              }}
+    <nav
+      className="hidden lg:flex fixed top-0 right-0 w-[320px] h-screen flex-col bg-[#2D4A43]"
+      style={{ zIndex: 100 }}
+    >
+      <div className="flex-1 flex flex-col justify-center px-8">
+        <ul className="space-y-0">
+          {/* Home */}
+          <li>
+            <button
+              onClick={() => scrollToSection("home")}
+              className="w-full py-5 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               Home
-            </span>
-          </NavLink>
-        </li>
+            </button>
+          </li>
 
-        {/* About Me */}
-        <li>
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              `flex items-center justify-center h-[72px] text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
-                isActive ? "text-white" : "text-[#C9A86C] hover:text-white"
-              }`
-            }
-          >
-            <span
-              className="text-[20px] tracking-wide"
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontWeight: 400,
-              }}
+          {/* About Me */}
+          <li>
+            <button
+              onClick={() => scrollToSection("about")}
+              className="w-full py-5 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               About Me
-            </span>
-          </NavLink>
-        </li>
+            </button>
+          </li>
 
-        {/* Children's Books with Accordion */}
-        <li>
-          <NavLink
-            to="/childrens-books"
-            className={`flex items-center justify-center h-[72px] text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
-              isChildrensBooks
-                ? "text-white"
-                : "text-[#C9A86C] hover:text-white"
-            }`}
-          >
-            <span
-              className="text-[20px] tracking-wide"
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontWeight: 400,
-              }}
+          {/* Children's Book Illustrations - Accordion */}
+          <li>
+            <button
+              onClick={() => setIsChildrensOpen(!isChildrensOpen)}
+              className="w-full py-5 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors flex items-center justify-center gap-2"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
-              {isChildrensBooks ? "▼" : "►"} Children's book
-              <br />
-              illustrations
-            </span>
-          </NavLink>
+              <span>{isChildrensOpen ? "▼" : "►"}</span>
+              <span>Children's book illustrations</span>
+            </button>
 
-          {/* Accordion Submenu */}
-          <AnimatePresence>
-            {isChildrensBooks && (
-              <motion.ul
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className="overflow-hidden bg-[#243832]"
-              >
-                {bookProjects.map((project) => (
-                  <li key={project.id}>
-                    <NavLink
-                      to={`/childrens-books/${project.id}`}
-                      className={({ isActive }) =>
-                        `flex items-center justify-center h-[52px] text-center border-b border-[#C9A86C]/20 transition-colors duration-300 ${
-                          isActive
-                            ? "text-white bg-[#C9A86C]/20"
-                            : "text-[#C9A86C]/80 hover:text-white"
-                        }`
-                      }
-                    >
-                      <span
-                        className="text-[16px] tracking-wide"
-                        style={{
-                          fontFamily: "'Cormorant Garamond', serif",
-                          fontWeight: 400,
-                        }}
+            <AnimatePresence>
+              {isChildrensOpen && (
+                <motion.ul
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="overflow-hidden bg-[#243832]"
+                >
+                  {bookProjects.map((project) => (
+                    <li key={project.id}>
+                      <button
+                        onClick={() => scrollToSection(project.id)}
+                        className="w-full py-3 text-[#C9A86C] text-sm text-center hover:text-white hover:bg-[#C9A86C]/10 transition-colors"
+                        style={{ fontFamily: "'Cormorant Garamond', serif" }}
                       >
                         {project.title}
-                      </span>
-                    </NavLink>
-                  </li>
-                ))}
-              </motion.ul>
-            )}
-          </AnimatePresence>
-        </li>
+                      </button>
+                    </li>
+                  ))}
+                </motion.ul>
+              )}
+            </AnimatePresence>
+          </li>
 
-        {/* Label Design */}
-        <li>
-          <NavLink
-            to="/label-design"
-            className={({ isActive }) =>
-              `flex items-center justify-center h-[72px] text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
-                isActive ? "text-white" : "text-[#C9A86C] hover:text-white"
-              }`
-            }
-          >
-            <span
-              className="text-[20px] tracking-wide"
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontWeight: 400,
-              }}
+          {/* Label Design */}
+          <li>
+            <button
+              onClick={() => scrollToSection("label-design")}
+              className="w-full py-5 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               Label design
-            </span>
-          </NavLink>
-        </li>
+            </button>
+          </li>
 
-        {/* Logos */}
-        <li>
-          <NavLink
-            to="/logos"
-            className={({ isActive }) =>
-              `flex items-center justify-center h-[72px] text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
-                isActive ? "text-white" : "text-[#C9A86C] hover:text-white"
-              }`
-            }
-          >
-            <span
-              className="text-[20px] tracking-wide"
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontWeight: 400,
-              }}
+          {/* Logos */}
+          <li>
+            <button
+              onClick={() => scrollToSection("logos")}
+              className="w-full py-5 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               Logos
-            </span>
-          </NavLink>
-        </li>
+            </button>
+          </li>
 
-        {/* Branding */}
-        <li>
-          <NavLink
-            to="/branding"
-            className={({ isActive }) =>
-              `flex items-center justify-center h-[72px] text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
-                isActive ? "text-white" : "text-[#C9A86C] hover:text-white"
-              }`
-            }
-          >
-            <span
-              className="text-[20px] tracking-wide"
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontWeight: 400,
-              }}
+          {/* Print and Digital Branding */}
+          <li>
+            <button
+              onClick={() => scrollToSection("branding")}
+              className="w-full py-5 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
-              Print and Digital
-              <br />
-              Branding
-            </span>
-          </NavLink>
-        </li>
+              Print and Digital Branding
+            </button>
+          </li>
 
-        {/* Contact */}
-        <li>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              `flex items-center justify-center h-[72px] text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
-                isActive ? "text-white" : "text-[#C9A86C] hover:text-white"
-              }`
-            }
-          >
-            <span
-              className="text-[20px] tracking-wide"
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontWeight: 400,
-              }}
+          {/* Contact */}
+          <li>
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="w-full py-5 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               Contact Me
-            </span>
-          </NavLink>
-        </li>
-      </ul>
+            </button>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 };
