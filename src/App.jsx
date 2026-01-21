@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Layout from "./components/Layout";
-import ChildrensBooksLayout from "./components/ChildrensBooksLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import ChildrensBooksContent from "./pages/ChildrensBooksContent";
@@ -19,13 +18,11 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
-
-            {/* Children's Books with nested layout for sticky submenu */}
-            <Route path="childrens-books" element={<ChildrensBooksLayout />}>
-              <Route index element={<ChildrensBooksContent />} />
-              <Route path=":projectId" element={<BookProject />} />
-            </Route>
-
+            <Route path="childrens-books" element={<ChildrensBooksContent />} />
+            <Route
+              path="childrens-books/:projectId"
+              element={<BookProject />}
+            />
             <Route path="label-design" element={<LabelDesign />} />
             <Route path="logos" element={<Logos />} />
             <Route path="branding" element={<Branding />} />

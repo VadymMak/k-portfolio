@@ -9,22 +9,15 @@ const Layout = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
-  // Check if we're in children's books section
-  const isChildrensBooks = location.pathname.startsWith("/childrens-books");
-
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
     <div className="min-h-screen">
-      {/* Main Content Area - with fixed width excluding side menu */}
-      <div
-        className={`fixed top-0 left-0 bottom-0 overflow-y-auto bg-[#F5EFE6] ${
-          isChildrensBooks ? "lg:right-[640px]" : "lg:right-[320px]"
-        } right-0`}
-      >
-        {/* Header - only in content area */}
+      {/* Main Content Area */}
+      <div className="fixed top-0 left-0 bottom-0 right-0 lg:right-[320px] overflow-y-auto bg-[#F5EFE6]">
+        {/* Header */}
         <Header />
 
         <AnimatePresence mode="wait">
@@ -40,7 +33,7 @@ const Layout = () => {
         </AnimatePresence>
       </div>
 
-      {/* Desktop Menu - visible on ALL pages */}
+      {/* Desktop Menu */}
       <DesktopMenu />
 
       {/* Mobile Menu */}
