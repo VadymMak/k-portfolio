@@ -1,156 +1,92 @@
-import { useParams, Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { useParams } from "react-router-dom";
+import { motion } from "framer-motion";
 
-// Import all book project images
-import nutcrackerImg from '../assets/images/4.png'
-import wildSwansImg from '../assets/images/5.png'
-import winterImg from '../assets/images/6.png'
-import starTeamImg from '../assets/images/7.png'
-import sigurdImg from '../assets/images/8.png'
-import secretsImg from '../assets/images/9.png'
-
-const projectData = {
-  'nutcracker': {
-    title: 'The Nutcracker and the Mouse King',
-    image: nutcrackerImg,
-    description: 'A magical Christmas tale brought to life through warm, festive illustrations that capture the wonder and excitement of Clara\'s adventure with the Nutcracker Prince.',
+const bookData = {
+  nutcracker: {
+    title: "The Nutcracker and the Mouse King",
+    image: "/images/11.png",
+    description:
+      "A magical Christmas tale brought to life through warm, enchanting illustrations that capture the wonder and fantasy of this beloved story.",
   },
-  'wild-swans': {
-    title: 'The Wild Swans',
-    image: wildSwansImg,
-    description: 'Hans Christian Andersen\'s classic fairy tale illustrated with ethereal watercolors and delicate details that bring Eliza\'s journey to save her brothers to life.',
+  "wild-swans": {
+    title: "The Wild Swans",
+    image: "/images/6.png",
+    description:
+      "Hans Christian Andersen's fairy tale reimagined with ethereal watercolors and delicate linework, following Elisa's journey to save her brothers.",
   },
-  'winter-adventures': {
-    title: 'Winter Adventures',
-    image: winterImg,
-    description: 'A cozy collection of winter scenes and holiday moments, filled with warmth, snow-covered landscapes, and the magic of the season.',
+  "winter-adventures": {
+    title: "Winter Adventures",
+    image: "/images/12.png",
+    description:
+      "A cozy collection of winter stories featuring snowy landscapes, warm firesides, and the magic of the holiday season.",
   },
-  'star-team': {
-    title: 'Star Team',
-    image: starTeamImg,
-    description: 'An exciting space adventure for young readers, featuring colorful characters and imaginative cosmic landscapes that spark curiosity about the universe.',
+  "star-team": {
+    title: "Star Team",
+    image: "/images/7.png",
+    description:
+      "An adventurous space journey with lovable characters exploring the cosmos, designed to spark curiosity and imagination in young readers.",
   },
-  'sigurd-dragon': {
-    title: 'Sigurd Fights the Dragon',
-    image: sigurdImg,
-    description: 'A Norse legend reimagined with rich, detailed illustrations featuring brave dwarves, fearsome dragons, and epic battles.',
+  "sigurd-dragon": {
+    title: "Sigurd Fights the Dragon",
+    image: "/images/9.png",
+    description:
+      "A Norse legend retold with dramatic, atmospheric illustrations that bring ancient mythology to life for modern young readers.",
   },
-  'secrets-sea': {
-    title: 'Secrets of the Sea for Little Explorers',
-    image: secretsImg,
-    description: 'An educational journey through the ocean depths, introducing young readers to fascinating marine creatures through playful, informative illustrations.',
+  "secrets-sea": {
+    title: "Secrets of the Sea for Little Explorers",
+    image: "/images/13.png",
+    description:
+      "An underwater educational adventure featuring marine life illustrations designed to teach children about ocean ecosystems.",
   },
-}
+};
 
 const BookProject = () => {
-  const { projectId } = useParams()
-  const project = projectData[projectId]
+  const { projectId } = useParams();
+  const book = bookData[projectId];
 
-  if (!project) {
+  if (!book) {
     return (
-      <div className="min-h-screen bg-[#F5EFE6] flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl text-[#8B5A3C] mb-4">Project not found</h1>
-          <Link to="/childrens-books" className="text-[#2D4A43] underline">
-            ← Back to Children's Books
-          </Link>
-        </div>
+      <div className="p-8 lg:p-16">
+        <h1 className="text-[#8B5A3C] text-2xl">Project not found</h1>
       </div>
-    )
+    );
   }
 
   return (
-    <div className="min-h-screen bg-[#F5EFE6]">
-      {/* Back button */}
-      <motion.div
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        className="p-6 lg:p-8"
-      >
-        <Link
-          to="/childrens-books"
-          className="inline-flex items-center text-[#2D4A43] hover:text-[#8B5A3C] transition-colors"
-        >
-          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-          Back to Children's Books
-        </Link>
-      </motion.div>
-
-      {/* Project Title */}
-      <motion.div
+    <div className="p-8 lg:p-16">
+      <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 }}
-        className="text-center px-6 mb-8"
-      >
-        <h1 className="text-[#8B5A3C] text-2xl lg:text-4xl tracking-[0.15em] uppercase font-light font-serif">
-          {project.title}
-        </h1>
-      </motion.div>
-
-      {/* Project Image */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
-        className="px-6 lg:px-16 pb-12"
+        className="text-[#8B5A3C] text-xl lg:text-2xl tracking-[0.15em] uppercase font-light mb-6"
+        style={{ fontFamily: "'Cormorant Garamond', serif" }}
       >
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            whileHover={{ scale: 1.01 }}
-            transition={{ duration: 0.3 }}
-            className="overflow-hidden rounded-lg shadow-2xl"
-          >
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-auto"
-            />
-          </motion.div>
+        {book.title}
+      </motion.h1>
 
-          {/* Description */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="mt-8 text-[#2D4A43]/80 text-center max-w-2xl mx-auto leading-relaxed"
-          >
-            {project.description}
-          </motion.p>
-        </div>
-      </motion.div>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+        className="text-[#2D4A43]/80 text-sm lg:text-base leading-relaxed mb-8"
+      >
+        {book.description}
+      </motion.p>
 
-      {/* Navigation to other projects */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-        className="bg-[#2D4A43] py-8 px-6"
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.4 }}
+        className="rounded-lg overflow-hidden shadow-lg"
       >
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-[#C9A86C] text-center mb-6 text-sm tracking-wider uppercase">
-            Explore More Projects
-          </h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {Object.entries(projectData)
-              .filter(([id]) => id !== projectId)
-              .slice(0, 3)
-              .map(([id, data]) => (
-                <Link
-                  key={id}
-                  to={`/childrens-books/${id}`}
-                  className="text-[#C9A86C]/70 hover:text-white transition-colors text-sm"
-                >
-                  {data.title}
-                </Link>
-              ))}
-          </div>
-        </div>
+        <img
+          src={book.image}
+          alt={book.title}
+          className="w-full h-auto object-cover"
+        />
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default BookProject
+export default BookProject;

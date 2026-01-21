@@ -1,14 +1,15 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { AnimatePresence } from 'framer-motion'
-import Layout from './components/Layout'
-import Home from './pages/Home'
-import About from './pages/About'
-import ChildrensBooks from './pages/ChildrensBooks'
-import BookProject from './pages/BookProject'
-import LabelDesign from './pages/LabelDesign'
-import Logos from './pages/Logos'
-import Branding from './pages/Branding'
-import Contact from './pages/Contact'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import Layout from "./components/Layout";
+import ChildrensBooksLayout from "./components/ChildrensBooksLayout";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import ChildrensBooksContent from "./pages/ChildrensBooksContent";
+import BookProject from "./pages/BookProject";
+import LabelDesign from "./pages/LabelDesign";
+import Logos from "./pages/Logos";
+import Branding from "./pages/Branding";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -18,8 +19,13 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
-            <Route path="childrens-books" element={<ChildrensBooks />} />
-            <Route path="childrens-books/:projectId" element={<BookProject />} />
+
+            {/* Children's Books with nested layout for sticky submenu */}
+            <Route path="childrens-books" element={<ChildrensBooksLayout />}>
+              <Route index element={<ChildrensBooksContent />} />
+              <Route path=":projectId" element={<BookProject />} />
+            </Route>
+
             <Route path="label-design" element={<LabelDesign />} />
             <Route path="logos" element={<Logos />} />
             <Route path="branding" element={<Branding />} />
@@ -28,7 +34,7 @@ function App() {
         </Routes>
       </AnimatePresence>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
