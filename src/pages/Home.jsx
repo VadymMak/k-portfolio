@@ -1,114 +1,110 @@
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
-import heroImage from '../assets/images/1.png'
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import heroImage from "../assets/images/1.png";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-[#F5EFE6] flex flex-col items-center justify-center px-6 py-12 lg:py-0">
-      {/* Logo */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6 }}
-        className="mb-6"
-      >
-        <Link to="/">
-          <div className="w-28 h-28 md:w-36 md:h-36 rounded-full bg-[#C9A86C]/20 border-2 border-[#C9A86C]/40 flex items-center justify-center hover:bg-[#C9A86C]/30 transition-colors duration-300">
-            <span className="text-[#8B5A3C] text-4xl md:text-5xl font-serif font-semibold">AK</span>
-          </div>
-        </Link>
-      </motion.div>
-
-      {/* Title */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className="text-center mb-8"
-      >
-        <h1 className="text-[#8B5A3C] text-xl md:text-2xl tracking-[0.3em] uppercase font-light mb-2">
-          Professional
-        </h1>
-        <h2 className="text-[#8B5A3C] text-xl md:text-2xl tracking-[0.2em] uppercase font-light">
-          Illustrator/Grafik Designer
-        </h2>
-      </motion.div>
-
-      {/* Hero Image with Parallax Effect */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-        className="relative w-full max-w-xl lg:max-w-2xl"
-      >
+    <div className="min-h-screen flex">
+      {/* Left Side - Content */}
+      <div className="w-full lg:w-[60%] bg-[#F5EFE6] min-h-screen flex flex-col items-center justify-center px-8 lg:px-16 py-12">
+        {/* Logo */}
         <motion.div
-          whileHover={{ scale: 1.02 }}
-          transition={{ duration: 0.3 }}
-          className="overflow-hidden rounded-t-[50%] rounded-b-lg shadow-2xl"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="mb-6"
         >
-          <img
-            src={heroImage}
-            alt="Landscape illustration with mountains and cypress trees"
-            className="w-full h-auto object-cover"
-          />
+          <Link to="/">
+            <div className="w-32 h-32 lg:w-40 lg:h-40 rounded-full bg-[#D4C4A8] border-4 border-[#C9B896] flex items-center justify-center shadow-sm">
+              <span className="text-[#8B5A3C] text-5xl lg:text-6xl font-serif font-medium tracking-wide">
+                AK
+              </span>
+            </div>
+          </Link>
         </motion.div>
 
-        {/* Decorative elements */}
+        {/* Title */}
         <motion.div
-          animate={{ 
-            y: [0, -10, 0],
-          }}
-          transition={{ 
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          className="absolute -top-4 -left-4 w-8 h-8 bg-[#C9A86C]/20 rounded-full blur-sm"
-        />
-        <motion.div
-          animate={{ 
-            y: [0, 10, 0],
-          }}
-          transition={{ 
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
-          }}
-          className="absolute -bottom-4 -right-4 w-12 h-12 bg-[#2D4A43]/10 rounded-full blur-sm"
-        />
-      </motion.div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
-        className="mt-12 lg:hidden"
-      >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className="flex flex-col items-center text-[#2D4A43]/50"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-center mb-8"
         >
-          <span className="text-sm mb-2">Explore</span>
-          <svg 
-            className="w-6 h-6" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
+          <h1
+            className="text-[#8B5A3C] text-lg lg:text-xl tracking-[0.25em] uppercase mb-1"
+            style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              fontWeight: 500,
+            }}
           >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
-              d="M19 14l-7 7m0 0l-7-7m7 7V3" 
-            />
-          </svg>
+            Professional
+          </h1>
+          <h2
+            className="text-[#8B5A3C] text-lg lg:text-xl tracking-[0.15em] uppercase"
+            style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              fontWeight: 500,
+            }}
+          >
+            Illustrator/Grafik Designer
+          </h2>
         </motion.div>
-      </motion.div>
-    </div>
-  )
-}
 
-export default Home
+        {/* Hero Image - Landscape */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="w-full max-w-lg lg:max-w-xl"
+        >
+          <div
+            className="relative overflow-hidden shadow-xl"
+            style={{
+              borderRadius: "50% 50% 4% 4% / 30% 30% 4% 4%",
+            }}
+          >
+            <img
+              src={heroImage}
+              alt="Landscape with mountains and cypress trees"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Right Side - Navigation (Desktop only, mobile uses Layout hamburger) */}
+      <nav className="hidden lg:flex w-[40%] bg-[#2D4A43] min-h-screen flex-col items-center justify-center px-12">
+        <ul className="space-y-2 text-center w-full max-w-xs">
+          {[
+            { path: "/about", label: "About Me" },
+            {
+              path: "/childrens-books",
+              label: "Children's book\nillustrations",
+            },
+            { path: "/label-design", label: "Label design" },
+            { path: "/logos", label: "Logos" },
+            { path: "/branding", label: "Print and Digital\nBranding" },
+            { path: "/contact", label: "Contact Me" },
+          ].map((item, index) => (
+            <motion.li
+              key={item.path}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5 + index * 0.1 }}
+            >
+              <Link
+                to={item.path}
+                className="block py-5 text-[#C9A86C] hover:text-white transition-colors duration-300 text-lg font-light tracking-wide border-b border-[#C9A86C]/30 whitespace-pre-line"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                {item.label}
+              </Link>
+            </motion.li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+  );
+};
+
+export default Home;
