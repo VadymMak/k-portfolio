@@ -13,54 +13,56 @@ const bookProjects = [
 const ChildrensBooksLayout = () => {
   return (
     <div className="min-h-screen">
-      {/* Content Area - with padding for mobile bottom menu */}
-      <div className="w-full bg-[#F5EFE6] min-h-screen pb-24 lg:pb-0">
+      {/* Content Area */}
+      <div className="w-full bg-[#F5EFE6] min-h-screen pb-[420px] lg:pb-0">
         <Outlet />
       </div>
 
-      {/* Mobile: Fixed bottom horizontal submenu */}
+      {/* Mobile: Fixed bottom - vertical column */}
       <nav
-        className="lg:hidden fixed bottom-0 left-0 right-0 z-30 overflow-x-auto"
+        className="lg:hidden fixed bottom-0 left-0 right-0 z-30 max-h-[60vh] overflow-y-auto"
         style={{
           backgroundColor: "rgba(45, 74, 67, 0.95)",
           backdropFilter: "blur(10px)",
           WebkitBackdropFilter: "blur(10px)",
         }}
       >
-        <ul className="flex whitespace-nowrap px-2 py-3">
+        <ul className="py-2">
           {bookProjects.map((project, index) => (
             <motion.li
               key={project.id}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.03 }}
-              className="flex-shrink-0"
             >
               <NavLink
                 to={`/childrens-books/${project.id}`}
                 className={({ isActive }) =>
-                  `block px-3 py-2 mx-1 rounded-full text-xs transition-all duration-300 ${
-                    isActive
-                      ? "bg-[#C9A86C] text-[#2D4A43]"
-                      : "text-[#C9A86C] border border-[#C9A86C]/50"
+                  `block py-3 px-6 text-center border-b border-[#C9A86C]/30 transition-all duration-300 ${
+                    isActive ? "text-white bg-[#C9A86C]/20" : "text-[#C9A86C]"
                   }`
                 }
                 style={{
                   fontFamily: "'Cormorant Garamond', serif",
-                  fontWeight: 500,
+                  fontWeight: 400,
                 }}
               >
-                {project.title.length > 15
-                  ? project.title.substring(0, 15) + "..."
-                  : project.title}
+                {project.title}
               </NavLink>
             </motion.li>
           ))}
         </ul>
       </nav>
 
-      {/* Desktop: Fixed right submenu - SAME SIZE as main menu (320px) */}
-      <nav className="hidden lg:flex fixed right-[320px] top-0 h-screen w-[320px] bg-[#2D4A43] flex-col items-center justify-center px-8">
+      {/* Desktop: Fixed right - transparent, same style as main menu */}
+      <nav
+        className="hidden lg:flex fixed right-[320px] top-0 h-screen w-[320px] flex-col items-center justify-center px-8"
+        style={{
+          backgroundColor: "rgba(45, 74, 67, 0.85)",
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
+        }}
+      >
         <ul className="w-full max-w-[280px]">
           {bookProjects.map((project, index) => (
             <motion.li
@@ -72,7 +74,7 @@ const ChildrensBooksLayout = () => {
               <NavLink
                 to={`/childrens-books/${project.id}`}
                 className={({ isActive }) =>
-                  `block h-[72px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
+                  `flex items-center justify-center h-[72px] text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
                     isActive ? "text-white" : "text-[#C9A86C] hover:text-white"
                   }`
                 }
