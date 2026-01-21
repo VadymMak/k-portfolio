@@ -14,70 +14,52 @@ const ChildrensBooksLayout = () => {
   return (
     <div className="min-h-screen flex flex-col lg:flex-row">
       {/* Left Side - Content Area */}
-      <div className="w-full lg:w-[55%] bg-[#F5EFE6] min-h-screen">
+      <div className="w-full lg:w-[50%] bg-[#F5EFE6] min-h-screen">
         <Outlet />
       </div>
 
-      {/* Right Side - Sticky Submenu */}
-      <div className="w-full lg:w-[45%] bg-[#2D4A43] lg:fixed lg:right-[320px] lg:top-0 lg:h-screen lg:overflow-y-auto">
-        <div className="p-8 lg:p-12 flex flex-col justify-center min-h-full">
-          {/* Section Title */}
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mb-8 text-center lg:text-left"
-          >
-            <NavLink
-              to="/childrens-books"
-              className="text-[#C9A86C] text-sm tracking-[0.3em] uppercase hover:text-white transition-colors"
-            >
-              ← Back to Overview
-            </NavLink>
-          </motion.div>
-
+      {/* Middle - Sticky Submenu (Semi-transparent) */}
+      <div
+        className="w-full lg:w-[250px] lg:fixed lg:right-[320px] lg:top-0 lg:h-screen lg:overflow-y-auto"
+        style={{
+          backgroundColor: "rgba(45, 74, 67, 0.85)",
+          backdropFilter: "blur(10px)",
+          WebkitBackdropFilter: "blur(10px)",
+        }}
+      >
+        <div className="p-6 lg:p-8 flex flex-col justify-center min-h-full">
           {/* Book Projects List */}
           <nav>
-            <ul className="space-y-2">
+            <ul>
               {bookProjects.map((project, index) => (
                 <motion.li
                   key={project.id}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.05 }}
                 >
                   <NavLink
                     to={`/childrens-books/${project.id}`}
                     className={({ isActive }) =>
-                      `group block py-4 px-4 border-b border-[#C9A86C]/30 transition-all duration-300 ${
+                      `block py-5 text-center border-b border-[#C9A86C]/40 transition-all duration-300 ${
                         isActive
-                          ? "bg-[#C9A86C]/20 border-l-4 border-l-[#C9A86C]"
-                          : "hover:bg-[#C9A86C]/10 border-l-4 border-l-transparent"
+                          ? "text-white"
+                          : "text-[#C9A86C] hover:text-white"
                       }`
                     }
                   >
                     {({ isActive }) => (
-                      <div className="flex items-center justify-between">
-                        <span
-                          className={`text-base lg:text-lg font-light transition-colors duration-300 ${
-                            isActive
-                              ? "text-white"
-                              : "text-[#C9A86C] group-hover:text-white"
-                          }`}
-                          style={{ fontFamily: "'Cormorant Garamond', serif" }}
-                        >
-                          {project.title}
-                        </span>
-                        <motion.span
-                          initial={{ opacity: 0, x: -5 }}
-                          animate={{
-                            opacity: isActive ? 1 : 0,
-                            x: isActive ? 0 : -5,
-                          }}
-                          className="text-[#C9A86C]"
-                        >
-                          ●
-                        </motion.span>
-                      </div>
+                      <span
+                        className={`text-[17px] tracking-wide transition-colors duration-300 ${
+                          isActive ? "text-white" : ""
+                        }`}
+                        style={{
+                          fontFamily: "'Cormorant Garamond', serif",
+                          fontWeight: 400,
+                        }}
+                      >
+                        {project.title}
+                      </span>
                     )}
                   </NavLink>
                 </motion.li>
@@ -86,6 +68,9 @@ const ChildrensBooksLayout = () => {
           </nav>
         </div>
       </div>
+
+      {/* Right side space for main menu */}
+      <div className="hidden lg:block lg:w-[320px]" />
     </div>
   );
 };
