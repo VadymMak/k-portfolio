@@ -3,17 +3,17 @@ import { motion } from "framer-motion";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-10 bg-[#F5EFE6] py-4 px-6 lg:px-8 border-b border-[#D4C4A8]/50">
+    <header className="sticky top-0 z-10 bg-[#F5EFE6] py-5 px-6 lg:px-10 border-b border-[#D4C4A8]/50">
       <div className="flex items-center">
         {/* Logo - Left */}
         <Link to="/" className="flex-shrink-0">
           <motion.div
-            className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-[#D4C4A8] border-2 border-[#C9B896]/50 flex items-center justify-center shadow-sm"
+            className="w-14 h-14 lg:w-16 lg:h-16 rounded-full bg-[#D4C4A8] border-2 border-[#C9B896]/50 flex items-center justify-center shadow-sm"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             <span
-              className="text-[#8B5A3C] text-xl lg:text-2xl font-medium"
+              className="text-[#8B5A3C] text-2xl lg:text-3xl font-medium"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               AK
@@ -21,10 +21,10 @@ const Header = () => {
           </motion.div>
         </Link>
 
-        {/* Title - Centered in remaining space */}
-        <div className="flex-1 flex justify-center pr-4">
+        {/* Title - Centered in content area */}
+        <div className="flex-1 flex justify-center">
           <h1
-            className="text-[#8B5A3C] text-[10px] sm:text-xs lg:text-sm tracking-[0.15em] lg:tracking-[0.2em] uppercase whitespace-nowrap"
+            className="text-[#8B5A3C] text-sm sm:text-base lg:text-lg tracking-[0.15em] lg:tracking-[0.2em] uppercase whitespace-nowrap"
             style={{
               fontFamily: "'Cormorant Garamond', serif",
               fontWeight: 500,
