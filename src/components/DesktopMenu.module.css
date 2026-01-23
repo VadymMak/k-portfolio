@@ -1,0 +1,93 @@
+/* ========== DESKTOP MENU ========== */
+
+.nav {
+  display: none;
+  width: 320px;
+  height: 100vh;
+  flex-shrink: 0;
+  flex-direction: column;
+  background-color: #2D4A43;
+  z-index: 100;
+  position: sticky;
+  top: 0;
+}
+
+.navInner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 32px;
+}
+
+.menuList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuItem {
+  width: 100%;
+}
+
+.menuButton {
+  width: 100%;
+  padding: 28px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(201, 168, 108, 0.3);
+  color: #C9A86C;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.menuButton:hover {
+  color: #ffffff;
+}
+
+/* ========== SUBMENU ========== */
+
+.submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #243832;
+  overflow: hidden;
+}
+
+.submenuItem {
+  width: 100%;
+}
+
+.submenuButton {
+  width: 100%;
+  padding: 16px 0;
+  background: none;
+  border: none;
+  color: #C9A86C;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.submenuButton:hover {
+  color: #ffffff;
+  background-color: rgba(201, 168, 108, 0.1);
+}
+
+/* ========== SHOW ON DESKTOP (min-width: 1025px) ========== */
+
+@media (min-width: 1025px) {
+  .nav {
+    display: flex;
+  }
+}

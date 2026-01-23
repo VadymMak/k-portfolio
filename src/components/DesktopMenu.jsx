@@ -1,5 +1,8 @@
-import { useState } from "react";
+/* eslint-disable no-unused-vars */
 import { motion, AnimatePresence } from "framer-motion";
+/* eslint-enable no-unused-vars */
+import { useState } from "react";
+import styles from "./DesktopMenu.module.css";
 
 const bookProjects = [
   { id: "nutcracker", title: "The Nutcracker and the Mouse King" },
@@ -21,40 +24,34 @@ const DesktopMenu = () => {
   };
 
   return (
-    <nav
-      className="hidden lg:flex fixed top-0 right-0 w-[320px] h-screen flex-col bg-[#2D4A43]"
-      style={{ zIndex: 100 }}
-    >
-      <div className="flex-1 flex flex-col justify-center px-8">
-        <ul className="space-y-0">
+    <nav className={styles.nav}>
+      <div className={styles.navInner}>
+        <ul className={styles.menuList}>
           {/* Home */}
-          <li>
+          <li className={styles.menuItem}>
             <button
               onClick={() => scrollToSection("home")}
-              className="w-full py-7 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors"
-              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              className={styles.menuButton}
             >
               Home
             </button>
           </li>
 
           {/* About Me */}
-          <li>
+          <li className={styles.menuItem}>
             <button
               onClick={() => scrollToSection("about")}
-              className="w-full py-7 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors"
-              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              className={styles.menuButton}
             >
               About Me
             </button>
           </li>
 
           {/* Children's Book Illustrations - Accordion */}
-          <li>
+          <li className={styles.menuItem}>
             <button
               onClick={() => setIsChildrensOpen(!isChildrensOpen)}
-              className="w-full py-7 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors flex items-center justify-center gap-2"
-              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              className={styles.menuButton}
             >
               <span>{isChildrensOpen ? "▼" : "►"}</span>
               <span>Children's book illustrations</span>
@@ -63,18 +60,17 @@ const DesktopMenu = () => {
             <AnimatePresence>
               {isChildrensOpen && (
                 <motion.ul
+                  className={styles.submenu}
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="overflow-hidden bg-[#243832]"
                 >
                   {bookProjects.map((project) => (
-                    <li key={project.id}>
+                    <li key={project.id} className={styles.submenuItem}>
                       <button
                         onClick={() => scrollToSection(project.id)}
-                        className="w-full py-4 text-[#C9A86C] text-sm text-center hover:text-white hover:bg-[#C9A86C]/10 transition-colors"
-                        style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                        className={styles.submenuButton}
                       >
                         {project.title}
                       </button>
@@ -86,44 +82,40 @@ const DesktopMenu = () => {
           </li>
 
           {/* Label Design */}
-          <li>
+          <li className={styles.menuItem}>
             <button
               onClick={() => scrollToSection("label-design")}
-              className="w-full py-7 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors"
-              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              className={styles.menuButton}
             >
               Label design
             </button>
           </li>
 
           {/* Logos */}
-          <li>
+          <li className={styles.menuItem}>
             <button
               onClick={() => scrollToSection("logos")}
-              className="w-full py-7 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors"
-              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              className={styles.menuButton}
             >
               Logos
             </button>
           </li>
 
           {/* Print and Digital Branding */}
-          <li>
+          <li className={styles.menuItem}>
             <button
               onClick={() => scrollToSection("branding")}
-              className="w-full py-7 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors"
-              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              className={styles.menuButton}
             >
               Print and Digital Branding
             </button>
           </li>
 
           {/* Contact */}
-          <li>
+          <li className={styles.menuItem}>
             <button
               onClick={() => scrollToSection("contact")}
-              className="w-full py-7 text-[#C9A86C] text-lg text-center border-b border-[#C9A86C]/30 hover:text-white transition-colors"
-              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              className={styles.menuButton}
             >
               Contact Me
             </button>

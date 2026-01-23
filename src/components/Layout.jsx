@@ -2,6 +2,7 @@ import { useState } from "react";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import Header from "./Header";
+import styles from "./Layout.module.css";
 
 const Layout = ({ children }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -11,9 +12,9 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className={styles.layout}>
       {/* Main Content Area */}
-      <div className="fixed top-0 left-0 bottom-0 right-0 lg:right-[320px] overflow-y-auto bg-[#F5EFE6]">
+      <div className={styles.mainContent}>
         {/* Header */}
         <Header />
 

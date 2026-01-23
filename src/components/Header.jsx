@@ -1,4 +1,7 @@
+/* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
+/* eslint-enable no-unused-vars */
+import styles from "./Header.module.css";
 
 const Header = () => {
   const scrollToTop = () => {
@@ -9,35 +12,21 @@ const Header = () => {
   };
 
   return (
-    <header
-      className="sticky top-0 z-10 bg-[#F5EFE6] border-b border-[#D4C4A8]/50 relative"
-      style={{ padding: "24px 40px" }}
-    >
+    <header className={styles.header}>
       {/* Logo - Left */}
-      <button onClick={scrollToTop} className="flex-shrink-0 relative z-10">
+      <button onClick={scrollToTop} className={styles.logoButton}>
         <motion.div
-          className="w-14 h-14 lg:w-16 lg:h-16 rounded-full bg-[#D4C4A8] border-2 border-[#9f988b]/50 flex items-center justify-center shadow-sm"
+          className={styles.logoCircle}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <span
-            className="text-[#8B5A3C] text-2xl lg:text-3xl font-medium"
-            style={{ fontFamily: "'Cormorant Garamond', serif" }}
-          >
-            AK
-          </span>
+          <span className={styles.logoText}>AK</span>
         </motion.div>
       </button>
 
-      {/* Title - Centered in content area */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <h1
-          className="text-[#8B5A3C] text-sm sm:text-base lg:text-lg tracking-[0.15em] lg:tracking-[0.2em] uppercase whitespace-nowrap"
-          style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontWeight: 500,
-          }}
-        >
+      {/* Title - Centered */}
+      <div className={styles.titleWrapper}>
+        <h1 className={styles.title}>
           Professional Illustrator / Grafik Designer
         </h1>
       </div>

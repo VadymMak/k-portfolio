@@ -1,5 +1,8 @@
 import { useState } from "react";
+/* eslint-disable no-unused-vars */
 import { motion, AnimatePresence } from "framer-motion";
+/* eslint-enable no-unused-vars */
+import styles from "./MobileMenu.module.css";
 
 const bookProjects = [
   { id: "nutcracker", title: "The Nutcracker and the Mouse King" },
@@ -28,21 +31,21 @@ const MobileMenu = ({ isOpen, onClose }) => {
       {/* Mobile Menu Button */}
       <button
         onClick={onClose}
-        className="lg:hidden fixed top-6 right-4 z-50 w-12 h-12 bg-[#2D4A43] rounded-full flex items-center justify-center shadow-lg"
+        className={styles.menuButton}
         aria-label="Toggle menu"
       >
-        <div className="flex flex-col gap-1.5">
+        <div className={styles.hamburger}>
           <motion.span
-            animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-            className="w-6 h-0.5 bg-[#C9A86C] block origin-center"
+            className={styles.hamburgerLine}
+            animate={isOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
           />
           <motion.span
+            className={styles.hamburgerLine}
             animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
-            className="w-6 h-0.5 bg-[#C9A86C] block"
           />
           <motion.span
-            animate={isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-            className="w-6 h-0.5 bg-[#C9A86C] block origin-center"
+            className={styles.hamburgerLine}
+            animate={isOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
           />
         </div>
       </button>
@@ -51,81 +54,75 @@ const MobileMenu = ({ isOpen, onClose }) => {
       <AnimatePresence>
         {isOpen && (
           <motion.nav
+            className={`${styles.menuPanel} ${isOpen ? styles.open : ""}`}
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "tween", duration: 0.3 }}
-            className="lg:hidden fixed inset-0 bg-[#2D4A43] z-40 flex flex-col items-center justify-start pt-20 px-8 overflow-y-auto"
+            style={{ display: "flex" }}
           >
-            <ul className="w-full max-w-xs">
+            <ul className={styles.menuList}>
               {/* Home */}
               <motion.li
+                className={styles.menuItem}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.05 }}
               >
                 <button
                   onClick={() => scrollToSection("home")}
-                  className="w-full h-[60px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 text-[#C9A86C] hover:text-white transition-colors"
-                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                  className={styles.menuItemButton}
                 >
-                  <span className="text-xl tracking-wide">Home</span>
+                  Home
                 </button>
               </motion.li>
 
               {/* About Me */}
               <motion.li
+                className={styles.menuItem}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
               >
                 <button
                   onClick={() => scrollToSection("about")}
-                  className="w-full h-[60px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 text-[#C9A86C] hover:text-white transition-colors"
-                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                  className={styles.menuItemButton}
                 >
-                  <span className="text-xl tracking-wide">About Me</span>
+                  About Me
                 </button>
               </motion.li>
 
               {/* Children's Books with Accordion */}
               <motion.li
+                className={styles.menuItem}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.15 }}
               >
                 <button
                   onClick={() => setIsChildrensOpen(!isChildrensOpen)}
-                  className="w-full h-[60px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 text-[#C9A86C] hover:text-white transition-colors"
-                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                  className={styles.menuItemButton}
                 >
-                  <span className="text-xl tracking-wide">
-                    {isChildrensOpen ? "▼" : "►"} Children's book illustrations
-                  </span>
+                  {isChildrensOpen ? "▼" : "►"} Children's book illustrations
                 </button>
 
                 {/* Accordion Submenu */}
                 <AnimatePresence>
                   {isChildrensOpen && (
                     <motion.ul
+                      className={styles.submenu}
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="overflow-hidden bg-[#243832]"
                     >
                       {bookProjects.map((project) => (
-                        <li key={project.id}>
+                        <li key={project.id} className={styles.submenuItem}>
                           <button
                             onClick={() => scrollToSection(project.id)}
-                            className="w-full h-[48px] flex items-center justify-center text-center border-b border-[#C9A86C]/20 text-[#C9A86C]/80 hover:text-white transition-colors"
-                            style={{
-                              fontFamily: "'Cormorant Garamond', serif",
-                            }}
+                            className={styles.submenuButton}
                           >
-                            <span className="text-[15px] tracking-wide">
-                              {project.title}
-                            </span>
+                            {project.title}
                           </button>
                         </li>
                       ))}
@@ -136,63 +133,61 @@ const MobileMenu = ({ isOpen, onClose }) => {
 
               {/* Label Design */}
               <motion.li
+                className={styles.menuItem}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
               >
                 <button
                   onClick={() => scrollToSection("label-design")}
-                  className="w-full h-[60px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 text-[#C9A86C] hover:text-white transition-colors"
-                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                  className={styles.menuItemButton}
                 >
-                  <span className="text-xl tracking-wide">Label design</span>
+                  Label design
                 </button>
               </motion.li>
 
               {/* Logos */}
               <motion.li
+                className={styles.menuItem}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.25 }}
               >
                 <button
                   onClick={() => scrollToSection("logos")}
-                  className="w-full h-[60px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 text-[#C9A86C] hover:text-white transition-colors"
-                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                  className={styles.menuItemButton}
                 >
-                  <span className="text-xl tracking-wide">Logos</span>
+                  Logos
                 </button>
               </motion.li>
 
               {/* Branding */}
               <motion.li
+                className={styles.menuItem}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
                 <button
                   onClick={() => scrollToSection("branding")}
-                  className="w-full h-[60px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 text-[#C9A86C] hover:text-white transition-colors"
-                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                  className={styles.menuItemButton}
                 >
-                  <span className="text-xl tracking-wide">
-                    Print and Digital Branding
-                  </span>
+                  Print and Digital Branding
                 </button>
               </motion.li>
 
               {/* Contact */}
               <motion.li
+                className={styles.menuItem}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.35 }}
               >
                 <button
                   onClick={() => scrollToSection("contact")}
-                  className="w-full h-[60px] flex items-center justify-center text-center border-b border-[#C9A86C]/40 text-[#C9A86C] hover:text-white transition-colors"
-                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                  className={styles.menuItemButton}
                 >
-                  <span className="text-xl tracking-wide">Contact Me</span>
+                  Contact Me
                 </button>
               </motion.li>
             </ul>
