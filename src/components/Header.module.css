@@ -4,7 +4,7 @@
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: #F5EFE6;
+  background-color: #f5efe6;
   border-bottom: 1px solid rgba(212, 196, 168, 0.5);
   padding: 24px 40px;
 }
@@ -22,7 +22,7 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background-color: #D4C4A8;
+  background-color: #d4c4a8;
   border: 2px solid rgba(159, 152, 139, 0.5);
   display: flex;
   align-items: center;
@@ -40,10 +40,10 @@
 }
 
 .logoText {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 24px;
   font-weight: 500;
-  color: #8B5A3C;
+  color: #8b5a3c;
 }
 
 .titleWrapper {
@@ -59,10 +59,10 @@
 }
 
 .title {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 18px;
   font-weight: 500;
-  color: #8B5A3C;
+  color: #8b5a3c;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   white-space: nowrap;
@@ -85,8 +85,7 @@
   }
 
   .title {
-    font-size: 16px;
-    letter-spacing: 0.12em;
+    display: none;
   }
 }
 
@@ -105,11 +104,6 @@
   .logoText {
     font-size: 20px;
   }
-
-  .title {
-    font-size: 12px;
-    letter-spacing: 0.1em;
-  }
 }
 
 /* ========== MOBILE SMALL (max-width: 480px) ========== */
@@ -126,10 +120,5 @@
 
   .logoText {
     font-size: 18px;
-  }
-
-  .title {
-    font-size: 10px;
-    letter-spacing: 0.08em;
   }
 }

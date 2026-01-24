@@ -13,8 +13,18 @@ const bookProjects = [
   { id: "secrets-sea", title: "Secrets of the Sea for Little Explorers" },
 ];
 
+const languages = [
+  { code: "en", label: "English" },
+  { code: "sk", label: "Slovenčina" },
+  { code: "de", label: "Deutsch" },
+  { code: "ru", label: "Русский" },
+  { code: "ua", label: "Українська" },
+];
+
 const MobileMenu = ({ isOpen, onClose }) => {
   const [isChildrensOpen, setIsChildrensOpen] = useState(false);
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  const [currentLanguage, setCurrentLanguage] = useState("en");
 
   const scrollToSection = (id) => {
     onClose();
@@ -24,6 +34,19 @@ const MobileMenu = ({ isOpen, onClose }) => {
         element.scrollIntoView({ behavior: "smooth" });
       }
     }, 300);
+  };
+
+  const handleLanguageChange = (code) => {
+    setCurrentLanguage(code);
+    setIsLanguageOpen(false);
+    localStorage.setItem("language", code);
+  };
+
+  const getCurrentLanguageLabel = () => {
+    return (
+      languages.find((lang) => lang.code === currentLanguage)?.label ||
+      "English"
+    );
   };
 
   return (
@@ -61,22 +84,43 @@ const MobileMenu = ({ isOpen, onClose }) => {
             transition={{ type: "tween", duration: 0.3 }}
             style={{ display: "flex" }}
           >
-            <ul className={styles.menuList}>
-              {/* Home */}
-              <motion.li
-                className={styles.menuItem}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.05 }}
+            {/* Language Switcher */}
+            <div className={styles.languageSection}>
+              <button
+                onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+                className={styles.languageButton}
               >
-                <button
-                  onClick={() => scrollToSection("home")}
-                  className={styles.menuItemButton}
-                >
-                  Home
-                </button>
-              </motion.li>
+                <span>{isLanguageOpen ? "▼" : "►"}</span>
+                <span>{getCurrentLanguageLabel()}</span>
+              </button>
 
+              <AnimatePresence>
+                {isLanguageOpen && (
+                  <motion.ul
+                    className={styles.languageList}
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {languages
+                      .filter((lang) => lang.code !== currentLanguage)
+                      .map((lang) => (
+                        <li key={lang.code} className={styles.languageItem}>
+                          <button
+                            onClick={() => handleLanguageChange(lang.code)}
+                            className={styles.languageOption}
+                          >
+                            {lang.label}
+                          </button>
+                        </li>
+                      ))}
+                  </motion.ul>
+                )}
+              </AnimatePresence>
+            </div>
+
+            <ul className={styles.menuList}>
               {/* About Me */}
               <motion.li
                 className={styles.menuItem}
@@ -191,6 +235,50 @@ const MobileMenu = ({ isOpen, onClose }) => {
                 </button>
               </motion.li>
             </ul>
+
+            {/* Contact Block */}
+            <motion.div
+              className={styles.contactBlock}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              <a
+                href="mailto:akolesnykl989@gmail.com"
+                className={styles.contactLink}
+              >
+                akolesnykl989@gmail.com
+              </a>
+
+              <a
+                href="https://wa.me/421951813809"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.contactLink}
+              >
+                <span className={styles.contactLabel}>WhatsApp:</span> +421 951
+                813 809
+              </a>
+
+              <div className={styles.socialLinks}>
+                <a
+                  href="https://www.behance.net/anastasiiakol1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.socialLink}
+                >
+                  Behance
+                </a>
+                <a
+                  href="https://www.instagram.com/a.kolisnyk_art"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.socialLink}
+                >
+                  Instagram
+                </a>
+              </div>
+            </motion.div>
           </motion.nav>
         )}
       </AnimatePresence>
