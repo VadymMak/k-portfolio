@@ -16,7 +16,6 @@ const bookProjects = [
 const languages = [
   { code: "en", label: "English" },
   { code: "sk", label: "Slovenčina" },
-  { code: "de", label: "Deutsch" },
   { code: "ru", label: "Русский" },
   { code: "ua", label: "Українська" },
 ];
