@@ -1,0 +1,40 @@
+.section {
+  padding: 100px 40px 0px;
+  background-color: #F5EFE6;
+}
+
+.description {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.descriptionTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #2D4A43;
+  margin-bottom: 20px;
+}
+
+.descriptionText {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  color: #2D4A43;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 20px;
+  }
+
+  .descriptionTitle {
+    font-size: 18px;
+  }
+
+  .descriptionText {
+    font-size: 15px;
+  }
+}

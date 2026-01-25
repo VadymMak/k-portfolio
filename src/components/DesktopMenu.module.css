@@ -108,7 +108,7 @@
 .contactLink {
   color: #c9a86c;
   font-family: "Cormorant Garamond", serif;
-  font-size: 14px;
+  font-size: 18px;
   text-decoration: none;
   transition: color 0.3s ease;
   text-align: center;
@@ -127,7 +127,7 @@
 .socialLink {
   color: #c9a86c;
   font-family: "Cormorant Garamond", serif;
-  font-size: 14px;
+  font-size: 18px;
   text-decoration: none;
   transition: color 0.3s ease;
 }

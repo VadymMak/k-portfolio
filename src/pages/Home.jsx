@@ -1,5 +1,5 @@
-import HeroSection from "../components/sections/HeroSection";
 import AboutSection from "../components/sections/AboutSection";
+import ChildrensBooksIntro from "../components/sections/ChildrensBooksIntro";
 import ChildrensBooksSection from "../components/sections/ChildrensBooksSection";
 import LabelDesignSection from "../components/sections/LabelDesignSection";
 import LogosSection from "../components/sections/LogosSection";
@@ -10,6 +10,7 @@ const Home = () => {
   return (
     <div>
       <AboutSection />
+      <ChildrensBooksIntro />
       <ChildrensBooksSection />
       <LabelDesignSection />
       <LogosSection />
