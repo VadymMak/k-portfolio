@@ -7,7 +7,7 @@ import styles from "./LabelDesignSection.module.css";
 
 const labelImages = [
   { src: "/gallery/labels/label_01.webp", alt: "Sunflower oil label" },       // Row 1
-  { src: "/gallery/labels/label_03.webp", alt: "Star sunflower oil label" },  // Row 1
+  { src: "/gallery/labels/label_09.webp", alt: "Star sunflower oil label" },  // Row 1
   { src: "/gallery/labels/label_05.webp", alt: "Adriano restaurant flyer" },  // Row 2
   { src: "/gallery/labels/label_04.webp", alt: "Adriano business cards" },    // Row 2
   { src: "/gallery/labels/label_06.webp", alt: "Adriano seafood poster" },    // Row 2
