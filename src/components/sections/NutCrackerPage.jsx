@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 import styles from "./NutCrackerPage.module.css";
 
 const nutcrackerImages = [
-  { src: "/gallery/books/nutcracker/nc-5.webp", alt: "Character sketches" },
-  { src: "/gallery/books/nutcracker/nc-1.webp", alt: "Book spread 1" },
-  { src: "/gallery/books/nutcracker/nc-2.webp", alt: "Book covers" },
-  { src: "/gallery/books/nutcracker/nc-3.webp", alt: "Book spread 2" },
-  { src: "/gallery/books/nutcracker/nc-4.webp", alt: "Full cover" },
+  { thumb: "/gallery/books/nutcracker/nc-5.webp", full:"/gallery/books/nutcracker/nc-5.webp", alt: "Character sketches" },
+  { thumb: "/gallery/books/nutcracker/thumb_01.webp", full: "/gallery/books/nutcracker/full_01.webp", alt: "Book spread 1" },
+  { thumb: "/gallery/books/nutcracker/nc-2.webp", full:"/gallery/books/nutcracker/nc-2.webp", alt: "Book covers" },
+  { thumb: "/gallery/books/nutcracker/thumb_02.webp", full: "/gallery/books/nutcracker/full_02.webp", alt: "Book spread 2" },
+  { thumb: "/gallery/books/nutcracker/nc-4.webp", full:"/gallery/books/nutcracker/nc-4.webp", alt: "Full cover" },
 ];
 
 const NutCrackerPage = () => {
@@ -63,9 +63,11 @@ const NutCrackerPage = () => {
             onClick={() => openLightbox(index)}
           >
             <img
-              src={image.src}
+              src={image.thumb}
               alt={image.alt}
               className={styles.image}
+              loading="lazy"
+              onLoad={(e) => e.target.classList.add(styles.loaded)}
             />
           </motion.div>
         ))}
@@ -98,7 +100,7 @@ const NutCrackerPage = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={nutcrackerImages[activeIndex].src}
+              src={nutcrackerImages[activeIndex].full}
               alt={nutcrackerImages[activeIndex].alt}
               className={styles.lightboxImage}
             />
