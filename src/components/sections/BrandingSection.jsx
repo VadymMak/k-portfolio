@@ -11,10 +11,10 @@ const brandingImages = [
   { thumb: "/gallery/branding/thumb/thumb_03.webp", full: "/gallery/branding/full/full_03.webp", alt: "Advent 2026 calendar" },
   { thumb: "/gallery/branding/thumb/thumb_04.webp", full: "/gallery/branding/full/full_04.webp", alt: "Floral pillow" },
   { thumb: "/gallery/branding/thumb/thumb_05.webp", full: "/gallery/branding/full/full_05.webp", alt: "Green floral scarf" },
-  { thumb: "/gallery/branding/thumb/thumb_06.webp", full: "/gallery/branding/full/full_06.webp", alt: "Pink sky landscape" },
-  { thumb: "/gallery/branding/thumb/thumb_07.webp", full: "/gallery/branding/full/full_07.webp", alt: "Sunset landscape" },
-  { thumb: "/gallery/branding/thumb/thumb_08.webp", full: "/gallery/branding/full/full_08.webp", alt: "Green river landscape" },
-  { thumb: "/gallery/branding/thumb/thumb_09.webp", full: "/gallery/branding/full/full_09.webp", alt: "Branding design" },
+  { thumb: "/gallery/branding/thumb/thumb_10.webp", full: "/gallery/branding/full/full_10.webp", alt: "Pink sky landscape" },
+  { thumb: "/gallery/branding/thumb/thumb_11.webp", full: "/gallery/branding/full/full_11.webp", alt: "Sunset landscape" },
+  { thumb: "/gallery/branding/thumb/thumb_12.webp", full: "/gallery/branding/full/full_12.webp", alt: "Green river landscape" },
+  { thumb: "/gallery/branding/thumb/thumb_14.webp", full: "/gallery/branding/full/full_14.webp", alt: "Branding design" },
 ];
 
 const BrandingSection = () => {
