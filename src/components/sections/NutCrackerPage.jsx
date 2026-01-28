@@ -67,7 +67,6 @@ const NutCrackerPage = () => {
               alt={image.alt}
               className={styles.image}
               loading="lazy"
-              onLoad={(e) => e.target.classList.add(styles.loaded)}
             />
           </motion.div>
         ))}
