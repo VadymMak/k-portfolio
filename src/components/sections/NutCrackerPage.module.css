@@ -1,9 +1,8 @@
 /* ========== BOOK PAGE SECTION ========== */
 
 .section {
-  min-height: 100vh;
   background-color: #F5EFE6;
-  padding: 60px 40px;
+   padding: 40px 40px 0;  /* Уменьши padding-top */
 }
 
 /* ========== TITLE ========== */

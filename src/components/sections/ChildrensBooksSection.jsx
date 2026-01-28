@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 /* eslint-enable no-unused-vars */
 import SectionTitle from "../ui/SectionTitle";
 import NutCrackerPage from "./NutCrackerPage";
+import WildSwansPage from "./WildSwansPage";
+
 import styles from "./ChildrensBooksSection.module.css";
 
 const ChildrensBooksSection = () => {
@@ -10,7 +12,7 @@ const ChildrensBooksSection = () => {
     <section id="childrens-books" className={styles.section}>
       {/* Book Pages */}
       <NutCrackerPage />
-      
+      <WildSwansPage />
       {/* Позже добавим другие книги: */}
       {/* <WildSwansPage /> */}
       {/* <WinterAdventuresPage /> */}
