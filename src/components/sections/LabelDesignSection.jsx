@@ -93,6 +93,7 @@ const LabelDesignSection = () => {
             className={styles.gridItem}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.02 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
             onClick={() => openLightbox(index)}
