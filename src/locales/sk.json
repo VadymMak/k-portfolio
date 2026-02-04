@@ -1,0 +1,51 @@
+{
+  "menu": {
+    "aboutMe": "O mne",
+    "illustrationPhilosophy": "Moja filozofia ilustrácie",
+    "childrensBooks": "Ilustrácie detských kníh",
+    "labelDesign": "Dizajn etikiet",
+    "logos": "Logá",
+    "branding": "Tlačový a digitálny branding",
+    "contactMe": "Kontaktujte ma"
+  },
+  "books": {
+    "nutcracker": "Luskáčik a Myší kráľ",
+    "wildSwans": "Divé labute",
+    "winterAdventures": "Zimné dobrodružstvá",
+    "starTeam": "Hviezdny tím",
+    "sigurd": "Sigurd bojuje s drakom",
+    "seaSecrets": "Tajomstvá mora pre malých objaviteľov"
+  },
+  "sections": {
+    "home": {
+      "title": "Profesionálna ilustrátorka / Grafická dizajnérka"
+    },
+    "about": {
+      "title": "O mne"
+    },
+    "labelDesign": {
+      "title": "Dizajn etikiet"
+    },
+    "logos": {
+      "title": "Logá"
+    },
+    "branding": {
+      "title": "Tlačový a digitálny branding"
+    },
+    "contact": {
+      "title": "Kontaktujte ma"
+    }
+  },
+  "contact": {
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "behance": "Behance",
+    "instagram": "Instagram"
+  },
+  "common": {
+    "loading": "Načítava sa...",
+    "close": "Zavrieť",
+    "next": "Ďalej",
+    "previous": "Späť"
+  }
+}

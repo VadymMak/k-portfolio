@@ -2,28 +2,32 @@ import { useState } from "react";
 /* eslint-disable no-unused-vars */
 import { motion, AnimatePresence } from "framer-motion";
 /* eslint-enable no-unused-vars */
+import { useLanguage } from "../hooks/useLanguage";
+import { useTranslation } from "../hooks/useTranslation";
 import styles from "./MobileMenu.module.css";
-
-const bookProjects = [
-  { id: "nutcracker", title: "The Nutcracker and the Mouse King" },
-  { id: "wild-swans", title: "The Wild Swans" },
-  { id: "winter-adventures", title: "Winter Adventures" },
-  { id: "star-team", title: "Star Team" },
-  { id: "sigurd", title: "Sigurd Fights the Dragon" },
-  { id: "secrets-sea", title: "Secrets of the Sea for Little Explorers" },
-];
-
-const languages = [
-  { code: "en", label: "English" },
-  { code: "sk", label: "Slovenčina" },
-  { code: "ru", label: "Русский" },
-  { code: "ua", label: "Українська" },
-];
 
 const MobileMenu = ({ isOpen, onClose }) => {
   const [isChildrensOpen, setIsChildrensOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState("en");
+
+  // Language context and translations
+  const {
+    currentLanguage,
+    availableLanguages,
+    changeLanguage,
+    getCurrentLanguageLabel,
+  } = useLanguage();
+  const { translate } = useTranslation();
+
+  // Book projects with translations
+  const bookProjects = [
+    { id: "nutcracker", title: translate("books.nutcracker") },
+    { id: "wild-swans", title: translate("books.wildSwans") },
+    { id: "winter-adventures", title: translate("books.winterAdventures") },
+    { id: "star-team", title: translate("books.starTeam") },
+    { id: "sigurd", title: translate("books.sigurd") },
+    { id: "secrets-sea", title: translate("books.seaSecrets") },
+  ];
 
   const scrollToSection = (id) => {
     onClose();
@@ -36,16 +40,8 @@ const MobileMenu = ({ isOpen, onClose }) => {
   };
 
   const handleLanguageChange = (code) => {
-    setCurrentLanguage(code);
+    changeLanguage(code);
     setIsLanguageOpen(false);
-    localStorage.setItem("language", code);
-  };
-
-  const getCurrentLanguageLabel = () => {
-    return (
-      languages.find((lang) => lang.code === currentLanguage)?.label ||
-      "English"
-    );
   };
 
   return (
@@ -102,7 +98,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    {languages
+                    {availableLanguages
                       .filter((lang) => lang.code !== currentLanguage)
                       .map((lang) => (
                         <li key={lang.code} className={styles.languageItem}>
@@ -131,7 +127,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
                   onClick={() => scrollToSection("about")}
                   className={styles.menuItemButton}
                 >
-                  About Me
+                  {translate("menu.aboutMe")}
                 </button>
               </motion.li>
 
@@ -146,7 +142,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
                   onClick={() => setIsChildrensOpen(!isChildrensOpen)}
                   className={styles.menuItemButton}
                 >
-                  {isChildrensOpen ? "▼" : "►"} Children's book illustrations
+                  {isChildrensOpen ? "▼" : "►"} {translate("menu.childrensBooks")}
                 </button>
 
                 {/* Accordion Submenu */}
@@ -185,7 +181,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
                   onClick={() => scrollToSection("label-design")}
                   className={styles.menuItemButton}
                 >
-                  Label design
+                  {translate("menu.labelDesign")}
                 </button>
               </motion.li>
 
@@ -200,7 +196,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
                   onClick={() => scrollToSection("logos")}
                   className={styles.menuItemButton}
                 >
-                  Logos
+                  {translate("menu.logos")}
                 </button>
               </motion.li>
 
@@ -215,7 +211,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
                   onClick={() => scrollToSection("branding")}
                   className={styles.menuItemButton}
                 >
-                  Print and Digital Branding
+                  {translate("menu.branding")}
                 </button>
               </motion.li>
 
@@ -230,7 +226,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
                   onClick={() => scrollToSection("contact")}
                   className={styles.menuItemButton}
                 >
-                  Contact Me
+                  {translate("menu.contactMe")}
                 </button>
               </motion.li>
             </ul>

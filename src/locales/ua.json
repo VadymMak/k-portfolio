@@ -1,0 +1,51 @@
+{
+  "menu": {
+    "aboutMe": "Про мене",
+    "illustrationPhilosophy": "Моя філософія ілюстрації",
+    "childrensBooks": "Ілюстрації дитячих книг",
+    "labelDesign": "Дизайн етикеток",
+    "logos": "Логотипи",
+    "branding": "Друкований та цифровий брендинг",
+    "contactMe": "Зв'язатися зі мною"
+  },
+  "books": {
+    "nutcracker": "Лускунчик і Мишачий король",
+    "wildSwans": "Дикі лебеді",
+    "winterAdventures": "Зимові пригоди",
+    "starTeam": "Зоряна команда",
+    "sigurd": "Сігурд бореться з драконом",
+    "seaSecrets": "Таємниці моря для маленьких дослідників"
+  },
+  "sections": {
+    "home": {
+      "title": "Професійний ілюстратор / Графічний дизайнер"
+    },
+    "about": {
+      "title": "Про мене"
+    },
+    "labelDesign": {
+      "title": "Дизайн етикеток"
+    },
+    "logos": {
+      "title": "Логотипи"
+    },
+    "branding": {
+      "title": "Друкований та цифровий брендинг"
+    },
+    "contact": {
+      "title": "Зв'язатися зі мною"
+    }
+  },
+  "contact": {
+    "email": "Ел. пошта",
+    "whatsapp": "WhatsApp",
+    "behance": "Behance",
+    "instagram": "Instagram"
+  },
+  "common": {
+    "loading": "Завантаження...",
+    "close": "Закрити",
+    "next": "Далі",
+    "previous": "Назад"
+  }
+}

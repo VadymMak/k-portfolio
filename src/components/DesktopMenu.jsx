@@ -2,28 +2,32 @@
 import { motion, AnimatePresence } from "framer-motion";
 /* eslint-enable no-unused-vars */
 import { useState } from "react";
+import { useLanguage } from "../hooks/useLanguage";
+import { useTranslation } from "../hooks/useTranslation";
 import styles from "./DesktopMenu.module.css";
-
-const bookProjects = [
-  { id: "nutcracker", title: "The Nutcracker and the Mouse King" },
-  { id: "wild-swans", title: "The Wild Swans" },
-  { id: "winter-adventures", title: "Winter Adventures" },
-  { id: "star-team", title: "Star Team" },
-  { id: "sigurd", title: "Sigurd Fights the Dragon" },
-  { id: "secrets-sea", title: "Secrets of the Sea for Little Explorers" },
-];
-
-const languages = [
-  { code: "en", label: "English" },
-  { code: "sk", label: "Slovenčina" },
-  { code: "ru", label: "Русский" },
-  { code: "ua", label: "Українська" },
-];
 
 const DesktopMenu = () => {
   const [isChildrensOpen, setIsChildrensOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState("en");
+
+  // Language context and translations
+  const {
+    currentLanguage,
+    availableLanguages,
+    changeLanguage,
+    getCurrentLanguageLabel,
+  } = useLanguage();
+  const { translate } = useTranslation();
+
+  // Book projects with translations
+  const bookProjects = [
+    { id: "nutcracker", title: translate("books.nutcracker") },
+    { id: "wild-swans", title: translate("books.wildSwans") },
+    { id: "winter-adventures", title: translate("books.winterAdventures") },
+    { id: "star-team", title: translate("books.starTeam") },
+    { id: "sigurd", title: translate("books.sigurd") },
+    { id: "secrets-sea", title: translate("books.seaSecrets") },
+  ];
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -33,16 +37,8 @@ const DesktopMenu = () => {
   };
 
   const handleLanguageChange = (code) => {
-    setCurrentLanguage(code);
+    changeLanguage(code);
     setIsLanguageOpen(false);
-    localStorage.setItem("language", code);
-  };
-
-  const getCurrentLanguageLabel = () => {
-    return (
-      languages.find((lang) => lang.code === currentLanguage)?.label ||
-      "English"
-    );
   };
 
   return (
@@ -67,7 +63,7 @@ const DesktopMenu = () => {
                 exit={{ height: 0, opacity: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                {languages
+                {availableLanguages
                   .filter((lang) => lang.code !== currentLanguage)
                   .map((lang) => (
                     <li key={lang.code} className={styles.languageItem}>
@@ -85,25 +81,23 @@ const DesktopMenu = () => {
         </div>
 
         <ul className={styles.menuList}>
-          {/* Home */}
-
           {/* About Me */}
           <li className={styles.menuItem}>
             <button
               onClick={() => scrollToSection("about")}
               className={styles.menuButton}
             >
-              About Me
+              {translate("menu.aboutMe")}
             </button>
           </li>
 
           {/* Books Intro */}
           <li className={styles.menuItem}>
             <button
-              onClick={() => scrollToSection("about")}
+              onClick={() => scrollToSection("books-intro")}
               className={styles.menuButton}
             >
-              My Illustration Philosophy
+              {translate("menu.illustrationPhilosophy")}
             </button>
           </li>
 
@@ -114,7 +108,7 @@ const DesktopMenu = () => {
               className={styles.menuButton}
             >
               <span>{isChildrensOpen ? "▼" : "►"}</span>
-              <span>Children's book illustrations</span>
+              <span>{translate("menu.childrensBooks")}</span>
             </button>
 
             <AnimatePresence>
@@ -147,7 +141,7 @@ const DesktopMenu = () => {
               onClick={() => scrollToSection("label-design")}
               className={styles.menuButton}
             >
-              Label design
+              {translate("menu.labelDesign")}
             </button>
           </li>
 
@@ -157,7 +151,7 @@ const DesktopMenu = () => {
               onClick={() => scrollToSection("logos")}
               className={styles.menuButton}
             >
-              Logos
+              {translate("menu.logos")}
             </button>
           </li>
 
@@ -167,7 +161,7 @@ const DesktopMenu = () => {
               onClick={() => scrollToSection("branding")}
               className={styles.menuButton}
             >
-              Print and Digital Branding
+              {translate("menu.branding")}
             </button>
           </li>
 
@@ -177,7 +171,7 @@ const DesktopMenu = () => {
               onClick={() => scrollToSection("contact")}
               className={styles.menuButton}
             >
-              Contact Me
+              {translate("menu.contactMe")}
             </button>
           </li>
         </ul>

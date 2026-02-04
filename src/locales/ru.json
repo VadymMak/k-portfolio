@@ -1,0 +1,51 @@
+{
+  "menu": {
+    "aboutMe": "Обо мне",
+    "illustrationPhilosophy": "Моя философия иллюстрации",
+    "childrensBooks": "Иллюстрации детских книг",
+    "labelDesign": "Дизайн этикеток",
+    "logos": "Логотипы",
+    "branding": "Печатный и цифровой брендинг",
+    "contactMe": "Связаться со мной"
+  },
+  "books": {
+    "nutcracker": "Щелкунчик и Мышиный король",
+    "wildSwans": "Дикие лебеди",
+    "winterAdventures": "Зимние приключения",
+    "starTeam": "Звёздная команда",
+    "sigurd": "Сигурд сражается с драконом",
+    "seaSecrets": "Тайны моря для маленьких исследователей"
+  },
+  "sections": {
+    "home": {
+      "title": "Профессиональный иллюстратор / Графический дизайнер"
+    },
+    "about": {
+      "title": "Обо мне"
+    },
+    "labelDesign": {
+      "title": "Дизайн этикеток"
+    },
+    "logos": {
+      "title": "Логотипы"
+    },
+    "branding": {
+      "title": "Печатный и цифровой брендинг"
+    },
+    "contact": {
+      "title": "Связаться со мной"
+    }
+  },
+  "contact": {
+    "email": "Эл. почта",
+    "whatsapp": "WhatsApp",
+    "behance": "Behance",
+    "instagram": "Instagram"
+  },
+  "common": {
+    "loading": "Загрузка...",
+    "close": "Закрыть",
+    "next": "Далее",
+    "previous": "Назад"
+  }
+}

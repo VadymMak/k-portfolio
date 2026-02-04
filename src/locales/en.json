@@ -1,0 +1,51 @@
+{
+  "menu": {
+    "aboutMe": "About Me",
+    "illustrationPhilosophy": "My Illustration Philosophy",
+    "childrensBooks": "Children's book illustrations",
+    "labelDesign": "Label design",
+    "logos": "Logos",
+    "branding": "Print and Digital Branding",
+    "contactMe": "Contact Me"
+  },
+  "books": {
+    "nutcracker": "The Nutcracker and the Mouse King",
+    "wildSwans": "The Wild Swans",
+    "winterAdventures": "Winter Adventures",
+    "starTeam": "Star Team",
+    "sigurd": "Sigurd Fights the Dragon",
+    "seaSecrets": "Secrets of the Sea for Little Explorers"
+  },
+  "sections": {
+    "home": {
+      "title": "Professional Illustrator / Graphic Designer"
+    },
+    "about": {
+      "title": "About Me"
+    },
+    "labelDesign": {
+      "title": "Label Design"
+    },
+    "logos": {
+      "title": "Logos"
+    },
+    "branding": {
+      "title": "Print and Digital Branding"
+    },
+    "contact": {
+      "title": "Contact Me"
+    }
+  },
+  "contact": {
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "behance": "Behance",
+    "instagram": "Instagram"
+  },
+  "common": {
+    "loading": "Loading...",
+    "close": "Close",
+    "next": "Next",
+    "previous": "Previous"
+  }
+}
