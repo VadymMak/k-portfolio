@@ -1,0 +1,224 @@
+/* ========== SECTION ========== */
+
+.section {
+  padding: 40px 40px 60px;
+  scroll-margin-top: 100px;
+}
+
+/* ========== GRID GALLERY ========== */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 20px;
+  max-width: 1400px;
+  margin: 40px auto 0;
+}
+
+.gridItem {
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Row 1: 2 книжных разворота (широкие) */
+.gridItem:nth-child(1),
+.gridItem:nth-child(2) {
+  grid-column: span 5;
+}
+
+/* Row 2: 5 картинок процесса */
+.gridItem:nth-child(3),
+.gridItem:nth-child(4),
+.gridItem:nth-child(5),
+.gridItem:nth-child(6),
+.gridItem:nth-child(7) {
+  grid-column: span 2;
+}
+
+/* Row 3: Санта широкая - БЕЗ max-height */
+.gridItem:nth-child(8) {
+  grid-column: span 10;
+}
+
+.gridItem:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Широкая картинка - показываем полностью */
+.gridItem:nth-child(8) .image {
+  height: auto;
+  object-fit: contain;
+}
+
+/* ========== LIGHTBOX ========== */
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  outline: none;
+}
+
+.lightboxContent {
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightboxImage {
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+}
+
+/* ========== LIGHTBOX CONTROLS ========== */
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 2001;
+  transition: color 0.3s ease;
+}
+
+.closeBtn:hover {
+  color: #C9A86C;
+}
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 2001;
+}
+
+.navBtn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.prevBtn {
+  left: 20px;
+}
+
+.nextBtn {
+  right: 20px;
+}
+
+/* ========== TABLET (max-width: 1024px) ========== */
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 40px 30px 50px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+
+  /* Row 1: книжные развороты */
+  .gridItem:nth-child(1),
+  .gridItem:nth-child(2) {
+    grid-column: span 2;
+  }
+
+  /* Row 2-3: процесс */
+  .gridItem:nth-child(3),
+  .gridItem:nth-child(4),
+  .gridItem:nth-child(5),
+  .gridItem:nth-child(6) {
+    grid-column: span 1;
+  }
+
+  /* Row 4 */
+  .gridItem:nth-child(7),
+  .gridItem:nth-child(8) {
+    grid-column: span 2;
+  }
+
+  /* На планшете тоже показываем полностью */
+  .gridItem:nth-child(8) .image {
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/* ========== MOBILE (max-width: 600px) ========== */
+
+@media (max-width: 600px) {
+  .section {
+    padding: 30px 20px 40px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .gridItem:nth-child(1),
+  .gridItem:nth-child(2),
+  .gridItem:nth-child(3),
+  .gridItem:nth-child(4),
+  .gridItem:nth-child(5),
+  .gridItem:nth-child(6),
+  .gridItem:nth-child(7),
+  .gridItem:nth-child(8) {
+    grid-column: span 1;
+  }
+
+  /* На мобильном все картинки показываем полностью */
+  .gridItem .image {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .navBtn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .prevBtn {
+    left: 10px;
+  }
+
+  .nextBtn {
+    right: 10px;
+  }
+}

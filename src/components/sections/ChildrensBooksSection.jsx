@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import SectionTitle from "../ui/SectionTitle";
 import NutCrackerPage from "./NutCrackerPage";
 import WildSwansPage from "./WildSwansPage";
+import WinterAdventuresPage from "./WinterAdventuresPage";
 
 import styles from "./ChildrensBooksSection.module.css";
 
@@ -13,9 +14,8 @@ const ChildrensBooksSection = () => {
       {/* Book Pages */}
       <NutCrackerPage />
       <WildSwansPage />
+      <WinterAdventuresPage />
       {/* Позже добавим другие книги: */}
-      {/* <WildSwansPage /> */}
-      {/* <WinterAdventuresPage /> */}
       {/* <StarTeamPage /> */}
       {/* <SigurdDragonPage /> */}
       {/* <SecretsSeaPage /> */}
