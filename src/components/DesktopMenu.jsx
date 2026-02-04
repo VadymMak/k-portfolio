@@ -9,7 +9,7 @@ const bookProjects = [
   { id: "wild-swans", title: "The Wild Swans" },
   { id: "winter-adventures", title: "Winter Adventures" },
   { id: "star-team", title: "Star Team" },
-  { id: "sigurd-dragon", title: "Sigurd Fights the Dragon" },
+  { id: "sigurd", title: "Sigurd Fights the Dragon" },
   { id: "secrets-sea", title: "Secrets of the Sea for Little Explorers" },
 ];
 
