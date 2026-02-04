@@ -10,8 +10,8 @@ const sigurdImages = [
   { thumb: "/gallery/books/sigurd/thumb/thumb_02.webp", full: "/gallery/books/sigurd/full/full_02.webp", alt: "Sigurd - Chapter 2", hasVideo: true, videoSrc: "/gallery/books/sigurd/video/video_02" },
   { thumb: "/gallery/books/sigurd/thumb/thumb_03.webp", full: "/gallery/books/sigurd/full/full_03.webp", alt: "Sigurd - Chapter 3", hasVideo: false },
   { thumb: "/gallery/books/sigurd/thumb/thumb_04.webp", full: "/gallery/books/sigurd/full/full_04.webp", alt: "Sigurd - Chapter 4", hasVideo: false },
-  { thumb: "/gallery/books/sigurd/thumb/thumb_05.webp", full: "/gallery/books/sigurd/full/full_05.webp", alt: "Sigurd - Sketches", hasVideo: false },
-  { thumb: "/gallery/books/sigurd/thumb/thumb_06.webp", full: "/gallery/books/sigurd/full/full_06.webp", alt: "Sigurd - Characters", hasVideo: true, videoSrc: "/gallery/books/sigurd/video/video_06" },
+  { thumb: "/gallery/books/sigurd/thumb/thumb_06.webp", full: "/gallery/books/sigurd/full/full_06.webp", alt: "Sigurd - Sketches", hasVideo: true, videoSrc: "/gallery/books/sigurd/video/video_06" },
+  { thumb: "/gallery/books/sigurd/thumb/thumb_05.webp", full: "/gallery/books/sigurd/full/full_05.webp", alt: "Sigurd - Characters", hasVideo: false },
 ];
 
 const SigurdPage = () => {
