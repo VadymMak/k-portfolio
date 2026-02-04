@@ -9,7 +9,7 @@ const seaImages = [
   { thumb: "/gallery/books/sea-secrets/thumb/thumb_01.webp", full: "/gallery/books/sea-secrets/full/full_01.webp", alt: "Sea creatures sketches", hasVideo: true, videoSrc: "/gallery/books/sea-secrets/video/video_01" },
   { thumb: "/gallery/books/sea-secrets/thumb/thumb_02.webp", full: "/gallery/books/sea-secrets/full/full_02.webp", alt: "Whale and octopus spread", hasVideo: false },
   { thumb: "/gallery/books/sea-secrets/thumb/thumb_03.webp", full: "/gallery/books/sea-secrets/full/full_03.webp", alt: "Turtle and starfish spread", hasVideo: false },
-  { thumb: "/gallery/books/sea-secrets/thumb/thumb_04.webp", full: "/gallery/books/sea-secrets/full/full_04.webp", alt: "Book mockup", hasVideo: false },
+  { thumb: "/gallery/books/sea-secrets/thumb/thumb_10.webp", full: "/gallery/books/sea-secrets/full/full_10.webp", alt: "Book mockup", hasVideo: false },
   { thumb: "/gallery/books/sea-secrets/thumb/thumb_05.webp", full: "/gallery/books/sea-secrets/full/full_05.webp", alt: "Book mockup angle", hasVideo: true, videoSrc: "/gallery/books/sea-secrets/video/video_05" },
   { thumb: "/gallery/books/sea-secrets/thumb/thumb_06.webp", full: "/gallery/books/sea-secrets/full/full_06.webp", alt: "Hammerhead and rays", hasVideo: false },
   { thumb: "/gallery/books/sea-secrets/thumb/thumb_07.webp", full: "/gallery/books/sea-secrets/full/full_07.webp", alt: "Pufferfish and eel", hasVideo: false },
