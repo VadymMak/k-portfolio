@@ -6,6 +6,7 @@ import NutCrackerPage from "./NutCrackerPage";
 import WildSwansPage from "./WildSwansPage";
 import WinterAdventuresPage from "./WinterAdventuresPage";
 import SigurdPage from "./SiguardPage";
+import SeaSecretsPage from "./SeaSecretsPage";
 
 import styles from "./ChildrensBooksSection.module.css";
 
@@ -17,9 +18,9 @@ const ChildrensBooksSection = () => {
       <WildSwansPage />
       <WinterAdventuresPage />
       <SigurdPage />
+      <SeaSecretsPage />
       {/* Позже добавим другие книги: */}
       {/* <StarTeamPage /> */}
-      {/* <SecretsSeaPage /> */}
     </section>
   );
 };
