@@ -5,6 +5,7 @@ import SectionTitle from "../ui/SectionTitle";
 import NutCrackerPage from "./NutCrackerPage";
 import WildSwansPage from "./WildSwansPage";
 import WinterAdventuresPage from "./WinterAdventuresPage";
+import SigurdPage from "./SiguardPage";
 
 import styles from "./ChildrensBooksSection.module.css";
 
@@ -15,9 +16,9 @@ const ChildrensBooksSection = () => {
       <NutCrackerPage />
       <WildSwansPage />
       <WinterAdventuresPage />
+      <SigurdPage />
       {/* Позже добавим другие книги: */}
       {/* <StarTeamPage /> */}
-      {/* <SigurdDragonPage /> */}
       {/* <SecretsSeaPage /> */}
     </section>
   );
