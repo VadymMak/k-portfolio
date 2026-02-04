@@ -5,13 +5,13 @@
   scroll-margin-top: 100px;
 }
 
-/* ========== GRID GALLERY ========== */
+/* ========== GRID GALLERY 3x2 ========== */
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 40px auto 0;
 }
 
@@ -21,34 +21,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
-}
-
-/* Row 1: 2 книжных разворота (широкие) */
-.gridItem:nth-child(1),
-.gridItem:nth-child(2) {
-  grid-column: span 5;
-}
-
-/* Row 2: 5 картинок процесса */
-.gridItem:nth-child(3),
-.gridItem:nth-child(4),
-.gridItem:nth-child(5),
-.gridItem:nth-child(6),
-.gridItem:nth-child(7) {
-  grid-column: span 2;
-}
-
-/* Row 3: 3 картинки */
-.gridItem:nth-child(8) {
-  grid-column: span 4;
-}
-
-.gridItem:nth-child(9) {
-  grid-column: span 3;
-}
-
-.gridItem:nth-child(10) {
-  grid-column: span 3;
+  aspect-ratio: 4 / 3;
 }
 
 .gridItem:hover {
@@ -150,34 +123,8 @@
   }
 
   .grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
-  }
-
-  /* Row 1: книжные развороты */
-  .gridItem:nth-child(1),
-  .gridItem:nth-child(2) {
-    grid-column: span 2;
-  }
-
-  /* Row 2-3: процесс */
-  .gridItem:nth-child(3),
-  .gridItem:nth-child(4),
-  .gridItem:nth-child(5),
-  .gridItem:nth-child(6) {
-    grid-column: span 1;
-  }
-
-  /* Row 4 */
-  .gridItem:nth-child(7),
-  .gridItem:nth-child(8) {
-    grid-column: span 2;
-  }
-
-  /* Row 5 */
-  .gridItem:nth-child(9),
-  .gridItem:nth-child(10) {
-    grid-column: span 2;
   }
 }
 
@@ -193,17 +140,13 @@
     gap: 15px;
   }
 
-  .gridItem:nth-child(1),
-  .gridItem:nth-child(2),
-  .gridItem:nth-child(3),
-  .gridItem:nth-child(4),
-  .gridItem:nth-child(5),
-  .gridItem:nth-child(6),
-  .gridItem:nth-child(7),
-  .gridItem:nth-child(8),
-  .gridItem:nth-child(9),
-  .gridItem:nth-child(10) {
-    grid-column: span 1;
+  .gridItem {
+    aspect-ratio: auto;
+  }
+
+  .image {
+    height: auto;
+    aspect-ratio: 4 / 3;
   }
 
   .navBtn {

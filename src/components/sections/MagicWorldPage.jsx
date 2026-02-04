@@ -3,22 +3,18 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 /* eslint-enable no-unused-vars */
 import SectionTitle from "../ui/SectionTitle";
-import styles from "./WinterAdventuresPage.module.css";
+import styles from "./MagicWorldPage.module.css";
 
-const winterImages = [
-  { thumb: "/gallery/books/winter-adventures/thumb/thumb_01.webp", full: "/gallery/books/winter-adventures/full/full_01.webp", alt: "Book spread - Santa" },
-  { thumb: "/gallery/books/winter-adventures/thumb/thumb_03.webp", full: "/gallery/books/winter-adventures/full/full_03.webp", alt: "Book spread - Girl at window" },
-  { thumb: "/gallery/books/winter-adventures/thumb/thumb_02.webp", full: "/gallery/books/winter-adventures/full/full_02.webp", alt: "Sketch - Children in village" },
-  { thumb: "/gallery/books/winter-adventures/thumb/thumb_04.webp", full: "/gallery/books/winter-adventures/full/full_04.webp", alt: "B&W - Children in village" },
-  { thumb: "/gallery/books/winter-adventures/thumb/thumb_05.webp", full: "/gallery/books/winter-adventures/full/full_05.webp", alt: "Color - Children in village" },
-  { thumb: "/gallery/books/winter-adventures/thumb/thumb_06.webp", full: "/gallery/books/winter-adventures/full/full_06.webp", alt: "B&W - Girl at window" },
-  { thumb: "/gallery/books/winter-adventures/thumb/thumb_07.webp", full: "/gallery/books/winter-adventures/full/full_07.webp", alt: "Color - Girl at window" },
-  { thumb: "/gallery/books/winter-adventures/thumb/thumb_08.webp", full: "/gallery/books/winter-adventures/full/full_08.webp", alt: "Santa over village" },
-  { thumb: "/gallery/books/winter-adventures/thumb/thumb_09.webp", full: "/gallery/books/winter-adventures/full/full_09.webp", alt: "B&W - Girl" },
-  { thumb: "/gallery/books/winter-adventures/thumb/thumb_10.webp", full: "/gallery/books/winter-adventures/full/full_10.webp", alt: "Santa over village Titled" },
+const magicImages = [
+  { thumb: "/gallery/books/magic-world/thumb/thumb_01.webp", full: "/gallery/books/magic-world/full/full_01.webp", alt: "Magic World - Circus performers" },
+  { thumb: "/gallery/books/magic-world/thumb/thumb_02.webp", full: "/gallery/books/magic-world/full/full_02.webp", alt: "Magic Animals - Lion" },
+  { thumb: "/gallery/books/magic-world/thumb/thumb_03.webp", full: "/gallery/books/magic-world/full/full_03.webp", alt: "Spectators" },
+  { thumb: "/gallery/books/magic-world/thumb/thumb_04.webp", full: "/gallery/books/magic-world/full/full_04.webp", alt: "The Wonderful - Girl with glasses" },
+  { thumb: "/gallery/books/magic-world/thumb/thumb_05.webp", full: "/gallery/books/magic-world/full/full_05.webp", alt: "Circus tent with bird" },
+  { thumb: "/gallery/books/magic-world/thumb/thumb_06.webp", full: "/gallery/books/magic-world/full/full_06.webp", alt: "Acrobats performance" },
 ];
 
-const WinterAdventuresPage = () => {
+const MagicWorldPage = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -32,11 +28,11 @@ const WinterAdventuresPage = () => {
   };
 
   const goNext = () => {
-    setActiveIndex((prev) => (prev + 1) % winterImages.length);
+    setActiveIndex((prev) => (prev + 1) % magicImages.length);
   };
 
   const goPrev = () => {
-    setActiveIndex((prev) => (prev - 1 + winterImages.length) % winterImages.length);
+    setActiveIndex((prev) => (prev - 1 + magicImages.length) % magicImages.length);
   };
 
   const handleKeyDown = (e) => {
@@ -46,19 +42,19 @@ const WinterAdventuresPage = () => {
   };
 
   return (
-    <section id="winter-adventures" className={styles.section}>
+    <section id="magic-world" className={styles.section}>
       {/* Title */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <SectionTitle>Winter Adventures</SectionTitle>
+        <SectionTitle>Magic World</SectionTitle>
       </motion.div>
 
-      {/* Grid Gallery */}
+      {/* Grid Gallery 3x2 */}
       <div className={styles.grid}>
-        {winterImages.map((image, index) => (
+        {magicImages.map((image, index) => (
           <motion.div
             key={index}
             className={styles.gridItem}
@@ -107,8 +103,8 @@ const WinterAdventuresPage = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={winterImages[activeIndex].full}
-              alt={winterImages[activeIndex].alt}
+              src={magicImages[activeIndex].full}
+              alt={magicImages[activeIndex].alt}
               className={styles.lightboxImage}
             />
           </div>
@@ -128,4 +124,4 @@ const WinterAdventuresPage = () => {
   );
 };
 
-export default WinterAdventuresPage;
+export default MagicWorldPage;

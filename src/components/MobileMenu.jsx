@@ -24,7 +24,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
     { id: "nutcracker", title: translate("books.nutcracker") },
     { id: "wild-swans", title: translate("books.wildSwans") },
     { id: "winter-adventures", title: translate("books.winterAdventures") },
-    { id: "star-team", title: translate("books.starTeam") },
+    { id: "magic-world", title: translate("books.magicWorld") },
     { id: "sigurd", title: translate("books.sigurd") },
     { id: "secrets-sea", title: translate("books.seaSecrets") },
   ];
