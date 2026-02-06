@@ -2,6 +2,7 @@ import { useState } from "react";
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 /* eslint-enable no-unused-vars */
+import { useTranslation } from "../../hooks/useTranslation";
 import SectionTitle from "../ui/SectionTitle";
 import styles from "./BrandingSection.module.css";
 
@@ -18,6 +19,7 @@ const brandingImages = [
 ];
 
 const BrandingSection = () => {
+  const { translate } = useTranslation();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -55,7 +57,7 @@ const BrandingSection = () => {
           whileHover={{ scale: 1.02 }}
           viewport={{ once: true }}
         >
-          <SectionTitle>Print and Digital Branding</SectionTitle>
+          <SectionTitle>{translate("branding.title")}</SectionTitle>
         </motion.div>
 
         <motion.div
@@ -66,23 +68,13 @@ const BrandingSection = () => {
           transition={{ delay: 0.2 }}
         >
           <p className={styles.descriptionText}>
-            Print and digital branding together create a unified visual presence
-            for a brand across both physical and online spaces. My approach
-            focuses on clarity, emotional resonance, and a cohesive aesthetic
-            that strengthens recognition and trust.
+            {translate("branding.text1")}
           </p>
           <p className={styles.descriptionText}>
-            In print, I design materials that feel tangible and memorable —
-            business cards, brochures, catalogs, packaging elements, posters,
-            and branded merchandise. Each piece is crafted with attention to
-            composition, typography, and color, ensuring that the brand's
-            personality is expressed with warmth and precision.
+            {translate("branding.text2")}
           </p>
           <p className={styles.descriptionText}>
-            In the digital space, I develop visual systems for websites, social
-            media, presentations, and online campaigns. This includes graphics,
-            templates, icons, and layouts that adapt seamlessly across platforms
-            while maintaining a consistent identity.
+            {translate("branding.text3")}
           </p>
         </motion.div>
       </div>

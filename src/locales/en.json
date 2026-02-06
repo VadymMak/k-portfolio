@@ -30,21 +30,30 @@
     "text2": "I approach each illustration with care and intention. I think about how a child will feel when they see the page, how the colors will guide their curiosity, and how the composition will help them understand the world a little better. My goal is to create images that are not only beautiful, but meaningful — illustrations that comfort, inspire, and invite the viewer to explore.",
     "text3": "Every piece I make carries a part of my own experience: my love for nature, my fascination with quiet moments, and my belief that visual storytelling can nurture kindness, imagination, and hope."
   },
+   "labelDesign": {
+      "title": "Label Design",
+      "text1": "Label design is the art of creating a visual identity for a product through its packaging. It combines aesthetics, clarity, and brand storytelling to make a product instantly recognizable and emotionally appealing. A well-designed label not only informs — it invites, inspires, and builds trust.",
+      "text2": "My approach to label design focuses on thoughtful composition, harmonious color palettes, and clear typography. I create labels that reflect the character of the product and the values of the brand, whether it's a handcrafted item, a natural cosmetic, or a premium food product.",
+      "text3": "A strong label communicates at a glance — it captures attention, conveys quality, and helps the product stand out on the shelf. I design labels that feel alive, sincere, and visually memorable, blending artistic intuition with practical functionality."
+    },
+    "logos": {
+      "title": "Logos",
+      "text1": "A logo is the visual heartbeat of a brand — a distilled symbol of its character, values, and voice. It's the first impression, the signature, and the element that stays in memory long after the product or message is gone. Thoughtful logo design combines clarity, emotion, and precision, creating a mark that feels both timeless and alive.",
+      "text2": "In my work, I focus on logos that breathe with simplicity and meaning. I explore the rhythm of shapes, the balance of negative space, and the harmony of color to craft identities that resonate. Whether it's a monogram, an emblem, or a minimalist symbol, each design is built to communicate the essence of the brand with honesty and elegance.",
+      "text3": "A strong logo doesn't shout — it speaks clearly. It builds trust, enhances recognition, and becomes the foundation for a cohesive visual identity. I create logos that reflect the story behind the brand, support its growth, and feel emotionally true to the people who stand behind it."
+    },
+    "branding": {
+      "title": "Print and Digital Branding",
+      "text1": "Print and digital branding together create a unified visual presence for a brand across both physical and online spaces. My approach focuses on clarity, emotional resonance, and a cohesive aesthetic that strengthens recognition and trust.",
+      "text2": "In print, I design materials that feel tangible and memorable — business cards, brochures, catalogs, packaging elements, posters, and branded merchandise. Each piece is crafted with attention to composition, typography, and color, ensuring that the brand's personality is expressed with warmth and precision.",
+      "text3": "In the digital space, I develop visual systems for websites, social media, presentations, and online campaigns. This includes graphics, templates, icons, and layouts that adapt seamlessly across platforms while maintaining a consistent identity."
+    },
   "sections": {
     "home": {
       "title": "Professional Illustrator / Graphic Designer"
     },
     "about": {
       "title": "About Me"
-    },
-    "labelDesign": {
-      "title": "Label Design"
-    },
-    "logos": {
-      "title": "Logos"
-    },
-    "branding": {
-      "title": "Print and Digital Branding"
     },
     "contact": {
       "title": "Contact Me"

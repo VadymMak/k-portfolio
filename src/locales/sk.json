@@ -30,21 +30,30 @@
     "text2": "Ku každej ilustrácii pristupujem s láskou a zámerom. Premýšľam o tom, ako sa dieťa bude cítiť, keď uvidí stránku, ako farby povedú jeho zvedavosť a ako kompozícia pomôže lepšie pochopiť svet. Mojím cieľom je vytvárať obrazy, ktoré sú nielen krásne, ale aj zmysluplné — ilustrácie, ktoré utešujú, inšpirujú a pozývajú diváka objavovať.",
     "text3": "Každé dielo, ktoré vytvorím, nesie časť mojej vlastnej skúsenosti: moju lásku k prírode, fascináciu tichými chvíľami a vieru, že vizuálne rozprávanie môže pestovať láskavosť, fantáziu a nádej."
   },
+  "labelDesign": {
+      "title": "Dizajn etikiet",
+      "text1": "Dizajn etikiet je umenie vytvárania vizuálnej identity produktu prostredníctvom jeho obalu. Spája estetiku, jasnosť a príbeh značky, aby bol produkt okamžite rozpoznateľný a emocionálne príťažlivý. Dobre navrhnutá etiketa nielen informuje — pozýva, inšpiruje a buduje dôveru.",
+      "text2": "Môj prístup k dizajnu etikiet sa zameriava na premyslenú kompozíciu, harmonické farebné palety a jasnú typografiu. Vytváram etikety, ktoré odrážajú charakter produktu a hodnoty značky, či už ide o ručne vyrobený predmet, prírodnú kozmetiku alebo prémiový potravinový produkt.",
+      "text3": "Silná etiketa komunikuje na prvý pohľad — upúta pozornosť, vyjadruje kvalitu a pomáha produktu vyniknúť na poličke. Navrhujem etikety, ktoré pôsobia živo, úprimne a vizuálne nezabudnuteľne, spájajúc umeleckú intuíciu s praktickou funkčnosťou."
+    },
+    "logos": {
+      "title": "Logá",
+      "text1": "Logo je vizuálnym srdcom značky — destilovaným symbolom jej charakteru, hodnôt a hlasu. Je to prvý dojem, podpis a prvok, ktorý zostáva v pamäti dlho po tom, čo produkt alebo správa zmiznú. Premyslený dizajn loga spája jasnosť, emócie a precíznosť, vytvárajúc značku, ktorá pôsobí nadčasovo aj živo.",
+      "text2": "Vo svojej práci sa zameriavam na logá, ktoré dýchajú jednoduchosťou a významom. Skúmam rytmus tvarov, rovnováhu negatívneho priestoru a harmóniu farieb, aby som vytvorila identity, ktoré rezonujú. Či už ide o monogram, emblém alebo minimalistický symbol, každý dizajn je vytvorený tak, aby komunikoval podstatu značky s úprimnosťou a eleganciou.",
+      "text3": "Silné logo nekričí — hovorí jasne. Buduje dôveru, posilňuje rozpoznateľnosť a stáva sa základom pre súdržnú vizuálnu identitu. Vytváram logá, ktoré odrážajú príbeh za značkou, podporujú jej rast a sú emocionálne pravdivé pre ľudí, ktorí za ňou stoja."
+    },
+    "branding": {
+      "title": "Tlačový a digitálny branding",
+      "text1": "Tlačový a digitálny branding spoločne vytvárajú jednotnú vizuálnu prítomnosť značky vo fyzickom aj online priestore. Môj prístup sa zameriava na jasnosť, emocionálnu rezonanciu a súdržnú estetiku, ktorá posilňuje rozpoznateľnosť a dôveru.",
+      "text2": "V tlači navrhujem materiály, ktoré pôsobia hmatateľne a nezabudnuteľne — vizitky, brožúry, katalógy, obalové prvky, plagáty a značkový tovar. Každý kus je vytvorený s dôrazom na kompozíciu, typografiu a farbu, aby osobnosť značky bola vyjadrená s vrelosťou a precíznosťou.",
+      "text3": "V digitálnom priestore vyvíjam vizuálne systémy pre webové stránky, sociálne médiá, prezentácie a online kampane. To zahŕňa grafiku, šablóny, ikony a rozloženia, ktoré sa plynulo prispôsobujú rôznym platformám pri zachovaní konzistentnej identity."
+    },
   "sections": {
     "home": {
       "title": "Profesionálna ilustrátorka / Grafická dizajnérka"
     },
     "about": {
       "title": "O mne"
-    },
-    "labelDesign": {
-      "title": "Dizajn etikiet"
-    },
-    "logos": {
-      "title": "Logá"
-    },
-    "branding": {
-      "title": "Tlačový a digitálny branding"
     },
     "contact": {
       "title": "Kontaktujte ma"

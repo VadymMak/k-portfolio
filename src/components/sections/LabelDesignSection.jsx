@@ -2,20 +2,22 @@ import { useState } from "react";
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 /* eslint-enable no-unused-vars */
+import { useTranslation } from "../../hooks/useTranslation";
 import SectionTitle from "../ui/SectionTitle";
 import styles from "./LabelDesignSection.module.css";
 
 const labelImages = [
-  { src: "/gallery/labels/label_01.webp", alt: "Sunflower oil label" },       // Row 1
-  { src: "/gallery/labels/label_09.webp", alt: "Star sunflower oil label" },  // Row 1
-  { src: "/gallery/labels/label_05.webp", alt: "Adriano restaurant flyer" },  // Row 2
-  { src: "/gallery/labels/label_04.webp", alt: "Adriano business cards" },    // Row 2
-  { src: "/gallery/labels/label_06.webp", alt: "Adriano seafood poster" },    // Row 2
-  { src: "/gallery/labels/label_02.webp", alt: "Adriano menu design" },       // Row 3
-  { src: "/gallery/labels/label_07.webp", alt: "Adriano menu page" },         // Row 3
+  { src: "/gallery/labels/label_01.webp", alt: "Sunflower oil label" },
+  { src: "/gallery/labels/label_09.webp", alt: "Star sunflower oil label" },
+  { src: "/gallery/labels/label_05.webp", alt: "Adriano restaurant flyer" },
+  { src: "/gallery/labels/label_04.webp", alt: "Adriano business cards" },
+  { src: "/gallery/labels/label_06.webp", alt: "Adriano seafood poster" },
+  { src: "/gallery/labels/label_02.webp", alt: "Adriano menu design" },
+  { src: "/gallery/labels/label_07.webp", alt: "Adriano menu page" },
 ];
 
 const LabelDesignSection = () => {
+  const { translate } = useTranslation();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -52,7 +54,7 @@ const LabelDesignSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <SectionTitle>Label Design</SectionTitle>
+          <SectionTitle>{translate("labelDesign.title")}</SectionTitle>
         </motion.div>
 
         <motion.div
@@ -63,24 +65,13 @@ const LabelDesignSection = () => {
           transition={{ delay: 0.2 }}
         >
           <p className={styles.descriptionText}>
-            Label design is the art of creating a visual identity for a product
-            through its packaging. It combines aesthetics, clarity, and brand
-            storytelling to make a product instantly recognizable and
-            emotionally appealing. A well-designed label not only informs — it
-            invites, inspires, and builds trust.
+            {translate("labelDesign.text1")}
           </p>
           <p className={styles.descriptionText}>
-            My approach to label design focuses on thoughtful composition,
-            harmonious color palettes, and clear typography. I create labels
-            that reflect the character of the product and the values of the
-            brand, whether it's a handcrafted item, a natural cosmetic, or a
-            premium food product.
+            {translate("labelDesign.text2")}
           </p>
           <p className={styles.descriptionText}>
-            A strong label communicates at a glance — it captures attention,
-            conveys quality, and helps the product stand out on the shelf. I
-            design labels that feel alive, sincere, and visually memorable,
-            blending artistic intuition with practical functionality.
+            {translate("labelDesign.text3")}
           </p>
         </motion.div>
       </div>

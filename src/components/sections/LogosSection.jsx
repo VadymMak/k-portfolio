@@ -2,6 +2,7 @@ import { useState } from "react";
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 /* eslint-enable no-unused-vars */
+import { useTranslation } from "../../hooks/useTranslation";
 import SectionTitle from "../ui/SectionTitle";
 import styles from "./LogosSection.module.css";
 
@@ -14,6 +15,7 @@ const logoImages = [
 ];
 
 const LogosSection = () => {
+  const { translate } = useTranslation();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -50,7 +52,7 @@ const LogosSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <SectionTitle>Logos</SectionTitle>
+          <SectionTitle>{translate("logos.title")}</SectionTitle>
         </motion.div>
 
         <motion.div
@@ -61,27 +63,13 @@ const LogosSection = () => {
           transition={{ delay: 0.2 }}
         >
           <p className={styles.descriptionText}>
-            A logo is the visual heartbeat of a brand — a distilled symbol of
-            its character, values, and voice. It's the first impression, the
-            signature, and the element that stays in memory long after the
-            product or message is gone. Thoughtful logo design combines clarity,
-            emotion, and precision, creating a mark that feels both timeless and
-            alive.
+            {translate("logos.text1")}
           </p>
           <p className={styles.descriptionText}>
-            In my work, I focus on logos that breathe with simplicity and
-            meaning. I explore the rhythm of shapes, the balance of negative
-            space, and the harmony of color to craft identities that resonate.
-            Whether it's a monogram, an emblem, or a minimalist symbol, each
-            design is built to communicate the essence of the brand with honesty
-            and elegance.
+            {translate("logos.text2")}
           </p>
           <p className={styles.descriptionText}>
-            A strong logo doesn't shout — it speaks clearly. It builds trust,
-            enhances recognition, and becomes the foundation for a cohesive
-            visual identity. I create logos that reflect the story behind the
-            brand, support its growth, and feel emotionally true to the people
-            who stand behind it.
+            {translate("logos.text3")}
           </p>
         </motion.div>
       </div>
