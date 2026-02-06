@@ -1,1 +1,8 @@
+# Netlify Redirects
+# https://docs.netlify.com/routing/redirects/
+
+# Redirect www to non-www
+https://www.akillustrator.com/* https://akillustrator.com/:splat 301!
+
+# SPA fallback - all routes to index.html
 /*    /index.html   200
