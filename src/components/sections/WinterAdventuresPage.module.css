@@ -41,6 +41,7 @@
 /* Row 3: 3 картинки */
 .gridItem:nth-child(8) {
   grid-column: span 4;
+  aspect-ratio: 3 / 4;
 }
 
 .gridItem:nth-child(9) {

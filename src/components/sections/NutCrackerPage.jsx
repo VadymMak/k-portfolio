@@ -7,11 +7,12 @@ import SectionTitle from "../ui/SectionTitle";
 import styles from "./NutCrackerPage.module.css";
 
 const nutcrackerImages = [
-  { thumb: "/gallery/books/nutcracker/nc-5.webp", full:"/gallery/books/nutcracker/nc-5.webp", alt: "Character sketches" },
-  { thumb: "/gallery/books/nutcracker/thumb_01.webp", full: "/gallery/books/nutcracker/full_01.webp", alt: "Book spread 1" },
-  { thumb: "/gallery/books/nutcracker/nc-2.webp", full:"/gallery/books/nutcracker/nc-2.webp", alt: "Book covers" },
-  { thumb: "/gallery/books/nutcracker/thumb_02.webp", full: "/gallery/books/nutcracker/full_02.webp", alt: "Book spread 2" },
-  { thumb: "/gallery/books/nutcracker/nc-4.webp", full:"/gallery/books/nutcracker/nc-4.webp", alt: "Full cover" },
+  { thumb: "/gallery/books/nutcracker/thumb_01.webp", full: "/gallery/books/nutcracker/full_01.webp", alt: "Nutcracker - Book spread 1" },
+  { thumb: "/gallery/books/nutcracker/thumb_02.webp", full: "/gallery/books/nutcracker/full_02.webp", alt: "Nutcracker - Book spread 2" },
+  { thumb: "/gallery/books/nutcracker/thumb_03.webp", full: "/gallery/books/nutcracker/full_03.webp", alt: "Nutcracker - Book spread 3" },
+  { thumb: "/gallery/books/nutcracker/thumb_04.webp", full: "/gallery/books/nutcracker/full_04.webp", alt: "Nutcracker - Characters" },
+  { thumb: "/gallery/books/nutcracker/thumb_05.webp", full: "/gallery/books/nutcracker/full_05.webp", alt: "Nutcracker - Sketches" },
+  { thumb: "/gallery/books/nutcracker/thumb_06.webp", full: "/gallery/books/nutcracker/full_06.webp", alt: "Nutcracker - Cover" },
 ];
 
 const NutCrackerPage = () => {
@@ -56,12 +57,12 @@ const NutCrackerPage = () => {
         {nutcrackerImages.map((image, index) => (
           <motion.div
             key={index}
-            className={`${styles.gridItem} ${styles[`item${index + 1}`]}`}
+            className={styles.gridItem}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             whileHover={{ scale: 1.02 }}
             viewport={{ once: true }}
-            transition={{ delay: index * 0.1 }}
+            transition={{ delay: index * 0.08 }}
             onClick={() => openLightbox(index)}
           >
             <img
