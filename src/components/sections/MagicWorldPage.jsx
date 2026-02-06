@@ -2,6 +2,7 @@ import { useState } from "react";
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 /* eslint-enable no-unused-vars */
+import { useTranslation } from "../../hooks/useTranslation";
 import SectionTitle from "../ui/SectionTitle";
 import styles from "./MagicWorldPage.module.css";
 
@@ -15,6 +16,7 @@ const magicImages = [
 ];
 
 const MagicWorldPage = () => {
+  const { translate } = useTranslation();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -49,7 +51,7 @@ const MagicWorldPage = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <SectionTitle>Magic World</SectionTitle>
+         <SectionTitle>{translate("books.magicWorld")}</SectionTitle>
       </motion.div>
 
       {/* Grid Gallery 3x2 */}

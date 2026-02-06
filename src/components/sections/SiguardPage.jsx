@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 /* eslint-enable no-unused-vars */
+import { useTranslation } from "../../hooks/useTranslation";
 import SectionTitle from "../ui/SectionTitle";
 import styles from "./SiguardPage.module.css";
 
@@ -17,6 +18,7 @@ const sigurdImages = [
 ];
 
 const SigurdPage = () => {
+  const { translate } = useTranslation();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -62,7 +64,7 @@ const SigurdPage = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <SectionTitle>Sigurd Fights the Dragon</SectionTitle>
+        <SectionTitle>{translate("books.sigurd")}</SectionTitle>
       </motion.div>
 
       {/* Grid Gallery */}

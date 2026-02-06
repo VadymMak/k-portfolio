@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 /* eslint-enable no-unused-vars */
+import { useTranslation } from "../../hooks/useTranslation";
 import SectionTitle from "../ui/SectionTitle";
 import styles from "./SeaSecretsPage.module.css";
 
@@ -18,6 +19,7 @@ const seaImages = [
 ];
 
 const SeaSecretsPage = () => {
+  const { translate } = useTranslation();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -63,7 +65,7 @@ const SeaSecretsPage = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <SectionTitle>Secrets of the Sea for Little Explorers</SectionTitle>
+        <SectionTitle>{translate("books.seaSecrets")}</SectionTitle>
       </motion.div>
 
       {/* Grid Gallery 3x3 */}
