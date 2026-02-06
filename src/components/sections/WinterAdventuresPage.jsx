@@ -2,6 +2,7 @@ import { useState } from "react";
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 /* eslint-enable no-unused-vars */
+import { useTranslation } from "../../hooks/useTranslation";
 import SectionTitle from "../ui/SectionTitle";
 import styles from "./WinterAdventuresPage.module.css";
 
@@ -19,6 +20,7 @@ const winterImages = [
 ];
 
 const WinterAdventuresPage = () => {
+  const { translate } = useTranslation();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -53,7 +55,7 @@ const WinterAdventuresPage = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <SectionTitle>Winter Adventures</SectionTitle>
+        <SectionTitle>{translate("books.winterAdventures")}</SectionTitle>
       </motion.div>
 
       {/* Grid Gallery */}

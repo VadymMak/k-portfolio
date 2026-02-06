@@ -2,6 +2,8 @@ import { useState } from "react";
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 /* eslint-enable no-unused-vars */
+import { useTranslation } from "../../hooks/useTranslation";
+import SectionTitle from "../ui/SectionTitle";
 import styles from "./NutCrackerPage.module.css";
 
 const nutcrackerImages = [
@@ -13,6 +15,7 @@ const nutcrackerImages = [
 ];
 
 const NutCrackerPage = () => {
+  const { translate } = useTranslation();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -41,14 +44,13 @@ const NutCrackerPage = () => {
 
   return (
     <section id="nutcracker" className={styles.section}>
-      <motion.h2
-        className={styles.title}
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        The Nutcracker and the Mouse King
-      </motion.h2>
+        <SectionTitle>{translate("books.nutcracker")}</SectionTitle>
+      </motion.div>
 
       <div className={styles.grid}>
         {nutcrackerImages.map((image, index) => (
