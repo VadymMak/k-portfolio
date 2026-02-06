@@ -55,8 +55,9 @@
 
 /* Row 2: 2 широкие (span 3 columns each) */
 .gridItem:nth-child(4),
-.gridItem:nth-child(5) {
-  grid-column: span 3;
+.gridItem:nth-child(5),
+.gridItem:nth-child(6) {
+  grid-column: span 2;
 }
 
 .gridItem:hover {

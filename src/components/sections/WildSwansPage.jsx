@@ -10,6 +10,7 @@ const swansImages = [
   { thumb: "/gallery/books/swans/thumb/thumb_01.webp", full: "/gallery/books/swans/full/full_01.webp", alt: "Book spread 1" },
   { thumb: "/gallery/books/swans/thumb/thumb_02.webp", full: "/gallery/books/swans/full/full_02.webp", alt: "Book spread 2" },
   { thumb: "/gallery/books/swans/thumb/thumb_04.webp", full: "/gallery/books/swans/full/full_04.webp", alt: "Character and landscape" },
+  { thumb: "/gallery/books/swans/thumb/thumb_06.webp", full: "/gallery/books/swans/full/full_06.webp", alt: "Forest scene" },
   { thumb: "/gallery/books/swans/thumb/thumb_05.webp", full: "/gallery/books/swans/full/full_05.webp", alt: "Sketches and studies" },
 ];
 

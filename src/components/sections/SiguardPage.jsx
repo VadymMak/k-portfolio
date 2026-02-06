@@ -7,11 +7,13 @@ import styles from "./SiguardPage.module.css";
 
 const sigurdImages = [
   { thumb: "/gallery/books/sigurd/thumb/thumb_01.webp", full: "/gallery/books/sigurd/full/full_01.webp", alt: "Sigurd - Chapter 1", hasVideo: false },
+  { thumb: "/gallery/books/sigurd/thumb/thumb_06.webp", full: "/gallery/books/sigurd/full/full_06.webp", alt: "Sigurd - Sketches", hasVideo: false },
   { thumb: "/gallery/books/sigurd/thumb/thumb_02.webp", full: "/gallery/books/sigurd/full/full_02.webp", alt: "Sigurd - Chapter 2", hasVideo: true, videoSrc: "/gallery/books/sigurd/video/video_02" },
   { thumb: "/gallery/books/sigurd/thumb/thumb_03.webp", full: "/gallery/books/sigurd/full/full_03.webp", alt: "Sigurd - Chapter 3", hasVideo: false },
   { thumb: "/gallery/books/sigurd/thumb/thumb_04.webp", full: "/gallery/books/sigurd/full/full_04.webp", alt: "Sigurd - Chapter 4", hasVideo: false },
-  { thumb: "/gallery/books/sigurd/thumb/thumb_06.webp", full: "/gallery/books/sigurd/full/full_06.webp", alt: "Sigurd - Sketches", hasVideo: true, videoSrc: "/gallery/books/sigurd/video/video_06" },
   { thumb: "/gallery/books/sigurd/thumb/thumb_05.webp", full: "/gallery/books/sigurd/full/full_05.webp", alt: "Sigurd - Characters", hasVideo: false },
+  { thumb: "/gallery/books/sigurd/thumb/thumb_06.webp", full: "/gallery/books/sigurd/full/full_06.webp", alt: "Sigurd - Sketches", hasVideo: true, videoSrc: "/gallery/books/sigurd/video/video_06" },
+  { thumb: "/gallery/books/sigurd/thumb/thumb_02.webp", full: "/gallery/books/sigurd/full/full_02.webp", alt: "Sigurd - Dragon battle", hasVideo: false },
 ];
 
 const SigurdPage = () => {
@@ -207,7 +209,7 @@ const GridItem = ({ image, index, isMobile, onOpenLightbox }) => {
       whileInView={{ opacity: 1, y: 0 }}
       whileHover={{ scale: 1.02 }}
       viewport={{ once: true }}
-      transition={{ delay: index * 0.1 }}
+      transition={{ delay: index * 0.08 }}
       onClick={handleClick}
     >
       {image.hasVideo ? (
