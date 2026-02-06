@@ -1,6 +1,24 @@
+import { useTranslation } from "../../hooks/useTranslation";
 import styles from "./AboutSection.module.css";
 
 const AboutSection = () => {
+  const { translate } = useTranslation();
+
+  // Replace {name} placeholder with the actual name in bold
+  const renderIntro = () => {
+    const intro = translate("about.intro");
+    const name = translate("about.name");
+    const parts = intro.split("{name}");
+    
+    return (
+      <>
+        {parts[0]}
+        <strong className={styles.name}>{name}</strong>
+        {parts[1]}
+      </>
+    );
+  };
+
   return (
     <section id="about" className={styles.section}>
       <div className={styles.container}>
@@ -14,27 +32,16 @@ const AboutSection = () => {
           <div className={styles.textOverlay}>
             <div className={styles.textContent}>
               <p className={styles.paragraph}>
-                I'm <strong className={styles.name}>Anastasiia Kolisnyk</strong> — an illustrator, designer, and creative
-                entrepreneur based in Trenčín, Slovakia. I create artwork that
-                blends emotional clarity with thoughtful craftsmanship, bringing
-                together illustration, storytelling, multilingual adaptation, and
-                visual identity design.
+                {renderIntro()}
               </p>
               <p className={styles.paragraph}>
-                My work spans children's books, educational materials, packaging,
-                label design, logos, and print & digital branding. I focus on warm
-                color palettes, intuitive composition, and imagery that feels alive —
-                full of rhythm, sincerity, and gentle wonder.
+                {translate("about.work")}
               </p>
               <p className={styles.paragraph}>
-                Whether I'm illustrating marine animals for young readers,
-                designing a brand's visual language, or crafting packaging that
-                tells a story, my goal is always the same: to create meaningful,
-                heartfelt visuals that inspire curiosity and connect with people.
+                {translate("about.goal")}
               </p>
               <p className={styles.paragraph}>
-                Explore my portfolio to discover the projects, illustrations, and
-                creative worlds I build with care and imagination.
+                {translate("about.explore")}
               </p>
             </div>
           </div>

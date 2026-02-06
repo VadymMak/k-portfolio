@@ -16,6 +16,20 @@
     "sigurd": "Sigurd Fights the Dragon",
     "seaSecrets": "Secrets of the Sea for Little Explorers"
   },
+  "about": {
+    "name": "Anastasiia Kolisnyk",
+    "intro": "I'm {name} — an illustrator, designer, and creative entrepreneur based in Trenčín, Slovakia. I create artwork that blends emotional clarity with thoughtful craftsmanship, bringing together illustration, storytelling, multilingual adaptation, and visual identity design.",
+    "work": "My work spans children's books, educational materials, packaging, label design, logos, and print & digital branding. I focus on warm color palettes, intuitive composition, and imagery that feels alive — full of rhythm, sincerity, and gentle wonder.",
+    "goal": "Whether I'm illustrating marine animals for young readers, designing a brand's visual language, or crafting packaging that tells a story, my goal is always the same: to create meaningful, heartfelt visuals that inspire curiosity and connect with people.",
+    "explore": "Explore my portfolio to discover the projects, illustrations, and creative worlds I build with care and imagination."
+  },
+  "booksIntro": {
+    "title": "Children's Book Illustrations",
+    "subtitle": "What I Put Into My Illustrations?",
+    "text1": "I pour sincerity, emotion, and quiet storytelling into every illustration I create. My work is built on intuition — on the rhythm of lines, the warmth of color, and the small details that make an image feel alive. I strive to capture moments that breathe: gentle gestures, subtle expressions, and the atmosphere that surrounds a story.",
+    "text2": "I approach each illustration with care and intention. I think about how a child will feel when they see the page, how the colors will guide their curiosity, and how the composition will help them understand the world a little better. My goal is to create images that are not only beautiful, but meaningful — illustrations that comfort, inspire, and invite the viewer to explore.",
+    "text3": "Every piece I make carries a part of my own experience: my love for nature, my fascination with quiet moments, and my belief that visual storytelling can nurture kindness, imagination, and hope."
+  },
   "sections": {
     "home": {
       "title": "Professional Illustrator / Graphic Designer"
