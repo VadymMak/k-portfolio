@@ -186,7 +186,7 @@ const DesktopMenu = () => {
           </a>
 
           <a
-            href="https://wa.me/421951813809"
+            href="https://wa.me/qr/A3NYYPE55OODK1"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.contactLink}
@@ -197,7 +197,7 @@ const DesktopMenu = () => {
 
           <div className={styles.socialLinks}>
             <a
-              href="https://www.behance.net/anastasiiakol1"
+              href="https://www.behance.net/akolesnyk14bf8"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialLink}
@@ -206,7 +206,7 @@ const DesktopMenu = () => {
               Behance
             </a>
             <a
-              href="https://www.instagram.com/a.kolisnyk_art"
+              href="https://www.instagram.com/akolesnyk.sketch?igsh=eTgyYnNrZnVneDRy"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialLink}

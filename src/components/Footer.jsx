@@ -40,7 +40,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="https://wa.me/421951813809"
+            href="https://wa.me/qr/A3NYYPE55OODK1"
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: "#C9A86C", textDecoration: "none" }}
@@ -49,7 +49,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="https://www.behance.net/"
+            href="https://www.behance.net/akolesnyk14bf8"
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: "#C9A86C", textDecoration: "none" }}
@@ -58,7 +58,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="https://www.instagram.com/"
+            href="https://www.instagram.com/akolesnyk.sketch?igsh=eTgyYnNrZnVneDRy"
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: "#C9A86C", textDecoration: "none" }}
