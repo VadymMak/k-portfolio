@@ -24,20 +24,20 @@
   position: relative;
 }
 
-/* Row 1: images 1-2 (span 3 each) */
+/* Row 1: images 1-2-3 (span 2 each) */
 .gridItem:nth-child(1),
 .gridItem:nth-child(2),
 .gridItem:nth-child(3) {
   grid-column: span 2;
 }
 
-/* Row 2: images 3-4 (span 3 each) */
+/* Row 2: images 4-5 (span 3 each) */
 .gridItem:nth-child(4),
 .gridItem:nth-child(5) {
   grid-column: span 3;
 }
 
-/* Row 3: images 5-6-7 (span 2 each) */
+/* Row 3: images 6-7-8 (span 2 each) */
 .gridItem:nth-child(6),
 .gridItem:nth-child(7),
 .gridItem:nth-child(8) {
@@ -200,7 +200,7 @@
     gap: 15px;
   }
 
-  /* Row 1-2: 2 images per row */
+  /* Row 1-2: 2 images per row (4 items) */
   .gridItem:nth-child(1),
   .gridItem:nth-child(2),
   .gridItem:nth-child(3),
@@ -208,14 +208,16 @@
     grid-column: span 2;
   }
 
-  /* Row 3: 3 images - first 2 span 2, last spans full */
+  /* Row 3: 2 images */
   .gridItem:nth-child(5),
   .gridItem:nth-child(6) {
     grid-column: span 2;
   }
 
-  .gridItem:nth-child(7) {
-    grid-column: span 4;
+  /* Row 4: 2 images */
+  .gridItem:nth-child(7),
+  .gridItem:nth-child(8) {
+    grid-column: span 2;
   }
 
   .playBtn {
@@ -237,13 +239,15 @@
     gap: 15px;
   }
 
+  /* All 8 items - single column */
   .gridItem:nth-child(1),
   .gridItem:nth-child(2),
   .gridItem:nth-child(3),
   .gridItem:nth-child(4),
   .gridItem:nth-child(5),
   .gridItem:nth-child(6),
-  .gridItem:nth-child(7) {
+  .gridItem:nth-child(7),
+  .gridItem:nth-child(8) {
     grid-column: span 1;
   }
 
