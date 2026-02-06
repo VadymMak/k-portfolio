@@ -3,7 +3,7 @@
 .menuButton {
   display: none;
   position: fixed;
-  top: 35px; /* Подстроено под header */
+  top: 35px;
   right: 20px;
   z-index: 1000;
   width: 48px;
@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transform: translateY(-50%); /* Центрирует по вертикали */
+  transform: translateY(-50%);
 }
 
 .hamburger {
@@ -49,10 +49,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 100px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-top: clamp(80px, 12vh, 100px);
+  padding-left: clamp(20px, 5vw, 32px);
+  padding-right: clamp(20px, 5vw, 32px);
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 /* ========== LANGUAGE SWITCHER ========== */
@@ -60,19 +61,19 @@
 .languageSection {
   width: 100%;
   max-width: 320px;
-  margin-bottom: 20px;
-  padding-bottom: 15px;
+  margin-bottom: clamp(15px, 3vh, 20px);
+  padding-bottom: clamp(10px, 2vh, 15px);
   border-bottom: 1px solid rgba(201, 168, 108, 0.3);
 }
 
 .languageButton {
   width: 100%;
-  padding: 14px 0;
+  padding: clamp(10px, 2vh, 14px) 0;
   background: none;
   border: none;
   color: #c9a86c;
   font-family: "Cormorant Garamond", serif;
-  font-size: 18px;
+  font-size: clamp(16px, 4vw, 18px);
   text-align: center;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -100,12 +101,12 @@
 
 .languageOption {
   width: 100%;
-  padding: 12px 0;
+  padding: clamp(10px, 2vh, 12px) 0;
   background: none;
   border: none;
   color: #c9a86c;
   font-family: "Cormorant Garamond", serif;
-  font-size: 16px;
+  font-size: clamp(14px, 3.5vw, 16px);
   text-align: center;
   cursor: pointer;
   transition:
@@ -134,7 +135,7 @@
 
 .menuItemButton {
   width: 100%;
-  height: 60px;
+  height: clamp(50px, 8vh, 60px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,10 +145,13 @@
   border-bottom: 1px solid rgba(201, 168, 108, 0.4);
   color: #c9a86c;
   font-family: "Cormorant Garamond", serif;
-  font-size: 20px;
+  font-size: clamp(16px, 4.5vw, 20px);
   letter-spacing: 0.05em;
   cursor: pointer;
   transition: color 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menuItemButton:hover {
@@ -170,7 +174,7 @@
 
 .submenuButton {
   width: 100%;
-  height: 48px;
+  height: clamp(40px, 6vh, 48px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -180,10 +184,13 @@
   border-bottom: 1px solid rgba(201, 168, 108, 0.2);
   color: rgba(201, 168, 108, 0.8);
   font-family: "Cormorant Garamond", serif;
-  font-size: 15px;
+  font-size: clamp(13px, 3.5vw, 15px);
   letter-spacing: 0.05em;
   cursor: pointer;
   transition: color 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .submenuButton:hover {
@@ -195,18 +202,18 @@
 .contactBlock {
   width: 100%;
   max-width: 320px;
-  margin-top: 30px;
-  padding-top: 20px;
+  margin-top: clamp(20px, 4vh, 30px);
+  padding-top: clamp(15px, 3vh, 20px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: clamp(8px, 2vh, 12px);
 }
 
 .contactLink {
   color: #c9a86c;
   font-family: "Cormorant Garamond", serif;
-  font-size: 16px;
+  font-size: clamp(14px, 3.5vw, 16px);
   text-decoration: none;
   transition: color 0.3s ease;
   text-align: center;
@@ -223,14 +230,14 @@
 
 .socialLinks {
   display: flex;
-  gap: 20px;
-  margin-top: 10px;
+  gap: clamp(15px, 4vw, 20px);
+  margin-top: clamp(8px, 2vh, 10px);
 }
 
 .socialLink {
   color: #c9a86c;
   font-family: "Cormorant Garamond", serif;
-  font-size: 16px;
+  font-size: clamp(14px, 3.5vw, 16px);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -248,5 +255,23 @@
 
   .menuPanel.open {
     display: flex;
+  }
+}
+
+/* ========== SMALL PHONES (max-width: 360px) ========== */
+
+@media (max-width: 360px) {
+  .menuPanel {
+    padding-top: 70px;
+  }
+
+  .menuItemButton {
+    font-size: 15px;
+    height: 48px;
+  }
+
+  .submenuButton {
+    font-size: 12px;
+    height: 38px;
   }
 }
