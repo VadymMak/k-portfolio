@@ -159,6 +159,20 @@
     flex-direction: column;
     gap: 30px;
     margin-bottom: 40px;
+    align-items: center;
+  }
+
+  .titleWrapper {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .description {
+    max-width: 100%;
+  }
+
+  .descriptionText {
+    text-align: left;
   }
 
   .grid {
@@ -179,8 +193,13 @@
     margin-bottom: 30px;
   }
 
+  .titleWrapper {
+    text-align: center;
+  }
+
   .descriptionText {
     font-size: 15px;
+    line-height: 1.7;
   }
 
   .grid {

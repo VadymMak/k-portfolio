@@ -1,40 +1,19 @@
+import styles from './Footer.module.css';
+
 const Footer = () => {
   return (
-    <footer
-      style={{
-        backgroundColor: "#2D4A43",
-        padding: "16px 30px",
-        marginTop: "0",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          flexWrap: "wrap",
-          gap: "16px",
-          fontFamily: "'Cormorant Garamond', serif",
-          fontSize: "20px",
-        }}
-      >
-        {/* Left - Copyright */}
-        <p style={{ color: "#C9A86C", opacity: 0.7, margin: 0 }}>
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        {/* Copyright */}
+        <p className={styles.copyright}>
           © 2025 Anastasiia Kolisnyk
         </p>
 
-        {/* Center - Contact Links */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "24px",
-            flexWrap: "wrap",
-          }}
-        >
+        {/* Contact Links */}
+        <div className={styles.links}>
           <a
             href="mailto:akolesnykl989@gmail.com"
-            style={{ color: "#C9A86C", textDecoration: "none" }}
+            className={styles.link}
           >
             akolesnykl989@gmail.com
           </a>
@@ -43,7 +22,7 @@ const Footer = () => {
             href="https://wa.me/qr/A3NYYPE55OODK1"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: "#C9A86C", textDecoration: "none" }}
+            className={styles.link}
           >
             WhatsApp
           </a>
@@ -52,7 +31,7 @@ const Footer = () => {
             href="https://www.behance.net/akolesnyk14bf8"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: "#C9A86C", textDecoration: "none" }}
+            className={styles.link}
           >
             Behance
           </a>
@@ -61,28 +40,14 @@ const Footer = () => {
             href="https://www.instagram.com/akolesnyk.sketch?igsh=eTgyYnNrZnVneDRy"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: "#C9A86C", textDecoration: "none" }}
+            className={styles.link}
           >
             Instagram
           </a>
         </div>
 
-        {/* Right - Logo */}
-        <div
-          style={{
-            width: "36px",
-            height: "36px",
-            borderRadius: "50%",
-            backgroundColor: "#C9A86C",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontFamily: "'Cormorant Garamond', serif",
-            fontSize: "14px",
-            color: "#2D4A43",
-            fontWeight: 600,
-          }}
-        >
+        {/* Logo */}
+        <div className={styles.logo}>
           AK
         </div>
       </div>
