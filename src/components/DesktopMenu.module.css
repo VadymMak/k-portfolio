@@ -10,16 +10,35 @@
   z-index: 100;
   position: sticky;
   top: 0;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .navInner {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 0 clamp(16px, 2vw, 32px);
+  justify-content: flex-start; /* Changed from center - content starts from top */
+  padding: clamp(20px, 3vh, 40px) clamp(16px, 2vw, 32px);
+  overflow-y: auto; /* Scrollable when content doesn't fit */
   overflow-x: hidden;
+}
+
+/* Custom scrollbar for menu */
+.navInner::-webkit-scrollbar {
+  width: 4px;
+}
+
+.navInner::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.navInner::-webkit-scrollbar-thumb {
+  background: rgba(201, 168, 108, 0.3);
+  border-radius: 2px;
+}
+
+.navInner::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 168, 108, 0.5);
 }
 
 .menuList {
@@ -117,6 +136,10 @@
   .submenuButton {
     font-size: clamp(14px, 0.9vw, 18px);
   }
+
+  .navInner {
+    padding: clamp(30px, 4vh, 60px) clamp(24px, 2vw, 40px);
+  }
 }
 
 /* ========== EXTRA LARGE SCREENS (min-width: 2560px) - 4K ========== */
@@ -127,7 +150,7 @@
   }
 
   .navInner {
-    padding: 0 clamp(24px, 1.5vw, 40px);
+    padding: clamp(40px, 5vh, 80px) clamp(24px, 1.5vw, 40px);
   }
 
   .menuButton {
@@ -138,6 +161,87 @@
   .submenuButton {
     font-size: clamp(16px, 0.7vw, 20px);
     padding: clamp(14px, 0.8vw, 20px) 0;
+  }
+}
+
+/* ========== SMALL HEIGHT SCREENS ========== */
+
+@media (max-height: 700px) {
+  .navInner {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .menuButton {
+    padding: 12px 0;
+  }
+
+  .submenuButton {
+    padding: 8px 0;
+  }
+
+  .languageButton {
+    padding: 8px 0;
+  }
+
+  .languageOption {
+    padding: 6px 0;
+  }
+
+  .contactBlock {
+    margin-top: 15px;
+    padding-top: 10px;
+  }
+
+  .languageSection {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+  }
+}
+
+@media (max-height: 550px) {
+  .navInner {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .menuButton {
+    padding: 8px 0;
+    font-size: 13px;
+  }
+
+  .submenuButton {
+    padding: 6px 0;
+    font-size: 12px;
+  }
+
+  .languageButton {
+    padding: 6px 0;
+    font-size: 12px;
+  }
+
+  .languageOption {
+    padding: 5px 0;
+    font-size: 11px;
+  }
+
+  .contactBlock {
+    margin-top: 10px;
+    padding-top: 8px;
+    gap: 6px;
+  }
+
+  .contactLink {
+    font-size: 11px;
+  }
+
+  .socialLink {
+    font-size: 11px;
+  }
+
+  .languageSection {
+    margin-bottom: 8px;
+    padding-bottom: 6px;
   }
 }
 
@@ -198,6 +302,7 @@
   margin-bottom: clamp(15px, 1.5vw, 30px);
   padding-bottom: clamp(10px, 1vw, 20px);
   border-bottom: 1px solid rgba(201, 168, 108, 0.3);
+  flex-shrink: 0; /* Prevent language section from shrinking */
 }
 
 .languageButton {
