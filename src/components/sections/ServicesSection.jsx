@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "../../hooks/useTranslation";
 import SectionTitle from "../ui/SectionTitle";
 import styles from "./ServicesSection.module.css";
-const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || "6Lfe3WUsAAAAACOFaxYNt26KZB8FzYOwKVAphlKG";
 
 
 const services = [
