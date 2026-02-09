@@ -121,20 +121,23 @@ const ServicesSection = () => {
     setFormStatus("sending");
 
     try {
-      // reCAPTCHA v3 token
+      // reCAPTCHA v3 token with timeout
       let recaptchaToken = "";
       if (window.grecaptcha && RECAPTCHA_SITE_KEY) {
         try {
-          recaptchaToken = await new Promise((resolve, reject) => {
-            window.grecaptcha.ready(() => {
-              window.grecaptcha
-                .execute(RECAPTCHA_SITE_KEY, { action: "contact_form" })
-                .then(resolve)
-                .catch(reject);
-            });
-          });
-        } catch (err) {
-          console.warn("reCAPTCHA failed, submitting without it:", err);
+          recaptchaToken = await Promise.race([
+            new Promise((resolve) => {
+              window.grecaptcha.ready(() => {
+                window.grecaptcha
+                  .execute(RECAPTCHA_SITE_KEY, { action: "contact_form" })
+                  .then(resolve)
+                  .catch(() => resolve(""));
+              });
+            }),
+            new Promise((resolve) => setTimeout(() => resolve(""), 3000)),
+          ]);
+        } catch {
+          console.warn("reCAPTCHA failed, submitting without it");
         }
       }
 
