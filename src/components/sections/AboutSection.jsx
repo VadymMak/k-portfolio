@@ -5,7 +5,6 @@ import styles from "./AboutSection.module.css";
 const AboutSection = () => {
   const { translate } = useTranslation();
 
-  // Replace {name} placeholder with the actual name in bold
   const renderIntro = () => {
     const intro = translate("about.intro");
     const name = translate("about.name");
