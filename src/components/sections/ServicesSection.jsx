@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "../../hooks/useTranslation";
 import SectionTitle from "../ui/SectionTitle";
 import styles from "./ServicesSection.module.css";
+const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 
 //Test option
 
@@ -121,6 +122,14 @@ const ServicesSection = () => {
     setFormStatus("sending");
 
     try {
+      // reCAPTCHA v3 token
+      let recaptchaToken = "";
+      if (window.grecaptcha && RECAPTCHA_SITE_KEY) {
+        recaptchaToken = await window.grecaptcha.execute(RECAPTCHA_SITE_KEY, {
+          action: "contact_form",
+        });
+      }
+
       const submitData = new FormData();
       submitData.append("form-name", "contact");
       submitData.append("name", formData.name);
@@ -129,6 +138,10 @@ const ServicesSection = () => {
       submitData.append("description", formData.description);
       submitData.append("timeline", formData.timeline);
       submitData.append("referral", formData.referral);
+
+      if (recaptchaToken) {
+        submitData.append("g-recaptcha-response", recaptchaToken);
+      }
 
       const response = await fetch("/", {
         method: "POST",
@@ -249,6 +262,7 @@ const ServicesSection = () => {
             <form
               name="contact"
               data-netlify="true"
+              data-netlify-recaptcha="true"
               netlify-honeypot="bot-field"
               hidden
             >
