@@ -70,5 +70,61 @@
     "close": "Close",
     "next": "Next",
     "previous": "Previous"
+  },
+  "services": {
+    "title": "Services",
+    "intro": "I offer a full range of illustration and design services — from children's book projects to brand identity. Every project is unique, so I tailor my approach to your vision, timeline, and goals. Let's create something meaningful together.",
+    "inquire": "Inquire",
+    "book": {
+      "title": "Children's Book Illustration",
+      "desc": "Full illustration sets for children's books — from initial sketches and character development to final artwork. 24–32 pages, cohesive visual storytelling."
+    },
+    "cover": {
+      "title": "Book Cover Design",
+      "desc": "Eye-catching cover designs that capture the essence of your story and invite readers in. Includes concept development and final print-ready artwork."
+    },
+    "character": {
+      "title": "Character Design",
+      "desc": "Original characters with personality and emotion — designed for books, animation, games, or branding. Includes expression sheets and style guides."
+    },
+    "label": {
+      "title": "Label & Packaging Design",
+      "desc": "Product labels and packaging that stand out on the shelf. Thoughtful composition, harmonious palettes, and clear typography for any product category."
+    },
+    "logo": {
+      "title": "Logo Design",
+      "desc": "Distinctive logos that capture your brand's character and values. From monograms to emblems — timeless marks built with clarity and elegance."
+    },
+    "branding": {
+      "title": "Branding & Print Design",
+      "desc": "Cohesive visual identity across print and digital — business cards, menus, posters, social media templates, and branded merchandise."
+    },
+    "form": {
+      "title": "Let's Work Together",
+      "subtitle": "Tell me about your project and I'll get back to you within 48 hours.",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "projectType": "Project Type",
+      "selectProject": "Select project type...",
+      "timeline": "Timeline",
+      "selectTimeline": "Select timeline...",
+      "less1": "Less than 1 month",
+      "months13": "1–3 months",
+      "months36": "3–6 months",
+      "flexible": "Flexible",
+      "description": "Project Description",
+      "descriptionPlaceholder": "Tell me about your project — what do you need, what's the scope, any preferences for style or format?",
+      "referral": "How did you find me?",
+      "selectReferral": "Select an option...",
+      "referralOption": "Referral",
+      "other": "Other",
+      "submit": "Send Request",
+      "sending": "Sending...",
+      "successTitle": "Thank you!",
+      "successText": "Your request has been received. I'll review it and get back to you within 48 hours.",
+      "error": "Something went wrong. Please try again or contact me directly via email."
+    }
   }
 }

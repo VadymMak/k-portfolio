@@ -215,6 +215,21 @@ const MobileMenu = ({ isOpen, onClose }) => {
                 </button>
               </motion.li>
 
+              {/* Services */}
+              <motion.li
+                className={styles.menuItem}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.35 }}
+              >
+                <button
+                  onClick={() => scrollToSection("services")}
+                  className={styles.menuItemButton}
+                >
+                  {translate("menu.services")}
+                </button>
+              </motion.li>
+
               {/* Contact */}
               <motion.li
                 className={styles.menuItem}

@@ -70,5 +70,61 @@
     "close": "Zavrieť",
     "next": "Ďalej",
     "previous": "Späť"
+  },
+  "services": {
+    "title": "Služby",
+    "intro": "Ponúkam kompletný rozsah ilustračných a dizajnérskych služieb — od projektov detských kníh po tvorbu vizuálnej identity značky. Každý projekt je jedinečný, preto prispôsobujem svoj prístup vašej vízii, časovému plánu a cieľom. Vytvorme spolu niečo zmysluplné.",
+    "inquire": "Dopytovať",
+    "book": {
+      "title": "Ilustrácia detských kníh",
+      "desc": "Kompletné sady ilustrácií pre detské knihy — od prvých skíc a vývoja postáv po finálnu grafiku. 24–32 strán, súdržné vizuálne rozprávanie."
+    },
+    "cover": {
+      "title": "Dizajn obálky knihy",
+      "desc": "Pútavé obálky, ktoré zachytávajú podstatu vášho príbehu a pozývajú čitateľov. Zahŕňa vývoj konceptu a finálnu grafiku pripravenú na tlač."
+    },
+    "character": {
+      "title": "Dizajn postáv",
+      "desc": "Originálne postavy s osobnosťou a emóciami — navrhnuté pre knihy, animáciu, hry alebo branding. Zahŕňa výrazové listy a štýlové príručky."
+    },
+    "label": {
+      "title": "Dizajn etikiet a obalov",
+      "desc": "Produktové etikety a obaly, ktoré vyniknú na poličke. Premyslená kompozícia, harmonické palety a jasná typografia pre akúkoľvek kategóriu produktov."
+    },
+    "logo": {
+      "title": "Dizajn loga",
+      "desc": "Výrazné logá, ktoré zachytávajú charakter a hodnoty vašej značky. Od monogramov po emblémy — nadčasové značky vytvorené s jasnosťou a eleganciou."
+    },
+    "branding": {
+      "title": "Branding a tlačový dizajn",
+      "desc": "Súdržná vizuálna identita v tlači aj digitáli — vizitky, jedálne lístky, plagáty, šablóny pre sociálne médiá a značkový tovar."
+    },
+    "form": {
+      "title": "Spolupracujme",
+      "subtitle": "Povedzte mi o vašom projekte a ozvem sa vám do 48 hodín.",
+      "name": "Meno",
+      "namePlaceholder": "Vaše meno",
+      "email": "Email",
+      "emailPlaceholder": "váš@email.com",
+      "projectType": "Typ projektu",
+      "selectProject": "Vyberte typ projektu...",
+      "timeline": "Časový plán",
+      "selectTimeline": "Vyberte časový plán...",
+      "less1": "Menej ako 1 mesiac",
+      "months13": "1–3 mesiace",
+      "months36": "3–6 mesiacov",
+      "flexible": "Flexibilný",
+      "description": "Popis projektu",
+      "descriptionPlaceholder": "Povedzte mi o vašom projekte — čo potrebujete, aký je rozsah, máte preferencie štýlu alebo formátu?",
+      "referral": "Ako ste ma našli?",
+      "selectReferral": "Vyberte možnosť...",
+      "referralOption": "Odporúčanie",
+      "other": "Iné",
+      "submit": "Odoslať dopyt",
+      "sending": "Odosielanie...",
+      "successTitle": "Ďakujem!",
+      "successText": "Váš dopyt bol prijatý. Prezriem si ho a ozvem sa vám do 48 hodín.",
+      "error": "Niečo sa pokazilo. Skúste to znova alebo ma kontaktujte priamo emailom."
+    }
   }
 }
