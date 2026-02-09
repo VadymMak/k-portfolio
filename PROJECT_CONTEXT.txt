@@ -1,0 +1,4523 @@
+======================================================================
+AK PORTFOLIO - PROJECT CONTEXT FOR CLAUDE
+======================================================================
+Generated: 2026-02-09 12:33:19
+Project Root: C:\projects\ak-portfolio\k-portfolio
+
+
+======================================================================
+1. PROJECT STRUCTURE
+======================================================================
+├── 📁 public/
+│   ├── 📁 gallery/
+│   │   ├── 📁 about/
+│   │   │   ├── 🖼️ about-me.png (1.0 MB)
+│   │   │   ├── 🖼️ about-me_empty.webp (175 KB)
+│   │   │   ├── 🖼️ about-photo.webp (110 KB)
+│   │   │   └── 🖼️ paper-bg.webp (359 KB)
+│   │   ├── 📁 books/
+│   │   │   ├── 📁 magic-world/
+│   │   │   ├── 📁 nutcracker/
+│   │   │   ├── 📁 sea-secrets/
+│   │   │   ├── 📁 sigurd/
+│   │   │   ├── 📁 swans/
+│   │   │   └── 📁 winter-adventures/
+│   │   ├── 📁 branding/
+│   │   │   ├── 📁 full/
+│   │   │   └── 📁 thumb/
+│   │   ├── 📁 labels/
+│   │   │   ├── 🖼️ label_01.webp (36 KB)
+│   │   │   ├── 🖼️ label_02.webp (79 KB)
+│   │   │   ├── 🖼️ label_03.webp (16 KB)
+│   │   │   ├── 🖼️ label_04.webp (173 KB)
+│   │   │   ├── 🖼️ label_05.webp (80 KB)
+│   │   │   ├── 🖼️ label_06.webp (156 KB)
+│   │   │   ├── 🖼️ label_07.webp (104 KB)
+│   │   │   └── 🖼️ label_09.webp (94 KB)
+│   │   ├── 📁 logos/
+│   │   │   ├── 🖼️ logo_01.webp (48 KB)
+│   │   │   ├── 🖼️ logo_02.webp (39 KB)
+│   │   │   ├── 🖼️ logo_03.webp (9 KB)
+│   │   │   ├── 🖼️ logo_04.webp (31 KB)
+│   │   │   ├── 🖼️ logo_05.webp (60 KB)
+│   │   │   ├── 🖼️ logo_06.webp (61 KB)
+│   │   │   └── 🖼️ logo_07.webp (12 KB)
+│   │   └── 🖼️ background.webp (58 KB)
+│   ├── 📄 _headers
+│   ├── 📄 _redirects
+│   ├── 🖼️ favicon.svg (0 KB)
+│   ├── 🌐 google02f9873c904396b1.html
+│   ├── 🖼️ og-image.jpg (128 KB)
+│   ├── 📄 robots.txt
+│   ├── 📄 sitemap.xml
+│   └── 🖼️ vite.svg (1 KB)
+├── 📁 src/
+│   ├── 📁 assets/
+│   │   ├── 📁 images/
+│   │   │   ├── 🖼️ 1.png (57 KB)
+│   │   │   ├── 🖼️ 10.png (170 KB)
+│   │   │   ├── 🖼️ 11.png (113 KB)
+│   │   │   ├── 🖼️ 12.png (164 KB)
+│   │   │   ├── 🖼️ 13.png (36 KB)
+│   │   │   ├── 🖼️ 2.png (82 KB)
+│   │   │   ├── 🖼️ 3.png (84 KB)
+│   │   │   ├── 🖼️ 4.png (174 KB)
+│   │   │   ├── 🖼️ 5.png (134 KB)
+│   │   │   ├── 🖼️ 6.png (174 KB)
+│   │   │   ├── 🖼️ 7.png (138 KB)
+│   │   │   ├── 🖼️ 8.png (149 KB)
+│   │   │   └── 🖼️ 9.png (175 KB)
+│   │   └── 🖼️ react.svg (4 KB)
+│   ├── 📁 components/
+│   │   ├── 📁 sections/
+│   │   │   ├── ⚛️ AboutSection.jsx
+│   │   │   ├── 🎨 AboutSection.module.css
+│   │   │   ├── ⚛️ BrandingSection.jsx
+│   │   │   ├── 🎨 BrandingSection.module.css
+│   │   │   ├── ⚛️ ChildrensBooksIntro.jsx
+│   │   │   ├── 🎨 ChildrensBooksIntro.module.css
+│   │   │   ├── ⚛️ ChildrensBooksSection.jsx
+│   │   │   ├── 🎨 ChildrensBooksSection.module.css
+│   │   │   ├── ⚛️ ContactSection.jsx
+│   │   │   ├── ⚛️ HeroSection.jsx
+│   │   │   ├── ⚛️ LabelDesignSection.jsx
+│   │   │   ├── 🎨 LabelDesignSection.module.css
+│   │   │   ├── ⚛️ LogosSection.jsx
+│   │   │   ├── 🎨 LogosSection.module.css
+│   │   │   ├── ⚛️ MagicWorldPage.jsx
+│   │   │   ├── 🎨 MagicWorldPage.module.css
+│   │   │   ├── ⚛️ NutCrackerPage.jsx
+│   │   │   ├── 🎨 NutCrackerPage.module.css
+│   │   │   ├── ⚛️ SeaSecretsPage.jsx
+│   │   │   ├── 🎨 SeaSecretsPage.module.css
+│   │   │   ├── ⚛️ SiguardPage.jsx
+│   │   │   ├── 🎨 SiguardPage.module.css
+│   │   │   ├── ⚛️ WildSwansPage.jsx
+│   │   │   ├── 🎨 WildSwansPage.module.css
+│   │   │   ├── ⚛️ WinterAdventuresPage.jsx
+│   │   │   └── 🎨 WinterAdventuresPage.module.css
+│   │   ├── 📁 ui/
+│   │   │   └── ⚛️ SectionTitle.jsx
+│   │   ├── ⚛️ ChildrensBooksLayout.jsx
+│   │   ├── ⚛️ DesktopMenu.jsx
+│   │   ├── 🎨 DesktopMenu.module.css
+│   │   ├── ⚛️ Footer.jsx
+│   │   ├── 🎨 Footer.module.css
+│   │   ├── ⚛️ Header.jsx
+│   │   ├── 🎨 Header.module.css
+│   │   ├── ⚛️ Layout.jsx
+│   │   ├── 🎨 Layout.module.css
+│   │   ├── ⚛️ MobileMenu.jsx
+│   │   └── 🎨 MobileMenu.module.css
+│   ├── 📁 context/
+│   │   └── ⚛️ LanguageContext.jsx
+│   ├── 📁 hooks/
+│   │   ├── 📜 useLanguage.js
+│   │   └── 📜 useTranslation.js
+│   ├── 📁 locales/
+│   │   ├── 📋 en.json
+│   │   ├── 📋 ru.json
+│   │   ├── 📋 sk.json
+│   │   └── 📋 ua.json
+│   ├── 📁 pages/
+│   │   └── ⚛️ Home.jsx
+│   ├── 📁 utils/
+│   │   └── 📜 geoLocation.js
+│   ├── ⚛️ App.jsx
+│   ├── 🎨 index.css
+│   └── ⚛️ main.jsx
+├── 📜 eslint.config.js
+├── 🌐 index.html
+├── 📋 package-lock.json
+├── 📋 package.json
+├── 📄 print_tree.py
+├── 📄 project_context.py
+├── 📄 PROJECT_CONTEXT.txt
+├── 📝 README.md
+└── 📜 vite.config.js
+
+
+======================================================================
+2. GALLERY/ASSETS STRUCTURE
+======================================================================
+
+📁 public\gallery/
+  ├── 📁 about/
+  │   ├── 🖼️ about-me.png (1.0 MB)
+  │   ├── 🖼️ about-me_empty.webp (175 KB)
+  │   ├── 🖼️ about-photo.webp (110 KB)
+  │   └── 🖼️ paper-bg.webp (359 KB)
+  ├── 📁 books/
+  │   ├── 📁 magic-world/
+  │   │   ├── 📁 full/
+  │   │   └── 📁 thumb/
+  │   ├── 📁 nutcracker/
+  │   │   ├── 🖼️ full_01.webp (193 KB)
+  │   │   ├── 🖼️ full_02.webp (183 KB)
+  │   │   ├── 🖼️ full_03.webp (74 KB)
+  │   │   ├── 🖼️ full_04.webp (374 KB)
+  │   │   ├── 🖼️ full_05.webp (308 KB)
+  │   │   ├── 🖼️ full_06.webp (271 KB)
+  │   │   ├── 🖼️ thumb_01.webp (49 KB)
+  │   │   ├── 🖼️ thumb_02.webp (69 KB)
+  │   │   ├── 🖼️ thumb_03.webp (76 KB)
+  │   │   ├── 🖼️ thumb_04.webp (180 KB)
+  │   │   ├── 🖼️ thumb_05.webp (95 KB)
+  │   │   └── 🖼️ thumb_06.webp (121 KB)
+  │   ├── 📁 sea-secrets/
+  │   │   ├── 📁 full/
+  │   │   ├── 📁 thumb/
+  │   │   └── 📁 video/
+  │   ├── 📁 sigurd/
+  │   │   ├── 📁 full/
+  │   │   ├── 📁 thumb/
+  │   │   └── 📁 video/
+  │   ├── 📁 swans/
+  │   │   ├── 📁 decor/
+  │   │   ├── 📁 full/
+  │   │   └── 📁 thumb/
+  │   └── 📁 winter-adventures/
+  │       ├── 📁 full/
+  │       └── 📁 thumb/
+  ├── 📁 branding/
+  │   ├── 📁 full/
+  │   │   ├── 🖼️ full_01.webp (451 KB)
+  │   │   ├── 🖼️ full_02.webp (136 KB)
+  │   │   ├── 🖼️ full_03.webp (100 KB)
+  │   │   ├── 🖼️ full_04.webp (45 KB)
+  │   │   ├── 🖼️ full_05.webp (134 KB)
+  │   │   ├── 🖼️ full_06.webp (243 KB)
+  │   │   ├── 🖼️ full_07.webp (82 KB)
+  │   │   ├── 🖼️ full_08.webp (198 KB)
+  │   │   ├── 🖼️ full_09.webp (162 KB)
+  │   │   ├── 🖼️ full_10.webp (26 KB)
+  │   │   ├── 🖼️ full_11.webp (178 KB)
+  │   │   ├── 🖼️ full_12.webp (105 KB)
+  │   │   └── 🖼️ full_14.webp (150 KB)
+  │   └── 📁 thumb/
+  │       ├── 🖼️ thumb_01.webp (313 KB)
+  │       ├── 🖼️ thumb_02.webp (136 KB)
+  │       ├── 🖼️ thumb_03.webp (77 KB)
+  │       ├── 🖼️ thumb_04.webp (68 KB)
+  │       ├── 🖼️ thumb_05.webp (129 KB)
+  │       ├── 🖼️ thumb_06.webp (195 KB)
+  │       ├── 🖼️ thumb_07.webp (94 KB)
+  │       ├── 🖼️ thumb_08.webp (162 KB)
+  │       ├── 🖼️ thumb_09.webp (151 KB)
+  │       ├── 🖼️ thumb_10.webp (11 KB)
+  │       ├── 🖼️ thumb_11.webp (29 KB)
+  │       ├── 🖼️ thumb_12.webp (20 KB)
+  │       └── 🖼️ thumb_14.webp (95 KB)
+  ├── 📁 labels/
+  │   ├── 🖼️ label_01.webp (36 KB)
+  │   ├── 🖼️ label_02.webp (79 KB)
+  │   ├── 🖼️ label_03.webp (16 KB)
+  │   ├── 🖼️ label_04.webp (173 KB)
+  │   ├── 🖼️ label_05.webp (80 KB)
+  │   ├── 🖼️ label_06.webp (156 KB)
+  │   ├── 🖼️ label_07.webp (104 KB)
+  │   └── 🖼️ label_09.webp (94 KB)
+  ├── 📁 logos/
+  │   ├── 🖼️ logo_01.webp (48 KB)
+  │   ├── 🖼️ logo_02.webp (39 KB)
+  │   ├── 🖼️ logo_03.webp (9 KB)
+  │   ├── 🖼️ logo_04.webp (31 KB)
+  │   ├── 🖼️ logo_05.webp (60 KB)
+  │   ├── 🖼️ logo_06.webp (61 KB)
+  │   └── 🖼️ logo_07.webp (12 KB)
+  └── 🖼️ background.webp (58 KB)
+
+📁 src\assets/
+  ├── 📁 images/
+  │   ├── 🖼️ 1.png (57 KB)
+  │   ├── 🖼️ 10.png (170 KB)
+  │   ├── 🖼️ 11.png (113 KB)
+  │   ├── 🖼️ 12.png (164 KB)
+  │   ├── 🖼️ 13.png (36 KB)
+  │   ├── 🖼️ 2.png (82 KB)
+  │   ├── 🖼️ 3.png (84 KB)
+  │   ├── 🖼️ 4.png (174 KB)
+  │   ├── 🖼️ 5.png (134 KB)
+  │   ├── 🖼️ 6.png (174 KB)
+  │   ├── 🖼️ 7.png (138 KB)
+  │   ├── 🖼️ 8.png (149 KB)
+  │   └── 🖼️ 9.png (175 KB)
+  └── 🖼️ react.svg (4 KB)
+
+
+======================================================================
+3. FILES RELATED TO LOGOS
+======================================================================
+  - src\components\DesktopMenu.jsx
+  - src\components\Footer.jsx
+  - src\components\Header.jsx
+  - src\components\MobileMenu.jsx
+  - src\pages\Home.jsx
+  - src\components\sections\LogosSection.jsx
+  - src\components\Footer.module.css
+  - src\components\Header.module.css
+  - src\components\sections\LogosSection.module.css
+  - src\components\Footer.module.css
+  - src\components\Header.module.css
+  - src\components\sections\LogosSection.module.css
+
+======================================================================
+4. FILE CONTENTS
+======================================================================
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: index.html
+──────────────────────────────────────────────────────────────────────
+<!doctype html>
+<html lang="en" translate="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- ========== SEO Meta Tags ========== -->
+    <title>Anastasiia Kolisnyk | Children's Book Illustrator & Graphic Designer</title>
+    <meta name="description" content="Professional illustrator specializing in children's book illustrations, label design, logos, and print & digital branding. Based in Trenčín, Slovakia. Creating warm, heartfelt visuals that inspire curiosity." />
+    <meta name="keywords" content="illustrator, children's book illustrator, graphic designer, label design, logo design, branding, Slovakia, Trenčín, book illustration, packaging design, visual identity" />
+    <meta name="author" content="Anastasiia Kolisnyk" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    
+    <!-- ========== Canonical URL ========== -->
+    <link rel="canonical" href="https://akillustrator.com/" />
+    
+    <!-- ========== Open Graph (Facebook, LinkedIn) ========== -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Anastasiia Kolisnyk | Children's Book Illustrator & Graphic Designer" />
+    <meta property="og:description" content="Professional illustrator specializing in children's book illustrations, label design, logos, and branding. Creating warm, heartfelt visuals that inspire curiosity." />
+    <meta property="og:image" content="https://akillustrator.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://akillustrator.com/" />
+    <meta property="og:site_name" content="Anastasiia Kolisnyk Portfolio" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- ========== Twitter Card ========== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Anastasiia Kolisnyk | Children's Book Illustrator & Graphic Designer" />
+    <meta name="twitter:description" content="Professional illustrator specializing in children's book illustrations, label design, logos, and branding." />
+    <meta name="twitter:image" content="https://akillustrator.com/og-image.jpg" />
+    
+    <!-- ========== Favicon ========== -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    
+    <!-- ========== Theme Color ========== -->
+    <meta name="theme-color" content="#2D4A43" />
+    <meta name="msapplication-TileColor" content="#2D4A43" />
+    
+    <!-- ========== Prevent Google Translate ========== -->
+    <meta name="google" content="notranslate" />
+    
+    <!-- ========== FONTS: Optimized Non-Blocking Loading ========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <link 
+      rel="preload" 
+      as="style" 
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" 
+    />
+    
+    <link 
+      rel="stylesheet" 
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" 
+      media="print" 
+      onload="this.media='all'" 
+    />
+    
+    <noscript>
+      <link 
+        rel="stylesheet" 
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" 
+      />
+    </noscript>
+    
+    <!-- ========== Google Analytics 4 ========== -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q4CMBHFQ2E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Q4CMBHFQ2E');
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: package.json
+──────────────────────────────────────────────────────────────────────
+{
+  "name": "ak-portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "framer-motion": "^12.27.5",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.12.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@tailwindcss/vite": "^4.1.18",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "tailwindcss": "^4.1.18",
+    "vite": "^7.2.4"
+  }
+}
+
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\App.jsx
+──────────────────────────────────────────────────────────────────────
+import './index.css'
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
+import { LanguageProvider } from "./context/LanguageContext";
+
+function App() {
+  return (
+    <LanguageProvider>
+    <Layout>
+      <Home />
+    </Layout>
+    </LanguageProvider>
+  );
+}
+
+export default App;
+
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\ChildrensBooksLayout.jsx
+──────────────────────────────────────────────────────────────────────
+import { Outlet, NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
+
+const bookProjects = [
+  { id: "nutcracker", title: "The Nutcracker and the Mouse King" },
+  { id: "wild-swans", title: "The Wild Swans" },
+  { id: "winter-adventures", title: "Winter Adventures" },
+  { id: "star-team", title: "Star Team" },
+  { id: "sigurd-dragon", title: "Sigurd Fights the Dragon" },
+  { id: "secrets-sea", title: "Secrets of the Sea for Little Explorers" },
+];
+
+const ChildrensBooksLayout = () => {
+  return (
+    <div className="min-h-screen">
+      {/* Content Area */}
+      <div className="w-full bg-[#F5EFE6] min-h-screen pb-[420px] lg:pb-0">
+        <Outlet />
+      </div>
+
+      {/* Mobile: Fixed bottom - vertical column */}
+      <nav
+        className="lg:hidden fixed bottom-0 left-0 right-0 z-30 max-h-[60vh] overflow-y-auto"
+        style={{
+          backgroundColor: "rgba(45, 74, 67, 0.95)",
+          backdropFilter: "blur(10px)",
+          WebkitBackdropFilter: "blur(10px)",
+        }}
+      >
+        <ul className="py-2">
+          {bookProjects.map((project, index) => (
+            <motion.li
+              key={project.id}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.03 }}
+            >
+              <NavLink
+                to={`/childrens-books/${project.id}`}
+                className={({ isActive }) =>
+                  `block py-3 px-6 text-center border-b border-[#C9A86C]/30 transition-all duration-300 ${
+                    isActive ? "text-white bg-[#C9A86C]/20" : "text-[#C9A86C]"
+                  }`
+                }
+                style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontWeight: 400,
+                }}
+              >
+                {project.title}
+              </NavLink>
+            </motion.li>
+          ))}
+        </ul>
+      </nav>
+
+      {/* Desktop: Fixed right - transparent, same style as main menu */}
+      <nav
+        className="hidden lg:flex fixed right-[320px] top-0 h-screen w-[320px] flex-col items-center justify-center px-8"
+        style={{
+          backgroundColor: "rgba(45, 74, 67, 0.85)",
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
+        }}
+      >
+        <ul className="w-full max-w-[280px]">
+          {bookProjects.map((project, index) => (
+            <motion.li
+              key={project.id}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: index * 0.05 }}
+            >
+              <NavLink
+                to={`/childrens-books/${project.id}`}
+                className={({ isActive }) =>
+                  `flex items-center justify-center h-[72px] text-center border-b border-[#C9A86C]/40 transition-colors duration-300 ${
+                    isActive ? "text-white" : "text-[#C9A86C] hover:text-white"
+                  }`
+                }
+              >
+                <span
+                  className="text-[20px] tracking-wide"
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontWeight: 400,
+                  }}
+                >
+                  {project.title}
+                </span>
+              </NavLink>
+            </motion.li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+  );
+};
+
+export default ChildrensBooksLayout;
+
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\DesktopMenu.jsx
+──────────────────────────────────────────────────────────────────────
+/* eslint-disable no-unused-vars */
+import { motion, AnimatePresence } from "framer-motion";
+/* eslint-enable no-unused-vars */
+import { useState } from "react";
+import { useLanguage } from "../hooks/useLanguage";
+import { useTranslation } from "../hooks/useTranslation";
+import styles from "./DesktopMenu.module.css";
+
+const DesktopMenu = () => {
+  const [isChildrensOpen, setIsChildrensOpen] = useState(false);
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+
+  // Language context and translations
+  const {
+    currentLanguage,
+    availableLanguages,
+    changeLanguage,
+    getCurrentLanguageLabel,
+  } = useLanguage();
+  const { translate } = useTranslation();
+
+  // Book projects with translations
+  const bookProjects = [
+    { id: "nutcracker", title: translate("books.nutcracker") },
+    { id: "wild-swans", title: translate("books.wildSwans") },
+    { id: "winter-adventures", title: translate("books.winterAdventures") },
+    { id: "magic-world", title: translate("books.magicWorld") },
+    { id: "sigurd", title: translate("books.sigurd") },
+    { id: "secrets-sea", title: translate("books.seaSecrets") },
+  ];
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleLanguageChange = (code) => {
+    changeLanguage(code);
+    setIsLanguageOpen(false);
+  };
+
+  return (
+    <nav className={styles.nav}>
+      <div className={styles.navInner}>
+        {/* Language Switcher */}
+        <div className={styles.languageSection}>
+          <button
+            onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+            className={styles.languageButton}
+          >
+            <span>{isLanguageOpen ? "▼" : "►"}</span>
+            <span>{getCurrentLanguageLabel()}</span>
+          </button>
+
+          <AnimatePresence>
+            {isLanguageOpen && (
+              <motion.ul
+                className={styles.languageList}
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                {availableLanguages
+                  .filter((lang) => lang.code !== currentLanguage)
+                  .map((lang) => (
+                    <li key={lang.code} className={styles.languageItem}>
+                      <button
+                        onClick={() => handleLanguageChange(lang.code)}
+                        className={styles.languageOption}
+                      >
+                        {lang.label}
+                      </button>
+                    </li>
+                  ))}
+              </motion.ul>
+            )}
+          </AnimatePresence>
+        </div>
+
+        <ul className={styles.menuList}>
+          {/* About Me */}
+          <li className={styles.menuItem}>
+            <button
+              onClick={() => scrollToSection("about")}
+              className={styles.menuButton}
+            >
+              {translate("menu.aboutMe")}
+            </button>
+          </li>
+
+          {/* Books Intro */}
+          <li className={styles.menuItem}>
+            <button
+              onClick={() => scrollToSection("books-intro")}
+              className={styles.menuButton}
+            >
+              {translate("menu.illustrationPhilosophy")}
+            </button>
+          </li>
+
+          {/* Children's Book Illustrations - Accordion */}
+          <li className={styles.menuItem}>
+            <button
+              onClick={() => setIsChildrensOpen(!isChildrensOpen)}
+              className={styles.menuButton}
+            >
+              <span>{isChildrensOpen ? "▼" : "►"}</span>
+              <span>{translate("menu.childrensBooks")}</span>
+            </button>
+
+            <AnimatePresence>
+              {isChildrensOpen && (
+                <motion.ul
+                  className={styles.submenu}
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {bookProjects.map((project) => (
+                    <li key={project.id} className={styles.submenuItem}>
+                      <button
+                        onClick={() => scrollToSection(project.id)}
+                        className={styles.submenuButton}
+                      >
+                        {project.title}
+                      </button>
+                    </li>
+                  ))}
+                </motion.ul>
+              )}
+            </AnimatePresence>
+          </li>
+
+          {/* Label Design */}
+          <li className={styles.menuItem}>
+            <button
+              onClick={() => scrollToSection("label-design")}
+              className={styles.menuButton}
+            >
+              {translate("menu.labelDesign")}
+            </button>
+          </li>
+
+          {/* Logos */}
+          <li className={styles.menuItem}>
+            <button
+              onClick={() => scrollToSection("logos")}
+              className={styles.menuButton}
+            >
+              {translate("menu.logos")}
+            </button>
+          </li>
+
+          {/* Print and Digital Branding */}
+          <li className={styles.menuItem}>
+            <button
+              onClick={() => scrollToSection("branding")}
+              className={styles.menuButton}
+            >
+              {translate("menu.branding")}
+            </button>
+          </li>
+
+          {/* Contact */}
+          <li className={styles.menuItem}>
+            <button
+              onClick={() => scrollToSection("footer")}
+              className={styles.menuButton}
+            >
+              {translate("menu.contactMe")}
+            </button>
+          </li>
+        </ul>
+
+        {/* Contact Block */}
+        <div className={styles.contactBlock}>
+          <a
+            href="mailto:akolesnykl989@gmail.com"
+            className={styles.contactLink}
+          >
+            akolesnykl989@gmail.com
+          </a>
+
+          <a
+            href="https://wa.me/qr/A3NYYPE55OODK1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.contactLink}
+          >
+            <span className={styles.contactLabel}>WhatsApp:</span> +421 951 813
+            809
+          </a>
+
+          <div className={styles.socialLinks}>
+            <a
+              href="https://www.behance.net/akolesnyk14bf8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialLink}
+              aria-label="Behance"
+            >
+              Behance
+            </a>
+            <a
+              href="https://www.instagram.com/akolesnyk.sketch?igsh=eTgyYnNrZnVneDRy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialLink}
+              aria-label="Instagram"
+            >
+              Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default DesktopMenu;
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\DesktopMenu.module.css
+──────────────────────────────────────────────────────────────────────
+/* ========== DESKTOP MENU ========== */
+
+.nav {
+  display: none;
+  width: clamp(240px, 18vw, 320px);
+  height: 100vh;
+  flex-shrink: 0;
+  flex-direction: column;
+  background-color: #2d4a43;
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+}
+
+.navInner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Changed from center - content starts from top */
+  padding: clamp(20px, 3vh, 40px) clamp(16px, 2vw, 32px);
+  overflow-y: auto; /* Scrollable when content doesn't fit */
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for menu */
+.navInner::-webkit-scrollbar {
+  width: 4px;
+}
+
+.navInner::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.navInner::-webkit-scrollbar-thumb {
+  background: rgba(201, 168, 108, 0.3);
+  border-radius: 2px;
+}
+
+.navInner::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 168, 108, 0.5);
+}
+
+.menuList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuItem {
+  width: 100%;
+}
+
+.menuButton {
+  width: 100%;
+  padding: clamp(16px, 1.5vw, 28px) 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(201, 168, 108, 0.3);
+  color: #c9a86c;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(14px, 1.1vw, 18px);
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(4px, 0.5vw, 8px);
+  white-space: normal; /* Changed: allow text wrapping */
+  word-wrap: break-word;
+  line-height: 1.3;
+}
+
+.menuButton:hover {
+  color: #ffffff;
+}
+
+/* ========== SUBMENU ========== */
+
+.submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #243832;
+  overflow: hidden;
+}
+
+.submenuItem {
+  width: 100%;
+}
+
+.submenuButton {
+  width: 100%;
+  padding: clamp(10px, 1vw, 16px) 0;
+  background: none;
+  border: none;
+  color: #c9a86c;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(12px, 1vw, 18px);
+  text-align: center;
+  cursor: pointer;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
+  white-space: normal; /* Changed: allow text wrapping */
+  word-wrap: break-word;
+  line-height: 1.3;
+}
+
+.submenuButton:hover {
+  color: #ffffff;
+  background-color: rgba(201, 168, 108, 0.1);
+}
+
+/* ========== SHOW ON DESKTOP (min-width: 1025px) ========== */
+
+@media (min-width: 1025px) {
+  .nav {
+    display: flex;
+  }
+}
+
+/* ========== LARGE SCREENS (min-width: 1600px) ========== */
+
+@media (min-width: 1600px) {
+  .nav {
+    width: clamp(280px, 16vw, 350px);
+  }
+
+  .menuButton {
+    font-size: clamp(16px, 1vw, 20px);
+    padding: clamp(20px, 1.5vw, 30px) 0;
+  }
+
+  .submenuButton {
+    font-size: clamp(14px, 0.9vw, 18px);
+  }
+
+  .navInner {
+    padding: clamp(30px, 4vh, 60px) clamp(24px, 2vw, 40px);
+  }
+}
+
+/* ========== EXTRA LARGE SCREENS (min-width: 2560px) - 4K ========== */
+
+@media (min-width: 2560px) {
+  .nav {
+    width: clamp(300px, 14vw, 400px);
+  }
+
+  .navInner {
+    padding: clamp(40px, 5vh, 80px) clamp(24px, 1.5vw, 40px);
+  }
+
+  .menuButton {
+    font-size: clamp(18px, 0.8vw, 24px);
+    padding: clamp(24px, 1.2vw, 36px) 0;
+  }
+
+  .submenuButton {
+    font-size: clamp(16px, 0.7vw, 20px);
+    padding: clamp(14px, 0.8vw, 20px) 0;
+  }
+}
+
+/* ========== SMALL HEIGHT SCREENS ========== */
+
+@media (max-height: 700px) {
+  .navInner {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .menuButton {
+    padding: 12px 0;
+  }
+
+  .submenuButton {
+    padding: 8px 0;
+  }
+
+  .languageButton {
+    padding: 8px 0;
+  }
+
+  .languageOption {
+    padding: 6px 0;
+  }
+
+  .contactBlock {
+    margin-top: 15px;
+    padding-top: 10px;
+  }
+
+  .languageSection {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+  }
+}
+
+@media (max-height: 550px) {
+  .navInner {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .menuButton {
+    padding: 8px 0;
+    font-size: 13px;
+  }
+
+  .submenuButton {
+    padding: 6px 0;
+    font-size: 12px;
+  }
+
+  .languageButton {
+    padding: 6px 0;
+    font-size: 12px;
+  }
+
+  .languageOption {
+    padding: 5px 0;
+    font-size: 11px;
+  }
+
+  .contactBlock {
+    margin-top: 10px;
+    padding-top: 8px;
+    gap: 6px;
+  }
+
+  .contactLink {
+    font-size: 11px;
+  }
+
+  .socialLink {
+    font-size: 11px;
+  }
+
+  .languageSection {
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+  }
+}
+
+/* ========== CONTACT BLOCK ========== */
+
+.contactBlock {
+  margin-top: clamp(20px, 2vw, 40px);
+  padding-top: clamp(15px, 1.5vw, 30px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(8px, 0.8vw, 12px);
+}
+
+.contactLink {
+  color: #c9a86c;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(12px, 1vw, 18px);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.contactLink:hover {
+  color: #ffffff;
+}
+
+.socialLinks {
+  display: flex;
+  gap: clamp(12px, 1vw, 20px);
+  margin-top: clamp(6px, 0.5vw, 10px);
+}
+
+.socialLink {
+  color: #c9a86c;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(12px, 1vw, 18px);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.socialLink:hover {
+  color: #ffffff;
+}
+
+.contactLabel {
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+/* ========== LANGUAGE SWITCHER ========== */
+
+.languageSection {
+  margin-bottom: clamp(15px, 1.5vw, 30px);
+  padding-bottom: clamp(10px, 1vw, 20px);
+  border-bottom: 1px solid rgba(201, 168, 108, 0.3);
+  flex-shrink: 0; /* Prevent language section from shrinking */
+}
+
+.languageButton {
+  width: 100%;
+  padding: clamp(10px, 1vw, 16px) 0;
+  background: none;
+  border: none;
+  color: #c9a86c;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(12px, 1vw, 16px);
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(4px, 0.5vw, 8px);
+}
+
+.languageButton:hover {
+  color: #ffffff;
+}
+
+.languageList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #243832;
+  overflow: hidden;
+}
+
+.languageItem {
+  width: 100%;
+}
+
+.languageOption {
+  width: 100%;
+  padding: clamp(8px, 0.8vw, 12px) 0;
+  background: none;
+  border: none;
+  color: #c9a86c;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(11px, 0.9vw, 14px);
+  text-align: center;
+  cursor: pointer;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.languageOption:hover {
+  color: #ffffff;
+  background-color: rgba(201, 168, 108, 0.1);
+}
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\Footer.jsx
+──────────────────────────────────────────────────────────────────────
+import styles from './Footer.module.css';
+
+const Footer = () => {
+  return (
+    <footer id="footer" className={styles.footer}>
+      <div className={styles.container}>
+        {/* Copyright */}
+        <p className={styles.copyright}>
+          © 2025 Anastasiia Kolisnyk
+        </p>
+
+        {/* Contact Links */}
+        <div className={styles.links}>
+          <a
+            href="mailto:akolesnykl989@gmail.com"
+            className={styles.link}
+          >
+            akolesnykl989@gmail.com
+          </a>
+
+          <a
+            href="https://wa.me/qr/A3NYYPE55OODK1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            WhatsApp
+          </a>
+
+          <a
+            href="https://www.behance.net/akolesnyk14bf8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            Behance
+          </a>
+
+          <a
+            href="https://www.instagram.com/akolesnyk.sketch?igsh=eTgyYnNrZnVneDRy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            Instagram
+          </a>
+        </div>
+
+        {/* Logo */}
+        <div className={styles.logo}>
+          AK
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\Footer.module.css
+──────────────────────────────────────────────────────────────────────
+/* ========== FOOTER ========== */
+
+.footer {
+  background-color: #2D4A43;
+  padding: 16px 30px;
+  margin-top: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+}
+
+/* ========== COPYRIGHT ========== */
+
+.copyright {
+  color: #C9A86C;
+  opacity: 0.7;
+  margin: 0;
+}
+
+/* ========== LINKS ========== */
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.link {
+  color: #C9A86C;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.link:hover {
+  opacity: 0.7;
+}
+
+/* ========== LOGO ========== */
+
+.logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #C9A86C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  color: #2D4A43;
+  font-weight: 600;
+}
+
+/* ========== TABLET (max-width: 1024px) ========== */
+
+@media (max-width: 1024px) {
+  .container {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .links {
+    justify-content: center;
+  }
+}
+
+/* ========== MOBILE (max-width: 600px) ========== */
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 24px 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: 16px;
+  }
+
+  .copyright {
+    order: 2;
+  }
+
+  .links {
+    order: 1;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .logo {
+    order: 0;
+  }
+}
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\Header.jsx
+──────────────────────────────────────────────────────────────────────
+/* eslint-disable no-unused-vars */
+import { motion } from "framer-motion";
+/* eslint-enable no-unused-vars */
+import styles from "./Header.module.css";
+
+const Header = () => {
+  const scrollToTop = () => {
+    const element = document.getElementById("home");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <header className={styles.header}>
+      {/* Logo - Left */}
+      <button onClick={scrollToTop} className={styles.logoButton}>
+        <motion.div
+          className={styles.logoCircle}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <span className={styles.logoText}>AK</span>
+        </motion.div>
+      </button>
+
+      {/* Title - Centered */}
+      <div className={styles.titleWrapper}>
+        <h1 className={styles.title}>
+          Professional Illustrator / Grafik Designer
+        </h1>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
+
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\Header.module.css
+──────────────────────────────────────────────────────────────────────
+/* ========== HEADER ========== */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #f5efe6;
+  border-bottom: 1px solid rgba(212, 196, 168, 0.5);
+  padding: 24px 40px;
+}
+
+.logoButton {
+  position: relative;
+  z-index: 10;
+  flex-shrink: 0;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.logoCircle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #d4c4a8;
+  border: 2px solid rgba(159, 152, 139, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.logoCircle:hover {
+  transform: scale(1.05);
+}
+
+.logoCircle:active {
+  transform: scale(0.95);
+}
+
+.logoText {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #8b5a3c;
+}
+
+.titleWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #8b5a3c;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ========== TABLET (max-width: 1024px) ========== */
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 20px 30px;
+  }
+
+  .logoCircle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logoText {
+    font-size: 22px;
+  }
+
+  .title {
+    display: none;
+  }
+}
+
+/* ========== MOBILE (max-width: 768px) ========== */
+
+@media (max-width: 768px) {
+  .header {
+    padding: 16px 20px;
+  }
+
+  .logoCircle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .logoText {
+    font-size: 20px;
+  }
+}
+
+/* ========== MOBILE SMALL (max-width: 480px) ========== */
+
+@media (max-width: 480px) {
+  .header {
+    padding: 12px 16px;
+  }
+
+  .logoCircle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logoText {
+    font-size: 18px;
+  }
+}
+
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\Layout.jsx
+──────────────────────────────────────────────────────────────────────
+import { useState, useEffect } from "react";
+import DesktopMenu from "./DesktopMenu";
+import MobileMenu from "./MobileMenu";
+import Header from "./Header";
+import styles from "./Layout.module.css";
+
+const Layout = ({ children }) => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 1024 && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isMobileMenuOpen]);
+
+  return (
+    <div className={styles.layout}>
+      {/* Main Content Area */}
+      <div className={styles.mainContent}>
+        {/* Header */}
+        <Header />
+
+        {/* Content */}
+        {children}
+      </div>
+
+      {/* Desktop Menu */}
+      <DesktopMenu />
+
+      {/* Mobile Menu */}
+      <MobileMenu isOpen={isMobileMenuOpen} onClose={toggleMobileMenu} />
+    </div>
+  );
+};
+
+export default Layout;
+
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\Layout.module.css
+──────────────────────────────────────────────────────────────────────
+/* ========== LAYOUT ========== */
+
+.layout {
+  max-width: 1600px;
+  margin: 0 auto;
+  height: 100vh;        /* Change from min-height */
+  display: flex;
+  overflow-x: hidden;
+}
+
+.mainContent {
+  flex: 1;
+  height: 100vh;        /* Add fixed height */
+  overflow-y: auto;     /* This creates scroll container */
+  background-color: #F5EFE6;
+}
+
+/* ========== TABLET & MOBILE (max-width: 1024px) ========== */
+
+@media (max-width: 1024px) {
+  .mainContent {
+    right: 0;
+  }
+}
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\MobileMenu.jsx
+──────────────────────────────────────────────────────────────────────
+import { useState } from "react";
+/* eslint-disable no-unused-vars */
+import { motion, AnimatePresence } from "framer-motion";
+/* eslint-enable no-unused-vars */
+import { useLanguage } from "../hooks/useLanguage";
+import { useTranslation } from "../hooks/useTranslation";
+import styles from "./MobileMenu.module.css";
+
+const MobileMenu = ({ isOpen, onClose }) => {
+  const [isChildrensOpen, setIsChildrensOpen] = useState(false);
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+
+  // Language context and translations
+  const {
+    currentLanguage,
+    availableLanguages,
+    changeLanguage,
+    getCurrentLanguageLabel,
+  } = useLanguage();
+  const { translate } = useTranslation();
+
+  // Book projects with translations
+  const bookProjects = [
+    { id: "nutcracker", title: translate("books.nutcracker") },
+    { id: "wild-swans", title: translate("books.wildSwans") },
+    { id: "winter-adventures", title: translate("books.winterAdventures") },
+    { id: "magic-world", title: translate("books.magicWorld") },
+    { id: "sigurd", title: translate("books.sigurd") },
+    { id: "secrets-sea", title: translate("books.seaSecrets") },
+  ];
+
+  const scrollToSection = (id) => {
+    onClose();
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 300);
+  };
+
+  const handleLanguageChange = (code) => {
+    changeLanguage(code);
+    setIsLanguageOpen(false);
+  };
+
+  return (
+    <>
+      {/* Mobile Menu Button */}
+      <button
+        onClick={onClose}
+        className={styles.menuButton}
+        aria-label="Toggle menu"
+      >
+        <div className={styles.hamburger}>
+          <motion.span
+            className={styles.hamburgerLine}
+            animate={isOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
+          />
+          <motion.span
+            className={styles.hamburgerLine}
+            animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
+          />
+          <motion.span
+            className={styles.hamburgerLine}
+            animate={isOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
+          />
+        </div>
+      </button>
+
+      {/* Mobile Menu Panel */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.nav
+            className={`${styles.menuPanel} ${isOpen ? styles.open : ""}`}
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "tween", duration: 0.3 }}
+            style={{ display: "flex" }}
+          >
+            {/* Language Switcher */}
+            <div className={styles.languageSection}>
+              <button
+                onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+                className={styles.languageButton}
+              >
+                <span>{isLanguageOpen ? "▼" : "►"}</span>
+                <span>{getCurrentLanguageLabel()}</span>
+              </button>
+
+              <AnimatePresence>
+                {isLanguageOpen && (
+                  <motion.ul
+                    className={styles.languageList}
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {availableLanguages
+                      .filter((lang) => lang.code !== currentLanguage)
+                      .map((lang) => (
+                        <li key={lang.code} className={styles.languageItem}>
+                          <button
+                            onClick={() => handleLanguageChange(lang.code)}
+                            className={styles.languageOption}
+                          >
+                            {lang.label}
+                          </button>
+                        </li>
+                      ))}
+                  </motion.ul>
+                )}
+              </AnimatePresence>
+            </div>
+
+            <ul className={styles.menuList}>
+              {/* About Me */}
+              <motion.li
+                className={styles.menuItem}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+              >
+                <button
+                  onClick={() => scrollToSection("about")}
+                  className={styles.menuItemButton}
+                >
+                  {translate("menu.aboutMe")}
+                </button>
+              </motion.li>
+
+              {/* Children's Books with Accordion */}
+              <motion.li
+                className={styles.menuItem}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.15 }}
+              >
+                <button
+                  onClick={() => setIsChildrensOpen(!isChildrensOpen)}
+                  className={styles.menuItemButton}
+                >
+                  {isChildrensOpen ? "▼" : "►"} {translate("menu.childrensBooks")}
+                </button>
+
+                {/* Accordion Submenu */}
+                <AnimatePresence>
+                  {isChildrensOpen && (
+                    <motion.ul
+                      className={styles.submenu}
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      {bookProjects.map((project) => (
+                        <li key={project.id} className={styles.submenuItem}>
+                          <button
+                            onClick={() => scrollToSection(project.id)}
+                            className={styles.submenuButton}
+                          >
+                            {project.title}
+                          </button>
+                        </li>
+                      ))}
+                    </motion.ul>
+                  )}
+                </AnimatePresence>
+              </motion.li>
+
+              {/* Label Design */}
+              <motion.li
+                className={styles.menuItem}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+              >
+                <button
+                  onClick={() => scrollToSection("label-design")}
+                  className={styles.menuItemButton}
+                >
+                  {translate("menu.labelDesign")}
+                </button>
+              </motion.li>
+
+              {/* Logos */}
+              <motion.li
+                className={styles.menuItem}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.25 }}
+              >
+                <button
+                  onClick={() => scrollToSection("logos")}
+                  className={styles.menuItemButton}
+                >
+                  {translate("menu.logos")}
+                </button>
+              </motion.li>
+
+              {/* Branding */}
+              <motion.li
+                className={styles.menuItem}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+              >
+                <button
+                  onClick={() => scrollToSection("branding")}
+                  className={styles.menuItemButton}
+                >
+                  {translate("menu.branding")}
+                </button>
+              </motion.li>
+
+              {/* Contact */}
+              <motion.li
+                className={styles.menuItem}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.35 }}
+              >
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className={styles.menuItemButton}
+                >
+                  {translate("menu.contactMe")}
+                </button>
+              </motion.li>
+            </ul>
+
+            {/* Contact Block */}
+            <motion.div
+              className={styles.contactBlock}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              <a
+                href="mailto:akolesnykl989@gmail.com"
+                className={styles.contactLink}
+              >
+                akolesnykl989@gmail.com
+              </a>
+
+              <a
+                href="https://wa.me/qr/A3NYYPE55OODK1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.contactLink}
+              >
+                <span className={styles.contactLabel}>WhatsApp:</span> +421 951
+                813 809
+              </a>
+
+              <div className={styles.socialLinks}>
+                <a
+                  href="https://www.behance.net/akolesnyk14bf8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.socialLink}
+                >
+                  Behance
+                </a>
+                <a
+                  href="https://www.instagram.com/akolesnyk.sketch?igsh=eTgyYnNrZnVneDRy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.socialLink}
+                >
+                  Instagram
+                </a>
+              </div>
+            </motion.div>
+          </motion.nav>
+        )}
+      </AnimatePresence>
+    </>
+  );
+};
+
+export default MobileMenu;
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\MobileMenu.module.css
+──────────────────────────────────────────────────────────────────────
+/* ========== MOBILE MENU BUTTON ========== */
+
+.menuButton {
+  display: none;
+  position: fixed;
+  top: 35px;
+  right: 20px;
+  z-index: 1000;
+  width: 48px;
+  height: 48px;
+  background-color: #2d4a43;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-50%);
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hamburgerLine {
+  width: 24px;
+  height: 2px;
+  background-color: #c9a86c;
+  display: block;
+  transform-origin: center;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* ========== MOBILE MENU PANEL ========== */
+
+.menuPanel {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2d4a43;
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: clamp(80px, 12vh, 100px);
+  padding-left: clamp(20px, 5vw, 32px);
+  padding-right: clamp(20px, 5vw, 32px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ========== LANGUAGE SWITCHER ========== */
+
+.languageSection {
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: clamp(15px, 3vh, 20px);
+  padding-bottom: clamp(10px, 2vh, 15px);
+  border-bottom: 1px solid rgba(201, 168, 108, 0.3);
+}
+
+.languageButton {
+  width: 100%;
+  padding: clamp(10px, 2vh, 14px) 0;
+  background: none;
+  border: none;
+  color: #c9a86c;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(16px, 4vw, 18px);
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.languageButton:hover {
+  color: #ffffff;
+}
+
+.languageList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #243832;
+  overflow: hidden;
+}
+
+.languageItem {
+  width: 100%;
+}
+
+.languageOption {
+  width: 100%;
+  padding: clamp(10px, 2vh, 12px) 0;
+  background: none;
+  border: none;
+  color: #c9a86c;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(14px, 3.5vw, 16px);
+  text-align: center;
+  cursor: pointer;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.languageOption:hover {
+  color: #ffffff;
+  background-color: rgba(201, 168, 108, 0.1);
+}
+
+/* ========== MENU LIST ========== */
+
+.menuList {
+  width: 100%;
+  max-width: 320px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuItem {
+  width: 100%;
+}
+
+.menuItemButton {
+  width: 100%;
+  height: clamp(50px, 8vh, 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(201, 168, 108, 0.4);
+  color: #c9a86c;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(16px, 4.5vw, 20px);
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menuItemButton:hover {
+  color: #ffffff;
+}
+
+/* ========== SUBMENU ========== */
+
+.submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #243832;
+  overflow: hidden;
+}
+
+.submenuItem {
+  width: 100%;
+}
+
+.submenuButton {
+  width: 100%;
+  height: clamp(40px, 6vh, 48px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(201, 168, 108, 0.2);
+  color: rgba(201, 168, 108, 0.8);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(13px, 3.5vw, 15px);
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.submenuButton:hover {
+  color: #ffffff;
+}
+
+/* ========== CONTACT BLOCK ========== */
+
+.contactBlock {
+  width: 100%;
+  max-width: 320px;
+  margin-top: clamp(20px, 4vh, 30px);
+  padding-top: clamp(15px, 3vh, 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(8px, 2vh, 12px);
+}
+
+.contactLink {
+  color: #c9a86c;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(14px, 3.5vw, 16px);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+.contactLink:hover {
+  color: #ffffff;
+}
+
+.contactLabel {
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.socialLinks {
+  display: flex;
+  gap: clamp(15px, 4vw, 20px);
+  margin-top: clamp(8px, 2vh, 10px);
+}
+
+.socialLink {
+  color: #c9a86c;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(14px, 3.5vw, 16px);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.socialLink:hover {
+  color: #ffffff;
+}
+
+/* ========== SHOW ON MOBILE (max-width: 1024px) ========== */
+
+@media (max-width: 1024px) {
+  .menuButton {
+    display: flex;
+  }
+
+  .menuPanel.open {
+    display: flex;
+  }
+}
+
+/* ========== SMALL PHONES (max-width: 360px) ========== */
+
+@media (max-width: 360px) {
+  .menuPanel {
+    padding-top: 70px;
+  }
+
+  .menuItemButton {
+    font-size: 15px;
+    height: 48px;
+  }
+
+  .submenuButton {
+    font-size: 12px;
+    height: 38px;
+  }
+}
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\sections\AboutSection.jsx
+──────────────────────────────────────────────────────────────────────
+import { useTranslation } from "../../hooks/useTranslation";
+import SectionTitle from "../ui/SectionTitle";
+import styles from "./AboutSection.module.css";
+
+const AboutSection = () => {
+  const { translate } = useTranslation();
+
+  // Replace {name} placeholder with the actual name in bold
+  const renderIntro = () => {
+    const intro = translate("about.intro");
+    const name = translate("about.name");
+    const parts = intro.split("{name}");
+    
+    return (
+      <>
+        {parts[0]}
+        <strong className={styles.name}>{name}</strong>
+        {parts[1]}
+      </>
+    );
+  };
+
+  return (
+    <section id="about" className={styles.section}>
+      {/* ========== DESKTOP VERSION ========== */}
+      <div className={styles.desktopContainer}>
+        <div className={styles.imageWrapper}>
+          <img
+            src="/gallery/about/about-me_empty.webp"
+            alt="About Me"
+            className={styles.aboutImage}
+          />
+          
+          <div className={styles.textOverlay}>
+            <div className={styles.textContent}>
+              <p className={styles.paragraph}>
+                {renderIntro()}
+              </p>
+              <p className={styles.paragraph}>
+                {translate("about.work")}
+              </p>
+              <p className={styles.paragraph}>
+                {translate("about.goal")}
+              </p>
+              <p className={styles.paragraph}>
+                {translate("about.explore")}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ========== MOBILE VERSION ========== */}
+      <div className={styles.mobileContainer}>
+        {/* Portrait Image */}
+        <div className={styles.mobileImageWrapper}>
+          <img
+            src="/gallery/about/about-photo.webp"
+            alt="Anastasiia Kolisnyk"
+            className={styles.mobileImage}
+          />
+        </div>
+
+        {/* Text Content */}
+        <div className={styles.mobileTextWrapper}>
+          <div className={styles.mobileTitleWrapper}>
+            <SectionTitle textKey="menu.about" />
+          </div>
+
+          <div className={styles.mobileDescription}>
+            <p className={styles.mobileText}>
+              {renderIntro()}
+            </p>
+            <p className={styles.mobileText}>
+              {translate("about.work")}
+            </p>
+            <p className={styles.mobileText}>
+              {translate("about.goal")}
+            </p>
+            <p className={styles.mobileText}>
+              {translate("about.explore")}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutSection;
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\sections\BrandingSection.jsx
+──────────────────────────────────────────────────────────────────────
+import { useState } from "react";
+/* eslint-disable no-unused-vars */
+import { motion } from "framer-motion";
+/* eslint-enable no-unused-vars */
+import { useTranslation } from "../../hooks/useTranslation";
+import SectionTitle from "../ui/SectionTitle";
+import styles from "./BrandingSection.module.css";
+
+const brandingImages = [
+  { thumb: "/gallery/branding/thumb/thumb_01.webp", full: "/gallery/branding/full/full_01.webp", alt: "Botanical print" },
+  { thumb: "/gallery/branding/thumb/thumb_02.webp", full: "/gallery/branding/full/full_02.webp", alt: "Impressionist Mood notebook" },
+  { thumb: "/gallery/branding/thumb/thumb_03.webp", full: "/gallery/branding/full/full_03.webp", alt: "Advent 2026 calendar" },
+  { thumb: "/gallery/branding/thumb/thumb_04.webp", full: "/gallery/branding/full/full_04.webp", alt: "Floral pillow" },
+  { thumb: "/gallery/branding/thumb/thumb_05.webp", full: "/gallery/branding/full/full_05.webp", alt: "Green floral scarf" },
+  { thumb: "/gallery/branding/thumb/thumb_10.webp", full: "/gallery/branding/full/full_10.webp", alt: "Pink sky landscape" },
+  { thumb: "/gallery/branding/thumb/thumb_11.webp", full: "/gallery/branding/full/full_11.webp", alt: "Sunset landscape" },
+  { thumb: "/gallery/branding/thumb/thumb_12.webp", full: "/gallery/branding/full/full_12.webp", alt: "Green river landscape" },
+  { thumb: "/gallery/branding/thumb/thumb_14.webp", full: "/gallery/branding/full/full_14.webp", alt: "Branding design" },
+];
+
+const BrandingSection = () => {
+  const { translate } = useTranslation();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const openLightbox = (index) => {
+    setActiveIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+  };
+
+  const goNext = () => {
+    setActiveIndex((prev) => (prev + 1) % brandingImages.length);
+  };
+
+  const goPrev = () => {
+    setActiveIndex((prev) => (prev - 1 + brandingImages.length) % brandingImages.length);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowRight") goNext();
+    if (e.key === "ArrowLeft") goPrev();
+  };
+
+  return (
+    <section id="branding" className={styles.section}>
+      {/* Header */}
+      <div className={styles.header}>
+        <motion.div
+          className={styles.titleWrapper}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          whileHover={{ scale: 1.02 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle>{translate("branding.title")}</SectionTitle>
+        </motion.div>
+
+        <motion.div
+          className={styles.description}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+        >
+          <p className={styles.descriptionText}>
+            {translate("branding.text1")}
+          </p>
+          <p className={styles.descriptionText}>
+            {translate("branding.text2")}
+          </p>
+          <p className={styles.descriptionText}>
+            {translate("branding.text3")}
+          </p>
+        </motion.div>
+      </div>
+
+      {/* Grid Gallery */}
+      <div className={styles.grid}>
+        {brandingImages.map((image, index) => (
+          <motion.div
+            key={index}
+            className={styles.gridItem}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.02 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
+            onClick={() => openLightbox(index)}
+          >
+            <img
+              src={image.thumb}
+              alt={image.alt}
+              className={styles.image}
+              loading="lazy"
+            />
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Lightbox */}
+      {lightboxOpen && (
+        <div
+          className={styles.lightbox}
+          onClick={closeLightbox}
+          onKeyDown={handleKeyDown}
+          tabIndex={0}
+          ref={(el) => el && el.focus()}
+        >
+          <button className={styles.closeBtn} onClick={closeLightbox}>
+            ✕
+          </button>
+
+          <button
+            className={`${styles.navBtn} ${styles.prevBtn}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              goPrev();
+            }}
+          >
+            ←
+          </button>
+
+          <div
+            className={styles.lightboxContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={brandingImages[activeIndex].full}
+              alt={brandingImages[activeIndex].alt}
+              className={styles.lightboxImage}
+            />
+          </div>
+
+          <button
+            className={`${styles.navBtn} ${styles.nextBtn}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              goNext();
+            }}
+          >
+            →
+          </button>
+        </div>
+      )}
+    </section>
+  );
+};
+
+export default BrandingSection;
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\sections\ChildrensBooksIntro.jsx
+──────────────────────────────────────────────────────────────────────
+/* eslint-disable no-unused-vars */
+import { motion } from "framer-motion";
+/* eslint-enable no-unused-vars */
+import { useTranslation } from "../../hooks/useTranslation";
+import SectionTitle from "../ui/SectionTitle";
+import styles from "./ChildrensBooksIntro.module.css";
+
+const ChildrensBooksIntro = () => {
+  const { translate } = useTranslation();
+
+  return (
+    <section className={styles.section}>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        <SectionTitle>{translate("booksIntro.title")}</SectionTitle>
+      </motion.div>
+
+      <motion.div 
+        className={styles.description}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2 }}
+      >
+        <h3 className={styles.descriptionTitle}>
+          {translate("booksIntro.subtitle")}
+        </h3>
+        <p className={styles.descriptionText}>
+          {translate("booksIntro.text1")}
+        </p>
+        <p className={styles.descriptionText}>
+          {translate("booksIntro.text2")}
+        </p>
+        <p className={styles.descriptionText}>
+          {translate("booksIntro.text3")}
+        </p>
+      </motion.div>
+    </section>
+  );
+};
+
+export default ChildrensBooksIntro;
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\sections\ChildrensBooksSection.jsx
+──────────────────────────────────────────────────────────────────────
+/* eslint-disable no-unused-vars */
+import { motion } from "framer-motion";
+/* eslint-enable no-unused-vars */
+import SectionTitle from "../ui/SectionTitle";
+import NutCrackerPage from "./NutCrackerPage";
+import WildSwansPage from "./WildSwansPage";
+import WinterAdventuresPage from "./WinterAdventuresPage";
+import SigurdPage from "./SiguardPage";
+import SeaSecretsPage from "./SeaSecretsPage";
+import MagicWorldPage from "./MagicWorldPage";
+
+import styles from "./ChildrensBooksSection.module.css";
+
+const ChildrensBooksSection = () => {
+  return (
+    <section id="childrens-books" className={styles.section}>
+      {/* Book Pages */}
+      <NutCrackerPage />
+      <WildSwansPage />
+      <WinterAdventuresPage />
+      <MagicWorldPage />
+      <SigurdPage />
+      <SeaSecretsPage />
+    </section>
+  );
+};
+
+export default ChildrensBooksSection;
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\sections\ContactSection.jsx
+──────────────────────────────────────────────────────────────────────
+import Footer from "../Footer";
+
+const ContactSection = () => {
+  return (
+    <section id="contact">
+      <Footer />
+    </section>
+  );
+};
+
+export default ContactSection;
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\sections\HeroSection.jsx
+──────────────────────────────────────────────────────────────────────
+/* eslint-disable no-unused-vars */
+import { motion } from "framer-motion";
+/* eslint-enable no-unused-vars */
+
+const HeroSection = () => {
+  return (
+    <section
+      id="home"
+      style={{
+        minHeight: "calc(100vh - 114px)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "40px",
+      }}
+    >
+      <motion.img
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+        src="/gallery/home.png"
+        alt="AK Portfolio"
+        style={{
+          maxWidth: "100%",
+          maxHeight: "calc(100vh - 200px)",
+          objectFit: "contain",
+        }}
+      />
+    </section>
+  );
+};
+
+export default HeroSection;
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\sections\LabelDesignSection.jsx
+──────────────────────────────────────────────────────────────────────
+import { useState } from "react";
+/* eslint-disable no-unused-vars */
+import { motion } from "framer-motion";
+/* eslint-enable no-unused-vars */
+import { useTranslation } from "../../hooks/useTranslation";
+import SectionTitle from "../ui/SectionTitle";
+import styles from "./LabelDesignSection.module.css";
+
+const labelImages = [
+  { src: "/gallery/labels/label_01.webp", alt: "Sunflower oil label" },
+  { src: "/gallery/labels/label_09.webp", alt: "Star sunflower oil label" },
+  { src: "/gallery/labels/label_05.webp", alt: "Adriano restaurant flyer" },
+  { src: "/gallery/labels/label_04.webp", alt: "Adriano business cards" },
+  { src: "/gallery/labels/label_06.webp", alt: "Adriano seafood poster" },
+  { src: "/gallery/labels/label_02.webp", alt: "Adriano menu design" },
+  { src: "/gallery/labels/label_07.webp", alt: "Adriano menu page" },
+];
+
+const LabelDesignSection = () => {
+  const { translate } = useTranslation();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const openLightbox = (index) => {
+    setActiveIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+  };
+
+  const goNext = () => {
+    setActiveIndex((prev) => (prev + 1) % labelImages.length);
+  };
+
+  const goPrev = () => {
+    setActiveIndex((prev) => (prev - 1 + labelImages.length) % labelImages.length);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowRight") goNext();
+    if (e.key === "ArrowLeft") goPrev();
+  };
+
+  return (
+    <section id="label-design" className={styles.section}>
+      {/* Header */}
+      <div className={styles.header}>
+        <motion.div
+          className={styles.titleWrapper}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle>{translate("labelDesign.title")}</SectionTitle>
+        </motion.div>
+
+        <motion.div
+          className={styles.description}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+        >
+          <p className={styles.descriptionText}>
+            {translate("labelDesign.text1")}
+          </p>
+          <p className={styles.descriptionText}>
+            {translate("labelDesign.text2")}
+          </p>
+          <p className={styles.descriptionText}>
+            {translate("labelDesign.text3")}
+          </p>
+        </motion.div>
+      </div>
+
+      {/* Grid Gallery */}
+      <div className={styles.grid}>
+        {labelImages.map((image, index) => (
+          <motion.div
+            key={index}
+            className={styles.gridItem}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.02 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
+            onClick={() => openLightbox(index)}
+          >
+            <img
+              src={image.src}
+              alt={image.alt}
+              className={styles.image}
+              loading="lazy"
+            />
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Lightbox */}
+      {lightboxOpen && (
+        <div
+          className={styles.lightbox}
+          onClick={closeLightbox}
+          onKeyDown={handleKeyDown}
+          tabIndex={0}
+          ref={(el) => el && el.focus()}
+        >
+          <button className={styles.closeBtn} onClick={closeLightbox}>
+            ✕
+          </button>
+
+          <button
+            className={`${styles.navBtn} ${styles.prevBtn}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              goPrev();
+            }}
+          >
+            ←
+          </button>
+
+          <div
+            className={styles.lightboxContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={labelImages[activeIndex].src}
+              alt={labelImages[activeIndex].alt}
+              className={styles.lightboxImage}
+            />
+          </div>
+
+          <button
+            className={`${styles.navBtn} ${styles.nextBtn}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              goNext();
+            }}
+          >
+            →
+          </button>
+        </div>
+      )}
+    </section>
+  );
+};
+
+export default LabelDesignSection;
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\sections\LogosSection.jsx
+──────────────────────────────────────────────────────────────────────
+import { useState } from "react";
+/* eslint-disable no-unused-vars */
+import { motion } from "framer-motion";
+/* eslint-enable no-unused-vars */
+import { useTranslation } from "../../hooks/useTranslation";
+import SectionTitle from "../ui/SectionTitle";
+import styles from "./LogosSection.module.css";
+
+const logoImages = [
+  { src: "/gallery/logos/logo_01.webp", alt: "Star Food logo" },
+  { src: "/gallery/logos/logo_05.webp", alt: "Balloon Party logo" },
+  { src: "/gallery/logos/logo_04.webp", alt: "Geometric logo" },
+  { src: "/gallery/logos/logo_06.webp", alt: "DT Diagecutunetrencin cards" },
+  { src: "/gallery/logos/logo_07.webp", alt: "Adriano Golf Restaurant logo" },
+];
+
+const LogosSection = () => {
+  const { translate } = useTranslation();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const openLightbox = (index) => {
+    setActiveIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+  };
+
+  const goNext = () => {
+    setActiveIndex((prev) => (prev + 1) % logoImages.length);
+  };
+
+  const goPrev = () => {
+    setActiveIndex((prev) => (prev - 1 + logoImages.length) % logoImages.length);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowRight") goNext();
+    if (e.key === "ArrowLeft") goPrev();
+  };
+
+  return (
+    <section id="logos" className={styles.section}>
+      {/* Header */}
+      <div className={styles.header}>
+        <motion.div
+          className={styles.titleWrapper}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle>{translate("logos.title")}</SectionTitle>
+        </motion.div>
+
+        <motion.div
+          className={styles.description}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+        >
+          <p className={styles.descriptionText}>
+            {translate("logos.text1")}
+          </p>
+          <p className={styles.descriptionText}>
+            {translate("logos.text2")}
+          </p>
+          <p className={styles.descriptionText}>
+            {translate("logos.text3")}
+          </p>
+        </motion.div>
+      </div>
+
+      {/* Grid Gallery */}
+      <div className={styles.grid}>
+        {logoImages.map((image, index) => (
+          <motion.div
+            key={index}
+            className={styles.gridItem}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.02 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
+            onClick={() => openLightbox(index)}
+          >
+            <img
+              src={image.src}
+              alt={image.alt}
+              className={styles.image}
+              loading="lazy"
+            />
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Lightbox */}
+      {lightboxOpen && (
+        <div
+          className={styles.lightbox}
+          onClick={closeLightbox}
+          onKeyDown={handleKeyDown}
+          tabIndex={0}
+          ref={(el) => el && el.focus()}
+        >
+          <button className={styles.closeBtn} onClick={closeLightbox}>
+            ✕
+          </button>
+
+          <button
+            className={`${styles.navBtn} ${styles.prevBtn}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              goPrev();
+            }}
+          >
+            ←
+          </button>
+
+          <div
+            className={styles.lightboxContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={logoImages[activeIndex].src}
+              alt={logoImages[activeIndex].alt}
+              className={styles.lightboxImage}
+            />
+          </div>
+
+          <button
+            className={`${styles.navBtn} ${styles.nextBtn}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              goNext();
+            }}
+          >
+            →
+          </button>
+        </div>
+      )}
+    </section>
+  );
+};
+
+export default LogosSection;
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\sections\MagicWorldPage.jsx
+──────────────────────────────────────────────────────────────────────
+import { useState } from "react";
+/* eslint-disable no-unused-vars */
+import { motion } from "framer-motion";
+/* eslint-enable no-unused-vars */
+import { useTranslation } from "../../hooks/useTranslation";
+import SectionTitle from "../ui/SectionTitle";
+import styles from "./MagicWorldPage.module.css";
+
+const magicImages = [
+  { thumb: "/gallery/books/magic-world/thumb/thumb_01.webp", full: "/gallery/books/magic-world/full/full_01.webp", alt: "Magic World - Circus performers" },
+  { thumb: "/gallery/books/magic-world/thumb/thumb_02.webp", full: "/gallery/books/magic-world/full/full_02.webp", alt: "Magic Animals - Lion" },
+  { thumb: "/gallery/books/magic-world/thumb/thumb_03.webp", full: "/gallery/books/magic-world/full/full_03.webp", alt: "Spectators" },
+  { thumb: "/gallery/books/magic-world/thumb/thumb_04.webp", full: "/gallery/books/magic-world/full/full_04.webp", alt: "The Wonderful - Girl with glasses" },
+  { thumb: "/gallery/books/magic-world/thumb/thumb_05.webp", full: "/gallery/books/magic-world/full/full_05.webp", alt: "Circus tent with bird" },
+  { thumb: "/gallery/books/magic-world/thumb/thumb_06.webp", full: "/gallery/books/magic-world/full/full_06.webp", alt: "Acrobats performance" },
+];
+
+const MagicWorldPage = () => {
+  const { translate } = useTranslation();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const openLightbox = (index) => {
+    setActiveIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+  };
+
+  const goNext = () => {
+    setActiveIndex((prev) => (prev + 1) % magicImages.length);
+  };
+
+  const goPrev = () => {
+    setActiveIndex((prev) => (prev - 1 + magicImages.length) % magicImages.length);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowRight") goNext();
+    if (e.key === "ArrowLeft") goPrev();
+  };
+
+  return (
+    <section id="magic-world" className={styles.section}>
+      {/* Title */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+         <SectionTitle>{translate("books.magicWorld")}</SectionTitle>
+      </motion.div>
+
+      {/* Grid Gallery 3x2 */}
+      <div className={styles.grid}>
+        {magicImages.map((image, index) => (
+          <motion.div
+            key={index}
+            className={styles.gridItem}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.02 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
+            onClick={() => openLightbox(index)}
+          >
+            <img
+              src={image.thumb}
+              alt={image.alt}
+              className={styles.image}
+              loading="lazy"
+            />
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Lightbox */}
+      {lightboxOpen && (
+        <div
+          className={styles.lightbox}
+          onClick={closeLightbox}
+          onKeyDown={handleKeyDown}
+          tabIndex={0}
+          ref={(el) => el && el.focus()}
+        >
+          <button className={styles.closeBtn} onClick={closeLightbox}>
+            ✕
+          </button>
+
+          <button
+            className={`${styles.navBtn} ${styles.prevBtn}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              goPrev();
+            }}
+          >
+            ←
+          </button>
+
+          <div
+            className={styles.lightboxContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={magicImages[activeIndex].full}
+              alt={magicImages[activeIndex].alt}
+              className={styles.lightboxImage}
+            />
+          </div>
+
+          <button
+            className={`${styles.navBtn} ${styles.nextBtn}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              goNext();
+            }}
+          >
+            →
+          </button>
+        </div>
+      )}
+    </section>
+  );
+};
+
+export default MagicWorldPage;
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\sections\NutCrackerPage.jsx
+──────────────────────────────────────────────────────────────────────
+import { useState } from "react";
+/* eslint-disable no-unused-vars */
+import { motion } from "framer-motion";
+/* eslint-enable no-unused-vars */
+import { useTranslation } from "../../hooks/useTranslation";
+import SectionTitle from "../ui/SectionTitle";
+import styles from "./NutCrackerPage.module.css";
+
+const nutcrackerImages = [
+  { thumb: "/gallery/books/nutcracker/thumb_01.webp", full: "/gallery/books/nutcracker/full_01.webp", alt: "Nutcracker - Book spread 1" },
+  { thumb: "/gallery/books/nutcracker/thumb_02.webp", full: "/gallery/books/nutcracker/full_02.webp", alt: "Nutcracker - Book spread 2" },
+  { thumb: "/gallery/books/nutcracker/thumb_03.webp", full: "/gallery/books/nutcracker/full_03.webp", alt: "Nutcracker - Book spread 3" },
+  { thumb: "/gallery/books/nutcracker/thumb_04.webp", full: "/gallery/books/nutcracker/full_04.webp", alt: "Nutcracker - Characters" },
+  { thumb: "/gallery/books/nutcracker/thumb_05.webp", full: "/gallery/books/nutcracker/full_05.webp", alt: "Nutcracker - Sketches" },
+  { thumb: "/gallery/books/nutcracker/thumb_06.webp", full: "/gallery/books/nutcracker/full_06.webp", alt: "Nutcracker - Cover" },
+];
+
+const NutCrackerPage = () => {
+  const { translate } = useTranslation();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const openLightbox = (index) => {
+    setActiveIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+  };
+
+  const goNext = () => {
+    setActiveIndex((prev) => (prev + 1) % nutcrackerImages.length);
+  };
+
+  const goPrev = () => {
+    setActiveIndex((prev) => (prev - 1 + nutcrackerImages.length) % nutcrackerImages.length);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowRight") goNext();
+    if (e.key === "ArrowLeft") goPrev();
+  };
+
+  return (
+    <section id="nutcracker" className={styles.section}>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        <SectionTitle>{translate("books.nutcracker")}</SectionTitle>
+      </motion.div>
+
+      <div className={styles.grid}>
+        {nutcrackerImages.map((image, index) => (
+          <motion.div
+            key={index}
+            className={styles.gridItem}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.02 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.08 }}
+            onClick={() => openLightbox(index)}
+          >
+            <img
+              src={image.thumb}
+              alt={image.alt}
+              className={styles.image}
+              loading="lazy"
+            />
+          </motion.div>
+        ))}
+      </div>
+
+      {lightboxOpen && (
+        <div
+          className={styles.lightbox}
+          onClick={closeLightbox}
+          onKeyDown={handleKeyDown}
+          tabIndex={0}
+          ref={(el) => el && el.focus()}
+        >
+          <button className={styles.closeBtn} onClick={closeLightbox}>
+            ✕
+          </button>
+
+          <button
+            className={`${styles.navBtn} ${styles.prevBtn}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              goPrev();
+            }}
+          >
+            ←
+          </button>
+
+          <div
+            className={styles.lightboxContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={nutcrackerImages[activeIndex].full}
+              alt={nutcrackerImages[activeIndex].alt}
+              className={styles.lightboxImage}
+            />
+          </div>
+
+          <button
+            className={`${styles.navBtn} ${styles.nextBtn}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              goNext();
+            }}
+          >
+            →
+          </button>
+        </div>
+      )}
+    </section>
+  );
+};
+
+export default NutCrackerPage;
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\sections\SeaSecretsPage.jsx
+──────────────────────────────────────────────────────────────────────
+import { useState, useRef, useEffect } from "react";
+/* eslint-disable no-unused-vars */
+import { motion } from "framer-motion";
+/* eslint-enable no-unused-vars */
+import { useTranslation } from "../../hooks/useTranslation";
+import SectionTitle from "../ui/SectionTitle";
+import styles from "./SeaSecretsPage.module.css";
+
+const seaImages = [
+  { thumb: "/gallery/books/sea-secrets/thumb/thumb_01.webp", full: "/gallery/books/sea-secrets/full/full_01.webp", alt: "Sea creatures sketches", hasVideo: true, videoSrc: "/gallery/books/sea-secrets/video/video_01" },
+  { thumb: "/gallery/books/sea-secrets/thumb/thumb_02.webp", full: "/gallery/books/sea-secrets/full/full_02.webp", alt: "Whale and octopus spread", hasVideo: false },
+  { thumb: "/gallery/books/sea-secrets/thumb/thumb_03.webp", full: "/gallery/books/sea-secrets/full/full_03.webp", alt: "Turtle and starfish spread", hasVideo: false },
+  { thumb: "/gallery/books/sea-secrets/thumb/thumb_10.webp", full: "/gallery/books/sea-secrets/full/full_10.webp", alt: "Book mockup", hasVideo: false },
+  { thumb: "/gallery/books/sea-secrets/thumb/thumb_05.webp", full: "/gallery/books/sea-secrets/full/full_05.webp", alt: "Book mockup angle", hasVideo: true, videoSrc: "/gallery/books/sea-secrets/video/video_05" },
+  { thumb: "/gallery/books/sea-secrets/thumb/thumb_06.webp", full: "/gallery/books/sea-secrets/full/full_06.webp", alt: "Hammerhead and rays", hasVideo: false },
+  { thumb: "/gallery/books/sea-secrets/thumb/thumb_07.webp", full: "/gallery/books/sea-secrets/full/full_07.webp", alt: "Pufferfish and eel", hasVideo: false },
+  { thumb: "/gallery/books/sea-secrets/thumb/thumb_08.webp", full: "/gallery/books/sea-secrets/full/full_08.webp", alt: "Turtle and pearl", hasVideo: false },
+  { thumb: "/gallery/books/sea-secrets/thumb/thumb_09.webp", full: "/gallery/books/sea-secrets/full/full_09.webp", alt: "Starfish spread", hasVideo: true, videoSrc: "/gallery/books/sea-secrets/video/video_09" },
+];
+
+const SeaSecretsPage = () => {
+  const { translate } = useTranslation();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const openLightbox = (index) => {
+    setActiveIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+  };
+
+  const goNext = () => {
+    setActiveIndex((prev) => (prev + 1) % seaImages.length);
+  };
+
+  const goPrev = () => {
+    setActiveIndex((prev) => (prev - 1 + seaImages.length) % seaImages.length);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowRight") goNext();
+    if (e.key === "ArrowLeft") goPrev();
+  };
+
+  return (
+    <section id="secrets-sea" className={styles.section}>
+      {/* Title */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        <SectionTitle>{translate("books.seaSecrets")}</SectionTitle>
+      </motion.div>
+
+      {/* Grid Gallery 3x3 */}
+      <div className={styles.grid}>
+        {seaImages.map((image, index) => (
+          <GridItem
+            key={index}
+            image={image}
+            index={index}
+            isMobile={isMobile}
+            onOpenLightbox={() => openLightbox(index)}
+          />
+        ))}
+      </div>
+
+      {/* Lightbox */}
+      {lightboxOpen && (
+        <div
+          className={styles.lightbox}
+          onClick={closeLightbox}
+          onKeyDown={handleKeyDown}
+          tabIndex={0}
+          ref={(el) => el && el.focus()}
+        >
+          <button className={styles.closeBtn} onClick={closeLightbox}>
+            ✕
+          </button>
+
+          <button
+            className={`${styles.navBtn} ${styles.prevBtn}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              goPrev();
+            }}
+          >
+            ←
+          </button>
+
+          <div
+            className={styles.lightboxContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* If current image has video, show video in lightbox */}
+            {seaImages[activeIndex].hasVideo ? (
+              <video
+                className={styles.lightboxVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src={`${seaImages[activeIndex].videoSrc}.webm`} type="video/webm" />
+                <source src={`${seaImages[activeIndex].videoSrc}.mp4`} type="video/mp4" />
+              </video>
+            ) : (
+              <img
+                src={seaImages[activeIndex].full}
+                alt={seaImages[activeIndex].alt}
+                className={styles.lightboxImage}
+              />
+            )}
+          </div>
+
+          <button
+            className={`${styles.navBtn} ${styles.nextBtn}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              goNext();
+            }}
+          >
+            →
+          </button>
+        </div>
+      )}
+    </section>
+  );
+};
+
+// Separate component for grid items with video support
+const GridItem = ({ image, index, isMobile, onOpenLightbox }) => {
+  const videoRef = useRef(null);
+  const containerRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [showPlayButton, setShowPlayButton] = useState(true);
+
+  // Intersection Observer for autoplay on desktop
+  useEffect(() => {
+    if (!image.hasVideo || isMobile) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (videoRef.current) {
+            if (entry.isIntersecting) {
+              videoRef.current.play();
+              setIsPlaying(true);
+            } else {
+              videoRef.current.pause();
+              setIsPlaying(false);
+            }
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [image.hasVideo, isMobile]);
+
+  // Handle mobile play button click
+  const handlePlayClick = (e) => {
+    e.stopPropagation();
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+        setIsPlaying(false);
+        setShowPlayButton(true);
+      } else {
+        videoRef.current.play();
+        setIsPlaying(true);
+        setShowPlayButton(false);
+      }
+    }
+  };
+
+  // Handle click - open lightbox for images, toggle play for videos on mobile
+  const handleClick = () => {
+    if (image.hasVideo && isMobile) {
+      handlePlayClick({ stopPropagation: () => {} });
+    } else {
+      onOpenLightbox();
+    }
+  };
+
+  return (
+    <motion.div
+      ref={containerRef}
+      className={styles.gridItem}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      whileHover={{ scale: 1.02 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.08 }}
+      onClick={handleClick}
+    >
+      {image.hasVideo ? (
+        <>
+          {/* Video element */}
+          <video
+            ref={videoRef}
+            className={styles.video}
+            loop
+            muted
+            playsInline
+            poster={image.thumb}
+            preload="none"
+          >
+            <source src={`${image.videoSrc}.webm`} type="video/webm" />
+            <source src={`${image.videoSrc}.mp4`} type="video/mp4" />
+          </video>
+
+          {/* Play button overlay for mobile */}
+          {isMobile && showPlayButton && (
+            <div className={styles.playOverlay}>
+              <button className={styles.playBtn} onClick={handlePlayClick}>
+                ▶
+              </button>
+            </div>
+          )}
+        </>
+      ) : (
+        <img
+          src={image.thumb}
+          alt={image.alt}
+          className={styles.image}
+          loading="lazy"
+        />
+      )}
+    </motion.div>
+  );
+};
+
+export default SeaSecretsPage;
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\sections\SiguardPage.jsx
+──────────────────────────────────────────────────────────────────────
+import { useState, useRef, useEffect } from "react";
+/* eslint-disable no-unused-vars */
+import { motion } from "framer-motion";
+/* eslint-enable no-unused-vars */
+import { useTranslation } from "../../hooks/useTranslation";
+import SectionTitle from "../ui/SectionTitle";
+import styles from "./SiguardPage.module.css";
+
+const sigurdImages = [
+  { thumb: "/gallery/books/sigurd/thumb/thumb_01.webp", full: "/gallery/books/sigurd/full/full_01.webp", alt: "Sigurd - Chapter 1", hasVideo: false },
+  { thumb: "/gallery/books/sigurd/thumb/thumb_06.webp", full: "/gallery/books/sigurd/full/full_06.webp", alt: "Sigurd - Sketches", hasVideo: false },
+  { thumb: "/gallery/books/sigurd/thumb/thumb_02.webp", full: "/gallery/books/sigurd/full/full_02.webp", alt: "Sigurd - Chapter 2", hasVideo: true, videoSrc: "/gallery/books/sigurd/video/video_02" },
+  { thumb: "/gallery/books/sigurd/thumb/thumb_03.webp", full: "/gallery/books/sigurd/full/full_03.webp", alt: "Sigurd - Chapter 3", hasVideo: false },
+  { thumb: "/gallery/books/sigurd/thumb/thumb_04.webp", full: "/gallery/books/sigurd/full/full_04.webp", alt: "Sigurd - Chapter 4", hasVideo: false },
+  { thumb: "/gallery/books/sigurd/thumb/thumb_05.webp", full: "/gallery/books/sigurd/full/full_05.webp", alt: "Sigurd - Characters", hasVideo: false },
+  { thumb: "/gallery/books/sigurd/thumb/thumb_06.webp", full: "/gallery/books/sigurd/full/full_06.webp", alt: "Sigurd - Sketches", hasVideo: true, videoSrc: "/gallery/books/sigurd/video/video_06" },
+  { thumb: "/gallery/books/sigurd/thumb/thumb_02.webp", full: "/gallery/books/sigurd/full/full_02.webp", alt: "Sigurd - Dragon battle", hasVideo: false },
+];
+
+const SigurdPage = () => {
+  const { translate } = useTranslation();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const openLightbox = (index) => {
+    setActiveIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+  };
+
+  const goNext = () => {
+    setActiveIndex((prev) => (prev + 1) % sigurdImages.length);
+  };
+
+  const goPrev = () => {
+    setActiveIndex((prev) => (prev - 1 + sigurdImages.length) % sigurdImages.length);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowRight") goNext();
+    if (e.key === "ArrowLeft") goPrev();
+  };
+
+  return (
+    <section id="sigurd" className={styles.section}>
+      {/* Title */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        <SectionTitle>{translate("books.sigurd")}</SectionTitle>
+      </motion.div>
+
+      {/* Grid Gallery */}
+      <div className={styles.grid}>
+        {sigurdImages.map((image, index) => (
+          <GridItem
+            key={index}
+            image={image}
+            index={index}
+            isMobile={isMobile}
+            onOpenLightbox={() => openLightbox(index)}
+          />
+        ))}
+      </div>
+
+      {/* Lightbox */}
+      {lightboxOpen && (
+        <div
+          className={styles.lightbox}
+          onClick={closeLightbox}
+          onKeyDown={handleKeyDown}
+          tabIndex={0}
+          ref={(el) => el && el.focus()}
+        >
+          <button className={styles.closeBtn} onClick={closeLightbox}>
+            ✕
+          </button>
+
+          <button
+            className={`${styles.navBtn} ${styles.prevBtn}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              goPrev();
+            }}
+          >
+            ←
+          </button>
+
+          <div
+            className={styles.lightboxContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* If current image has video, show video in lightbox */}
+            {sigurdImages[activeIndex].hasVideo ? (
+              <video
+                className={styles.lightboxVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src={`${sigurdImages[activeIndex].videoSrc}.webm`} type="video/webm" />
+                <source src={`${sigurdImages[activeIndex].videoSrc}.mp4`} type="video/mp4" />
+              </video>
+            ) : (
+              <img
+                src={sigurdImages[activeIndex].full}
+                alt={sigurdImages[activeIndex].alt}
+                className={styles.lightboxImage}
+              />
+            )}
+          </div>
+
+          <button
+            className={`${styles.navBtn} ${styles.nextBtn}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              goNext();
+            }}
+          >
+            →
+          </button>
+        </div>
+      )}
+    </section>
+  );
+};
+
+// Separate component for grid items with video support
+const GridItem = ({ image, index, isMobile, onOpenLightbox }) => {
+  const videoRef = useRef(null);
+  const containerRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [showPlayButton, setShowPlayButton] = useState(true);
+
+  // Intersection Observer for autoplay on desktop
+  useEffect(() => {
+    if (!image.hasVideo || isMobile) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (videoRef.current) {
+            if (entry.isIntersecting) {
+              videoRef.current.play();
+              setIsPlaying(true);
+            } else {
+              videoRef.current.pause();
+              setIsPlaying(false);
+            }
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [image.hasVideo, isMobile]);
+
+  // Handle mobile play button click
+  const handlePlayClick = (e) => {
+    e.stopPropagation();
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+        setIsPlaying(false);
+        setShowPlayButton(true);
+      } else {
+        videoRef.current.play();
+        setIsPlaying(true);
+        setShowPlayButton(false);
+      }
+    }
+  };
+
+  // Handle click - open lightbox for images, toggle play for videos on mobile
+  const handleClick = () => {
+    if (image.hasVideo && isMobile) {
+      handlePlayClick({ stopPropagation: () => {} });
+    } else {
+      onOpenLightbox();
+    }
+  };
+
+  return (
+    <motion.div
+      ref={containerRef}
+      className={styles.gridItem}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      whileHover={{ scale: 1.02 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.08 }}
+      onClick={handleClick}
+    >
+      {image.hasVideo ? (
+        <>
+          {/* Video element */}
+          <video
+            ref={videoRef}
+            className={styles.video}
+            loop
+            muted
+            playsInline
+            poster={image.thumb}
+            preload="none"
+          >
+            <source src={`${image.videoSrc}.webm`} type="video/webm" />
+            <source src={`${image.videoSrc}.mp4`} type="video/mp4" />
+          </video>
+
+          {/* Play button overlay for mobile */}
+          {isMobile && showPlayButton && (
+            <div className={styles.playOverlay}>
+              <button className={styles.playBtn} onClick={handlePlayClick}>
+                ▶
+              </button>
+            </div>
+          )}
+        </>
+      ) : (
+        <img
+          src={image.thumb}
+          alt={image.alt}
+          className={styles.image}
+          loading="lazy"
+        />
+      )}
+    </motion.div>
+  );
+};
+
+export default SigurdPage;
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\sections\WildSwansPage.jsx
+──────────────────────────────────────────────────────────────────────
+import { useState } from "react";
+/* eslint-disable no-unused-vars */
+import { motion } from "framer-motion";
+/* eslint-enable no-unused-vars */
+import { useTranslation } from "../../hooks/useTranslation";
+import SectionTitle from "../ui/SectionTitle";
+import styles from "./WildSwansPage.module.css";
+
+const swansImages = [
+  { thumb: "/gallery/books/swans/thumb/thumb_03.webp", full: "/gallery/books/swans/full/full_03.webp", alt: "Girl in the forest" },
+  { thumb: "/gallery/books/swans/thumb/thumb_01.webp", full: "/gallery/books/swans/full/full_01.webp", alt: "Book spread 1" },
+  { thumb: "/gallery/books/swans/thumb/thumb_02.webp", full: "/gallery/books/swans/full/full_02.webp", alt: "Book spread 2" },
+  { thumb: "/gallery/books/swans/thumb/thumb_04.webp", full: "/gallery/books/swans/full/full_04.webp", alt: "Character and landscape" },
+  { thumb: "/gallery/books/swans/thumb/thumb_06.webp", full: "/gallery/books/swans/full/full_06.webp", alt: "Forest scene" },
+  { thumb: "/gallery/books/swans/thumb/thumb_05.webp", full: "/gallery/books/swans/full/full_05.webp", alt: "Sketches and studies" },
+];
+
+const WildSwansPage = () => {
+  const { translate } = useTranslation();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const openLightbox = (index) => {
+    setActiveIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+  };
+
+  const goNext = () => {
+    setActiveIndex((prev) => (prev + 1) % swansImages.length);
+  };
+
+  const goPrev = () => {
+    setActiveIndex((prev) => (prev - 1 + swansImages.length) % swansImages.length);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowRight") goNext();
+    if (e.key === "ArrowLeft") goPrev();
+  };
+
+  return (
+    <section id="wild-swans" className={styles.section}>
+      {/* Decorative sketch */}
+      <div className={styles.decorSketch} />
+
+      {/* Title */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        <SectionTitle>{translate("books.wildSwans")}</SectionTitle>
+      </motion.div>
+
+      {/* Grid Gallery */}
+      <div className={styles.grid}>
+        {swansImages.map((image, index) => (
+          <motion.div
+            key={index}
+            className={styles.gridItem}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.02 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
+            onClick={() => openLightbox(index)}
+          >
+            <img
+              src={image.thumb}
+              alt={image.alt}
+              className={styles.image}
+              loading="lazy"
+            />
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Lightbox */}
+      {lightboxOpen && (
+        <div
+          className={styles.lightbox}
+          onClick={closeLightbox}
+          onKeyDown={handleKeyDown}
+          tabIndex={0}
+          ref={(el) => el && el.focus()}
+        >
+          <button className={styles.closeBtn} onClick={closeLightbox}>
+            ✕
+          </button>
+
+          <button
+            className={`${styles.navBtn} ${styles.prevBtn}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              goPrev();
+            }}
+          >
+            ←
+          </button>
+
+          <div
+            className={styles.lightboxContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={swansImages[activeIndex].full}
+              alt={swansImages[activeIndex].alt}
+              className={styles.lightboxImage}
+            />
+          </div>
+
+          <button
+            className={`${styles.navBtn} ${styles.nextBtn}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              goNext();
+            }}
+          >
+            →
+          </button>
+        </div>
+      )}
+    </section>
+  );
+};
+
+export default WildSwansPage;
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\sections\WinterAdventuresPage.jsx
+──────────────────────────────────────────────────────────────────────
+import { useState } from "react";
+/* eslint-disable no-unused-vars */
+import { motion } from "framer-motion";
+/* eslint-enable no-unused-vars */
+import { useTranslation } from "../../hooks/useTranslation";
+import SectionTitle from "../ui/SectionTitle";
+import styles from "./WinterAdventuresPage.module.css";
+
+const winterImages = [
+  { thumb: "/gallery/books/winter-adventures/thumb/thumb_01.webp", full: "/gallery/books/winter-adventures/full/full_01.webp", alt: "Book spread - Santa" },
+  { thumb: "/gallery/books/winter-adventures/thumb/thumb_03.webp", full: "/gallery/books/winter-adventures/full/full_03.webp", alt: "Book spread - Girl at window" },
+  { thumb: "/gallery/books/winter-adventures/thumb/thumb_02.webp", full: "/gallery/books/winter-adventures/full/full_02.webp", alt: "Sketch - Children in village" },
+  { thumb: "/gallery/books/winter-adventures/thumb/thumb_04.webp", full: "/gallery/books/winter-adventures/full/full_04.webp", alt: "B&W - Children in village" },
+  { thumb: "/gallery/books/winter-adventures/thumb/thumb_05.webp", full: "/gallery/books/winter-adventures/full/full_05.webp", alt: "Color - Children in village" },
+  { thumb: "/gallery/books/winter-adventures/thumb/thumb_06.webp", full: "/gallery/books/winter-adventures/full/full_06.webp", alt: "B&W - Girl at window" },
+  { thumb: "/gallery/books/winter-adventures/thumb/thumb_07.webp", full: "/gallery/books/winter-adventures/full/full_07.webp", alt: "Color - Girl at window" },
+  { thumb: "/gallery/books/winter-adventures/thumb/thumb_08.webp", full: "/gallery/books/winter-adventures/full/full_08.webp", alt: "Santa over village" },
+  { thumb: "/gallery/books/winter-adventures/thumb/thumb_09.webp", full: "/gallery/books/winter-adventures/full/full_09.webp", alt: "B&W - Girl" },
+  { thumb: "/gallery/books/winter-adventures/thumb/thumb_10.webp", full: "/gallery/books/winter-adventures/full/full_10.webp", alt: "Santa over village Titled" },
+];
+
+const WinterAdventuresPage = () => {
+  const { translate } = useTranslation();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const openLightbox = (index) => {
+    setActiveIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+  };
+
+  const goNext = () => {
+    setActiveIndex((prev) => (prev + 1) % winterImages.length);
+  };
+
+  const goPrev = () => {
+    setActiveIndex((prev) => (prev - 1 + winterImages.length) % winterImages.length);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowRight") goNext();
+    if (e.key === "ArrowLeft") goPrev();
+  };
+
+  return (
+    <section id="winter-adventures" className={styles.section}>
+      {/* Title */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        <SectionTitle>{translate("books.winterAdventures")}</SectionTitle>
+      </motion.div>
+
+      {/* Grid Gallery */}
+      <div className={styles.grid}>
+        {winterImages.map((image, index) => (
+          <motion.div
+            key={index}
+            className={styles.gridItem}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.02 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
+            onClick={() => openLightbox(index)}
+          >
+            <img
+              src={image.thumb}
+              alt={image.alt}
+              className={styles.image}
+              loading="lazy"
+            />
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Lightbox */}
+      {lightboxOpen && (
+        <div
+          className={styles.lightbox}
+          onClick={closeLightbox}
+          onKeyDown={handleKeyDown}
+          tabIndex={0}
+          ref={(el) => el && el.focus()}
+        >
+          <button className={styles.closeBtn} onClick={closeLightbox}>
+            ✕
+          </button>
+
+          <button
+            className={`${styles.navBtn} ${styles.prevBtn}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              goPrev();
+            }}
+          >
+            ←
+          </button>
+
+          <div
+            className={styles.lightboxContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={winterImages[activeIndex].full}
+              alt={winterImages[activeIndex].alt}
+              className={styles.lightboxImage}
+            />
+          </div>
+
+          <button
+            className={`${styles.navBtn} ${styles.nextBtn}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              goNext();
+            }}
+          >
+            →
+          </button>
+        </div>
+      )}
+    </section>
+  );
+};
+
+export default WinterAdventuresPage;
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\components\ui\SectionTitle.jsx
+──────────────────────────────────────────────────────────────────────
+const SectionTitle = ({ children }) => (
+  <h2
+    style={{
+      fontFamily: "'Cormorant Garamond', serif",
+      fontSize: "28px",
+      fontWeight: 400,
+      letterSpacing: "0.2em",
+      color: "#8B5A3C",
+      textTransform: "uppercase",
+      textAlign: "center",
+      marginBottom: "30px",
+    }}
+  >
+    {children}
+  </h2>
+);
+
+export default SectionTitle;
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\context\LanguageContext.jsx
+──────────────────────────────────────────────────────────────────────
+import { createContext, useState, useEffect } from "react";
+import { detectCountry, filterLanguagesByCountry } from "../utils/geoLocation";
+
+// All available languages
+const ALL_LANGUAGES = [
+  { code: "en", label: "English" },
+  { code: "sk", label: "Slovenčina" },
+  { code: "ru", label: "Русский" },
+  { code: "ua", label: "Українська" },
+];
+
+const LANGUAGE_STORAGE_KEY = "ak_selected_language";
+
+// Create context
+const LanguageContext = createContext(null);
+
+export const LanguageProvider = ({ children }) => {
+  const [currentLanguage, setCurrentLanguage] = useState("en");
+  const [availableLanguages, setAvailableLanguages] = useState(ALL_LANGUAGES);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Initialize: load saved language and detect country
+  useEffect(() => {
+    const initLanguage = async () => {
+      // 1. Check localStorage for saved language
+      const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY);
+
+      // 2. Detect country and filter languages
+      const country = await detectCountry();
+      const filtered = filterLanguagesByCountry(ALL_LANGUAGES, country);
+      setAvailableLanguages(filtered);
+
+      // 3. Set language (saved > browser > default)
+      if (savedLanguage && filtered.some((lang) => lang.code === savedLanguage)) {
+        // Use saved language if it's still available (not filtered out)
+        setCurrentLanguage(savedLanguage);
+      } else if (savedLanguage && !filtered.some((lang) => lang.code === savedLanguage)) {
+        // Saved language was filtered out (e.g., Russian user moved to Ukraine)
+        // Fall back to English
+        setCurrentLanguage("en");
+        localStorage.setItem(LANGUAGE_STORAGE_KEY, "en");
+      } else {
+        // No saved language - try to detect from browser
+        const browserLang = navigator.language?.slice(0, 2).toLowerCase();
+        const matchedLang = filtered.find(
+          (lang) => lang.code === browserLang || 
+          (browserLang === "uk" && lang.code === "ua") // Ukrainian browser code is 'uk'
+        );
+        
+        if (matchedLang) {
+          setCurrentLanguage(matchedLang.code);
+          localStorage.setItem(LANGUAGE_STORAGE_KEY, matchedLang.code);
+        } else {
+          // Default to English
+          setCurrentLanguage("en");
+        }
+      }
+
+      setIsLoading(false);
+    };
+
+    initLanguage();
+  }, []);
+
+  // Change language and save to localStorage
+  const changeLanguage = (code) => {
+    if (availableLanguages.some((lang) => lang.code === code)) {
+      setCurrentLanguage(code);
+      localStorage.setItem(LANGUAGE_STORAGE_KEY, code);
+    }
+  };
+
+  // Get current language label
+  const getCurrentLanguageLabel = () => {
+    return (
+      availableLanguages.find((lang) => lang.code === currentLanguage)?.label ||
+      "English"
+    );
+  };
+
+  const value = {
+    currentLanguage,
+    availableLanguages,
+    changeLanguage,
+    getCurrentLanguageLabel,
+    isLoading,
+  };
+
+  return (
+    <LanguageContext.Provider value={value}>
+      {children}
+    </LanguageContext.Provider>
+  );
+};
+
+export default LanguageContext;
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\hooks\useLanguage.js
+──────────────────────────────────────────────────────────────────────
+import { useContext } from "react";
+import LanguageContext from "../context/LanguageContext";
+
+// Hook to use language context
+export const useLanguage = () => {
+  const context = useContext(LanguageContext);
+  if (!context) {
+    throw new Error("useLanguage must be used within a LanguageProvider");
+  }
+  return context;
+};
+
+export default useLanguage;
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\hooks\useTranslation.js
+──────────────────────────────────────────────────────────────────────
+import { useMemo } from "react";
+import { useLanguage } from "./useLanguage";
+
+// Import all translations statically
+import en from "../locales/en.json";
+import sk from "../locales/sk.json";
+import ru from "../locales/ru.json";
+import ua from "../locales/ua.json";
+
+const translations = { en, sk, ru, ua };
+
+export const useTranslation = () => {
+  const { currentLanguage } = useLanguage();
+
+  // Get current translations based on language
+  const t = useMemo(() => {
+    return translations[currentLanguage] || translations.en;
+  }, [currentLanguage]);
+
+  // Helper function to get nested translation by key path
+  // Example: translate("menu.aboutMe") => "About Me"
+  const translate = useMemo(() => {
+    return (keyPath, fallback = "") => {
+      const keys = keyPath.split(".");
+      let result = t;
+
+      for (const key of keys) {
+        if (result && typeof result === "object" && key in result) {
+          result = result[key];
+        } else {
+          return fallback || keyPath;
+        }
+      }
+
+      return result || fallback || keyPath;
+    };
+  }, [t]);
+
+  return { t, translate };
+};
+
+export default useTranslation;
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\index.css
+──────────────────────────────────────────────────────────────────────
+/* 
+ * FONTS: Loaded via index.html (non-blocking)
+ * Do NOT use @import here - it blocks rendering!
+ */
+
+/* Custom color palette based on Canva design */
+:root {
+  --color-cream: #F5EFE6;
+  --color-cream-dark: #EDE4D3;
+  --color-forest: #2D4A43;
+  --color-forest-light: #3D5A53;
+  --color-terracotta: #8B5A3C;
+  --color-terracotta-light: #A67C5B;
+  --color-gold: #C9A86C;
+  --color-gold-light: #D4BC8E;
+  --color-paper: #C9B99A;
+  --color-text-dark: #5C4A3A;
+}
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--color-cream);
+  color: var(--color-forest);
+  overflow-x: hidden;
+  margin: 0 auto;
+  background-color: #2D4A43;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-forest);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-forest-light);
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-forest);
+}
+
+/* Utility classes */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\locales\en.json
+──────────────────────────────────────────────────────────────────────
+{
+  "menu": {
+    "aboutMe": "About Me",
+    "illustrationPhilosophy": "My Illustration Philosophy",
+    "childrensBooks": "Children's book illustrations",
+    "labelDesign": "Label design",
+    "logos": "Logos",
+    "branding": "Print and Digital Branding",
+    "contactMe": "Contact Me"
+  },
+  "books": {
+    "nutcracker": "The Nutcracker and the Mouse King",
+    "wildSwans": "The Wild Swans",
+    "winterAdventures": "Winter Adventures",
+    "magicWorld": "Magic World",
+    "sigurd": "Sigurd Fights the Dragon",
+    "seaSecrets": "Secrets of the Sea for Little Explorers"
+  },
+  "about": {
+    "name": "Anastasiia Kolisnyk",
+    "intro": "I'm {name} — an illustrator, designer, and creative entrepreneur based in Trenčín, Slovakia. I create artwork that blends emotional clarity with thoughtful craftsmanship, bringing together illustration, storytelling, multilingual adaptation, and visual identity design.",
+    "work": "My work spans children's books, educational materials, packaging, label design, logos, and print & digital branding. I focus on warm color palettes, intuitive composition, and imagery that feels alive — full of rhythm, sincerity, and gentle wonder.",
+    "goal": "Whether I'm illustrating marine animals for young readers, designing a brand's visual language, or crafting packaging that tells a story, my goal is always the same: to create meaningful, heartfelt visuals that inspire curiosity and connect with people.",
+    "explore": "Explore my portfolio to discover the projects, illustrations, and creative worlds I build with care and imagination."
+  },
+  "booksIntro": {
+    "title": "Children's Book Illustrations",
+    "subtitle": "What I Put Into My Illustrations?",
+    "text1": "I pour sincerity, emotion, and quiet storytelling into every illustration I create. My work is built on intuition — on the rhythm of lines, the warmth of color, and the small details that make an image feel alive. I strive to capture moments that breathe: gentle gestures, subtle expressions, and the atmosphere that surrounds a story.",
+    "text2": "I approach each illustration with care and intention. I think about how a child will feel when they see the page, how the colors will guide their curiosity, and how the composition will help them understand the world a little better. My goal is to create images that are not only beautiful, but meaningful — illustrations that comfort, inspire, and invite the viewer to explore.",
+    "text3": "Every piece I make carries a part of my own experience: my love for nature, my fascination with quiet moments, and my belief that visual storytelling can nurture kindness, imagination, and hope."
+  },
+   "labelDesign": {
+      "title": "Label Design",
+      "text1": "Label design is the art of creating a visual identity for a product through its packaging. It combines aesthetics, clarity, and brand storytelling to make a product instantly recognizable and emotionally appealing. A well-designed label not only informs — it invites, inspires, and builds trust.",
+      "text2": "My approach to label design focuses on thoughtful composition, harmonious color palettes, and clear typography. I create labels that reflect the character of the product and the values of the brand, whether it's a handcrafted item, a natural cosmetic, or a premium food product.",
+      "text3": "A strong label communicates at a glance — it captures attention, conveys quality, and helps the product stand out on the shelf. I design labels that feel alive, sincere, and visually memorable, blending artistic intuition with practical functionality."
+    },
+    "logos": {
+      "title": "Logos",
+      "text1": "A logo is the visual heartbeat of a brand — a distilled symbol of its character, values, and voice. It's the first impression, the signature, and the element that stays in memory long after the product or message is gone. Thoughtful logo design combines clarity, emotion, and precision, creating a mark that feels both timeless and alive.",
+      "text2": "In my work, I focus on logos that breathe with simplicity and meaning. I explore the rhythm of shapes, the balance of negative space, and the harmony of color to craft identities that resonate. Whether it's a monogram, an emblem, or a minimalist symbol, each design is built to communicate the essence of the brand with honesty and elegance.",
+      "text3": "A strong logo doesn't shout — it speaks clearly. It builds trust, enhances recognition, and becomes the foundation for a cohesive visual identity. I create logos that reflect the story behind the brand, support its growth, and feel emotionally true to the people who stand behind it."
+    },
+    "branding": {
+      "title": "Print and Digital Branding",
+      "text1": "Print and digital branding together create a unified visual presence for a brand across both physical and online spaces. My approach focuses on clarity, emotional resonance, and a cohesive aesthetic that strengthens recognition and trust.",
+      "text2": "In print, I design materials that feel tangible and memorable — business cards, brochures, catalogs, packaging elements, posters, and branded merchandise. Each piece is crafted with attention to composition, typography, and color, ensuring that the brand's personality is expressed with warmth and precision.",
+      "text3": "In the digital space, I develop visual systems for websites, social media, presentations, and online campaigns. This includes graphics, templates, icons, and layouts that adapt seamlessly across platforms while maintaining a consistent identity."
+    },
+  "sections": {
+    "home": {
+      "title": "Professional Illustrator / Graphic Designer"
+    },
+    "about": {
+      "title": "About Me"
+    },
+    "contact": {
+      "title": "Contact Me"
+    }
+  },
+  "contact": {
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "behance": "Behance",
+    "instagram": "Instagram"
+  },
+  "common": {
+    "loading": "Loading...",
+    "close": "Close",
+    "next": "Next",
+    "previous": "Previous"
+  }
+}
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\locales\ru.json
+──────────────────────────────────────────────────────────────────────
+{
+  "menu": {
+    "aboutMe": "Обо мне",
+    "illustrationPhilosophy": "Моя философия иллюстрации",
+    "childrensBooks": "Иллюстрации детских книг",
+    "labelDesign": "Дизайн этикеток",
+    "logos": "Логотипы",
+    "branding": "Печатный и цифровой брендинг",
+    "contactMe": "Связаться со мной"
+  },
+  "books": {
+    "nutcracker": "Щелкунчик и Мышиный король",
+    "wildSwans": "Дикие лебеди",
+    "winterAdventures": "Зимние приключения",
+    "magicWorld": "Волшебный мир",
+    "sigurd": "Сигурд сражается с драконом",
+    "seaSecrets": "Тайны моря для маленьких исследователей"
+  },
+  "about": {
+    "name": "Анастасия Колесник",
+    "intro": "Я {name} — иллюстратор, дизайнер и творческий предприниматель из Тренчина, Словакия. Я создаю работы, которые сочетают эмоциональную ясность с продуманным мастерством, объединяя иллюстрацию, сторителлинг, многоязычную адаптацию и дизайн визуальной айдентики.",
+    "work": "Моя работа охватывает детские книги, образовательные материалы, упаковку, дизайн этикеток, логотипы, а также печатный и цифровой брендинг. Я фокусируюсь на тёплых цветовых палитрах, интуитивной композиции и образах, которые кажутся живыми — полными ритма, искренности и нежного волшебства.",
+    "goal": "Будь то иллюстрации морских животных для юных читателей, разработка визуального языка бренда или создание упаковки, рассказывающей историю — моя цель всегда одна: создавать значимые, душевные визуальные образы, которые вдохновляют любопытство и находят отклик у людей.",
+    "explore": "Исследуйте моё портфолио, чтобы открыть для себя проекты, иллюстрации и творческие миры, которые я создаю с заботой и воображением."
+  },
+  "booksIntro": {
+    "title": "Иллюстрации детских книг",
+    "subtitle": "Что я вкладываю в свои иллюстрации?",
+    "text1": "Я вкладываю искренность, эмоции и тихое повествование в каждую иллюстрацию, которую создаю. Моя работа построена на интуиции — на ритме линий, теплоте цвета и мелких деталях, которые делают изображение живым. Я стремлюсь запечатлеть моменты, которые дышат: нежные жесты, тонкие выражения и атмосферу, окружающую историю.",
+    "text2": "Я подхожу к каждой иллюстрации с заботой и намерением. Я думаю о том, что почувствует ребёнок, когда увидит страницу, как цвета направят его любопытство и как композиция поможет ему лучше понять мир. Моя цель — создавать изображения, которые не только красивы, но и значимы — иллюстрации, которые утешают, вдохновляют и приглашают зрителя исследовать.",
+    "text3": "Каждая работа несёт в себе часть моего собственного опыта: мою любовь к природе, увлечение тихими моментами и веру в то, что визуальное повествование может воспитывать доброту, воображение и надежду."
+  },
+  "labelDesign": {
+    "title": "Дизайн этикеток",
+    "text1": "Дизайн этикеток — это искусство создания визуальной идентичности продукта через его упаковку. Он сочетает эстетику, ясность и историю бренда, делая продукт мгновенно узнаваемым и эмоционально привлекательным. Хорошо разработанная этикетка не только информирует — она приглашает, вдохновляет и вызывает доверие.",
+    "text2": "Мой подход к дизайну этикеток фокусируется на продуманной композиции, гармоничных цветовых палитрах и чёткой типографике. Я создаю этикетки, которые отражают характер продукта и ценности бренда, будь то изделие ручной работы, натуральная косметика или премиальный продукт питания.",
+    "text3": "Сильная этикетка говорит с первого взгляда — она привлекает внимание, передаёт качество и помогает продукту выделиться на полке. Я разрабатываю этикетки, которые выглядят живыми, искренними и визуально запоминающимися, сочетая художественную интуицию с практической функциональностью."
+  },
+  "logos": {
+    "title": "Логотипы",
+    "text1": "Логотип — это визуальное сердце бренда, концентрированный символ его характера, ценностей и голоса. Это первое впечатление, подпись и элемент, который остаётся в памяти надолго после того, как продукт или сообщение исчезнут. Продуманный дизайн логотипа сочетает ясность, эмоции и точность, создавая знак, который ощущается одновременно вневременным и живым.",
+    "text2": "В своей работе я фокусируюсь на логотипах, которые дышат простотой и смыслом. Я исследую ритм форм, баланс негативного пространства и гармонию цвета, чтобы создавать идентичности, которые находят отклик. Будь то монограмма, эмблема или минималистичный символ — каждый дизайн создан, чтобы передать суть бренда с честностью и элегантностью.",
+    "text3": "Сильный логотип не кричит — он говорит ясно. Он строит доверие, усиливает узнаваемость и становится основой для целостной визуальной идентичности. Я создаю логотипы, которые отражают историю бренда, поддерживают его рост и эмоционально близки людям, стоящим за ним."
+  },
+  "branding": {
+    "title": "Печатный и цифровой брендинг",
+    "text1": "Печатный и цифровой брендинг вместе создают единое визуальное присутствие бренда как в физическом, так и в онлайн-пространстве. Мой подход фокусируется на ясности, эмоциональном отклике и целостной эстетике, которая укрепляет узнаваемость и доверие.",
+    "text2": "В печати я разрабатываю материалы, которые ощущаются осязаемыми и запоминающимися — визитки, брошюры, каталоги, элементы упаковки, плакаты и брендированную продукцию. Каждый элемент создаётся с вниманием к композиции, типографике и цвету, чтобы личность бренда была выражена с теплотой и точностью.",
+    "text3": "В цифровом пространстве я разрабатываю визуальные системы для веб-сайтов, социальных сетей, презентаций и онлайн-кампаний. Это включает графику, шаблоны, иконки и макеты, которые плавно адаптируются к разным платформам, сохраняя целостную идентичность."
+  },
+  "sections": {
+    "home": {
+      "title": "Профессиональный иллюстратор / Графический дизайнер"
+    },
+    "about": {
+      "title": "Обо мне"
+    },
+    "contact": {
+      "title": "Связаться со мной"
+    }
+  },
+  "contact": {
+    "email": "Эл. почта",
+    "whatsapp": "WhatsApp",
+    "behance": "Behance",
+    "instagram": "Instagram"
+  },
+  "common": {
+    "loading": "Загрузка...",
+    "close": "Закрыть",
+    "next": "Далее",
+    "previous": "Назад"
+  }
+}
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\locales\sk.json
+──────────────────────────────────────────────────────────────────────
+{
+  "menu": {
+    "aboutMe": "O mne",
+    "illustrationPhilosophy": "Moja filozofia ilustrácie",
+    "childrensBooks": "Ilustrácie detských kníh",
+    "labelDesign": "Dizajn etikiet",
+    "logos": "Logá",
+    "branding": "Tlačový a digitálny branding",
+    "contactMe": "Kontaktujte ma"
+  },
+  "books": {
+    "nutcracker": "Luskáčik a Myší kráľ",
+    "wildSwans": "Divé labute",
+    "winterAdventures": "Zimné dobrodružstvá",
+    "magicWorld": "Magický svet",
+    "sigurd": "Sigurd bojuje s drakom",
+    "seaSecrets": "Tajomstvá mora pre malých objaviteľov"
+  },
+  "about": {
+    "name": "Anastasiia Kolisnyk",
+    "intro": "Som {name} — ilustrátorka, dizajnérka a kreatívna podnikateľka so sídlom v Trenčíne na Slovensku. Tvorím umelecké diela, ktoré spájajú emocionálnu jasnosť s premysleným remeselným spracovaním, prepájajúc ilustráciu, rozprávanie príbehov, viacjazyčnú adaptáciu a dizajn vizuálnej identity.",
+    "work": "Moja práca zahŕňa detské knihy, vzdelávacie materiály, obaly, dizajn etikiet, logá a tlačový a digitálny branding. Zameriavam sa na teplé farebné palety, intuitívnu kompozíciu a obrazy, ktoré pôsobia živo — plné rytmu, úprimnosti a jemného údivu.",
+    "goal": "Či už ilustrujem morské živočíchy pre malých čitateľov, navrhujem vizuálny jazyk značky alebo tvorím obaly, ktoré rozprávajú príbeh, môj cieľ je vždy rovnaký: vytvárať zmysluplné, srdečné vizuály, ktoré inšpirujú zvedavosť a spájajú sa s ľuďmi.",
+    "explore": "Preskúmajte moje portfólio a objavte projekty, ilustrácie a kreatívne svety, ktoré budujem s láskou a fantáziou."
+  },
+  "booksIntro": {
+    "title": "Ilustrácie detských kníh",
+    "subtitle": "Čo vkladám do svojich ilustrácií?",
+    "text1": "Do každej ilustrácie vkladám úprimnosť, emócie a tiché rozprávanie príbehov. Moja práca je postavená na intuícii — na rytme línií, teple farieb a drobných detailoch, ktoré dávajú obrazu život. Snažím sa zachytiť momenty, ktoré dýchajú: jemné gestá, subtílne výrazy a atmosféru, ktorá obklopuje príbeh.",
+    "text2": "Ku každej ilustrácii pristupujem s láskou a zámerom. Premýšľam o tom, ako sa dieťa bude cítiť, keď uvidí stránku, ako farby povedú jeho zvedavosť a ako kompozícia pomôže lepšie pochopiť svet. Mojím cieľom je vytvárať obrazy, ktoré sú nielen krásne, ale aj zmysluplné — ilustrácie, ktoré utešujú, inšpirujú a pozývajú diváka objavovať.",
+    "text3": "Každé dielo, ktoré vytvorím, nesie časť mojej vlastnej skúsenosti: moju lásku k prírode, fascináciu tichými chvíľami a vieru, že vizuálne rozprávanie môže pestovať láskavosť, fantáziu a nádej."
+  },
+  "labelDesign": {
+      "title": "Dizajn etikiet",
+      "text1": "Dizajn etikiet je umenie vytvárania vizuálnej identity produktu prostredníctvom jeho obalu. Spája estetiku, jasnosť a príbeh značky, aby bol produkt okamžite rozpoznateľný a emocionálne príťažlivý. Dobre navrhnutá etiketa nielen informuje — pozýva, inšpiruje a buduje dôveru.",
+      "text2": "Môj prístup k dizajnu etikiet sa zameriava na premyslenú kompozíciu, harmonické farebné palety a jasnú typografiu. Vytváram etikety, ktoré odrážajú charakter produktu a hodnoty značky, či už ide o ručne vyrobený predmet, prírodnú kozmetiku alebo prémiový potravinový produkt.",
+      "text3": "Silná etiketa komunikuje na prvý pohľad — upúta pozornosť, vyjadruje kvalitu a pomáha produktu vyniknúť na poličke. Navrhujem etikety, ktoré pôsobia živo, úprimne a vizuálne nezabudnuteľne, spájajúc umeleckú intuíciu s praktickou funkčnosťou."
+    },
+    "logos": {
+      "title": "Logá",
+      "text1": "Logo je vizuálnym srdcom značky — destilovaným symbolom jej charakteru, hodnôt a hlasu. Je to prvý dojem, podpis a prvok, ktorý zostáva v pamäti dlho po tom, čo produkt alebo správa zmiznú. Premyslený dizajn loga spája jasnosť, emócie a precíznosť, vytvárajúc značku, ktorá pôsobí nadčasovo aj živo.",
+      "text2": "Vo svojej práci sa zameriavam na logá, ktoré dýchajú jednoduchosťou a významom. Skúmam rytmus tvarov, rovnováhu negatívneho priestoru a harmóniu farieb, aby som vytvorila identity, ktoré rezonujú. Či už ide o monogram, emblém alebo minimalistický symbol, každý dizajn je vytvorený tak, aby komunikoval podstatu značky s úprimnosťou a eleganciou.",
+      "text3": "Silné logo nekričí — hovorí jasne. Buduje dôveru, posilňuje rozpoznateľnosť a stáva sa základom pre súdržnú vizuálnu identitu. Vytváram logá, ktoré odrážajú príbeh za značkou, podporujú jej rast a sú emocionálne pravdivé pre ľudí, ktorí za ňou stoja."
+    },
+    "branding": {
+      "title": "Tlačový a digitálny branding",
+      "text1": "Tlačový a digitálny branding spoločne vytvárajú jednotnú vizuálnu prítomnosť značky vo fyzickom aj online priestore. Môj prístup sa zameriava na jasnosť, emocionálnu rezonanciu a súdržnú estetiku, ktorá posilňuje rozpoznateľnosť a dôveru.",
+      "text2": "V tlači navrhujem materiály, ktoré pôsobia hmatateľne a nezabudnuteľne — vizitky, brožúry, katalógy, obalové prvky, plagáty a značkový tovar. Každý kus je vytvorený s dôrazom na kompozíciu, typografiu a farbu, aby osobnosť značky bola vyjadrená s vrelosťou a precíznosťou.",
+      "text3": "V digitálnom priestore vyvíjam vizuálne systémy pre webové stránky, sociálne médiá, prezentácie a online kampane. To zahŕňa grafiku, šablóny, ikony a rozloženia, ktoré sa plynulo prispôsobujú rôznym platformám pri zachovaní konzistentnej identity."
+    },
+  "sections": {
+    "home": {
+      "title": "Profesionálna ilustrátorka / Grafická dizajnérka"
+    },
+    "about": {
+      "title": "O mne"
+    },
+    "contact": {
+      "title": "Kontaktujte ma"
+    }
+  },
+  "contact": {
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "behance": "Behance",
+    "instagram": "Instagram"
+  },
+  "common": {
+    "loading": "Načítava sa...",
+    "close": "Zavrieť",
+    "next": "Ďalej",
+    "previous": "Späť"
+  }
+}
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\locales\ua.json
+──────────────────────────────────────────────────────────────────────
+{
+  "menu": {
+    "aboutMe": "Про мене",
+    "illustrationPhilosophy": "Моя філософія ілюстрації",
+    "childrensBooks": "Ілюстрації дитячих книг",
+    "labelDesign": "Дизайн етикеток",
+    "logos": "Логотипи",
+    "branding": "Друкований та цифровий брендинг",
+    "contactMe": "Зв'язатися зі мною"
+  },
+  "books": {
+    "nutcracker": "Лускунчик і Мишачий король",
+    "wildSwans": "Дикі лебеді",
+    "winterAdventures": "Зимові пригоди",
+    "magicWorld": "Чарівний світ",
+    "sigurd": "Сігурд бореться з драконом",
+    "seaSecrets": "Таємниці моря для маленьких дослідників"
+  },
+  "about": {
+    "name": "Анастасія Колісник",
+    "intro": "Я {name} — ілюстраторка, дизайнерка та креативна підприємниця з Тренчина, Словаччина. Я створюю роботи, які поєднують емоційну ясність із продуманою майстерністю, об'єднуючи ілюстрацію, сторітелінг, багатомовну адаптацію та дизайн візуальної айдентики.",
+    "work": "Моя робота охоплює дитячі книги, освітні матеріали, упаковку, дизайн етикеток, логотипи, а також друкований і цифровий брендинг. Я фокусуюся на теплих кольорових палітрах, інтуїтивній композиції та образах, які здаються живими — сповненими ритму, щирості та ніжного дива.",
+    "goal": "Чи то ілюстрації морських тварин для юних читачів, розробка візуальної мови бренду чи створення упаковки, яка розповідає історію — моя мета завжди одна: створювати значущі, душевні візуальні образи, які надихають допитливість і знаходять відгук у людей.",
+    "explore": "Досліджуйте моє портфоліо, щоб відкрити для себе проєкти, ілюстрації та творчі світи, які я будую з турботою та уявою."
+  },
+  "booksIntro": {
+    "title": "Ілюстрації дитячих книг",
+    "subtitle": "Що я вкладаю у свої ілюстрації?",
+    "text1": "Я вкладаю щирість, емоції та тиху оповідь у кожну ілюстрацію, яку створюю. Моя робота побудована на інтуїції — на ритмі ліній, теплоті кольору та дрібних деталях, які роблять зображення живим. Я прагну вловити моменти, що дихають: ніжні жести, тонкі вирази та атмосферу, що оточує історію.",
+    "text2": "Я підходжу до кожної ілюстрації з турботою та наміром. Я думаю про те, що відчує дитина, коли побачить сторінку, як кольори спрямують її допитливість і як композиція допоможе їй краще зрозуміти світ. Моя мета — створювати зображення, які не лише красиві, а й значущі — ілюстрації, що втішають, надихають і запрошують глядача досліджувати.",
+    "text3": "Кожна робота несе в собі частину мого власного досвіду: мою любов до природи, захоплення тихими моментами та віру в те, що візуальна оповідь може виховувати доброту, уяву та надію."
+  },
+  "labelDesign": {
+    "title": "Дизайн етикеток",
+    "text1": "Дизайн етикеток — це мистецтво створення візуальної ідентичності продукту через його упаковку. Він поєднує естетику, ясність та історію бренду, роблячи продукт миттєво впізнаваним та емоційно привабливим. Добре розроблена етикетка не лише інформує — вона запрошує, надихає та викликає довіру.",
+    "text2": "Мій підхід до дизайну етикеток фокусується на продуманій композиції, гармонійних кольорових палітрах та чіткій типографіці. Я створюю етикетки, що відображають характер продукту та цінності бренду, чи то виріб ручної роботи, натуральна косметика або преміальний харчовий продукт.",
+    "text3": "Сильна етикетка говорить з першого погляду — вона привертає увагу, передає якість та допомагає продукту виділитися на полиці. Я розробляю етикетки, які виглядають живими, щирими та візуально запам'ятовуються, поєднуючи художню інтуїцію з практичною функціональністю."
+  },
+  "logos": {
+    "title": "Логотипи",
+    "text1": "Логотип — це візуальне серце бренду, концентрований символ його характеру, цінностей та голосу. Це перше враження, підпис та елемент, який залишається в пам'яті надовго після того, як продукт чи повідомлення зникнуть. Продуманий дизайн логотипу поєднує ясність, емоції та точність, створюючи знак, який відчувається водночас позачасовим і живим.",
+    "text2": "У своїй роботі я фокусуюся на логотипах, що дихають простотою та змістом. Я досліджую ритм форм, баланс негативного простору та гармонію кольору, щоб створювати ідентичності, які знаходять відгук. Чи то монограма, емблема або мінімалістичний символ — кожен дизайн створений, щоб передати суть бренду з чесністю та елегантністю.",
+    "text3": "Сильний логотип не кричить — він говорить ясно. Він будує довіру, посилює впізнаваність і стає основою для цілісної візуальної ідентичності. Я створюю логотипи, які відображають історію бренду, підтримують його зростання та емоційно близькі людям, що стоять за ним."
+  },
+  "branding": {
+    "title": "Друкований та цифровий брендинг",
+    "text1": "Друкований та цифровий брендинг разом створюють єдину візуальну присутність бренду як у фізичному, так і в онлайн-просторі. Мій підхід фокусується на ясності, емоційному відгуку та цілісній естетиці, що зміцнює впізнаваність і довіру.",
+    "text2": "У друці я розробляю матеріали, які відчуваються відчутними та запам'ятовуються — візитки, брошури, каталоги, елементи упаковки, плакати та брендовану продукцію. Кожен елемент створюється з увагою до композиції, типографіки та кольору, щоб особистість бренду була виражена з теплотою та точністю.",
+    "text3": "У цифровому просторі я розробляю візуальні системи для веб-сайтів, соціальних мереж, презентацій та онлайн-кампаній. Це включає графіку, шаблони, іконки та макети, які плавно адаптуються до різних платформ, зберігаючи цілісну ідентичність."
+  },
+  "sections": {
+    "home": {
+      "title": "Професійний ілюстратор / Графічний дизайнер"
+    },
+    "about": {
+      "title": "Про мене"
+    },
+    "contact": {
+      "title": "Зв'язатися зі мною"
+    }
+  },
+  "contact": {
+    "email": "Ел. пошта",
+    "whatsapp": "WhatsApp",
+    "behance": "Behance",
+    "instagram": "Instagram"
+  },
+  "common": {
+    "loading": "Завантаження...",
+    "close": "Закрити",
+    "next": "Далі",
+    "previous": "Назад"
+  }
+}
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\main.jsx
+──────────────────────────────────────────────────────────────────────
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
+
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: src\pages\Home.jsx
+──────────────────────────────────────────────────────────────────────
+import AboutSection from "../components/sections/AboutSection";
+import ChildrensBooksIntro from "../components/sections/ChildrensBooksIntro";
+import ChildrensBooksSection from "../components/sections/ChildrensBooksSection";
+import LabelDesignSection from "../components/sections/LabelDesignSection";
+import LogosSection from "../components/sections/LogosSection";
+import BrandingSection from "../components/sections/BrandingSection";
+import ContactSection from "../components/sections/ContactSection";
+
+const Home = () => {
+  return (
+    <div>
+      <AboutSection />
+      <ChildrensBooksIntro />
+      <ChildrensBooksSection />
+      <LabelDesignSection />
+      <LogosSection />
+      <BrandingSection />
+      <ContactSection />
+    </div>
+  );
+};
+
+export default Home;
+
+
+──────────────────────────────────────────────────────────────────────
+📄 FILE: vite.config.js
+──────────────────────────────────────────────────────────────────────
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+})
+
+
+======================================================================
+5. DEPENDENCIES SUMMARY
+======================================================================
+Name: ak-portfolio
+Version: 0.0.0
+
+Dependencies:
+  - framer-motion: ^12.27.5
+  - react: ^19.2.0
+  - react-dom: ^19.2.0
+  - react-router-dom: ^7.12.0
+
+Dev Dependencies:
+  - @eslint/js: ^9.39.1
+  - @tailwindcss/vite: ^4.1.18
+  - @types/react: ^19.2.5
+  - @types/react-dom: ^19.2.3
+  - @vitejs/plugin-react: ^5.1.1
+  - eslint: ^9.39.1
+  - eslint-plugin-react-hooks: ^7.0.1
+  - eslint-plugin-react-refresh: ^0.4.24
+  - globals: ^16.5.0
+  - tailwindcss: ^4.1.18
+  - vite: ^7.2.4

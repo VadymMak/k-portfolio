@@ -7,11 +7,54 @@ import SectionTitle from "../ui/SectionTitle";
 import styles from "./LogosSection.module.css";
 
 const logoImages = [
-  { src: "/gallery/logos/logo_01.webp", alt: "Star Food logo" },
-  { src: "/gallery/logos/logo_05.webp", alt: "Balloon Party logo" },
-  { src: "/gallery/logos/logo_04.webp", alt: "Geometric logo" },
-  { src: "/gallery/logos/logo_06.webp", alt: "DT Diagecutunetrencin cards" },
-  { src: "/gallery/logos/logo_07.webp", alt: "Adriano Golf Restaurant logo" },
+  {
+    src: "/gallery/logos/logo_06.webp",
+    alt: "Laser Craft Wood logo",
+    client: "Laser Craft Wood",
+    category: "Woodworking & Crafts",
+    bgColor: "#C4BAB0",
+    theme: "light",
+  },
+  {
+    src: "/gallery/logos/logo_02.webp",
+    alt: "DCT Diagecutunetrencin logo",
+    client: "DCT",
+    category: "Automotive Diagnostics",
+    bgColor: "#1C1C1C",
+    theme: "dark",
+  },
+  {
+    src: "/gallery/logos/logo_03.webp",
+    alt: "Adriano Golf Restaurant logo",
+    client: "Adriano",
+    category: "Golf Restaurant",
+    bgColor: "#1A1A1A",
+    theme: "dark",
+  },
+  {
+    src: "/gallery/logos/logo_05.webp",
+    alt: "Balloon Party logo",
+    client: "Balloon Party",
+    category: "Events & Entertainment",
+    bgColor: "#EEF4F8",
+    theme: "light",
+  },
+  {
+    src: "/gallery/logos/logo_01.webp",
+    alt: "Star Food logo",
+    client: "Star Food",
+    category: "Food & Beverage",
+    bgColor: "#E8F4FD",
+    theme: "light",
+  },
+  {
+    src: "/gallery/logos/logo_04.webp",
+    alt: "Geometric logo",
+    client: "Geometric",
+    category: "Corporate Identity",
+    bgColor: "#F0F0F0",
+    theme: "light",
+  },
 ];
 
 const LogosSection = () => {
@@ -74,25 +117,33 @@ const LogosSection = () => {
         </motion.div>
       </div>
 
-      {/* Grid Gallery */}
+      {/* Showcase Grid */}
       <div className={styles.grid}>
-        {logoImages.map((image, index) => (
+        {logoImages.map((logo, index) => (
           <motion.div
             key={index}
-            className={styles.gridItem}
-            initial={{ opacity: 0, y: 20 }}
+            className={`${styles.card} ${logo.theme === "dark" ? styles.cardDark : styles.cardLight}`}
+            style={{ backgroundColor: logo.bgColor }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{ scale: 1.02 }}
             viewport={{ once: true }}
-            transition={{ delay: index * 0.1 }}
+            transition={{ delay: index * 0.1, duration: 0.5 }}
             onClick={() => openLightbox(index)}
           >
-            <img
-              src={image.src}
-              alt={image.alt}
-              className={styles.image}
-              loading="lazy"
-            />
+            <div className={styles.cardImageWrapper}>
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                className={styles.cardImage}
+                loading="lazy"
+              />
+            </div>
+
+            {/* Hover overlay with client info */}
+            <div className={styles.cardOverlay}>
+              <span className={styles.cardClient}>{logo.client}</span>
+              <span className={styles.cardCategory}>{logo.category}</span>
+            </div>
           </motion.div>
         ))}
       </div>
@@ -129,6 +180,14 @@ const LogosSection = () => {
               alt={logoImages[activeIndex].alt}
               className={styles.lightboxImage}
             />
+            <div className={styles.lightboxInfo}>
+              <span className={styles.lightboxClient}>
+                {logoImages[activeIndex].client}
+              </span>
+              <span className={styles.lightboxCategory}>
+                {logoImages[activeIndex].category}
+              </span>
+            </div>
           </div>
 
           <button

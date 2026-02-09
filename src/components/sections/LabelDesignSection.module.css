@@ -1,11 +1,9 @@
 /* ========== SECTION ========== */
 
 .section {
-  padding: 0px 40px;
+  padding: 80px 40px;
   scroll-margin-top: 100px;
   min-height: calc(100vh - 100px);
-  display: flex;
-  flex-direction: column;
 }
 
 /* ========== HEADER ========== */
@@ -15,7 +13,6 @@
   gap: 60px;
   max-width: 1400px;
   margin: 0 auto 60px;
-  width: 100%;
 }
 
 .titleWrapper {
@@ -39,56 +36,124 @@
   margin-bottom: 0;
 }
 
-/* ========== GRID GALLERY ========== */
+/* ========== SHOWCASE GRID ========== */
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 20px;
-  max-width: 1400px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1200px;
   margin: 0 auto;
-  flex-grow: 1;
-  align-content: center;
 }
 
-.gridItem {
-  cursor: pointer;
+/* ========== CARD ========== */
+
+.card {
+  position: relative;
+  border-radius: 16px;
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
   aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
-/* Row 1: 2 wide images (span 3 columns each) */
-.gridItem:nth-child(1),
-.gridItem:nth-child(2) {
-  grid-column: span 3;
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
-/* Row 2: 3 images (span 2 columns each) */
-.gridItem:nth-child(3),
-.gridItem:nth-child(4),
-.gridItem:nth-child(5) {
-  grid-column: span 2;
-}
+/* ========== CARD IMAGE ========== */
 
-/* Row 3: 2 wide images (span 3 columns each) */
-.gridItem:nth-child(6),
-.gridItem:nth-child(7) {
-  grid-column: span 3;
-}
-
-.gridItem:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.image {
+.cardImageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  padding: 24px;
+}
+
+.cardImage {
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
   display: block;
+  image-rendering: -webkit-optimize-contrast;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card:hover .cardImage {
+  transform: scale(1.05);
+}
+
+/* ========== HOVER OVERLAY ========== */
+
+.cardOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 60%,
+    transparent 100%
+  );
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease,
+              transform 0.35s ease;
+}
+
+.card:hover .cardOverlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Light card overlay — dark text not needed, gradient handles it */
+.cardLight .cardOverlay {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.25) 60%,
+    transparent 100%
+  );
+}
+
+/* Dark card overlay — subtle lighter gradient */
+.cardDark .cardOverlay {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.15) 60%,
+    transparent 100%
+  );
+}
+
+.cardClient {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.cardCategory {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
 /* ========== LIGHTBOX ========== */
@@ -99,27 +164,54 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(0, 0, 0, 0.92);
   z-index: 2000;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 40px;
   outline: none;
+  backdrop-filter: blur(8px);
 }
 
 .lightboxContent {
-  max-width: 90vw;
-  max-height: 90vh;
+  max-width: 80vw;
+  max-height: 85vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 20px;
 }
 
 .lightboxImage {
   max-width: 100%;
-  max-height: 85vh;
+  max-height: 75vh;
   object-fit: contain;
+  border-radius: 12px;
+}
+
+.lightboxInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.lightboxClient {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.lightboxCategory {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 /* ========== LIGHTBOX CONTROLS ========== */
@@ -149,18 +241,20 @@
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: none;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 50%;
   color: #ffffff;
   font-size: 24px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease,
+              border-color 0.3s ease;
   z-index: 2001;
 }
 
 .navBtn:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .prevBtn {
@@ -175,7 +269,7 @@
 
 @media (max-width: 1024px) {
   .section {
-    padding: 0px 24px;
+    padding: 60px 30px;
   }
 
   .header {
@@ -184,32 +278,17 @@
     margin-bottom: 40px;
   }
 
-  .titleWrapper {
-    text-align: center;
-  }
-
-  .description {
-    max-width: 100%;
-  }
-
-  .descriptionText {
-    text-align: left;
-    font-size: 15px;
-  }
-
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    gap: 20px;
   }
 
-  .gridItem:nth-child(1),
-  .gridItem:nth-child(2),
-  .gridItem:nth-child(3),
-  .gridItem:nth-child(4),
-  .gridItem:nth-child(5),
-  .gridItem:nth-child(6),
-  .gridItem:nth-child(7) {
-    grid-column: span 1;
+  .cardClient {
+    font-size: 18px;
+  }
+
+  .cardCategory {
+    font-size: 11px;
   }
 }
 
@@ -217,7 +296,7 @@
 
 @media (max-width: 600px) {
   .section {
-    padding: 0px 16px;
+    padding: 50px 20px;
   }
 
   .header {
@@ -226,17 +305,36 @@
   }
 
   .descriptionText {
-    font-size: 14px;
-    line-height: 1.7;
+    font-size: 15px;
   }
 
   .grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
 
-  .lightbox {
-    padding: 20px;
+  .card {
+    border-radius: 12px;
+    aspect-ratio: 1 / 1;
+  }
+
+  .cardImageWrapper {
+    padding: 16px;
+  }
+
+  .cardOverlay {
+    padding: 14px 16px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .cardClient {
+    font-size: 15px;
+  }
+
+  .cardCategory {
+    font-size: 10px;
+    letter-spacing: 1px;
   }
 
   .navBtn {
@@ -253,11 +351,11 @@
     right: 10px;
   }
 
-  .closeBtn {
-    top: 10px;
-    right: 10px;
-    width: 40px;
-    height: 40px;
-    font-size: 24px;
+  .lightboxClient {
+    font-size: 20px;
+  }
+
+  .lightboxCategory {
+    font-size: 11px;
   }
 }
