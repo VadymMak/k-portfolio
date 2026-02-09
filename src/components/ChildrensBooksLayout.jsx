@@ -1,5 +1,7 @@
 import { Outlet, NavLink } from "react-router-dom";
+/* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
+/* eslint-enable no-unused-vars */
 
 const bookProjects = [
   { id: "nutcracker", title: "The Nutcracker and the Mouse King" },
