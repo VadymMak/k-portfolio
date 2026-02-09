@@ -6,6 +6,7 @@ import { useTranslation } from "../../hooks/useTranslation";
 import SectionTitle from "../ui/SectionTitle";
 import styles from "./LogosSection.module.css";
 
+// some commit
 const logoImages = [
   {
     src: "/gallery/logos/logo_02.webp",
