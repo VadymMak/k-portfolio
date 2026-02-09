@@ -257,23 +257,7 @@ const ServicesSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            {/* Netlify Forms hidden form for detection */}
-            <form
-              name="contact"
-              data-netlify="true"
-              data-netlify-recaptcha="true"
-              netlify-honeypot="bot-field"
-              hidden
-            >
-              <input type="text" name="name" />
-              <input type="email" name="email" />
-              <input type="text" name="projectType" />
-              <textarea name="description"></textarea>
-              <input type="text" name="timeline" />
-              <input type="text" name="referral" />
-            </form>
-
-            <form
+           <form
               className={styles.form}
               onSubmit={handleSubmit}
             >
