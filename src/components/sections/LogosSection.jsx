@@ -8,7 +8,7 @@ import styles from "./LogosSection.module.css";
 
 const logoImages = [
   {
-    src: "/gallery/logos/logo_06.webp",
+    src: "/gallery/logos/logo_02.webp",
     alt: "Laser Craft Wood logo",
     client: "Laser Craft Wood",
     category: "Woodworking & Crafts",
@@ -16,7 +16,7 @@ const logoImages = [
     theme: "light",
   },
   {
-    src: "/gallery/logos/logo_02.webp",
+    src: "/gallery/logos/logo_06.webp",
     alt: "DCT Diagecutunetrencin logo",
     client: "DCT",
     category: "Automotive Diagnostics",
@@ -32,7 +32,7 @@ const logoImages = [
     theme: "dark",
   },
   {
-    src: "/gallery/logos/logo_05.webp",
+    src: "/gallery/logos/logo_01.webp",
     alt: "Balloon Party logo",
     client: "Balloon Party",
     category: "Events & Entertainment",
@@ -40,7 +40,7 @@ const logoImages = [
     theme: "light",
   },
   {
-    src: "/gallery/logos/logo_01.webp",
+    src: "/gallery/logos/logo_05.webp",
     alt: "Star Food logo",
     client: "Star Food",
     category: "Food & Beverage",
