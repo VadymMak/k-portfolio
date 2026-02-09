@@ -5,7 +5,7 @@ import LabelDesignSection from "../components/sections/LabelDesignSection";
 import LogosSection from "../components/sections/LogosSection";
 import BrandingSection from "../components/sections/BrandingSection";
 import ContactSection from "../components/sections/ContactSection";
-import ServicesSection from "../components/sections/ServiceSection";
+import ServicesSection from "../components/sections/ServicesSection";
 
 const Home = () => {
   return (
