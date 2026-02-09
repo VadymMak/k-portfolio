@@ -7,15 +7,70 @@ import SectionTitle from "../ui/SectionTitle";
 import styles from "./BrandingSection.module.css";
 
 const brandingImages = [
-  { thumb: "/gallery/branding/thumb/thumb_01.webp", full: "/gallery/branding/full/full_01.webp", alt: "Botanical print" },
-  { thumb: "/gallery/branding/thumb/thumb_02.webp", full: "/gallery/branding/full/full_02.webp", alt: "Impressionist Mood notebook" },
-  { thumb: "/gallery/branding/thumb/thumb_03.webp", full: "/gallery/branding/full/full_03.webp", alt: "Advent 2026 calendar" },
-  { thumb: "/gallery/branding/thumb/thumb_04.webp", full: "/gallery/branding/full/full_04.webp", alt: "Floral pillow" },
-  { thumb: "/gallery/branding/thumb/thumb_05.webp", full: "/gallery/branding/full/full_05.webp", alt: "Green floral scarf" },
-  { thumb: "/gallery/branding/thumb/thumb_10.webp", full: "/gallery/branding/full/full_10.webp", alt: "Pink sky landscape" },
-  { thumb: "/gallery/branding/thumb/thumb_11.webp", full: "/gallery/branding/full/full_11.webp", alt: "Sunset landscape" },
-  { thumb: "/gallery/branding/thumb/thumb_12.webp", full: "/gallery/branding/full/full_12.webp", alt: "Green river landscape" },
-  { thumb: "/gallery/branding/thumb/thumb_14.webp", full: "/gallery/branding/full/full_14.webp", alt: "Branding design" },
+  {
+    thumb: "/gallery/branding/thumb/thumb_01.webp",
+    full: "/gallery/branding/full/full_01.webp",
+    alt: "Botanical linen tea towel",
+    product: "Tea Towel",
+    category: "Textile Print",
+  },
+  {
+    thumb: "/gallery/branding/thumb/thumb_02.webp",
+    full: "/gallery/branding/full/full_02.webp",
+    alt: "Impressionist Mood notebook",
+    product: "Notebook",
+    category: "Stationery",
+  },
+  {
+    thumb: "/gallery/branding/thumb/thumb_03.webp",
+    full: "/gallery/branding/full/full_03.webp",
+    alt: "Advent 2026 calendar",
+    product: "Wall Calendar",
+    category: "Stationery",
+    wide: true,
+  },
+  {
+    thumb: "/gallery/branding/thumb/thumb_04.webp",
+    full: "/gallery/branding/full/full_04.webp",
+    alt: "Floral magnolia pillow",
+    product: "Decorative Pillow",
+    category: "Home Decor",
+  },
+  {
+    thumb: "/gallery/branding/thumb/thumb_05.webp",
+    full: "/gallery/branding/full/full_05.webp",
+    alt: "Green floral silk scarf",
+    product: "Silk Scarf",
+    category: "Accessories",
+  },
+  {
+    thumb: "/gallery/branding/thumb/thumb_10.webp",
+    full: "/gallery/branding/full/full_10.webp",
+    alt: "Lavender field tote bag",
+    product: "Tote Bag",
+    category: "Accessories",
+  },
+  {
+    thumb: "/gallery/branding/thumb/thumb_11.webp",
+    full: "/gallery/branding/full/full_11.webp",
+    alt: "Forest stream wall clock",
+    product: "Wall Clock",
+    category: "Home Decor",
+  },
+  {
+    thumb: "/gallery/branding/thumb/thumb_12.webp",
+    full: "/gallery/branding/full/full_12.webp",
+    alt: "Landscape acrylic block",
+    product: "Acrylic Block",
+    category: "Art Print",
+  },
+  {
+    thumb: "/gallery/branding/thumb/thumb_14.webp",
+    full: "/gallery/branding/full/full_14.webp",
+    alt: "Sunset meadow art print",
+    product: "Art Print",
+    category: "Wall Art",
+  },
 ];
 
 const BrandingSection = () => {
@@ -54,7 +109,6 @@ const BrandingSection = () => {
           className={styles.titleWrapper}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          whileHover={{ scale: 1.02 }}
           viewport={{ once: true }}
         >
           <SectionTitle>{translate("branding.title")}</SectionTitle>
@@ -84,12 +138,11 @@ const BrandingSection = () => {
         {brandingImages.map((image, index) => (
           <motion.div
             key={index}
-            className={styles.gridItem}
+            className={`${styles.gridItem} ${image.wide ? styles.gridItemWide : ""}`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{ scale: 1.02 }}
             viewport={{ once: true }}
-            transition={{ delay: index * 0.1 }}
+            transition={{ delay: index * 0.08 }}
             onClick={() => openLightbox(index)}
           >
             <img
@@ -98,6 +151,11 @@ const BrandingSection = () => {
               className={styles.image}
               loading="lazy"
             />
+            {/* Hover overlay */}
+            <div className={styles.overlay}>
+              <span className={styles.productName}>{image.product}</span>
+              <span className={styles.productCategory}>{image.category}</span>
+            </div>
           </motion.div>
         ))}
       </div>
@@ -134,6 +192,14 @@ const BrandingSection = () => {
               alt={brandingImages[activeIndex].alt}
               className={styles.lightboxImage}
             />
+            <div className={styles.lightboxInfo}>
+              <span className={styles.lightboxProduct}>
+                {brandingImages[activeIndex].product}
+              </span>
+              <span className={styles.lightboxCategory}>
+                {brandingImages[activeIndex].category}
+              </span>
+            </div>
           </div>
 
           <button
