@@ -6,7 +6,8 @@
     "labelDesign": "Dizajn etikiet",
     "logos": "Logá",
     "branding": "Tlačový a digitálny branding",
-    "contactMe": "Kontaktujte ma"
+    "contactMe": "Kontaktujte ma",
+    "services": "Služby"
   },
   "books": {
     "nutcracker": "Luskáčik a Myší kráľ",
@@ -124,8 +125,8 @@
       "sending": "Odosielanie...",
       "successTitle": "Ďakujem!",
       "successText": "Váš dopyt bol prijatý. Prezriem si ho a ozvem sa vám do 48 hodín.",
-      "error": "Niečo sa pokazilo. Skúste to znova alebo ma kontaktujte priamo emailom.",
-      "services": "Služby"
+      "error": "Niečo sa pokazilo. Skúste to znova alebo ma kontaktujte priamo emailom."
+      
     }
   }
 }
