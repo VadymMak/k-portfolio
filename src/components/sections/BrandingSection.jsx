@@ -22,14 +22,6 @@ const brandingImages = [
     category: "Stationery",
   },
   {
-    thumb: "/gallery/branding/thumb/thumb_03.webp",
-    full: "/gallery/branding/full/full_03.webp",
-    alt: "Advent 2026 calendar",
-    product: "Wall Calendar",
-    category: "Stationery",
-    wide: true,
-  },
-  {
     thumb: "/gallery/branding/thumb/thumb_04.webp",
     full: "/gallery/branding/full/full_04.webp",
     alt: "Floral magnolia pillow",
@@ -42,6 +34,14 @@ const brandingImages = [
     alt: "Green floral silk scarf",
     product: "Silk Scarf",
     category: "Accessories",
+  },
+  {
+    thumb: "/gallery/branding/thumb/thumb_03.webp",
+    full: "/gallery/branding/full/full_03.webp",
+    alt: "Advent 2026 calendar",
+    product: "Wall Calendar",
+    category: "Stationery",
+    wide: true,
   },
   {
     thumb: "/gallery/branding/thumb/thumb_10.webp",
@@ -63,6 +63,22 @@ const brandingImages = [
     alt: "Landscape acrylic block",
     product: "Acrylic Block",
     category: "Art Print",
+  },
+  {
+    thumb: "/gallery/branding/thumb/thumb_06.webp",
+    full: "/gallery/branding/full/full_06.webp",
+    alt: "Meadow path canvas print",
+    product: "Canvas Print",
+    category: "Wall Art",
+    desktopOnly: true,
+  },
+  {
+    thumb: "/gallery/branding/thumb/thumb_08.webp",
+    full: "/gallery/branding/full/full_08.webp",
+    alt: "Lavender field landscape",
+    product: "Framed Print",
+    category: "Wall Art",
+    desktopOnly: true,
   },
   {
     thumb: "/gallery/branding/thumb/thumb_14.webp",
@@ -138,7 +154,7 @@ const BrandingSection = () => {
         {brandingImages.map((image, index) => (
           <motion.div
             key={index}
-            className={`${styles.gridItem} ${image.wide ? styles.gridItemWide : ""}`}
+            className={`${styles.gridItem} ${image.wide ? styles.gridItemWide : ""} ${image.desktopOnly ? styles.desktopOnly : ""}`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

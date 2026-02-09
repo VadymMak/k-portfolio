@@ -132,6 +132,12 @@
   padding: 0 !important;
 }
 
+/* ========== DESKTOP-ONLY ITEMS ========== */
+
+.desktopOnly {
+  display: block !important;
+}
+
 /* ========== LIGHTBOX ========== */
 
 .lightbox {
@@ -277,6 +283,11 @@
     aspect-ratio: 2 / 1 !important;
   }
 
+  /* Hide desktop-only items on tablet */
+  .desktopOnly {
+    display: none !important;
+  }
+
   .productName {
     font-size: 18px !important;
   }
@@ -315,6 +326,11 @@
   .gridItemWide {
     grid-column: span 2 !important;
     aspect-ratio: 2 / 1 !important;
+  }
+
+  /* Show all items on mobile including desktopOnly */
+  .desktopOnly {
+    display: block !important;
   }
 
   .gridItem {
