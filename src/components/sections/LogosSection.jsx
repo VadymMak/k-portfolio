@@ -51,7 +51,7 @@ const logoImages = [
     src: "/gallery/logos/logo_04.webp",
     alt: "Geometric logo",
     client: "Star Food",
-    category: "Food & Beverage",,
+    category: "Food & Beverage",
     bgColor: "#F0F0F0",
     theme: "light",
   },
