@@ -52,11 +52,13 @@
 }
 
 .gridItem {
+  position: relative;
   cursor: pointer;
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   aspect-ratio: 4 / 3;
 }
 
@@ -80,8 +82,8 @@
 }
 
 .gridItem:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
 }
 
 .image {
@@ -89,6 +91,60 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gridItem:hover .image {
+  transform: scale(1.05);
+}
+
+/* ========== HOVER OVERLAY ========== */
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.25) 60%,
+    transparent 100%
+  );
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
+}
+
+.gridItem:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.productName {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin: 0;
+  padding: 0;
+}
+
+.productCategory {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
 }
 
 /* ========== LIGHTBOX ========== */
@@ -99,27 +155,54 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(0, 0, 0, 0.92);
   z-index: 2000;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 40px;
   outline: none;
+  backdrop-filter: blur(8px);
 }
 
 .lightboxContent {
   max-width: 90vw;
   max-height: 90vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 20px;
 }
 
 .lightboxImage {
   max-width: 100%;
-  max-height: 85vh;
+  max-height: 80vh;
   object-fit: contain;
+  border-radius: 8px;
+}
+
+.lightboxInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.lightboxProduct {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.lightboxCategory {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 /* ========== LIGHTBOX CONTROLS ========== */
@@ -149,18 +232,19 @@
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: none;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 50%;
   color: #ffffff;
   font-size: 24px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
   z-index: 2001;
 }
 
 .navBtn:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .prevBtn {
@@ -211,6 +295,14 @@
   .gridItem:nth-child(7) {
     grid-column: span 1;
   }
+
+  .productName {
+    font-size: 18px;
+  }
+
+  .productCategory {
+    font-size: 11px;
+  }
 }
 
 /* ========== MOBILE (max-width: 600px) ========== */
@@ -233,6 +325,26 @@
   .grid {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+
+  .gridItem {
+    border-radius: 10px;
+  }
+
+  /* Overlay always visible on mobile */
+  .overlay {
+    opacity: 1;
+    transform: translateY(0);
+    padding: 14px 16px;
+  }
+
+  .productName {
+    font-size: 15px;
+  }
+
+  .productCategory {
+    font-size: 10px;
+    letter-spacing: 1px;
   }
 
   .lightbox {
@@ -259,5 +371,13 @@
     width: 40px;
     height: 40px;
     font-size: 24px;
+  }
+
+  .lightboxProduct {
+    font-size: 20px;
+  }
+
+  .lightboxCategory {
+    font-size: 11px;
   }
 }

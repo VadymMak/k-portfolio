@@ -7,13 +7,48 @@ import SectionTitle from "../ui/SectionTitle";
 import styles from "./LabelDesignSection.module.css";
 
 const labelImages = [
-  { src: "/gallery/labels/label_01.webp", alt: "Sunflower oil label" },
-  { src: "/gallery/labels/label_09.webp", alt: "Star sunflower oil label" },
-  { src: "/gallery/labels/label_05.webp", alt: "Adriano restaurant flyer" },
-  { src: "/gallery/labels/label_04.webp", alt: "Adriano business cards" },
-  { src: "/gallery/labels/label_06.webp", alt: "Adriano seafood poster" },
-  { src: "/gallery/labels/label_02.webp", alt: "Adriano menu design" },
-  { src: "/gallery/labels/label_07.webp", alt: "Adriano menu page" },
+  {
+    src: "/gallery/labels/label_01.webp",
+    alt: "Sunflower oil label",
+    product: "Product Label",
+    category: "Sunflower Oil",
+  },
+  {
+    src: "/gallery/labels/label_09.webp",
+    alt: "Star sunflower oil label",
+    product: "Product Label",
+    category: "Star Sunflower Oil",
+  },
+  {
+    src: "/gallery/labels/label_05.webp",
+    alt: "Adriano restaurant flyer",
+    product: "Promotional Flyer",
+    category: "Adriano Restaurant",
+  },
+  {
+    src: "/gallery/labels/label_04.webp",
+    alt: "Adriano business cards",
+    product: "Business Cards",
+    category: "Adriano Restaurant",
+  },
+  {
+    src: "/gallery/labels/label_06.webp",
+    alt: "Adriano seafood poster",
+    product: "Poster Design",
+    category: "Adriano Restaurant",
+  },
+  {
+    src: "/gallery/labels/label_02.webp",
+    alt: "Adriano menu design",
+    product: "Menu Design",
+    category: "Adriano Restaurant",
+  },
+  {
+    src: "/gallery/labels/label_07.webp",
+    alt: "Adriano menu page",
+    product: "Menu Page",
+    category: "Adriano Restaurant",
+  },
 ];
 
 const LabelDesignSection = () => {
@@ -84,9 +119,8 @@ const LabelDesignSection = () => {
             className={styles.gridItem}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{ scale: 1.02 }}
             viewport={{ once: true }}
-            transition={{ delay: index * 0.1 }}
+            transition={{ delay: index * 0.08 }}
             onClick={() => openLightbox(index)}
           >
             <img
@@ -95,6 +129,11 @@ const LabelDesignSection = () => {
               className={styles.image}
               loading="lazy"
             />
+            {/* Hover overlay */}
+            <div className={styles.overlay}>
+              <span className={styles.productName}>{image.product}</span>
+              <span className={styles.productCategory}>{image.category}</span>
+            </div>
           </motion.div>
         ))}
       </div>
@@ -131,6 +170,14 @@ const LabelDesignSection = () => {
               alt={labelImages[activeIndex].alt}
               className={styles.lightboxImage}
             />
+            <div className={styles.lightboxInfo}>
+              <span className={styles.lightboxProduct}>
+                {labelImages[activeIndex].product}
+              </span>
+              <span className={styles.lightboxCategory}>
+                {labelImages[activeIndex].category}
+              </span>
+            </div>
           </div>
 
           <button
