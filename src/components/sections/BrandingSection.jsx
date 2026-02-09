@@ -81,8 +81,8 @@ const brandingImages = [
     desktopOnly: true,
   },
   {
-    thumb: "/gallery/branding/thumb/thumb_14.webp",
-    full: "/gallery/branding/full/full_14.webp",
+    thumb: "/gallery/branding/thumb/thumb_09.webp",
+    full: "/gallery/branding/full/full_09.webp",
     alt: "Sunset meadow art print",
     product: "Art Print",
     category: "Wall Art",
