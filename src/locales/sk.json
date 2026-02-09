@@ -124,7 +124,8 @@
       "sending": "Odosielanie...",
       "successTitle": "Ďakujem!",
       "successText": "Váš dopyt bol prijatý. Prezriem si ho a ozvem sa vám do 48 hodín.",
-      "error": "Niečo sa pokazilo. Skúste to znova alebo ma kontaktujte priamo emailom."
+      "error": "Niečo sa pokazilo. Skúste to znova alebo ma kontaktujte priamo emailom.",
+      "services": "Služby"
     }
   }
 }

@@ -124,7 +124,8 @@
       "sending": "Sending...",
       "successTitle": "Thank you!",
       "successText": "Your request has been received. I'll review it and get back to you within 48 hours.",
-      "error": "Something went wrong. Please try again or contact me directly via email."
+      "error": "Something went wrong. Please try again or contact me directly via email.",
+      "services": "Services"
     }
   }
 }
