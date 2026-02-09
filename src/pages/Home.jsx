@@ -16,8 +16,8 @@ const Home = () => {
       <LabelDesignSection />
       <LogosSection />
       <BrandingSection />
-      <ContactSection />
       <ServicesSection/>
+      <ContactSection />
     </div>
   );
 };
