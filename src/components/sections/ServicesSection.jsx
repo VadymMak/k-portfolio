@@ -124,9 +124,18 @@ const ServicesSection = () => {
       // reCAPTCHA v3 token
       let recaptchaToken = "";
       if (window.grecaptcha && RECAPTCHA_SITE_KEY) {
-        recaptchaToken = await window.grecaptcha.execute(RECAPTCHA_SITE_KEY, {
-          action: "contact_form",
-        });
+        try {
+          recaptchaToken = await new Promise((resolve, reject) => {
+            window.grecaptcha.ready(() => {
+              window.grecaptcha
+                .execute(RECAPTCHA_SITE_KEY, { action: "contact_form" })
+                .then(resolve)
+                .catch(reject);
+            });
+          });
+        } catch (err) {
+          console.warn("reCAPTCHA failed, submitting without it:", err);
+        }
       }
 
       const submitData = new FormData();
