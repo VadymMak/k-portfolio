@@ -9,19 +9,19 @@ import styles from "./LogosSection.module.css";
 const logoImages = [
   {
     src: "/gallery/logos/logo_02.webp",
-    alt: "Laser Craft Wood logo",
-    client: "Laser Craft Wood",
-    category: "Woodworking & Crafts",
-    bgColor: "#C4BAB0",
-    theme: "light",
-  },
-  {
-    src: "/gallery/logos/logo_06.webp",
     alt: "DCT Diagecutunetrencin logo",
     client: "DCT",
     category: "Automotive Diagnostics",
     bgColor: "#1C1C1C",
     theme: "dark",
+  },
+  {
+    src: "/gallery/logos/logo_06.webp",
+    alt: "Laser Craft Wood logo",
+    client: "Laser Craft Wood",
+    category: "Woodworking & Crafts",
+    bgColor: "#C4BAB0",
+    theme: "light",
   },
   {
     src: "/gallery/logos/logo_03.webp",
