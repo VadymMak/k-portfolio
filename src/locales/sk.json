@@ -7,7 +7,8 @@
     "logos": "Logá",
     "branding": "Tlačový a digitálny branding",
     "contactMe": "Kontaktujte ma",
-    "services": "Služby"
+    "services": "Služby",
+    "testimonials": "Referencie"
   },
   "books": {
     "nutcracker": "Luskáčik a Myší kráľ",
@@ -127,6 +128,27 @@
       "successText": "Váš dopyt bol prijatý. Prezriem si ho a ozvem sa vám do 48 hodín.",
       "error": "Niečo sa pokazilo. Skúste to znova alebo ma kontaktujte priamo emailom."
       
-    }
+    },
+    "testimonials": {
+    "title": "Referencie",
+    "subtitle": "Milé slová od ľudí, s ktorými som mala tú česť spolupracovať.",
+    "items": [
+      {
+        "name": "Sarah K.",
+        "role": "Autorka detských kníh, USA",
+        "text": "Anastasiia oživila môj príbeh svojimi úžasnými ilustráciami. Jej pozornosť k detailom, teplá farebná paleta a schopnosť zachytiť emócie každej postavy predčili všetky moje očakávania. Skutočný profesionál."
+      },
+      {
+        "name": "Martin R.",
+        "role": "Majiteľ značky, Nemecko",
+        "text": "Spolupráca s Anastasiou na etiketách našich produktov bola úžasná skúsenosť. Okamžite pochopila našu víziu a dodala dizajny, ktoré dokonale reprezentujú našu značku. Kreatívna, spoľahlivá a radosť spolupracovať."
+      },
+      {
+        "name": "Olena T.",
+        "role": "Vydavateľka, Slovensko",
+        "text": "Spolupracovali sme na viacerých projektoch detských kníh a zakaždým Anastasiia dodáva výnimočnú kvalitu. Jej ilustrácie majú jedinečnú vrelosť, ktorá rezonuje u detí aj rodičov. Vrelo odporúčam."
+      }
+    ]
+  }
   }
 }

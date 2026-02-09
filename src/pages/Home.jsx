@@ -6,6 +6,7 @@ import LogosSection from "../components/sections/LogosSection";
 import BrandingSection from "../components/sections/BrandingSection";
 import ContactSection from "../components/sections/ContactSection";
 import ServicesSection from "../components/sections/ServicesSection";
+import TestimonialsSection from "../components/sections/TestimonialsSection";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <LabelDesignSection />
       <LogosSection />
       <BrandingSection />
+      <TestimonialsSection /> 
       <ServicesSection/>
       <ContactSection />
     </div>

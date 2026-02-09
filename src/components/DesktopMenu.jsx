@@ -165,6 +165,16 @@ const DesktopMenu = () => {
             </button>
           </li>
 
+          {/* Testimonials */}
+          <li className={styles.menuItem}>
+            <button
+              onClick={() => scrollToSection("testimonials")}
+              className={styles.menuButton}
+            >
+              {translate("menu.testimonials")}
+            </button>
+          </li>
+
           {/* Services */}
           <li className={styles.menuItem}>
             <button
