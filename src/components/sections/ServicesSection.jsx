@@ -7,7 +7,6 @@ import SectionTitle from "../ui/SectionTitle";
 import styles from "./ServicesSection.module.css";
 const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 
-//Test option
 
 const services = [
   {
