@@ -132,23 +132,21 @@
   },
   "testimonials": {
     "title": "Testimonials",
-    "subtitle": "Kind words from people I've had the pleasure of working with.",
-    "items": [
-      {
-        "name": "Sarah K.",
-        "role": "Children's Book Author, USA",
-        "text": "Anastasiia brought my story to life with her incredible illustrations. Her attention to detail, warm color palette, and ability to capture emotions in each character exceeded all my expectations. A true professional."
-      },
-      {
-        "name": "Martin R.",
-        "role": "Brand Owner, Germany",
-        "text": "Working with Anastasiia on our product labels was a wonderful experience. She understood our vision immediately and delivered designs that perfectly represent our brand. Creative, reliable, and a joy to collaborate with."
-      },
-      {
-        "name": "Olena T.",
-        "role": "Publisher, Slovakia",
-        "text": "We've collaborated on multiple children's book projects, and every time Anastasiia delivers exceptional quality. Her illustrations have a unique warmth that resonates with both children and parents. Highly recommended."
-      }
-    ]
+    "subtitle": "What our clients say about working together",
+    "starFood": {
+      "name": "Star Food",
+      "role": "Labels, logo, visual style",
+      "text": "Anastasia created product labels, a company logo, and a comprehensive unified visual style concept for our company. All tasks were completed precisely, systematically, and in accordance with our requirements. We collaborate on a regular basis and recommend Anastasia as a reliable partner with a professional approach."
+    },
+    "baloonParty": {
+      "name": "Baloon Party",
+      "role": "Brandbook, visual identity",
+      "text": "Our collaboration with Anastasia Kolisnyk was conducted at a high professional level. She created a comprehensive brandbook for our company, thoroughly developing the visual identity, structure, and key elements of the corporate style. All project phases were delivered with quality, on schedule, and with attention to detail. We recommend Anastasia as a reliable specialist with a strong sense of systematic and creative work."
+    },
+    "laserCraft": {
+      "name": "Laser Craft",
+      "role": "Logo, corporate design, products",
+      "text": "Anastasia prepared a series of graphic solutions for gift and souvenir products for our company, including logo design and the creation of a unified corporate design concept. Her work was precise, creative, and always delivered on time. We have a long-term collaboration and recommend Anastasia as a reliable and professional partner for graphic and visual projects."
+    }
   }
 }

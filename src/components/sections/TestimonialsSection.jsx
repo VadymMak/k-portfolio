@@ -7,25 +7,28 @@ import styles from "./TestimonialsSection.module.css";
 
 const testimonials = [
   {
-    id: 1,
-    nameKey: "testimonials.items.0.name",
-    roleKey: "testimonials.items.0.role",
-    textKey: "testimonials.items.0.text",
-    initials: "SK",
+    id: "starFood",
+    nameKey: "testimonials.starFood.name",
+    roleKey: "testimonials.starFood.role",
+    textKey: "testimonials.starFood.text",
+    logo: "/gallery/logos/logo_01.webp",
+    alt: "Star Food logo",
   },
   {
-    id: 2,
-    nameKey: "testimonials.items.1.name",
-    roleKey: "testimonials.items.1.role",
-    textKey: "testimonials.items.1.text",
-    initials: "MR",
+    id: "baloonParty",
+    nameKey: "testimonials.baloonParty.name",
+    roleKey: "testimonials.baloonParty.role",
+    textKey: "testimonials.baloonParty.text",
+    logo: "/gallery/logos/logo_05.webp",
+    alt: "Baloon Party logo",
   },
   {
-    id: 3,
-    nameKey: "testimonials.items.2.name",
-    roleKey: "testimonials.items.2.role",
-    textKey: "testimonials.items.2.text",
-    initials: "OT",
+    id: "laserCraft",
+    nameKey: "testimonials.laserCraft.name",
+    roleKey: "testimonials.laserCraft.role",
+    textKey: "testimonials.laserCraft.text",
+    logo: "/gallery/logos/logo_06.webp",
+    alt: "Laser Craft Wood logo",
   },
 ];
 
@@ -75,8 +78,13 @@ const TestimonialsSection = () => {
                 {translate(item.textKey)}
               </p>
               <div className={styles.cardAuthor}>
-                <div className={styles.avatar}>
-                  {item.initials}
+                <div className={styles.logoWrapper}>
+                  <img
+                    src={item.logo}
+                    alt={item.alt}
+                    className={styles.logo}
+                    loading="lazy"
+                  />
                 </div>
                 <div className={styles.authorInfo}>
                   <span className={styles.authorName}>

@@ -50,6 +50,7 @@
       "text2": "V tlači navrhujem materiály, ktoré pôsobia hmatateľne a nezabudnuteľne — vizitky, brožúry, katalógy, obalové prvky, plagáty a značkový tovar. Každý kus je vytvorený s dôrazom na kompozíciu, typografiu a farbu, aby osobnosť značky bola vyjadrená s vrelosťou a precíznosťou.",
       "text3": "V digitálnom priestore vyvíjam vizuálne systémy pre webové stránky, sociálne médiá, prezentácie a online kampane. To zahŕňa grafiku, šablóny, ikony a rozloženia, ktoré sa plynulo prispôsobujú rôznym platformám pri zachovaní konzistentnej identity."
     },
+    
   "sections": {
     "home": {
       "title": "Profesionálna ilustrátorka / Grafická dizajnérka"
@@ -131,23 +132,21 @@
   },
     "testimonials": {
     "title": "Referencie",
-    "subtitle": "Milé slová od ľudí, s ktorými som mala tú česť spolupracovať.",
-    "items": [
-      {
-        "name": "Sarah K.",
-        "role": "Autorka detských kníh, USA",
-        "text": "Anastasiia oživila môj príbeh svojimi úžasnými ilustráciami. Jej pozornosť k detailom, teplá farebná paleta a schopnosť zachytiť emócie každej postavy predčili všetky moje očakávania. Skutočný profesionál."
-      },
-      {
-        "name": "Martin R.",
-        "role": "Majiteľ značky, Nemecko",
-        "text": "Spolupráca s Anastasiou na etiketách našich produktov bola úžasná skúsenosť. Okamžite pochopila našu víziu a dodala dizajny, ktoré dokonale reprezentujú našu značku. Kreatívna, spoľahlivá a radosť spolupracovať."
-      },
-      {
-        "name": "Olena T.",
-        "role": "Vydavateľka, Slovensko",
-        "text": "Spolupracovali sme na viacerých projektoch detských kníh a zakaždým Anastasiia dodáva výnimočnú kvalitu. Jej ilustrácie majú jedinečnú vrelosť, ktorá rezonuje u detí aj rodičov. Vrelo odporúčam."
-      }
-    ]
+    "subtitle": "Čo hovoria naši klienti o spolupráci",
+    "starFood": {
+      "name": "Star Food",
+      "role": "Etikety, logo, vizuálny štýl",
+      "text": "Anastasia pre našu spoločnosť vytvorila etikety pre produkty, firemné logo a komplexnú koncepciu jednotného vizuálneho štýlu. Všetky úlohy realizovala precízne, systematicky a v súlade s našimi požiadavkami. Spolupracujeme na pravidelnej báze a Anastasiu odporúčame ako spoľahlivú partnerku s profesionálnym prístupom."
+    },
+    "baloonParty": {
+      "name": "Baloon Party",
+      "role": "Brandbook, vizuálna identita",
+      "text": "Spolupráca s Anastasiou Kolesnik prebehla na vysokej profesionálnej úrovni. Pre našu spoločnosť vytvorila komplexný brandbook, v ktorom dôsledne spracovala vizuálnu identitu, štruktúru aj kľúčové prvky firemného štýlu. Všetky fázy projektu boli realizované kvalitne, v dohodnutých termínoch a s dôrazom na detail. Anastasiu odporúčame ako spoľahlivú odborníčku so silným zmyslom pre systematickú a kreatívnu prácu."
+    },
+    "laserCraft": {
+      "name": "Laser Craft",
+      "role": "Logo, firemný dizajn, produkty",
+      "text": "Anastasia pre našu spoločnosť pripravila sériu grafických riešení pre darčekové a suvenírové produkty, vrátane návrhu loga a vytvorenia jednotnej koncepcie firemného dizajnu. Jej práca bola precízna, kreatívna a vždy doručená v dohodnutých termínoch. Spolupracujeme dlhodobo a Anastasiu odporúčame ako spoľahlivú a profesionálnu partnerku pre grafické a vizuálne projekty."
+    }
   }
 }
