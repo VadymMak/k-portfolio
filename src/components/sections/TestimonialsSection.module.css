@@ -107,20 +107,22 @@
   border-top: 1px solid rgba(45, 74, 67, 0.08);
 }
 
-.avatar {
-  width: 44px;
-  height: 44px;
+.logoWrapper {
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background-color: #2D4A43;
-  color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: #f0ede7;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .authorInfo {
