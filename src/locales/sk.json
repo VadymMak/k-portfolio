@@ -127,8 +127,8 @@
       "successTitle": "Ďakujem!",
       "successText": "Váš dopyt bol prijatý. Prezriem si ho a ozvem sa vám do 48 hodín.",
       "error": "Niečo sa pokazilo. Skúste to znova alebo ma kontaktujte priamo emailom."
-      
-    },
+    }
+  },
     "testimonials": {
     "title": "Referencie",
     "subtitle": "Milé slová od ľudí, s ktorými som mala tú česť spolupracovať.",
@@ -149,6 +149,5 @@
         "text": "Spolupracovali sme na viacerých projektoch detských kníh a zakaždým Anastasiia dodáva výnimočnú kvalitu. Jej ilustrácie majú jedinečnú vrelosť, ktorá rezonuje u detí aj rodičov. Vrelo odporúčam."
       }
     ]
-  }
   }
 }

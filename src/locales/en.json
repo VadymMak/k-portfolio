@@ -128,8 +128,9 @@
       "successText": "Your request has been received. I'll review it and get back to you within 48 hours.",
       "error": "Something went wrong. Please try again or contact me directly via email."
       
-    },
-    "testimonials": {
+    }
+  },
+  "testimonials": {
     "title": "Testimonials",
     "subtitle": "Kind words from people I've had the pleasure of working with.",
     "items": [
@@ -149,6 +150,5 @@
         "text": "We've collaborated on multiple children's book projects, and every time Anastasiia delivers exceptional quality. Her illustrations have a unique warmth that resonates with both children and parents. Highly recommended."
       }
     ]
-  }
   }
 }
