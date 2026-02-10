@@ -6,6 +6,8 @@ import { useLanguage } from "../hooks/useLanguage";
 import { useTranslation } from "../hooks/useTranslation";
 import styles from "./DesktopMenu.module.css";
 
+// Test commit
+
 const DesktopMenu = () => {
   const [isChildrensOpen, setIsChildrensOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
