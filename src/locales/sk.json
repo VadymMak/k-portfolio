@@ -8,7 +8,7 @@
     "branding": "Tlačový a digitálny branding",
     "contactMe": "Kontaktujte ma",
     "services": "Služby",
-    "testimonials": "Referencie"
+    "testimonials": "Recenzie"
   },
   "books": {
     "nutcracker": "Luskáčik a Myší kráľ",
@@ -102,6 +102,9 @@
       "title": "Branding a tlačový dizajn",
       "desc": "Súdržná vizuálna identita v tlači aj digitáli — vizitky, jedálne lístky, plagáty, šablóny pre sociálne médiá a značkový tovar."
     },
+    "footer": {
+      "copyright": "Všetky ilustrácie a umelecké diela na tejto stránke sú chránené medzinárodným autorským právom. Neoprávnené reprodukovanie, distribúcia alebo použitie je prísne zakázané."
+    },
     "form": {
       "title": "Spolupracujme",
       "subtitle": "Povedzte mi o vašom projekte a ozvem sa vám do 48 hodín.",
@@ -131,7 +134,7 @@
     }
   },
     "testimonials": {
-    "title": "Referencie",
+    "title": "Recenzie",
     "subtitle": "Čo hovoria naši klienti o spolupráci",
     "starFood": {
       "name": "Star Food",

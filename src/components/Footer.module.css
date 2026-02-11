@@ -59,6 +59,27 @@
   font-weight: 600;
 }
 
+/* ========== COPYRIGHT PROTECTION NOTICE ========== */
+
+.copyrightNotice {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(201, 168, 108, 0.15);
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.copyrightText {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  color: rgba(201, 168, 108, 0.4);
+  line-height: 1.6;
+  margin: 0;
+  letter-spacing: 0.2px;
+}
+
 /* ========== TABLET (max-width: 1024px) ========== */
 
 @media (max-width: 1024px) {
@@ -98,5 +119,14 @@
 
   .logo {
     order: 0;
+  }
+
+  .copyrightNotice {
+    margin-top: 16px;
+    padding-top: 12px;
+  }
+
+  .copyrightText {
+    font-size: 10px;
   }
 }
