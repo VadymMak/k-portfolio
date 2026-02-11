@@ -8,8 +8,8 @@ import styles from './ProtectedImage.module.css';
  * - Invisible watermark (visible only when contrast is increased)
  * - CSS user-select: none
  * 
- * Usage (drop-in replacement for <img>):
- *   <ProtectedImage src="/gallery/nutcracker.webp" alt="Nutcracker illustration" />
+ * className is applied to the <img> tag (not the wrapper)
+ * so section-specific styles like object-fit work correctly.
  */
 const ProtectedImage = ({ 
   children, 
@@ -32,7 +32,7 @@ const ProtectedImage = ({
 
   return (
     <div 
-      className={`${styles.wrapper} ${className}`}
+      className={styles.wrapper}
       style={style}
       onContextMenu={handleContextMenu}
       onDragStart={handleDragStart}
@@ -45,7 +45,7 @@ const ProtectedImage = ({
           alt={alt} 
           draggable="false"
           loading={loading}
-          className={styles.image}
+          className={`${styles.image} ${className}`}
           {...imgProps}
         />
       )}
