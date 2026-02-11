@@ -2,15 +2,16 @@
 import { motion, AnimatePresence } from "framer-motion";
 /* eslint-enable no-unused-vars */
 import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useLanguage } from "../hooks/useLanguage";
 import { useTranslation } from "../hooks/useTranslation";
 import styles from "./DesktopMenu.module.css";
 
-// Test commit
-
 const DesktopMenu = () => {
   const [isChildrensOpen, setIsChildrensOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   // Language context and translations
   const {
@@ -31,10 +32,22 @@ const DesktopMenu = () => {
     { id: "secrets-sea", title: translate("books.seaSecrets") },
   ];
 
+  // Cross-navigation: scroll on home page, navigate+scroll from blog pages
   const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    if (location.pathname === "/") {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      navigate(`/#${id}`);
+      // After navigation, scroll to the section
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
     }
   };
 
@@ -42,6 +55,8 @@ const DesktopMenu = () => {
     changeLanguage(code);
     setIsLanguageOpen(false);
   };
+
+  const isOnBlog = location.pathname.startsWith("/blog");
 
   return (
     <nav className={styles.nav}>
@@ -144,6 +159,16 @@ const DesktopMenu = () => {
               className={styles.menuButton}
             >
               {translate("menu.testimonials")}
+            </button>
+          </li>
+
+          {/* Blog — navigates to /blog page */}
+          <li className={styles.menuItem}>
+            <button
+              onClick={() => navigate("/blog")}
+              className={`${styles.menuButton} ${isOnBlog ? styles.active : ""}`}
+            >
+              {translate("menu.blog") || "Blog"}
             </button>
           </li>
 

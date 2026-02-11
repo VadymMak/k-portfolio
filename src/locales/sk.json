@@ -4,6 +4,7 @@
     "childrensBooks": "Ilustrácie detských kníh",
     "designBranding": "Dizajn a branding",
     "contactMe": "Kontaktujte ma",
+    "blog": "Blog",
     "services": "Služby",
     "testimonials": "Recenzie"
   },
@@ -135,5 +136,13 @@
       "role": "Logo, firemný dizajn, produkty",
       "text": "Anastasia pre našu spoločnosť pripravila sériu grafických riešení pre darčekové a suvenírové produkty, vrátane návrhu loga a vytvorenia jednotnej koncepcie firemného dizajnu. Jej práca bola precízna, kreatívna a vždy doručená v dohodnutých termínoch. Spolupracujeme dlhodobo a Anastasiu odporúčame ako spoľahlivú a profesionálnu partnerku pre grafické a vizuálne projekty."
     }
+  },
+  "blog": {
+    "home": "Domov",
+    "minRead": "min čítania",
+    "backToBlog": "Späť na blog",
+    "ctaTitle": "Chcete spolupracovať?",
+    "ctaText": "Som k dispozícii pre projekty ilustrácie detských kníh, brandingu a vizuálneho dizajnu.",
+    "ctaButton": "Služby"
   }
 }

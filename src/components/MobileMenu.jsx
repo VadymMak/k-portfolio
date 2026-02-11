@@ -2,6 +2,7 @@ import { useState } from "react";
 /* eslint-disable no-unused-vars */
 import { motion, AnimatePresence } from "framer-motion";
 /* eslint-enable no-unused-vars */
+import { useNavigate, useLocation } from "react-router-dom";
 import { useLanguage } from "../hooks/useLanguage";
 import { useTranslation } from "../hooks/useTranslation";
 import styles from "./MobileMenu.module.css";
@@ -9,6 +10,8 @@ import styles from "./MobileMenu.module.css";
 const MobileMenu = ({ isOpen, onClose }) => {
   const [isChildrensOpen, setIsChildrensOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   // Language context and translations
   const {
@@ -29,20 +32,38 @@ const MobileMenu = ({ isOpen, onClose }) => {
     { id: "secrets-sea", title: translate("books.seaSecrets") },
   ];
 
+  // Cross-navigation: scroll on home, navigate from blog
   const scrollToSection = (id) => {
     onClose();
-    setTimeout(() => {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 300);
+    if (location.pathname === "/") {
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 300);
+    } else {
+      navigate(`/#${id}`);
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 400);
+    }
+  };
+
+  const handleBlogClick = () => {
+    onClose();
+    setTimeout(() => navigate("/blog"), 300);
   };
 
   const handleLanguageChange = (code) => {
     changeLanguage(code);
     setIsLanguageOpen(false);
   };
+
+  const isOnBlog = location.pathname.startsWith("/blog");
 
   return (
     <>
@@ -170,7 +191,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
                 </AnimatePresence>
               </motion.li>
 
-              {/* Design & Branding (replaces Label Design + Logos + Branding) */}
+              {/* Design & Branding */}
               <motion.li
                 className={styles.menuItem}
                 initial={{ opacity: 0, y: 20 }}
@@ -197,6 +218,21 @@ const MobileMenu = ({ isOpen, onClose }) => {
                   className={styles.menuItemButton}
                 >
                   {translate("menu.testimonials")}
+                </button>
+              </motion.li>
+
+              {/* Blog — navigates to /blog */}
+              <motion.li
+                className={styles.menuItem}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.28 }}
+              >
+                <button
+                  onClick={handleBlogClick}
+                  className={`${styles.menuItemButton} ${isOnBlog ? styles.active : ""}`}
+                >
+                  {translate("menu.blog") || "Blog"}
                 </button>
               </motion.li>
 

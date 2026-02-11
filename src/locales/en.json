@@ -4,6 +4,7 @@
     "childrensBooks": "Children's book illustrations",
     "designBranding": "Design & Branding",
     "contactMe": "Contact Me",
+    "blog": "Blog",
     "services": "Services",
     "testimonials": "Referencie"
   },
@@ -135,5 +136,13 @@
       "role": "Logo, corporate design, products",
       "text": "Anastasia prepared a series of graphic solutions for gift and souvenir products for our company, including logo design and the creation of a unified corporate design concept. Her work was precise, creative, and always delivered on time. We have a long-term collaboration and recommend Anastasia as a reliable and professional partner for graphic and visual projects."
     }
+  },
+  "blog": {
+    "home": "Home",
+    "minRead": "min read",
+    "backToBlog": "Back to Blog",
+    "ctaTitle": "Want to work together?",
+    "ctaText": "I'm available for children's book illustration, branding, and visual design projects.",
+    "ctaButton": "View Services"
   }
 }

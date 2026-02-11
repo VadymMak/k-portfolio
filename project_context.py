@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-AK Portfolio — Focused Context Collector for Site Improvement Plan
+AK Portfolio — Focused Context Collector
 Collects only the files needed for current development tasks.
-Run: python collect_context.py
+Run: python project_context.py
 """
 
 import os
@@ -20,55 +20,66 @@ COLLECT_FILES = [
     "src/App.jsx",
     "src/main.jsx",
     "index.html",
-    
+
     # === Header / Footer / Menu ===
     "src/components/Header.jsx",
     "src/components/Header.module.css",
     "src/components/Footer.jsx",
     "src/components/Footer.module.css",
+    "src/components/Layout.jsx",
+    "src/components/Layout.module.css",
     "src/components/DesktopMenu.jsx",
     "src/components/DesktopMenu.module.css",
     "src/components/MobileMenu.jsx",
     "src/components/MobileMenu.module.css",
-    
-    # === Sections with text to reduce ===
+
+    # === Sections ===
+    "src/components/sections/AboutSection.jsx",
+    "src/components/sections/AboutSection.module.css",
     "src/components/sections/ChildrensBooksIntro.jsx",
     "src/components/sections/ChildrensBooksIntro.module.css",
     "src/components/sections/ChildrensBooksSection.jsx",
     "src/components/sections/ChildrensBooksSection.module.css",
-    "src/components/sections/LabelDesignSection.jsx",
-    "src/components/sections/LabelDesignSection.module.css",
-    "src/components/sections/LogosSection.jsx",
-    "src/components/sections/LogosSection.module.css",
-    "src/components/sections/BrandingSection.jsx",
-    "src/components/sections/BrandingSection.module.css",
-    "src/components/sections/AboutSection.jsx",
-    "src/components/sections/AboutSection.module.css",
+    "src/components/sections/DesignBrandingSection.jsx",
+    "src/components/sections/DesignBrandingSection.module.css",
     "src/components/sections/TestimonialsSection.jsx",
     "src/components/sections/TestimonialsSection.module.css",
     "src/components/sections/ServicesSection.jsx",
     "src/components/sections/ServicesSection.module.css",
     "src/components/sections/ContactSection.jsx",
     "src/components/sections/ContactSection.module.css",
-    
+
     # === UI Components ===
     "src/components/ui/SectionTitle.jsx",
     "src/components/ui/SectionTitle.module.css",
-    
-    # === Protected Image (if exists) ===
     "src/components/ProtectedImage.jsx",
     "src/components/ProtectedImage.module.css",
-    
+    "src/components/ChildrensBooksLayout.jsx",
+
+    # === Blog ===
+    "src/blog/blogIndex.js",
+    "src/blog/parseFrontmatter.js",
+    "src/blog/blogTranslations.js",
+    "src/blog/posts/from-rejection-to-illustrator/en.md",
+    "src/blog/posts/from-rejection-to-illustrator/ru.md",
+    "src/blog/posts/from-rejection-to-illustrator/sk.md",
+    "src/blog/posts/from-rejection-to-illustrator/ua.md",
+    "src/pages/BlogList.jsx",
+    "src/pages/BlogList.module.css",
+    "src/pages/BlogPost.jsx",
+    "src/pages/BlogPost.module.css",
+
     # === Hooks & Context ===
     "src/hooks/useTranslation.js",
+    "src/hooks/useLanguage.js",
     "src/context/LanguageContext.jsx",
-    
-    # === Translations (all languages) ===
+
+    # === Translations ===
     "src/locales/en.json",
     "src/locales/sk.json",
     "src/locales/ru.json",
     "src/locales/ua.json",
-    
+
     # === Config ===
     "package.json",
     "vite.config.js",
@@ -76,10 +87,9 @@ COLLECT_FILES = [
     "public/_redirects",
     "public/robots.txt",
     "public/sitemap.xml",
-    
+
     # === Global Styles ===
     "src/index.css",
-    "src/App.css",
 ]
 
 SKIP_DIRS = {"node_modules", ".git", "dist", "build", ".next", "__pycache__", ".vscode", ".idea"}
@@ -117,21 +127,21 @@ def get_project_tree(root_path, prefix="", max_depth=4, current_depth=0):
 def main():
     root_path = Path.cwd()
     output = []
-    
+
     output.append("=" * 70)
     output.append("AK PORTFOLIO — PROJECT CONTEXT")
     output.append("=" * 70)
     output.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     output.append(f"Project: {root_path}")
     output.append("")
-    
+
     # 1. Project Tree
     output.append("=" * 70)
     output.append("PROJECT STRUCTURE")
     output.append("=" * 70)
     output.append(get_project_tree(root_path, max_depth=4))
-    
-    # 2. Gallery structure (images only — no content)
+
+    # 2. Gallery structure
     output.append("=" * 70)
     output.append("GALLERY STRUCTURE")
     output.append("=" * 70)
@@ -140,15 +150,25 @@ def main():
         output.append(get_project_tree(gallery, max_depth=3))
     else:
         output.append("No gallery folder found")
-    
-    # 3. File Contents
+
+    # 3. Blog assets structure
+    output.append("=" * 70)
+    output.append("BLOG ASSETS STRUCTURE")
+    output.append("=" * 70)
+    blog_public = root_path / "public" / "blog"
+    if blog_public.exists():
+        output.append(get_project_tree(blog_public, max_depth=3))
+    else:
+        output.append("No public/blog folder found")
+
+    # 4. File Contents
     output.append("\n" + "=" * 70)
     output.append("FILE CONTENTS")
     output.append("=" * 70)
-    
+
     collected = 0
     missing = []
-    
+
     for file_rel in COLLECT_FILES:
         file_path = root_path / file_rel
         if file_path.exists() and file_path.is_file():
@@ -163,25 +183,25 @@ def main():
                 output.append(f"\n# Error reading {file_rel}: {e}")
         else:
             missing.append(file_rel)
-    
-    # 4. Missing files report
+
+    # 5. Missing files report
     if missing:
         output.append(f"\n{'─' * 70}")
         output.append(f"MISSING FILES ({len(missing)}):")
         output.append(f"{'─' * 70}")
         for f in missing:
             output.append(f"  - {f}")
-    
-    # 5. Summary
+
+    # 6. Summary
     output.append(f"\n{'=' * 70}")
     output.append(f"SUMMARY: {collected} files collected, {len(missing)} missing")
     output.append(f"{'=' * 70}")
-    
+
     # Write
     output_text = "\n".join(output)
     output_path = root_path / OUTPUT_FILE
     output_path.write_text(output_text, encoding="utf-8")
-    
+
     print(f"✅ Context collected: {collected} files")
     print(f"📄 Output: {output_path}")
     print(f"📊 Size: {len(output_text) / 1024:.1f} KB")
