@@ -1,9 +1,7 @@
 import AboutSection from "../components/sections/AboutSection";
 import ChildrensBooksIntro from "../components/sections/ChildrensBooksIntro";
 import ChildrensBooksSection from "../components/sections/ChildrensBooksSection";
-import LabelDesignSection from "../components/sections/LabelDesignSection";
-import LogosSection from "../components/sections/LogosSection";
-import BrandingSection from "../components/sections/BrandingSection";
+import DesignBrandingSection from "../components/sections/DesignBrandingSection";
 import ContactSection from "../components/sections/ContactSection";
 import ServicesSection from "../components/sections/ServicesSection";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
@@ -14,11 +12,9 @@ const Home = () => {
       <AboutSection />
       <ChildrensBooksIntro />
       <ChildrensBooksSection />
-      <LabelDesignSection />
-      <LogosSection />
-      <BrandingSection />
-      <TestimonialsSection /> 
-      <ServicesSection/>
+      <DesignBrandingSection />
+      <TestimonialsSection />
+      <ServicesSection />
       <ContactSection />
     </div>
   );

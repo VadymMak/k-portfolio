@@ -128,30 +128,10 @@ const DesktopMenu = () => {
             </AnimatePresence>
           </li>
 
-          {/* Label Design */}
-          <li className={styles.menuItem}>
-            <button
-              onClick={() => scrollToSection("label-design")}
-              className={styles.menuButton}
-            >
-              {translate("menu.labelDesign")}
-            </button>
-          </li>
-
-          {/* Logos */}
-          <li className={styles.menuItem}>
-            <button
-              onClick={() => scrollToSection("logos")}
-              className={styles.menuButton}
-            >
-              {translate("menu.logos")}
-            </button>
-          </li>
-
           {/* Print and Digital Branding */}
           <li className={styles.menuItem}>
             <button
-              onClick={() => scrollToSection("branding")}
+              onClick={() => scrollToSection("design-branding")}
               className={styles.menuButton}
             >
               {translate("menu.branding")}

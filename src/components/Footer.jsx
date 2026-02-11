@@ -1,6 +1,9 @@
+import { useTranslation } from '../hooks/useTranslation';
 import styles from './Footer.module.css';
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer id="footer" className={styles.footer}>
       <div className={styles.container}>
@@ -55,20 +58,7 @@ const Footer = () => {
       {/* Copyright Protection Notice */}
       <div className={styles.copyrightNotice}>
         <p className={styles.copyrightText}>
-          All illustrations and artwork on this website are protected by international copyright law.
-          Unauthorized reproduction, distribution, or use is strictly prohibited.
-        </p>
-        <p className={styles.copyrightText}>
-          Všetky ilustrácie a umelecké diela na tejto stránke sú chránené medzinárodným autorským právom.
-          Neoprávnené reprodukovanie, distribúcia alebo použitie je prísne zakázané.
-        </p>
-        <p className={styles.copyrightText}>
-          Все иллюстрации и произведения на этом сайте защищены международным авторским правом.
-          Несанкционированное воспроизведение, распространение или использование строго запрещено.
-        </p>
-        <p className={styles.copyrightText}>
-          Усі ілюстрації та твори на цьому сайті захищені міжнародним авторським правом.
-          Несанкціоноване відтворення, розповсюдження або використання суворо заборонено.
+          {t('footer.copyright')}
         </p>
       </div>
     </footer>
