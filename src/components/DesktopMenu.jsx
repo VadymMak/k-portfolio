@@ -93,15 +93,6 @@ const DesktopMenu = () => {
             </button>
           </li>
 
-          {/* Books Intro */}
-          <li className={styles.menuItem}>
-            <button
-              onClick={() => scrollToSection("books-intro")}
-              className={styles.menuButton}
-            >
-              {translate("menu.illustrationPhilosophy")}
-            </button>
-          </li>
 
           {/* Children's Book Illustrations - Accordion */}
           <li className={styles.menuItem}>
