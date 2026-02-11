@@ -9,12 +9,12 @@ import TestimonialsSection from "../components/sections/TestimonialsSection";
 const Home = () => {
   return (
     <div>
-      <AboutSection />
+      {/* <AboutSection />
       <ChildrensBooksIntro />
       <ChildrensBooksSection />
       <DesignBrandingSection />
       <TestimonialsSection />
-      <ServicesSection />
+      <ServicesSection /> */}
       <ContactSection />
     </div>
   );
