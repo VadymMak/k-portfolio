@@ -1,7 +1,7 @@
 /* ========== SECTION ========== */
 
 .section {
-  padding: 80px 40px;
+  padding: 0px 40px;
   scroll-margin-top: 100px;
 }
 
@@ -65,52 +65,22 @@
   border-color: #3A5E55;
 }
 
-/* ========== LABELS GRID (from LabelDesignSection) ========== */
+/* ========== ALL GRIDS — simple 3 columns ========== */
 
-.gridLabels {
+.gridLabels,
+.gridBranding {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   max-width: 1400px;
   margin: 0 auto;
 }
-
-/* Row 1: 2 wide images */
-.gridLabels .gridItem:nth-child(1),
-.gridLabels .gridItem:nth-child(2) {
-  grid-column: span 3;
-}
-
-/* Row 2: 3 images */
-.gridLabels .gridItem:nth-child(3),
-.gridLabels .gridItem:nth-child(4),
-.gridLabels .gridItem:nth-child(5) {
-  grid-column: span 2;
-}
-
-/* Row 3: 2 wide images */
-.gridLabels .gridItem:nth-child(6),
-.gridLabels .gridItem:nth-child(7) {
-  grid-column: span 3;
-}
-
-/* ========== LOGOS GRID (from LogosSection) ========== */
 
 .gridLogos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* ========== BRANDING GRID (from BrandingSection) ========== */
-
-.gridBranding {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -132,14 +102,6 @@
   box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
 }
 
-.gridItemWide {
-  grid-column: span 2;
-}
-
-.desktopOnly {
-  display: block;
-}
-
 .image {
   width: 100%;
   height: 100%;
@@ -152,7 +114,7 @@
   transform: scale(1.05);
 }
 
-/* ========== LOGO CARD (from LogosSection) ========== */
+/* ========== LOGO CARD ========== */
 
 .logoCard {
   position: relative;
@@ -224,7 +186,6 @@
   transform: translateY(0);
 }
 
-/* Dark logo cards — subtler gradient */
 .logoDark .overlay {
   background: linear-gradient(
     to top,
@@ -372,36 +333,15 @@
     letter-spacing: 1px;
   }
 
-  /* Labels: 2 columns */
-  .gridLabels {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-
-  .gridLabels .gridItem:nth-child(1),
-  .gridLabels .gridItem:nth-child(2),
-  .gridLabels .gridItem:nth-child(3),
-  .gridLabels .gridItem:nth-child(4),
-  .gridLabels .gridItem:nth-child(5),
-  .gridLabels .gridItem:nth-child(6),
-  .gridLabels .gridItem:nth-child(7) {
-    grid-column: span 1;
-  }
-
-  /* Logos: 2 columns */
-  .gridLogos {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  /* Branding: 2 columns */
+  .gridLabels,
   .gridBranding {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
 
-  .gridItemWide {
-    grid-column: span 2;
+  .gridLogos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
   .overlayName { font-size: 18px; }
@@ -431,13 +371,12 @@
     letter-spacing: 0.8px;
   }
 
-  /* Labels: 1 column */
-  .gridLabels {
+  .gridLabels,
+  .gridBranding {
     grid-template-columns: 1fr;
     gap: 12px;
   }
 
-  /* Logos: 2 columns, square */
   .gridLogos {
     grid-template-columns: repeat(2, 1fr);
     gap: 14px;
@@ -452,25 +391,10 @@
     padding: 16px;
   }
 
-  /* Branding: 1 column */
-  .gridBranding {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .gridItemWide {
-    grid-column: span 1;
-  }
-
-  .desktopOnly {
-    display: none;
-  }
-
   .gridItem {
     border-radius: 10px;
   }
 
-  /* Overlay always visible on mobile */
   .overlay {
     opacity: 1;
     transform: translateY(0);

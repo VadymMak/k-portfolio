@@ -15,7 +15,6 @@ const labelImages = [
   { src: "/gallery/labels/label_04.webp", alt: "Adriano business cards", product: "Business Cards", category: "Adriano Restaurant" },
   { src: "/gallery/labels/label_06.webp", alt: "Adriano seafood poster", product: "Poster Design", category: "Adriano Restaurant" },
   { src: "/gallery/labels/label_02.webp", alt: "Adriano menu design", product: "Menu Design", category: "Adriano Restaurant" },
-  { src: "/gallery/labels/label_07.webp", alt: "Adriano menu page", product: "Menu Page", category: "Adriano Restaurant" },
 ];
 
 const logoImages = [
@@ -32,13 +31,8 @@ const brandingImages = [
   { thumb: "/gallery/branding/thumb/thumb_02.webp", full: "/gallery/branding/full/full_02.webp", alt: "Impressionist Mood notebook", product: "Notebook", category: "Stationery" },
   { thumb: "/gallery/branding/thumb/thumb_04.webp", full: "/gallery/branding/full/full_04.webp", alt: "Floral magnolia pillow", product: "Decorative Pillow", category: "Home Decor" },
   { thumb: "/gallery/branding/thumb/thumb_05.webp", full: "/gallery/branding/full/full_05.webp", alt: "Green floral silk scarf", product: "Silk Scarf", category: "Accessories" },
-  { thumb: "/gallery/branding/thumb/thumb_03.webp", full: "/gallery/branding/full/full_03.webp", alt: "Advent 2026 calendar", product: "Wall Calendar", category: "Stationery", wide: true },
+  { thumb: "/gallery/branding/thumb/thumb_03.webp", full: "/gallery/branding/full/full_03.webp", alt: "Advent 2026 calendar", product: "Wall Calendar", category: "Stationery" },
   { thumb: "/gallery/branding/thumb/thumb_10.webp", full: "/gallery/branding/full/full_10.webp", alt: "Lavender field tote bag", product: "Tote Bag", category: "Accessories" },
-  { thumb: "/gallery/branding/thumb/thumb_11.webp", full: "/gallery/branding/full/full_11.webp", alt: "Forest stream wall clock", product: "Wall Clock", category: "Home Decor" },
-  { thumb: "/gallery/branding/thumb/thumb_12.webp", full: "/gallery/branding/full/full_12.webp", alt: "Landscape acrylic block", product: "Acrylic Block", category: "Art Print" },
-  { thumb: "/gallery/branding/thumb/thumb_06.webp", full: "/gallery/branding/full/full_06.webp", alt: "Meadow path canvas print", product: "Canvas Print", category: "Wall Art", desktopOnly: true },
-  { thumb: "/gallery/branding/thumb/thumb_08.webp", full: "/gallery/branding/full/full_08.webp", alt: "Lavender field landscape", product: "Framed Print", category: "Wall Art", desktopOnly: true },
-  { thumb: "/gallery/branding/thumb/thumb_09.webp", full: "/gallery/branding/full/full_09.webp", alt: "Sunset meadow art print", product: "Art Print", category: "Wall Art" },
 ];
 
 const TABS = ["labels", "logos", "branding"];
