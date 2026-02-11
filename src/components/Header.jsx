@@ -27,7 +27,7 @@ const Header = () => {
       {/* Title - Centered */}
       <div className={styles.titleWrapper}>
         <h1 className={styles.title}>
-          Professional Illustrator / Grafik Designer
+          Children's Book Illustrator & Visual Designer
         </h1>
       </div>
     </header>
