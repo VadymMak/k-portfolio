@@ -1,6 +1,6 @@
 import { useState } from "react";
 /* eslint-disable no-unused-vars */
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 /* eslint-enable no-unused-vars */
 import { useTranslation } from "../../hooks/useTranslation";
 import SectionTitle from "../ui/SectionTitle";
@@ -113,13 +113,12 @@ const DesignBrandingSection = () => {
 
       {/* Gallery */}
       <AnimatePresence mode="wait">
-        <motion.div
-          key={activeTab}
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          transition={{ duration: 0.3 }}
-        >
+         <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+          >
           {/* ===== Labels Grid ===== */}
           {activeTab === "labels" && (
             <div className={styles.gridLabels}>
