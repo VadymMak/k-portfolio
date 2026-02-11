@@ -9,7 +9,7 @@ const ChildrensBooksIntro = () => {
   const { translate } = useTranslation();
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="childrens-books">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -18,26 +18,15 @@ const ChildrensBooksIntro = () => {
         <SectionTitle>{translate("booksIntro.title")}</SectionTitle>
       </motion.div>
 
-      <motion.div 
-        className={styles.description}
-        initial={{ opacity: 0, y: 20 }}
+      <motion.p 
+        className={styles.subtitle}
+        initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.2 }}
       >
-        <h3 className={styles.descriptionTitle}>
-          {translate("booksIntro.subtitle")}
-        </h3>
-        <p className={styles.descriptionText}>
-          {translate("booksIntro.text1")}
-        </p>
-        <p className={styles.descriptionText}>
-          {translate("booksIntro.text2")}
-        </p>
-        <p className={styles.descriptionText}>
-          {translate("booksIntro.text3")}
-        </p>
-      </motion.div>
+        {translate("booksIntro.subtitle")}
+      </motion.p>
     </section>
   );
 };

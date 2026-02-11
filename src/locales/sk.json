@@ -9,6 +9,10 @@
     "services": "Služby",
     "testimonials": "Recenzie"
   },
+  "booksIntro": {
+    "title": "Ilustrácie detských kníh",
+    "subtitle": "Teplo, čaro a rozprávanie príbehov na každej strane"
+  },
   "books": {
     "nutcracker": "Luskáčik a Myší kráľ",
     "wildSwans": "Divé labute",

@@ -9,6 +9,10 @@
     "services": "Services",
     "testimonials": "Referencie"
   },
+  "booksIntro": {
+    "title": "Children's Book Illustrations",
+    "subtitle": "Warmth, wonder, and storytelling in every page"
+  },
   "books": {
     "nutcracker": "The Nutcracker and the Mouse King",
     "wildSwans": "The Wild Swans",

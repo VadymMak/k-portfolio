@@ -12,6 +12,7 @@ const Home = () => {
   return (
     <div>
       <AboutSection />
+      <ChildrensBooksIntro />
       <ChildrensBooksSection />
       <LabelDesignSection />
       <LogosSection />

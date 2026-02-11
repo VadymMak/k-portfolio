@@ -1,40 +1,36 @@
+/* ========== CHILDREN'S BOOKS INTRO — Minimal ========== */
+
 .section {
-  padding: 100px 40px 0px;
-  background-color: #F5EFE6;
-}
-
-.description {
-  max-width: 650px;
-  margin: 0 auto;
+  padding: 60px 40px 20px;
   text-align: center;
+  scroll-margin-top: 100px;
 }
 
-.descriptionTitle {
+.subtitle {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 20px;
-  font-weight: 700;
-  color: #2D4A43;
-  margin-bottom: 20px;
+  font-size: 18px;
+  font-style: italic;
+  color: #5A7A70;
+  margin: 12px auto 0;
+  max-width: 500px;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
 }
 
-.descriptionText {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 16px;
-  color: #2D4A43;
-  line-height: 1.8;
-  text-align: justify;
-}
-
-@media (max-width: 768px) {
+/* ========== TABLET ========== */
+@media (max-width: 1024px) {
   .section {
-    padding: 60px 20px;
+    padding: 50px 30px 16px;
+  }
+}
+
+/* ========== MOBILE ========== */
+@media (max-width: 600px) {
+  .section {
+    padding: 40px 20px 12px;
   }
 
-  .descriptionTitle {
-    font-size: 18px;
-  }
-
-  .descriptionText {
-    font-size: 15px;
+  .subtitle {
+    font-size: 16px;
   }
 }
