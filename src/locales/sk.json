@@ -1,7 +1,6 @@
 {
   "menu": {
     "aboutMe": "O mne",
-    "illustrationPhilosophy": "Moja filozofia ilustrácie",
     "childrensBooks": "Ilustrácie detských kníh",
     "labelDesign": "Dizajn etikiet",
     "logos": "Logá",
@@ -24,13 +23,6 @@
     "work": "Moja práca zahŕňa detské knihy, vzdelávacie materiály, obaly, dizajn etikiet, logá a tlačový a digitálny branding. Zameriavam sa na teplé farebné palety, intuitívnu kompozíciu a obrazy, ktoré pôsobia živo — plné rytmu, úprimnosti a jemného údivu.",
     "goal": "Či už ilustrujem morské živočíchy pre malých čitateľov, navrhujem vizuálny jazyk značky alebo tvorím obaly, ktoré rozprávajú príbeh, môj cieľ je vždy rovnaký: vytvárať zmysluplné, srdečné vizuály, ktoré inšpirujú zvedavosť a spájajú sa s ľuďmi.",
     "explore": "Preskúmajte moje portfólio a objavte projekty, ilustrácie a kreatívne svety, ktoré budujem s láskou a fantáziou."
-  },
-  "booksIntro": {
-    "title": "Ilustrácie detských kníh",
-    "subtitle": "Čo vkladám do svojich ilustrácií?",
-    "text1": "Do každej ilustrácie vkladám úprimnosť, emócie a tiché rozprávanie príbehov. Moja práca je postavená na intuícii — na rytme línií, teple farieb a drobných detailoch, ktoré dávajú obrazu život. Snažím sa zachytiť momenty, ktoré dýchajú: jemné gestá, subtílne výrazy a atmosféru, ktorá obklopuje príbeh.",
-    "text2": "Ku každej ilustrácii pristupujem s láskou a zámerom. Premýšľam o tom, ako sa dieťa bude cítiť, keď uvidí stránku, ako farby povedú jeho zvedavosť a ako kompozícia pomôže lepšie pochopiť svet. Mojím cieľom je vytvárať obrazy, ktoré sú nielen krásne, ale aj zmysluplné — ilustrácie, ktoré utešujú, inšpirujú a pozývajú diváka objavovať.",
-    "text3": "Každé dielo, ktoré vytvorím, nesie časť mojej vlastnej skúsenosti: moju lásku k prírode, fascináciu tichými chvíľami a vieru, že vizuálne rozprávanie môže pestovať láskavosť, fantáziu a nádej."
   },
   "labelDesign": {
       "title": "Dizajn etikiet",
