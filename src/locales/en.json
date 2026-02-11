@@ -2,9 +2,7 @@
   "menu": {
     "aboutMe": "About Me",
     "childrensBooks": "Children's book illustrations",
-    "labelDesign": "Label design",
-    "logos": "Logos",
-    "branding": "Print and Digital Branding",
+    "designBranding": "Design & Branding",
     "contactMe": "Contact Me",
     "services": "Services",
     "testimonials": "Referencie"
@@ -28,24 +26,15 @@
     "goal": "Whether I'm illustrating marine animals for young readers, designing a brand's visual language, or crafting packaging that tells a story, my goal is always the same: to create meaningful, heartfelt visuals that inspire curiosity and connect with people.",
     "explore": "Explore my portfolio to discover the projects, illustrations, and creative worlds I build with care and imagination."
   },
-   "labelDesign": {
-      "title": "Label Design",
-      "text1": "Label design is the art of creating a visual identity for a product through its packaging. It combines aesthetics, clarity, and brand storytelling to make a product instantly recognizable and emotionally appealing. A well-designed label not only informs — it invites, inspires, and builds trust.",
-      "text2": "My approach to label design focuses on thoughtful composition, harmonious color palettes, and clear typography. I create labels that reflect the character of the product and the values of the brand, whether it's a handcrafted item, a natural cosmetic, or a premium food product.",
-      "text3": "A strong label communicates at a glance — it captures attention, conveys quality, and helps the product stand out on the shelf. I design labels that feel alive, sincere, and visually memorable, blending artistic intuition with practical functionality."
-    },
-    "logos": {
-      "title": "Logos",
-      "text1": "A logo is the visual heartbeat of a brand — a distilled symbol of its character, values, and voice. It's the first impression, the signature, and the element that stays in memory long after the product or message is gone. Thoughtful logo design combines clarity, emotion, and precision, creating a mark that feels both timeless and alive.",
-      "text2": "In my work, I focus on logos that breathe with simplicity and meaning. I explore the rhythm of shapes, the balance of negative space, and the harmony of color to craft identities that resonate. Whether it's a monogram, an emblem, or a minimalist symbol, each design is built to communicate the essence of the brand with honesty and elegance.",
-      "text3": "A strong logo doesn't shout — it speaks clearly. It builds trust, enhances recognition, and becomes the foundation for a cohesive visual identity. I create logos that reflect the story behind the brand, support its growth, and feel emotionally true to the people who stand behind it."
-    },
-    "branding": {
-      "title": "Print and Digital Branding",
-      "text1": "Print and digital branding together create a unified visual presence for a brand across both physical and online spaces. My approach focuses on clarity, emotional resonance, and a cohesive aesthetic that strengthens recognition and trust.",
-      "text2": "In print, I design materials that feel tangible and memorable — business cards, brochures, catalogs, packaging elements, posters, and branded merchandise. Each piece is crafted with attention to composition, typography, and color, ensuring that the brand's personality is expressed with warmth and precision.",
-      "text3": "In the digital space, I develop visual systems for websites, social media, presentations, and online campaigns. This includes graphics, templates, icons, and layouts that adapt seamlessly across platforms while maintaining a consistent identity."
-    },
+  "designBranding": {
+    "title": "Design & Branding",
+    "subtitle": "Labels, logos, and visual identity — crafted with care",
+    "tab": {
+      "labels": "Label Design",
+      "logos": "Logos",
+      "branding": "Print & Digital"
+    }
+  },
   "sections": {
     "home": {
       "title": "Professional Illustrator / Graphic Designer"
@@ -68,6 +57,9 @@
     "close": "Close",
     "next": "Next",
     "previous": "Previous"
+  },
+  "footer": {
+    "copyright": "All illustrations and artwork on this website are protected by international copyright law. Unauthorized reproduction, distribution, or use is strictly prohibited."
   },
   "services": {
     "title": "Services",
@@ -97,9 +89,6 @@
       "title": "Branding & Print Design",
       "desc": "Cohesive visual identity across print and digital — business cards, menus, posters, social media templates, and branded merchandise."
     },
-    "footer": {
-      "copyright": "All illustrations and artwork on this website are protected by international copyright law. Unauthorized reproduction, distribution, or use is strictly prohibited."
-    },
     "form": {
       "title": "Let's Work Together",
       "subtitle": "Tell me about your project and I'll get back to you within 48 hours.",
@@ -126,7 +115,6 @@
       "successTitle": "Thank you!",
       "successText": "Your request has been received. I'll review it and get back to you within 48 hours.",
       "error": "Something went wrong. Please try again or contact me directly via email."
-      
     }
   },
   "testimonials": {

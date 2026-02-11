@@ -2,9 +2,7 @@
   "menu": {
     "aboutMe": "O mne",
     "childrensBooks": "Ilustrácie detských kníh",
-    "labelDesign": "Dizajn etikiet",
-    "logos": "Logá",
-    "branding": "Tlačový a digitálny branding",
+    "designBranding": "Dizajn a branding",
     "contactMe": "Kontaktujte ma",
     "services": "Služby",
     "testimonials": "Recenzie"
@@ -28,25 +26,15 @@
     "goal": "Či už ilustrujem morské živočíchy pre malých čitateľov, navrhujem vizuálny jazyk značky alebo tvorím obaly, ktoré rozprávajú príbeh, môj cieľ je vždy rovnaký: vytvárať zmysluplné, srdečné vizuály, ktoré inšpirujú zvedavosť a spájajú sa s ľuďmi.",
     "explore": "Preskúmajte moje portfólio a objavte projekty, ilustrácie a kreatívne svety, ktoré budujem s láskou a fantáziou."
   },
-  "labelDesign": {
-      "title": "Dizajn etikiet",
-      "text1": "Dizajn etikiet je umenie vytvárania vizuálnej identity produktu prostredníctvom jeho obalu. Spája estetiku, jasnosť a príbeh značky, aby bol produkt okamžite rozpoznateľný a emocionálne príťažlivý. Dobre navrhnutá etiketa nielen informuje — pozýva, inšpiruje a buduje dôveru.",
-      "text2": "Môj prístup k dizajnu etikiet sa zameriava na premyslenú kompozíciu, harmonické farebné palety a jasnú typografiu. Vytváram etikety, ktoré odrážajú charakter produktu a hodnoty značky, či už ide o ručne vyrobený predmet, prírodnú kozmetiku alebo prémiový potravinový produkt.",
-      "text3": "Silná etiketa komunikuje na prvý pohľad — upúta pozornosť, vyjadruje kvalitu a pomáha produktu vyniknúť na poličke. Navrhujem etikety, ktoré pôsobia živo, úprimne a vizuálne nezabudnuteľne, spájajúc umeleckú intuíciu s praktickou funkčnosťou."
-    },
-    "logos": {
-      "title": "Logá",
-      "text1": "Logo je vizuálnym srdcom značky — destilovaným symbolom jej charakteru, hodnôt a hlasu. Je to prvý dojem, podpis a prvok, ktorý zostáva v pamäti dlho po tom, čo produkt alebo správa zmiznú. Premyslený dizajn loga spája jasnosť, emócie a precíznosť, vytvárajúc značku, ktorá pôsobí nadčasovo aj živo.",
-      "text2": "Vo svojej práci sa zameriavam na logá, ktoré dýchajú jednoduchosťou a významom. Skúmam rytmus tvarov, rovnováhu negatívneho priestoru a harmóniu farieb, aby som vytvorila identity, ktoré rezonujú. Či už ide o monogram, emblém alebo minimalistický symbol, každý dizajn je vytvorený tak, aby komunikoval podstatu značky s úprimnosťou a eleganciou.",
-      "text3": "Silné logo nekričí — hovorí jasne. Buduje dôveru, posilňuje rozpoznateľnosť a stáva sa základom pre súdržnú vizuálnu identitu. Vytváram logá, ktoré odrážajú príbeh za značkou, podporujú jej rast a sú emocionálne pravdivé pre ľudí, ktorí za ňou stoja."
-    },
-    "branding": {
-      "title": "Tlačový a digitálny branding",
-      "text1": "Tlačový a digitálny branding spoločne vytvárajú jednotnú vizuálnu prítomnosť značky vo fyzickom aj online priestore. Môj prístup sa zameriava na jasnosť, emocionálnu rezonanciu a súdržnú estetiku, ktorá posilňuje rozpoznateľnosť a dôveru.",
-      "text2": "V tlači navrhujem materiály, ktoré pôsobia hmatateľne a nezabudnuteľne — vizitky, brožúry, katalógy, obalové prvky, plagáty a značkový tovar. Každý kus je vytvorený s dôrazom na kompozíciu, typografiu a farbu, aby osobnosť značky bola vyjadrená s vrelosťou a precíznosťou.",
-      "text3": "V digitálnom priestore vyvíjam vizuálne systémy pre webové stránky, sociálne médiá, prezentácie a online kampane. To zahŕňa grafiku, šablóny, ikony a rozloženia, ktoré sa plynulo prispôsobujú rôznym platformám pri zachovaní konzistentnej identity."
-    },
-    
+  "designBranding": {
+    "title": "Dizajn a branding",
+    "subtitle": "Etikety, logá a vizuálna identita — s láskou ku detailom",
+    "tab": {
+      "labels": "Dizajn etikiet",
+      "logos": "Logá",
+      "branding": "Tlač a digitál"
+    }
+  },
   "sections": {
     "home": {
       "title": "Profesionálna ilustrátorka / Grafická dizajnérka"
@@ -69,6 +57,9 @@
     "close": "Zavrieť",
     "next": "Ďalej",
     "previous": "Späť"
+  },
+  "footer": {
+    "copyright": "Všetky ilustrácie a umelecké diela na tejto stránke sú chránené medzinárodným autorským právom. Neoprávnené reprodukovanie, distribúcia alebo použitie je prísne zakázané."
   },
   "services": {
     "title": "Služby",
@@ -98,9 +89,6 @@
       "title": "Branding a tlačový dizajn",
       "desc": "Súdržná vizuálna identita v tlači aj digitáli — vizitky, jedálne lístky, plagáty, šablóny pre sociálne médiá a značkový tovar."
     },
-    "footer": {
-      "copyright": "Všetky ilustrácie a umelecké diela na tejto stránke sú chránené medzinárodným autorským právom. Neoprávnené reprodukovanie, distribúcia alebo použitie je prísne zakázané."
-    },
     "form": {
       "title": "Spolupracujme",
       "subtitle": "Povedzte mi o vašom projekte a ozvem sa vám do 48 hodín.",
@@ -129,7 +117,7 @@
       "error": "Niečo sa pokazilo. Skúste to znova alebo ma kontaktujte priamo emailom."
     }
   },
-    "testimonials": {
+  "testimonials": {
     "title": "Recenzie",
     "subtitle": "Čo hovoria naši klienti o spolupráci",
     "starFood": {

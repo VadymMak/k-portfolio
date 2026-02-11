@@ -1,0 +1,490 @@
+/* ========== SECTION ========== */
+
+.section {
+  padding: 80px 40px;
+  scroll-margin-top: 100px;
+}
+
+/* ========== HEADER ========== */
+
+.header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-style: italic;
+  color: #5A7A70;
+  margin: 12px auto 0;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+}
+
+/* ========== TABS ========== */
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.tab {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #5A7A70;
+  background: none;
+  border: 1.5px solid rgba(45, 74, 67, 0.15);
+  border-radius: 30px;
+  padding: 10px 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  color: #2D4A43;
+  border-color: rgba(45, 74, 67, 0.35);
+  background-color: rgba(45, 74, 67, 0.04);
+}
+
+.tabActive {
+  color: #ffffff;
+  background-color: #2D4A43;
+  border-color: #2D4A43;
+}
+
+.tabActive:hover {
+  color: #ffffff;
+  background-color: #3A5E55;
+  border-color: #3A5E55;
+}
+
+/* ========== LABELS GRID (from LabelDesignSection) ========== */
+
+.gridLabels {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Row 1: 2 wide images */
+.gridLabels .gridItem:nth-child(1),
+.gridLabels .gridItem:nth-child(2) {
+  grid-column: span 3;
+}
+
+/* Row 2: 3 images */
+.gridLabels .gridItem:nth-child(3),
+.gridLabels .gridItem:nth-child(4),
+.gridLabels .gridItem:nth-child(5) {
+  grid-column: span 2;
+}
+
+/* Row 3: 2 wide images */
+.gridLabels .gridItem:nth-child(6),
+.gridLabels .gridItem:nth-child(7) {
+  grid-column: span 3;
+}
+
+/* ========== LOGOS GRID (from LogosSection) ========== */
+
+.gridLogos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ========== BRANDING GRID (from BrandingSection) ========== */
+
+.gridBranding {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ========== SHARED GRID ITEM ========== */
+
+.gridItem {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  aspect-ratio: 4 / 3;
+}
+
+.gridItem:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.gridItemWide {
+  grid-column: span 2;
+}
+
+.desktopOnly {
+  display: block;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gridItem:hover .image {
+  transform: scale(1.05);
+}
+
+/* ========== LOGO CARD (from LogosSection) ========== */
+
+.logoCard {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.logoCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.logoImageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+}
+
+.logoImage {
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.logoCard:hover .logoImage {
+  transform: scale(1.05);
+}
+
+/* ========== HOVER OVERLAY (shared) ========== */
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.25) 60%,
+    transparent 100%
+  );
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
+}
+
+.gridItem:hover .overlay,
+.logoCard:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dark logo cards — subtler gradient */
+.logoDark .overlay {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.15) 60%,
+    transparent 100%
+  );
+}
+
+.overlayName {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.overlayCategory {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* ========== LIGHTBOX ========== */
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.92);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  outline: none;
+  backdrop-filter: blur(8px);
+}
+
+.lightboxContent {
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.lightboxImage {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.lightboxInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.lightboxName {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.lightboxCategory {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ========== LIGHTBOX CONTROLS ========== */
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 2001;
+  transition: color 0.3s ease;
+}
+
+.closeBtn:hover {
+  color: #C9A86C;
+}
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  z-index: 2001;
+}
+
+.navBtn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.prevBtn { left: 20px; }
+.nextBtn { right: 20px; }
+
+/* ========== TABLET (max-width: 1024px) ========== */
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 60px 24px;
+  }
+
+  .tabs {
+    gap: 6px;
+    margin-bottom: 32px;
+  }
+
+  .tab {
+    font-size: 12px;
+    padding: 8px 20px;
+    letter-spacing: 1px;
+  }
+
+  /* Labels: 2 columns */
+  .gridLabels {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .gridLabels .gridItem:nth-child(1),
+  .gridLabels .gridItem:nth-child(2),
+  .gridLabels .gridItem:nth-child(3),
+  .gridLabels .gridItem:nth-child(4),
+  .gridLabels .gridItem:nth-child(5),
+  .gridLabels .gridItem:nth-child(6),
+  .gridLabels .gridItem:nth-child(7) {
+    grid-column: span 1;
+  }
+
+  /* Logos: 2 columns */
+  .gridLogos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Branding: 2 columns */
+  .gridBranding {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .gridItemWide {
+    grid-column: span 2;
+  }
+
+  .overlayName { font-size: 18px; }
+  .overlayCategory { font-size: 11px; }
+}
+
+/* ========== MOBILE (max-width: 600px) ========== */
+
+@media (max-width: 600px) {
+  .section {
+    padding: 50px 16px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .tab {
+    font-size: 11px;
+    padding: 8px 16px;
+    letter-spacing: 0.8px;
+  }
+
+  /* Labels: 1 column */
+  .gridLabels {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* Logos: 2 columns, square */
+  .gridLogos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .logoCard {
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+  }
+
+  .logoImageWrapper {
+    padding: 16px;
+  }
+
+  /* Branding: 1 column */
+  .gridBranding {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .gridItemWide {
+    grid-column: span 1;
+  }
+
+  .desktopOnly {
+    display: none;
+  }
+
+  .gridItem {
+    border-radius: 10px;
+  }
+
+  /* Overlay always visible on mobile */
+  .overlay {
+    opacity: 1;
+    transform: translateY(0);
+    padding: 14px 16px;
+  }
+
+  .overlayName { font-size: 15px; }
+  .overlayCategory { font-size: 10px; letter-spacing: 1px; }
+
+  .lightbox { padding: 20px; }
+  .navBtn { width: 40px; height: 40px; font-size: 18px; }
+  .prevBtn { left: 10px; }
+  .nextBtn { right: 10px; }
+  .closeBtn { top: 10px; right: 10px; width: 40px; height: 40px; font-size: 24px; }
+  .lightboxName { font-size: 20px; }
+  .lightboxCategory { font-size: 11px; }
+}
