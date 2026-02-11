@@ -112,7 +112,7 @@ const DesignBrandingSection = () => {
       </div>
 
       {/* Gallery */}
-      <AnimatePresence mode="wait">
+      
          <motion.div
             key={activeTab}
             initial={{ opacity: 0, y: 15 }}
@@ -191,7 +191,7 @@ const DesignBrandingSection = () => {
             </div>
           )}
         </motion.div>
-      </AnimatePresence>
+     
 
       {/* Lightbox */}
       {lightboxOpen && (
