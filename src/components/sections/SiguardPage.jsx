@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "../../hooks/useTranslation";
 import SectionTitle from "../ui/SectionTitle";
 import styles from "./SiguardPage.module.css";
+import ProtectedImage from "../ProtectedImage";
 
 const sigurdImages = [
   { thumb: "/gallery/books/sigurd/thumb/thumb_01.webp", full: "/gallery/books/sigurd/full/full_01.webp", alt: "Sigurd - Chapter 1", hasVideo: false },
@@ -120,8 +121,7 @@ const SigurdPage = () => {
                 <source src={`${sigurdImages[activeIndex].videoSrc}.mp4`} type="video/mp4" />
               </video>
             ) : (
-              <img
-                src={sigurdImages[activeIndex].full}
+              <ProtectedImage                 src={sigurdImages[activeIndex].full}
                 alt={sigurdImages[activeIndex].alt}
                 className={styles.lightboxImage}
               />
@@ -240,8 +240,7 @@ const GridItem = ({ image, index, isMobile, onOpenLightbox }) => {
           )}
         </>
       ) : (
-        <img
-          src={image.thumb}
+        <ProtectedImage           src={image.thumb}
           alt={image.alt}
           className={styles.image}
           loading="lazy"

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "../../hooks/useTranslation";
 import SectionTitle from "../ui/SectionTitle";
 import styles from "./TestimonialsSection.module.css";
+import ProtectedImage from "../ProtectedImage";
 
 const testimonials = [
   {
@@ -79,8 +80,7 @@ const TestimonialsSection = () => {
               </p>
               <div className={styles.cardAuthor}>
                 <div className={styles.logoWrapper}>
-                  <img
-                    src={item.logo}
+                  <ProtectedImage                     src={item.logo}
                     alt={item.alt}
                     className={styles.logo}
                     loading="lazy"

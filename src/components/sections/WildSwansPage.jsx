@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "../../hooks/useTranslation";
 import SectionTitle from "../ui/SectionTitle";
 import styles from "./WildSwansPage.module.css";
+import ProtectedImage from "../ProtectedImage";
 
 const swansImages = [
   { thumb: "/gallery/books/swans/thumb/thumb_03.webp", full: "/gallery/books/swans/full/full_03.webp", alt: "Girl in the forest" },
@@ -70,8 +71,7 @@ const WildSwansPage = () => {
             transition={{ delay: index * 0.1 }}
             onClick={() => openLightbox(index)}
           >
-            <img
-              src={image.thumb}
+            <ProtectedImage               src={image.thumb}
               alt={image.alt}
               className={styles.image}
               loading="lazy"
@@ -107,8 +107,7 @@ const WildSwansPage = () => {
             className={styles.lightboxContent}
             onClick={(e) => e.stopPropagation()}
           >
-            <img
-              src={swansImages[activeIndex].full}
+            <ProtectedImage               src={swansImages[activeIndex].full}
               alt={swansImages[activeIndex].alt}
               className={styles.lightboxImage}
             />

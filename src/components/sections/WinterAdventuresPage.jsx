@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "../../hooks/useTranslation";
 import SectionTitle from "../ui/SectionTitle";
 import styles from "./WinterAdventuresPage.module.css";
+import ProtectedImage from "../ProtectedImage";
 
 const winterImages = [
   { thumb: "/gallery/books/winter-adventures/thumb/thumb_01.webp", full: "/gallery/books/winter-adventures/full/full_01.webp", alt: "Book spread - Santa" },
@@ -71,8 +72,7 @@ const WinterAdventuresPage = () => {
             transition={{ delay: index * 0.1 }}
             onClick={() => openLightbox(index)}
           >
-            <img
-              src={image.thumb}
+            <ProtectedImage               src={image.thumb}
               alt={image.alt}
               className={styles.image}
               loading="lazy"
@@ -108,8 +108,7 @@ const WinterAdventuresPage = () => {
             className={styles.lightboxContent}
             onClick={(e) => e.stopPropagation()}
           >
-            <img
-              src={winterImages[activeIndex].full}
+            <ProtectedImage               src={winterImages[activeIndex].full}
               alt={winterImages[activeIndex].alt}
               className={styles.lightboxImage}
             />

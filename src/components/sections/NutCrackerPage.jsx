@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "../../hooks/useTranslation";
 import SectionTitle from "../ui/SectionTitle";
 import styles from "./NutCrackerPage.module.css";
+import ProtectedImage from "../ProtectedImage";
 
 const nutcrackerImages = [
   { thumb: "/gallery/books/nutcracker/thumb_01.webp", full: "/gallery/books/nutcracker/full_01.webp", alt: "Nutcracker - Book spread 1" },
@@ -65,8 +66,7 @@ const NutCrackerPage = () => {
             transition={{ delay: index * 0.08 }}
             onClick={() => openLightbox(index)}
           >
-            <img
-              src={image.thumb}
+            <ProtectedImage               src={image.thumb}
               alt={image.alt}
               className={styles.image}
               loading="lazy"
@@ -101,8 +101,7 @@ const NutCrackerPage = () => {
             className={styles.lightboxContent}
             onClick={(e) => e.stopPropagation()}
           >
-            <img
-              src={nutcrackerImages[activeIndex].full}
+            <ProtectedImage               src={nutcrackerImages[activeIndex].full}
               alt={nutcrackerImages[activeIndex].alt}
               className={styles.lightboxImage}
             />

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "../../hooks/useTranslation";
 import SectionTitle from "../ui/SectionTitle";
 import styles from "./DesignBrandingSection.module.css";
+import ProtectedImage from "../ProtectedImage";
 
 // ========== IMAGE DATA (preserved from original sections) ==========
 
@@ -126,7 +127,7 @@ const DesignBrandingSection = () => {
                   transition={{ delay: index * 0.06 }}
                   onClick={() => openLightbox(index)}
                 >
-                  <img src={image.src} alt={image.alt} className={styles.image} loading="lazy" />
+                  <ProtectedImage src={image.src} alt={image.alt} className={styles.image} loading="lazy" />
                   <div className={styles.overlay}>
                     <span className={styles.overlayName}>{image.product}</span>
                     <span className={styles.overlayCategory}>{image.category}</span>
@@ -151,7 +152,7 @@ const DesignBrandingSection = () => {
                   onClick={() => openLightbox(index)}
                 >
                   <div className={styles.logoImageWrapper}>
-                    <img src={logo.src} alt={logo.alt} className={styles.logoImage} loading="lazy" />
+                    <ProtectedImage src={logo.src} alt={logo.alt} className={styles.logoImage} loading="lazy" />
                   </div>
                   <div className={styles.overlay}>
                     <span className={styles.overlayName}>{logo.client}</span>
@@ -175,7 +176,7 @@ const DesignBrandingSection = () => {
                   transition={{ delay: index * 0.08 }}
                   onClick={() => openLightbox(index)}
                 >
-                  <img src={image.thumb} alt={image.alt} className={styles.image} loading="lazy" />
+                  <ProtectedImage src={image.thumb} alt={image.alt} className={styles.image} loading="lazy" />
                   <div className={styles.overlay}>
                     <span className={styles.overlayName}>{image.product}</span>
                     <span className={styles.overlayCategory}>{image.category}</span>
@@ -204,8 +205,7 @@ const DesignBrandingSection = () => {
           >←</button>
 
           <div className={styles.lightboxContent} onClick={(e) => e.stopPropagation()}>
-            <img
-              src={getLightboxSrc(currentImages[activeIndex])}
+            <ProtectedImage               src={getLightboxSrc(currentImages[activeIndex])}
               alt={currentImages[activeIndex].alt}
               className={styles.lightboxImage}
             />

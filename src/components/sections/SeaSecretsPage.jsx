@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "../../hooks/useTranslation";
 import SectionTitle from "../ui/SectionTitle";
 import styles from "./SeaSecretsPage.module.css";
+import ProtectedImage from "../ProtectedImage";
 
 const seaImages = [
   { thumb: "/gallery/books/sea-secrets/thumb/thumb_01.webp", full: "/gallery/books/sea-secrets/full/full_01.webp", alt: "Sea creatures sketches", hasVideo: true, videoSrc: "/gallery/books/sea-secrets/video/video_01" },
@@ -121,8 +122,7 @@ const SeaSecretsPage = () => {
                 <source src={`${seaImages[activeIndex].videoSrc}.mp4`} type="video/mp4" />
               </video>
             ) : (
-              <img
-                src={seaImages[activeIndex].full}
+              <ProtectedImage                 src={seaImages[activeIndex].full}
                 alt={seaImages[activeIndex].alt}
                 className={styles.lightboxImage}
               />
@@ -241,8 +241,7 @@ const GridItem = ({ image, index, isMobile, onOpenLightbox }) => {
           )}
         </>
       ) : (
-        <img
-          src={image.thumb}
+        <ProtectedImage           src={image.thumb}
           alt={image.alt}
           className={styles.image}
           loading="lazy"

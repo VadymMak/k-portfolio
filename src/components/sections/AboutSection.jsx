@@ -1,6 +1,7 @@
 import { useTranslation } from "../../hooks/useTranslation";
 import SectionTitle from "../ui/SectionTitle";
 import styles from "./AboutSection.module.css";
+import ProtectedImage from "../ProtectedImage";
 
 const AboutSection = () => {
   const { translate } = useTranslation();
@@ -24,8 +25,7 @@ const AboutSection = () => {
       {/* ========== DESKTOP VERSION ========== */}
       <div className={styles.desktopContainer}>
         <div className={styles.imageWrapper}>
-          <img
-            src="/gallery/about/about-me_empty.webp"
+          <ProtectedImage             src="/gallery/about/about-me_empty.webp"
             alt="About Me"
             className={styles.aboutImage}
           />
@@ -53,8 +53,7 @@ const AboutSection = () => {
       <div className={styles.mobileContainer}>
         {/* Portrait Image */}
         <div className={styles.mobileImageWrapper}>
-          <img
-            src="/gallery/about/about-photo.webp"
+          <ProtectedImage             src="/gallery/about/about-photo.webp"
             alt="Anastasiia Kolisnyk"
             className={styles.mobileImage}
           />

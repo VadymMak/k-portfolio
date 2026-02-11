@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "../../hooks/useTranslation";
 import SectionTitle from "../ui/SectionTitle";
 import styles from "./MagicWorldPage.module.css";
+import ProtectedImage from "../ProtectedImage";
 
 const magicImages = [
   { thumb: "/gallery/books/magic-world/thumb/thumb_01.webp", full: "/gallery/books/magic-world/full/full_01.webp", alt: "Magic World - Circus performers" },
@@ -67,8 +68,7 @@ const MagicWorldPage = () => {
             transition={{ delay: index * 0.1 }}
             onClick={() => openLightbox(index)}
           >
-            <img
-              src={image.thumb}
+            <ProtectedImage               src={image.thumb}
               alt={image.alt}
               className={styles.image}
               loading="lazy"
@@ -104,8 +104,7 @@ const MagicWorldPage = () => {
             className={styles.lightboxContent}
             onClick={(e) => e.stopPropagation()}
           >
-            <img
-              src={magicImages[activeIndex].full}
+            <ProtectedImage               src={magicImages[activeIndex].full}
               alt={magicImages[activeIndex].alt}
               className={styles.lightboxImage}
             />
