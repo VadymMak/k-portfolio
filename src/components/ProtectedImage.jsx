@@ -5,15 +5,11 @@ import styles from './ProtectedImage.module.css';
  * - Disables right-click context menu
  * - Disables drag-and-drop
  * - Transparent overlay prevents "Save Image As"
+ * - Invisible watermark (visible only when contrast is increased)
  * - CSS user-select: none
  * 
  * Usage (drop-in replacement for <img>):
  *   <ProtectedImage src="/gallery/nutcracker.webp" alt="Nutcracker illustration" />
- * 
- * Or wrap existing content:
- *   <ProtectedImage>
- *     <img src="/gallery/nutcracker.webp" alt="..." />
- *   </ProtectedImage>
  */
 const ProtectedImage = ({ 
   children, 
@@ -55,6 +51,12 @@ const ProtectedImage = ({
       )}
       {/* Transparent overlay - "Save Image As" saves this, not the image */}
       <div className={styles.overlay} aria-hidden="true" />
+      {/* Invisible watermark - visible only when contrast is increased */}
+      <div className={styles.watermark} aria-hidden="true">
+        {Array(6).fill(null).map((_, i) => (
+          <span key={i} className={styles.watermarkText}>© Anastasiia Kolisnyk</span>
+        ))}
+      </div>
     </div>
   );
 };
