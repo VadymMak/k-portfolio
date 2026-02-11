@@ -170,7 +170,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
                 </AnimatePresence>
               </motion.li>
 
-              {/* Label Design */}
+              {/* Design & Branding (replaces Label Design + Logos + Branding) */}
               <motion.li
                 className={styles.menuItem}
                 initial={{ opacity: 0, y: 20 }}
@@ -178,40 +178,10 @@ const MobileMenu = ({ isOpen, onClose }) => {
                 transition={{ delay: 0.2 }}
               >
                 <button
-                  onClick={() => scrollToSection("label-design")}
+                  onClick={() => scrollToSection("design-branding")}
                   className={styles.menuItemButton}
                 >
-                  {translate("menu.labelDesign")}
-                </button>
-              </motion.li>
-
-              {/* Logos */}
-              <motion.li
-                className={styles.menuItem}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.25 }}
-              >
-                <button
-                  onClick={() => scrollToSection("logos")}
-                  className={styles.menuItemButton}
-                >
-                  {translate("menu.logos")}
-                </button>
-              </motion.li>
-
-              {/* Branding */}
-              <motion.li
-                className={styles.menuItem}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-              >
-                <button
-                  onClick={() => scrollToSection("branding")}
-                  className={styles.menuItemButton}
-                >
-                  {translate("menu.branding")}
+                  {translate("menu.designBranding")}
                 </button>
               </motion.li>
 
@@ -220,7 +190,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
                 className={styles.menuItem}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.35 }}
+                transition={{ delay: 0.25 }}
               >
                 <button
                   onClick={() => scrollToSection("testimonials")}
@@ -235,7 +205,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
                 className={styles.menuItem}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
+                transition={{ delay: 0.3 }}
               >
                 <button
                   onClick={() => scrollToSection("services")}
@@ -250,7 +220,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
                 className={styles.menuItem}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.45 }}
+                transition={{ delay: 0.35 }}
               >
                 <button
                   onClick={() => scrollToSection("contact")}
@@ -266,7 +236,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
               className={styles.contactBlock}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
+              transition={{ delay: 0.4 }}
             >
               <a
                 href="mailto:akolesnykl989@gmail.com"

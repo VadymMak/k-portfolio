@@ -93,7 +93,6 @@ const DesktopMenu = () => {
             </button>
           </li>
 
-
           {/* Children's Book Illustrations - Accordion */}
           <li className={styles.menuItem}>
             <button
@@ -128,13 +127,13 @@ const DesktopMenu = () => {
             </AnimatePresence>
           </li>
 
-          {/* Print and Digital Branding */}
+          {/* Design & Branding */}
           <li className={styles.menuItem}>
             <button
               onClick={() => scrollToSection("design-branding")}
               className={styles.menuButton}
             >
-              {translate("menu.branding")}
+              {translate("menu.designBranding")}
             </button>
           </li>
 
