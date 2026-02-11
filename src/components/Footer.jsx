@@ -2,7 +2,7 @@ import { useTranslation } from '../hooks/useTranslation';
 import styles from './Footer.module.css';
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { translate } = useTranslation();
 
   return (
     <footer id="footer" className={styles.footer}>
@@ -58,7 +58,7 @@ const Footer = () => {
       {/* Copyright Protection Notice */}
       <div className={styles.copyrightNotice}>
         <p className={styles.copyrightText}>
-          {t('footer.copyright')}
+          {translate('footer.copyright')}
         </p>
       </div>
     </footer>
