@@ -191,19 +191,53 @@ const BlogPost = () => {
   // Early return AFTER all hooks
   if (!post) return <Navigate to="/blog" replace />;
 
+  // Helper: check if a path is a video file
+  const isVideo = (src) => /\.(mp4|webm|mov)$/i.test(src);
+
+  // Derive WebM path from MP4 path (or vice versa)
+  const getVideoSources = (src) => {
+    const base = src.replace(/\.(mp4|webm|mov)$/i, '');
+    return {
+      mp4: `${base}.mp4`,
+      webm: `${base}.webm`,
+    };
+  };
+
   // Custom renderers for ReactMarkdown
   const components = {
-    img: ({ src, alt }) => (
-      <figure className={styles.figure}>
-        <ProtectedImage
-          src={src}
-          alt={alt || ''}
-          className={styles.contentImage}
-          loading="lazy"
-        />
-        {alt && <figcaption className={styles.caption}>{alt}</figcaption>}
-      </figure>
-    ),
+    img: ({ src, alt }) => {
+      // Video: if src ends with .mp4/.webm/.mov → render <video>
+      if (isVideo(src)) {
+        const sources = getVideoSources(src);
+        return (
+          <figure className={styles.figure}>
+            <video
+              className={styles.contentVideo}
+              controls
+              preload="metadata"
+              playsInline
+            >
+              <source src={sources.webm} type="video/webm" />
+              <source src={sources.mp4} type="video/mp4" />
+            </video>
+            {alt && <figcaption className={styles.caption}>{alt}</figcaption>}
+          </figure>
+        );
+      }
+
+      // Image: default behavior
+      return (
+        <figure className={styles.figure}>
+          <ProtectedImage
+            src={src}
+            alt={alt || ''}
+            className={styles.contentImage}
+            loading="lazy"
+          />
+          {alt && <figcaption className={styles.caption}>{alt}</figcaption>}
+        </figure>
+      );
+    },
     h2: ({ children }) => (
       <h2 className={styles.sectionHeading}>{children}</h2>
     ),

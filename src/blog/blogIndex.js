@@ -10,6 +10,11 @@ import ruPost1 from './posts/from-rejection-to-illustrator/ru.md?raw';
 import skPost1 from './posts/from-rejection-to-illustrator/sk.md?raw';
 import uaPost1 from './posts/from-rejection-to-illustrator/ua.md?raw';
 
+import enPost2 from './posts/sigurd-illustration-process/en.md?raw';
+import ruPost2 from './posts/sigurd-illustration-process/ru.md?raw';
+import skPost2 from './posts/sigurd-illustration-process/sk.md?raw';
+import uaPost2 from './posts/sigurd-illustration-process/ua.md?raw';
+
 const posts = [
   {
     slug: 'from-rejection-to-illustrator',
@@ -23,14 +28,18 @@ const posts = [
       ua: uaPost1,
     },
   },
-  // Add more posts here:
-  // {
-  //   slug: 'illustration-cost-2026',
-  //   date: '2026-03-01',
-  //   cover: '/blog/illustration-cost-2026/cover.webp',
-  //   tags: ['guide', 'pricing', 'illustration'],
-  //   content: { en: enPost2, ru: ruPost2, sk: skPost2, ua: uaPost2 },
-  // },
+  {
+    slug: 'sigurd-illustration-process',
+    date: '2026-02-20',
+    cover: '/blog/sigurd-illustration-process/cover.webp',
+    tags: ['process', 'illustration', 'children-book', 'Sigurd'],
+    content: {
+      en: enPost2,
+      ru: ruPost2,
+      sk: skPost2,
+      ua: uaPost2,
+    },
+  },
 ];
 
 // Sort posts by date (newest first)
