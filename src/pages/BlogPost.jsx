@@ -73,12 +73,20 @@ const BlogPost = () => {
     descMeta.content = meta.description || '';
 
     // Open Graph
+    const ogLocaleMap = {
+      en: 'en_US',
+      sk: 'sk_SK',
+      ru: 'ru_RU',
+      ua: 'uk_UA',
+    };
+
     const ogTags = {
       'og:title': meta.title,
       'og:description': meta.description,
       'og:image': `https://akillustrator.com${post.cover}`,
       'og:url': `https://akillustrator.com/blog/${slug}`,
       'og:type': 'article',
+      'og:locale': ogLocaleMap[currentLanguage] || 'en_US',
     };
 
     Object.entries(ogTags).forEach(([property, val]) => {
@@ -165,6 +173,7 @@ const BlogPost = () => {
       description: meta.description,
       image: `https://akillustrator.com${post.cover}`,
       datePublished: post.date,
+      dateModified: post.dateModified || post.date,
       author: {
         '@type': 'Person',
         name: 'Anastasiia Kolisnyk',
