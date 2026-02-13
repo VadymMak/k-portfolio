@@ -186,7 +186,7 @@ const BlogPost = () => {
       document.title = 'Anastasiia Kolisnyk — Children\'s Book Illustrator & Visual Designer';
       document.querySelectorAll('link[data-hreflang]').forEach((el) => el.remove());
     };
-  }, [meta, post, slug]);
+  }, [meta, post, slug, currentLanguage]);
 
   // Early return AFTER all hooks
   if (!post) return <Navigate to="/blog" replace />;
@@ -254,6 +254,32 @@ const BlogPost = () => {
     em: ({ children }) => (
       <em className={styles.italic}>{children}</em>
     ),
+    a: ({ href, children }) => {
+      // PDF links → render as download button
+      if (href && /\.pdf$/i.test(href)) {
+        return (
+          <a
+            href={href}
+            download
+            className={styles.downloadButton}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {children}
+          </a>
+        );
+      }
+      // Internal links
+      if (href && href.startsWith('/')) {
+        return <Link to={href}>{children}</Link>;
+      }
+      // External links
+      return (
+        <a href={href} target="_blank" rel="noopener noreferrer">
+          {children}
+        </a>
+      );
+    },
   };
 
   return (

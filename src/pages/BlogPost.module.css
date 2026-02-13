@@ -277,6 +277,30 @@
   margin: 0 auto;
 }
 
+.downloadButton {
+  display: block;
+  width: fit-content;
+  margin: 16px auto 24px;
+  padding: 16px 40px;
+  background: #2D4A43;
+  color: #F9F6F0 !important;
+  text-decoration: none !important;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(45, 74, 67, 0.25);
+}
+
+.downloadButton:hover {
+  background: #3D5E54;
+  color: #F9F6F0 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(45, 74, 67, 0.35);
+}
+
 /* Responsive */
 @media (min-width: 960px) {
   .heroWrap {

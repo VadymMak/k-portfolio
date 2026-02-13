@@ -70,6 +70,8 @@ Stiahnite si zadarmo vo formáte PDF — stačí vytlačiť a kresliť!
 
 ![Náhľad omaľovánok z projektu Sigurd](/blog/sigurd-illustration-process/coloring-preview.webp)
 
+[⬇ Stiahnuť omaľovánky zadarmo (PDF)](/blog/sigurd-illustration-process/sigurd-coloring-pages.pdf)
+
 ## Čo sa môžete z tohto procesu naučiť
 
 Každá ilustrácia v detskej knihe nie je len jeden obrázok — je to výsledok desiatok rozhodnutí: o farbe, kompozícii, charaktere postavy, nálade scény. Preto knižná ilustrácia nie je rýchly proces. Je to cesta.

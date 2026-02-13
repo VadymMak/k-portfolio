@@ -70,6 +70,8 @@ Download for free as PDF — just print and draw!
 
 ![Coloring pages preview from the Sigurd project](/blog/sigurd-illustration-process/coloring-preview.webp)
 
+[⬇ Download Free Coloring Pages (PDF)](/blog/sigurd-illustration-process/sigurd-coloring-pages.pdf)
+
 ## What You Can Learn from This Process
 
 Every illustration in a children's book isn't just one picture — it's the result of dozens of decisions: about color, composition, character personality, and the mood of the scene. That's why book illustration isn't a quick process. It's a journey.
