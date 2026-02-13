@@ -91,6 +91,24 @@ const BlogPost = () => {
       tag.content = val || '';
     });
 
+    // Twitter Card
+    const twitterTags = {
+      'twitter:card': 'summary_large_image',
+      'twitter:title': meta.title,
+      'twitter:description': meta.description,
+      'twitter:image': `https://akillustrator.com${post.cover}`,
+    };
+
+    Object.entries(twitterTags).forEach(([name, val]) => {
+      let tag = document.querySelector(`meta[name="${name}"]`);
+      if (!tag) {
+        tag = document.createElement('meta');
+        tag.setAttribute('name', name);
+        document.head.appendChild(tag);
+      }
+      tag.content = val || '';
+    });
+
     // Structured data: Article schema
     let scriptTag = document.getElementById('blog-structured-data');
     if (!scriptTag) {
