@@ -109,6 +109,47 @@ const BlogPost = () => {
       tag.content = val || '';
     });
 
+    // Canonical URL
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.href = `https://akillustrator.com/blog/${slug}`;
+
+    // Hreflang tags (multilingual SEO)
+    const hreflangMap = {
+      en: 'en',
+      sk: 'sk',
+      ru: 'ru',
+      ua: 'uk',
+    };
+    const blogUrl = `https://akillustrator.com/blog/${slug}`;
+
+    // Remove old hreflang tags
+    document.querySelectorAll('link[data-hreflang]').forEach((el) => el.remove());
+
+    // Add hreflang for each language
+    Object.entries(hreflangMap).forEach(([lang, hreflang]) => {
+      if (post.content[lang]) {
+        const link = document.createElement('link');
+        link.setAttribute('rel', 'alternate');
+        link.setAttribute('hreflang', hreflang);
+        link.setAttribute('href', blogUrl);
+        link.setAttribute('data-hreflang', 'true');
+        document.head.appendChild(link);
+      }
+    });
+
+    // x-default (fallback — English)
+    const xDefault = document.createElement('link');
+    xDefault.setAttribute('rel', 'alternate');
+    xDefault.setAttribute('hreflang', 'x-default');
+    xDefault.setAttribute('href', blogUrl);
+    xDefault.setAttribute('data-hreflang', 'true');
+    document.head.appendChild(xDefault);
+
     // Structured data: Article schema
     let scriptTag = document.getElementById('blog-structured-data');
     if (!scriptTag) {
@@ -131,8 +172,10 @@ const BlogPost = () => {
       },
     });
 
+    // Cleanup on unmount
     return () => {
       document.title = 'Anastasiia Kolisnyk — Children\'s Book Illustrator & Visual Designer';
+      document.querySelectorAll('link[data-hreflang]').forEach((el) => el.remove());
     };
   }, [meta, post, slug]);
 
