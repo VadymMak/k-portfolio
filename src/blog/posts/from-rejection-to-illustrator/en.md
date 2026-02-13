@@ -2,91 +2,69 @@
 title: "From 20 Rejections to My Own Design Studio"
 date: "2026-02-15"
 cover: "/blog/from-rejection-to-illustrator/cover.webp"
-description: "How I left the finance industry, received 20 job rejections, and built a successful illustration and graphic design practice."
+description: "Anastasiia Kolisnyk's story: from a career in finance and twenty job rejections to her own design studio, loyal clients, and six children's book projects."
 tags: ["story", "freelance", "design", "motivation"]
-readingTime: 7
 ---
 
 ## When Numbers Stopped Inspiring Me
 
-For a long time, I worked in finance — an environment where precision, analytics, and impeccable logic matter most. But even there, I stood out through presentations: structuring complex data, turning numbers into clear stories, and visually communicating ideas in a way that truly worked.
+For a long time, I worked in finance — an environment where precision, analytics, and flawless logic are everything. But even there, I stood out most in presentations: structuring complex data, turning numbers into clear stories, and communicating ideas visually so they actually landed.
 
-Over time, it became clear that my strength wasn't just in calculations, but in how I present results. This realization pushed me to move forward and build my own practice, where my visual communication skills became the primary tool.
+Over time, it became clear that my real strength wasn't just in calculations — it was in how I presented results. That realization pushed me to build something of my own, where visual communication skills became the main instrument.
 
 ![Early illustrations and style experiments](/blog/from-rejection-to-illustrator/early-works.webp)
 
 ## The Dream: Working as a Real Designer
 
-When I first started looking for a new career, I targeted positions where I could combine my finance experience with what truly brought me joy — visual storytelling. I explored roles in branding, presentations, visual communication, and creating materials that help companies speak to their audience clearly.
-
-The idea of working in a design studio appealed to me — a place that values creativity, attention to detail, and the ability to transform complex data into expressive visual solutions. I wanted to participate in projects creating brand identity, packaging, presentations, and illustrations — everything that shapes a brand's image and influences how products are perceived.
-
-I expected studio work would give me more creative freedom, let me collaborate with other designers, and show me how my skills could make projects brighter, clearer, and stronger. It was exactly this combination of analytical experience and visual thinking that I wanted to develop further.
+When I started looking for a new job, I focused on positions where I could combine my financial background with visual communication. I wanted to be in an environment that values creativity and attention to detail — working on identity projects, packaging, and illustrations — everything that shapes a brand's image.
 
 ## 20 Rejections: The Moment That Changed Everything
 
-<!-- PLACEHOLDER: Anastasiia, please add your text about:
-- How many interviews did you go through?
-- What reasons did they give for rejecting you?
-- Which rejection was the most memorable?
-- What did you feel after the 10th, 15th, 20th rejection?
-- What was the turning point — when did you decide "I'm doing this on my own"?
-This is the most important section — it's what hooks readers and drives Google traffic.
--->
+I went through two or three dozen interviews, and over time it became routine: preparation, call, waiting for an answer. Most often they said I lacked experience or my portfolio wasn't strong enough. One rejection stuck with me — after a long process, they wrote that they had "decided to go with a candidate with a more relevant background."
 
-The job search turned into a marathon of rejections. Every interview started with hope and ended with a polite "we chose another candidate." After the twentieth rejection, it became clear: the system wasn't ready to accept someone from a different background, no matter how strong their portfolio was.
+After ten rejections, I started getting tired. After fifteen, I caught myself thinking I was moving too slowly. There were moments when I wanted to pause, just to catch my breath. But every time I came back, because I knew: there was no other way.
 
-That's when I made the decision that changed everything: if the market won't give me a chance — I'll create that chance myself.
+That's when I made the decision that changed everything: if the market wasn't ready to give me a chance — I would create that chance myself.
 
 ## First Steps in Freelancing
 
-<!-- PLACEHOLDER: Anastasiia, add details:
-- How did you find your first client?
-- What was your very first paid project?
-- How long between deciding to freelance and the first paid project?
-- What were your fears and doubts?
--->
+I found my first client almost by accident: a friend of a friend saw my work and asked if I could help. My first paid job was a small logo — I agonized over every line as if my entire future depended on it. About a month passed from deciding to go freelance to getting my first real order, and the whole time I doubted whether I'd made the right call.
 
-Freelancing didn't start with big commissions — it started with small steps: first logos, first labels, first clients found through word of mouth. Every project was an opportunity to prove — not to employers, but to myself — that my skills had real value.
+What scared me most was that there might simply be no clients. The moment I realized it was working came when my second client found me on their own — without me trying to convince anyone.
 
 ## Building Real Partnerships
 
-In freelancing, I quickly learned the key difference from employment: it's all about the work itself. In job interviews, I was judged by my resume and a few minutes of conversation. With clients, what matters is the quality of visual solutions, speed, and understanding of the brief. And that became the foundation for building genuine partnerships.
+As a freelancer, I quickly understood that the key difference from employment is in how you're evaluated. In job interviews, I was judged by my resume and a few minutes of conversation. Working with clients, what mattered was the real work: quality, speed, understanding the brief.
 
-![Star Food logo variations — from first sketches to final design](/blog/from-rejection-to-illustrator/starfood-sketches.webp)
+![Star Food logo variations](/blog/from-rejection-to-illustrator/starfood-sketches.webp)
 
-One of my first clients was **Star Food** — they needed labels for a new product line. The project went well, and they entrusted me with logo development, then the creation of a complete visual concept. We now collaborate on an ongoing basis.
+One of my first clients was Star Food — they needed labels for a new product line. The project went well, and they entrusted me with their logo, then a full visual concept. We've been working together on an ongoing basis ever since.
 
-![Star Food final label — a real product on the shelf](/blog/from-rejection-to-illustrator/starfood-label.webp)
+![Final Star Food label](/blog/from-rejection-to-illustrator/starfood-label.webp)
 
-**Baloon Party** came to me for a comprehensive brand book — from visual identity to structure and all corporate style elements. And the collaboration with **Laser Craft** started with a logo and gradually grew into a long-term partnership covering all their graphic and visual needs.
+Baloon Party came to me for a comprehensive brand book — from visual identity to every element of their corporate style. The collaboration with Laser Craft started with a logo and grew into a long-term partnership covering all their graphic needs.
 
-![Clients: Baloon Party, UB Market, Laser Craft Wood](/blog/from-rejection-to-illustrator/clients.webp)
+![Clients: Laser Craft, UB Market, Baloon Party](/blog/from-rejection-to-illustrator/clients.webp)
 
 ## From Design to Book Illustration
 
-<!-- PLACEHOLDER: Anastasiia, share:
-- How did you come to children's book illustration?
-- What inspired you to try this genre?
-- What was your first book?
-- How is book illustration different from commercial design for you?
--->
+I came to children's books quite naturally: at some point I noticed that what inspired me most were soft, warm stories and characters. My first book was for toddlers — short stories about a little raccoon, and I still remember how nervous I was sending the first sketches.
 
-Working with brands gave me confidence and a professional foundation. But alongside that, a desire was growing to tell stories — not through logos and labels, but through entire worlds populated with characters. That's how I came to children's book illustration.
+In book illustration, I find more freedom and emotion than in commercial design. When I draw for children, I feel like I'm creating a small world that someone will later immerse themselves in — and that's an entirely different feeling.
 
 ![Book project — from sketches to final illustrations](/blog/from-rejection-to-illustrator/book-project.webp)
 
-Today my portfolio includes six book projects: The Nutcracker, The Wild Swans, Winter Adventures, Magic World, Sigurd, and Sea Secrets. Each one represents months of work, dozens of sketches, and an endless search for the right visual language for every story.
+Today my portfolio includes six book projects: "The Nutcracker," "Wild Swans," "Winter Adventures," "Star Team," "Sigurd Fights the Dragon," and "Secrets of the Sea." Each one represents months of work, dozens of sketches, and the search for the right visual language for every story.
 
 ## What I've Learned Along the Way
 
-Twenty rejections taught me more than any job interview ever could:
+Twenty rejections taught me more than any job interview ever could.
 
-Rejection is not a verdict — it's a redirection. Every "no" brought me closer to my own path, which turned out to be far more interesting than any staff position.
+Rejection isn't a verdict — it's a redirection. Every "no" brought me closer to my own path, which turned out to be far more interesting than any staff position.
 
-Clients value results, not diplomas. Not one of my regular clients has ever asked where I studied. What matters to them is one thing — the quality of work and the ability to understand their brief.
+Clients value results, not diplomas. Not a single one of my regular clients has ever asked where I studied. They care about one thing — the quality of work and the ability to understand their brief.
 
-Long-term partnerships are built on trust. Star Food, Baloon Party, Laser Craft — all of them started with one small project. Quality work turned one-time orders into ongoing collaboration.
+Long-term partnerships are built on trust. Star Food, Baloon Party, Laser Craft — they all started with one small project. Quality work turned one-time orders into ongoing collaboration.
 
 ---
 

@@ -4,7 +4,7 @@
 .blogList {
   max-width: 960px;
   margin: 0 auto;
-  padding: 2rem 1.5rem 4rem;
+  padding: 4rem 1.5rem 4rem;    /* ← 4rem top gives breathing room */
   min-height: 100vh;
 }
 

@@ -2,69 +2,70 @@
 title: "Od 20 odmietnutí k vlastnému dizajnovému štúdiu"
 date: "2026-02-15"
 cover: "/blog/from-rejection-to-illustrator/cover.webp"
-description: "Ako som odišla z finančného sektora, dostala 20 odmietnutí na pohovoroch a vybudovala úspešnú prax ilustrátorky a grafickej dizajnérky."
+description: "Príbeh Anastasie Kolisnyk: od kariéry vo financiách a dvadsiatich odmietnutí na pohovoroch k vlastnému dizajnovému štúdiu, stálym klientom a šiestim knižným projektom."
 tags: ["príbeh", "freelance", "dizajn", "motivácia"]
-readingTime: 7
 ---
 
 ## Keď čísla prestali inšpirovať
 
-Dlho som pracovala vo finančnom sektore — v prostredí, kde sú dôležité presnosť, analytika a bezchybná logika. Ale aj tam som najlepšie vynikala v prezentáciách: v schopnosti štruktúrovať zložité dáta, premieňať čísla na zrozumiteľné príbehy a vizuálne komunikovať myšlienky tak, aby fungovali.
+Dlhý čas som pracovala vo finančnej sfére — v prostredí, kde sú dôležité presnosť, analytika a bezchybná logika. Ale aj tam som najviac vynikala v prezentáciách: v schopnosti štruktúrovať zložité dáta, premieňať čísla na zrozumiteľné príbehy a vizuálne komunikovať myšlienky tak, aby naozaj fungovali.
 
-Časom sa ukázalo, že moja sila nie je len v kalkuláciách, ale v tom, ako viem prezentovať výsledky. Práve to ma posunulo ďalej a priviedlo k budovaniu vlastného projektu, kde sa moje schopnosti vizuálnej komunikácie stali kľúčovým nástrojom.
+Postupom času sa ukázalo, že moja skutočná sila nie je len v kalkuláciách — ale v tom, ako dokážem prezentovať výsledky. Práve to ma priviedlo k budovaniu vlastného projektu, kde sa schopnosti vizuálnej komunikácie stali hlavným nástrojom.
 
-![Ranné ilustrácie a experimenty so štýlmi](/blog/from-rejection-to-illustrator/early-works.webp)
+![Prvé ilustrácie a experimenty so štýlmi](/blog/from-rejection-to-illustrator/early-works.webp)
 
 ## Sen: pracovať ako skutočná dizajnérka
 
-Keď som začala hľadať novú prácu, zameriavala som sa na pozície, kde by som mohla spojiť svoje skúsenosti z financií s tým, čo mi skutočne prinášalo radosť — vizuálnou prezentáciou informácií. Zvažovala som roly v brandingu, prezentáciách, vizuálnej komunikácii a tvorbe materiálov, ktoré pomáhajú firmám komunikovať s publikom zrozumiteľným jazykom.
-
-Predstava práce v štúdiu ma lákala možnosťou ponoriť sa do prostredia, kde sa cení kreativita, zmysel pre detail a schopnosť premeniť zložité dáta na výrazné vizuálne riešenia. Chcela som sa podieľať na projektoch tvorby identity, obalov, prezentácií a ilustrácií — všetkého, čo formuje obraz značky.
-
-Očakávala som, že práca v štúdiu mi dá väčšiu slobodu pri realizácii nápadov, umožní mi spolupracovať s tímom dizajnérov a ukáže mi, ako moje zručnosti pomáhajú projektom byť jasnejšie a silnejšie. Práve túto kombináciu analytických skúseností a vizuálneho myslenia som chcela ďalej rozvíjať.
+Keď som začala hľadať novú prácu, zameriavala som sa na pozície, kde by som mohla spojiť finančné skúsenosti s vizuálnou komunikáciou. Chcela som sa ponoriť do prostredia, kde si cenia kreativitu a pozornosť k detailom — pracovať na projektoch tvorby identity, obalov a ilustrácií — všetkého, čo formuje obraz značky.
 
 ## 20 odmietnutí: moment, ktorý všetko zmenil
 
-Hľadanie práce sa premenilo na maratón odmietnutí. Každý pohovor sa začínal nádejou a končil zdvorilým „vybrali sme iného kandidáta". Po dvadsiatom odmietnutí bolo jasné: systém nebol pripravený prijať človeka z iného odboru, bez ohľadu na silu jeho portfólia.
+Prešla som dve-tri desiatky pohovorov a časom sa to zmenilo na rutinu: príprava, hovor, čakanie na odpoveď. Najčastejšie hovorili, že mám málo skúseností alebo portfólio nie je dosť silné. Jedno odmietnutie mi obzvlášť utkvelo — po dlhom procese mi napísali, že sa „rozhodli pre kandidáta s relevantnejším zázemím".
 
-Vtedy som urobila rozhodnutie, ktoré všetko zmenilo: ak mi trh nedá šancu — vytvorím si ju sama.
+Po desiatich odmietnutiach som začala byť unavená, po pätnástich som sa pristihla pri myšlienke, že sa posúvam príliš pomaly. Boli chvíle, keď som chcela zastaviť, len aby som sa nadýchla. Ale zakaždým som sa vrátila, lebo som vedela: iná cesta neexistuje.
+
+Práve vtedy som urobila rozhodnutie, ktoré všetko zmenilo: ak mi trh nie je pripravený dať šancu — vytvorím si tú šancu sama.
 
 ## Prvé kroky na voľnej nohe
 
-Freelancing sa nezačal veľkými zákazkami — začal sa malými krokmi: prvé logá, prvé etikety, prví klienti nájdení cez odporúčania. Každý projekt bol príležitosťou dokázať — nie zamestnávateľom, ale sebe — že moje zručnosti majú reálnu hodnotu.
+Prvého klienta som našla takmer náhodou: známa mojej známej videla moje práce a opýtala sa, či by som mohla pomôcť. Prvou platenou zákazkou bol malý logotyp — vtedy som sa trápila nad každou čiarou, akoby od toho závisela celá budúcnosť. Od rozhodnutia ísť na voľnú nohu po prvú reálnu zákazku prešiel asi mesiac a celý ten čas som pochybovala, či to bolo správne rozhodnutie.
+
+Najviac ma desilo, že zákazky jednoducho nemusia prísť. A moment, keď som pochopila, že to funguje, nastal, keď si ma druhý klient našiel sám — bez mojich pokusov niekoho presvedčiť.
 
 ## Budovanie skutočných partnerstiev
 
-Na voľnej nohe som rýchlo pochopila, že kľúčový rozdiel od zamestnania je v prístupe k hodnoteniu. Na pohovoroch ma posudzovali podľa životopisu a niekoľkých minút rozhovoru. Pri práci s klientmi rozhodovalo skutočné dielo: kvalita vizuálnych riešení, rýchlosť, pochopenie zadania. A práve to sa stalo základom pre budovanie skutočných partnerstiev.
+Na voľnej nohe som rýchlo pochopila, že hlavný rozdiel oproti zamestnaniu je v prístupe k hodnoteniu. Na pohovoroch ma posudzovali podľa životopisu a pár minút rozhovoru. Pri práci s klientmi rozhodovala skutočná práca: kvalita, rýchlosť, pochopenie zadania.
 
-![Varianty loga Star Food — od prvých náčrtov po finál](/blog/from-rejection-to-illustrator/starfood-sketches.webp)
+![Varianty loga Star Food](/blog/from-rejection-to-illustrator/starfood-sketches.webp)
 
-Jedným z prvých klientov bola spoločnosť **Star Food** — potrebovali etikety pre novú produktovú radu. Projekt prebehol úspešne a zverili mi vývoj loga, a potom aj vytvorenie kompletného vizuálneho konceptu. Teraz spolupracujeme na stálej báze.
+Jedným z prvých klientov bola spoločnosť Star Food — potrebovali etikety pre novú produktovú radu. Projekt dopadol dobre a zverili mi tvorbu loga, potom aj kompletnú vizuálnu koncepciu. Odvtedy spolupracujeme na stálej báze.
 
-![Finálna etiketa Star Food — skutočný produkt na poličke](/blog/from-rejection-to-illustrator/starfood-label.webp)
+![Finálna etiketa Star Food](/blog/from-rejection-to-illustrator/starfood-label.webp)
 
-Spoločnosť **Baloon Party** sa na mňa obrátila s tvorbou komplexného brandbooku — od vizuálnej identity po štruktúru a všetky prvky firemného štýlu. A spolupráca s **Laser Craft** sa začala logom a postupne prerástla do dlhodobého partnerstva pokrývajúceho všetky ich grafické a vizuálne potreby.
+Spoločnosť Baloon Party sa na mňa obrátila s tvorbou komplexného brandbooku — od vizuálnej identity po všetky prvky firemného štýlu. Spolupráca s Laser Craft začala logom a prerástla do dlhodobého partnerstva pokrývajúceho všetky ich grafické potreby.
 
-![Klienti: Baloon Party, UB Market, Laser Craft Wood](/blog/from-rejection-to-illustrator/clients.webp)
+![Klienti: Laser Craft, UB Market, Baloon Party](/blog/from-rejection-to-illustrator/clients.webp)
 
-## Od dizajnu k knižnej ilustrácii
+## Od dizajnu ku knižnej ilustrácii
 
-Práca so značkami mi dala istotu a profesionálny základ. Ale paralelne rástla túžba rozprávať príbehy — nie cez logá a etikety, ale cez celé svety obývané postavami. Tak som prišla k ilustrácii detských kníh.
+K detským knihám som prišla celkom prirodzene: v istom momente som si uvedomila, že ma najviac inšpirujú jemné, teplé príbehy a postavy. Prvá kniha bola pre najmenších — krátke príbehy o malom medvedíku prackovi, a dodnes si pamätám, aká som bola nervózna, keď som posielala prvé náčrty.
+
+V knižnej ilustrácii nachádzam viac slobody a emócií ako v komerčnom dizajne. Keď kreslím pre deti, mám pocit, že tvorím malý svet, do ktorého sa potom niekto ponoří — a to je úplne iný zážitok.
 
 ![Knižný projekt — od náčrtov po finálne ilustrácie](/blog/from-rejection-to-illustrator/book-project.webp)
 
-Dnes je v mojom portfóliu šesť knižných projektov: Luskáčik, Divoké labute, Zimné dobrodružstvá, Čarovný svet, Sigurd a Tajomstvá mora. Každý z nich predstavuje mesiace práce, desiatky náčrtov a nekonečné hľadanie správneho vizuálneho jazyka pre každý príbeh.
+Dnes moje portfólio obsahuje šesť knižných projektov: „Luskáčik", „Divoké labute", „Zimné dobrodružstvá", „Hviezdny tím", „Sigurd bojuje s drakom" a „Tajomstvá mora". Každý z nich predstavuje mesiace práce, desiatky náčrtov a hľadanie správneho vizuálneho jazyka pre každý príbeh.
 
-## Čo som sa naučila
+## Čo som sa za ten čas naučila
 
-Dvadsať odmietnutí ma naučilo viac než akýkoľvek pohovor:
+Dvadsať odmietnutí ma naučilo viac ako akýkoľvek pohovor.
 
-Odmietnutie nie je rozsudok — je to presmerovanie. Každé „nie" ma priblížilo k vlastnej ceste, ktorá sa ukázala byť oveľa zaujímavejšia než akákoľvek zamestnanecká pozícia.
+Odmietnutie nie je rozsudok — je to presmerovanie. Každé „nie" ma priblížilo k vlastnej ceste, ktorá sa ukázala byť oveľa zaujímavejšia ako akákoľvek zamestnanecká pozícia.
 
-Klienti si cenia výsledky, nie diplomy. Nikto z mojich stálych klientov sa nikdy nespýtal, kde som študovala. Záleží im na jednom — na kvalite práce a schopnosti pochopiť ich zadanie.
+Klienti si cenia výsledky, nie diplomy. Ani jeden z mojich stálych klientov sa nikdy neopýtal, kde som študovala. Záleží im na jednom — na kvalite práce a schopnosti pochopiť zadanie.
 
-Dlhodobé partnerstvá sa budujú na dôvere. Star Food, Baloon Party, Laser Craft — všetky sa začali jedným malým projektom. Kvalitná práca premenila jednorazové objednávky na stálu spoluprácu.
+Dlhodobé partnerstvá sa budujú na dôvere. Star Food, Baloon Party, Laser Craft — všetky začali jedným malým projektom. Kvalitná práca premenila jednorazové zákazky na stálu spoluprácu.
 
 ---
 
-*Ak hľadáte ilustrátorku pre svoju knihu alebo dizajnérku pre vizuálnu identitu vašej značky — rada prediskutujem váš projekt.*
+*Ak hľadáte ilustrátorku pre svoju knihu alebo dizajnérku pre vizuálnu identitu vašej značky — rada s vami prediskutujem váš projekt.*
