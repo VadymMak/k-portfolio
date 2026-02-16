@@ -14,7 +14,7 @@ It's a Scandinavian legend about a warrior hero, dwarf blacksmiths, a magic swor
 
 ## About the Project: The Book "Sigurd"
 
-<!-- PLACEHOLDER: Anastasiia will tell about the project — who commissioned it, why Scandinavian mythology, how many pages, how long it took, what was the hardest part. 4–6 sentences. -->
+This little tale was commissioned by those who believe that every child has a brave hero inside. The Scandinavian motif came naturally — it fits perfectly into a world where dragons soar over mountains and dwarf blacksmiths forge swords from living fire. The book has only four illustrated pages, but each one is like a separate legend. Creating the story and illustrations took several weeks, filled with the search for the right mood and magic.
 
 ## Stage 1: Color Palette
 
@@ -32,7 +32,7 @@ Landscapes and caves — cool blue-gray, lavender, steel tones. The world of Sca
 
 ![Palette and process: dwarves in the cave](/blog/sigurd-illustration-process/cave-palette.webp)
 
-<!-- PLACEHOLDER: Anastasiia will add 2–3 sentences — how she chooses palettes, whether the palette changed during the project. -->
+I chose colors as if gathering light from mountain peaks and heat from the forge. The palette barely changed throughout the project: gold, red, and deep shadows remained the heart of every scene.
 
 ## Stage 2: Sketches and Composition
 
@@ -44,7 +44,7 @@ For each scene, I create several composition variants before choosing the final 
 
 ![Sketches overview — four scenes from the book](/blog/sigurd-illustration-process/sketches-overview.webp)
 
-<!-- PLACEHOLDER: Anastasiia will add — how many sketches before the final version, what she draws with, which character was the hardest. -->
+Before the final drawing, I make two or three quick sketches to capture the right rhythm of the composition. I draw on a tablet, with thin lines, as if carving a story out of thin air. The dragon turned out to be the hardest — he had to be both fierce and beautiful.
 
 ## Stage 3: From Lines to Color
 
@@ -60,7 +60,7 @@ Watch the transformation — the same scene as a sketch and in its final version
 
 ![Book spread: Forging the golden sword](/blog/sigurd-illustration-process/book-spread-02.webp)
 
-<!-- PLACEHOLDER: Anastasiia will add — what tools she uses, how many hours per illustration, what she loves most about this stage. -->
+For coloring, I use digital brushes that create a soft glow and a sense of living texture. One illustration takes about three to four hours, until the fire, metal, and mist start to breathe. My favorite moment is when the light appears — and the scene comes alive, as if it's telling the story on its own.
 
 ## Bonus: Free Coloring Pages for Kids
 

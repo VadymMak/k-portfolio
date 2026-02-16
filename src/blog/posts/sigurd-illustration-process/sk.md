@@ -14,7 +14,7 @@ Je to škandinávska legenda o hrdinskom bojovníkovi, trpasličích kováčoch,
 
 ## O projekte: kniha «Sigurd»
 
-<!-- PLACEHOLDER: Anastasiia povie o projekte — kto si knihu objednal, prečo škandinávska mytológia, koľko strán, ako dlho trval, čo bolo najťažšie. 4–6 viet. -->
+Tento malý príbeh si objednali tí, ktorí veria, že v každom dieťati žije odvážny hrdina. Škandinávsky motív prišiel sám od seba — príliš dobre sa hodí do sveta, kde draky lietajú nad horami a trpaslíci-kováči kujú meče zo živého ohňa. Kniha má len štyri ilustrované strany, ale každá z nich je ako samostatná legenda. Vytvorenie príbehu a kresieb trvalo niekoľko týždňov plných hľadania nálady a kúzla.
 
 ## Etapa 1: Farebná paleta
 
@@ -32,7 +32,7 @@ Krajiny a jaskyne — chladné sivomodré, levanduľové, oceľové tóny. Svet 
 
 ![Paleta a proces: trpaslíci v jaskyni](/blog/sigurd-illustration-process/cave-palette.webp)
 
-<!-- PLACEHOLDER: Anastasiia doplní 2–3 vety — ako vyberá paletu, či sa paleta menila počas práce. -->
+Farby som vyberala, akoby som zbierala svetlo z horských vrcholov a žiar z kováčskej vyhne. Paleta sa takmer nemenila: zlato, červená a hlboké tiene zostali srdcom každej scény.
 
 ## Etapa 2: Skice a kompozícia
 
@@ -44,7 +44,7 @@ Pre každú scénu robím niekoľko variantov kompozície, kým vyberiem fináln
 
 ![Prehľad skíc — štyri scény z knihy](/blog/sigurd-illustration-process/sketches-overview.webp)
 
-<!-- PLACEHOLDER: Anastasiia doplní — koľko skíc pred finálnou verziou, čím kreslí, ktorá postava bola najťažšia. -->
+Pred finálnou kresbou robím dve-tri rýchle skice, aby som zachytila správny rytmus kompozície. Kreslím na tablete, tenkými líniami, akoby som vyrezávala príbeh zo vzduchu. Najťažší bol drak — musel byť hrozivý aj krásny zároveň.
 
 ## Etapa 3: Od liniek k farbe
 
@@ -60,7 +60,7 @@ Pozrite sa na premenu — tá istá scéna ako skica a vo finálnej verzii:
 
 ![Rozklad knihy: Kovanie zlatého meča](/blog/sigurd-illustration-process/book-spread-02.webp)
 
-<!-- PLACEHOLDER: Anastasiia doplní — aké nástroje používa, koľko hodín na jednu ilustráciu, čo má na tejto fáze najradšej. -->
+Na kolorovanie používam digitálne štetce, ktoré vytvárajú jemný lesk a pocit živej textúry. Jedna ilustrácia zaberie asi tri-štyri hodiny, kým oheň, kov a hmla nezačnú dýchať. Najviac milujem chvíľu, keď sa objaví svetlo — a scéna ožije, akoby sama rozprávala príbeh.
 
 ## Bonus: Bezplatné omaľovánky pre deti
 
