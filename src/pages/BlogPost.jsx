@@ -186,7 +186,7 @@ const BlogPost = () => {
       document.title = 'Anastasiia Kolisnyk — Children\'s Book Illustrator & Visual Designer';
       document.querySelectorAll('link[data-hreflang]').forEach((el) => el.remove());
     };
-  }, [meta, post, slug]);
+  }, [meta, post, slug, currentLanguage]);
 
   // Early return AFTER all hooks
   if (!post) return <Navigate to="/blog" replace />;
