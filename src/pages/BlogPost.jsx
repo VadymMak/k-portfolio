@@ -1,15 +1,16 @@
-import { useParams, Link, Navigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useParams, Link, Navigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 /* eslint-enable no-unused-vars */
-import ReactMarkdown from 'react-markdown';
-import { useLanguage } from '../hooks/useLanguage';
-import { useTranslation } from '../hooks/useTranslation';
-import { parseFrontmatter } from '../blog/parseFrontmatter';
-import posts from '../blog/blogIndex';
-import  ProtectedImage  from '../components/ProtectedImage';
-import styles from './BlogPost.module.css';
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import { useLanguage } from "../hooks/useLanguage";
+import { useTranslation } from "../hooks/useTranslation";
+import { parseFrontmatter } from "../blog/parseFrontmatter";
+import posts from "../blog/blogIndex";
+import ProtectedImage from "../components/ProtectedImage";
+import styles from "./BlogPost.module.css";
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -21,19 +22,23 @@ const BlogPost = () => {
   const post = posts.find((p) => p.slug === slug);
 
   // Parse content (safe even if post is null)
-  const raw = post ? (post.content[currentLanguage] || post.content.en) : '';
+  const raw = post ? post.content[currentLanguage] || post.content.en : "";
   const { meta, content } = parseFrontmatter(raw);
 
   const formatDate = (dateStr) => {
     const date = new Date(dateStr);
-    const locale = currentLanguage === 'sk' ? 'sk-SK'
-      : currentLanguage === 'ua' ? 'uk-UA'
-      : currentLanguage === 'ru' ? 'ru-RU'
-      : 'en-US';
+    const locale =
+      currentLanguage === "sk"
+        ? "sk-SK"
+        : currentLanguage === "ua"
+          ? "uk-UA"
+          : currentLanguage === "ru"
+            ? "ru-RU"
+            : "en-US";
     return date.toLocaleDateString(locale, {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
+      year: "numeric",
+      month: "long",
+      day: "numeric",
     });
   };
 
@@ -41,13 +46,14 @@ const BlogPost = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
       const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
       setScrollProgress(progress);
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Scroll to top on mount
@@ -66,125 +72,130 @@ const BlogPost = () => {
     // Meta description
     let descMeta = document.querySelector('meta[name="description"]');
     if (!descMeta) {
-      descMeta = document.createElement('meta');
-      descMeta.name = 'description';
+      descMeta = document.createElement("meta");
+      descMeta.name = "description";
       document.head.appendChild(descMeta);
     }
-    descMeta.content = meta.description || '';
+    descMeta.content = meta.description || "";
 
     // Open Graph
     const ogLocaleMap = {
-      en: 'en_US',
-      sk: 'sk_SK',
-      ru: 'ru_RU',
-      ua: 'uk_UA',
+      en: "en_US",
+      sk: "sk_SK",
+      ru: "ru_RU",
+      ua: "uk_UA",
     };
 
     const ogTags = {
-      'og:title': meta.title,
-      'og:description': meta.description,
-      'og:image': `https://akillustrator.com${post.cover}`,
-      'og:url': `https://akillustrator.com/blog/${slug}`,
-      'og:type': 'article',
-      'og:locale': ogLocaleMap[currentLanguage] || 'en_US',
+      "og:title": meta.title,
+      "og:description": meta.description,
+      "og:image": `https://akillustrator.com${post.cover}`,
+      "og:url": `https://akillustrator.com/blog/${slug}`,
+      "og:type": "article",
+      "og:locale": ogLocaleMap[currentLanguage] || "en_US",
     };
 
     Object.entries(ogTags).forEach(([property, val]) => {
       let tag = document.querySelector(`meta[property="${property}"]`);
       if (!tag) {
-        tag = document.createElement('meta');
-        tag.setAttribute('property', property);
+        tag = document.createElement("meta");
+        tag.setAttribute("property", property);
         document.head.appendChild(tag);
       }
-      tag.content = val || '';
+      tag.content = val || "";
     });
 
     // Twitter Card
     const twitterTags = {
-      'twitter:card': 'summary_large_image',
-      'twitter:title': meta.title,
-      'twitter:description': meta.description,
-      'twitter:image': `https://akillustrator.com${post.cover}`,
+      "twitter:card": "summary_large_image",
+      "twitter:title": meta.title,
+      "twitter:description": meta.description,
+      "twitter:image": `https://akillustrator.com${post.cover}`,
     };
 
     Object.entries(twitterTags).forEach(([name, val]) => {
       let tag = document.querySelector(`meta[name="${name}"]`);
       if (!tag) {
-        tag = document.createElement('meta');
-        tag.setAttribute('name', name);
+        tag = document.createElement("meta");
+        tag.setAttribute("name", name);
         document.head.appendChild(tag);
       }
-      tag.content = val || '';
+      tag.content = val || "";
     });
 
     // Canonical URL
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
       document.head.appendChild(canonical);
     }
     canonical.href = `https://akillustrator.com/blog/${slug}`;
 
     // Hreflang tags (multilingual SEO)
     const hreflangMap = {
-      en: 'en',
-      sk: 'sk',
-      ru: 'ru',
-      ua: 'uk',
+      en: "en",
+      sk: "sk",
+      ru: "ru",
+      ua: "uk",
     };
     const blogUrl = `https://akillustrator.com/blog/${slug}`;
 
     // Remove old hreflang tags
-    document.querySelectorAll('link[data-hreflang]').forEach((el) => el.remove());
+    document
+      .querySelectorAll("link[data-hreflang]")
+      .forEach((el) => el.remove());
 
     // Add hreflang for each language
     Object.entries(hreflangMap).forEach(([lang, hreflang]) => {
       if (post.content[lang]) {
-        const link = document.createElement('link');
-        link.setAttribute('rel', 'alternate');
-        link.setAttribute('hreflang', hreflang);
-        link.setAttribute('href', blogUrl);
-        link.setAttribute('data-hreflang', 'true');
+        const link = document.createElement("link");
+        link.setAttribute("rel", "alternate");
+        link.setAttribute("hreflang", hreflang);
+        link.setAttribute("href", blogUrl);
+        link.setAttribute("data-hreflang", "true");
         document.head.appendChild(link);
       }
     });
 
     // x-default (fallback — English)
-    const xDefault = document.createElement('link');
-    xDefault.setAttribute('rel', 'alternate');
-    xDefault.setAttribute('hreflang', 'x-default');
-    xDefault.setAttribute('href', blogUrl);
-    xDefault.setAttribute('data-hreflang', 'true');
+    const xDefault = document.createElement("link");
+    xDefault.setAttribute("rel", "alternate");
+    xDefault.setAttribute("hreflang", "x-default");
+    xDefault.setAttribute("href", blogUrl);
+    xDefault.setAttribute("data-hreflang", "true");
     document.head.appendChild(xDefault);
 
     // Structured data: Article schema
-    let scriptTag = document.getElementById('blog-structured-data');
+    let scriptTag = document.getElementById("blog-structured-data");
     if (!scriptTag) {
-      scriptTag = document.createElement('script');
-      scriptTag.id = 'blog-structured-data';
-      scriptTag.type = 'application/ld+json';
+      scriptTag = document.createElement("script");
+      scriptTag.id = "blog-structured-data";
+      scriptTag.type = "application/ld+json";
       document.head.appendChild(scriptTag);
     }
     scriptTag.textContent = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'Article',
+      "@context": "https://schema.org",
+      "@type": "Article",
       headline: meta.title,
       description: meta.description,
       image: `https://akillustrator.com${post.cover}`,
       datePublished: post.date,
       dateModified: post.dateModified || post.date,
       author: {
-        '@type': 'Person',
-        name: 'Anastasiia Kolisnyk',
-        url: 'https://akillustrator.com',
+        "@type": "Person",
+        name: "Anastasiia Kolisnyk",
+        url: "https://akillustrator.com",
       },
     });
 
     // Cleanup on unmount
     return () => {
-      document.title = 'Anastasiia Kolisnyk — Children\'s Book Illustrator & Visual Designer';
-      document.querySelectorAll('link[data-hreflang]').forEach((el) => el.remove());
+      document.title =
+        "Anastasiia Kolisnyk — Children's Book Illustrator & Visual Designer";
+      document
+        .querySelectorAll("link[data-hreflang]")
+        .forEach((el) => el.remove());
     };
   }, [meta, post, slug, currentLanguage]);
 
@@ -196,7 +207,7 @@ const BlogPost = () => {
 
   // Derive WebM path from MP4 path (or vice versa)
   const getVideoSources = (src) => {
-    const base = src.replace(/\.(mp4|webm|mov)$/i, '');
+    const base = src.replace(/\.(mp4|webm|mov)$/i, "");
     return {
       mp4: `${base}.mp4`,
       webm: `${base}.webm`,
@@ -230,7 +241,7 @@ const BlogPost = () => {
         <figure className={styles.figure}>
           <ProtectedImage
             src={src}
-            alt={alt || ''}
+            alt={alt || ""}
             className={styles.contentImage}
             loading="lazy"
           />
@@ -238,22 +249,19 @@ const BlogPost = () => {
         </figure>
       );
     },
-    h2: ({ children }) => (
-      <h2 className={styles.sectionHeading}>{children}</h2>
-    ),
+    h2: ({ children }) => <h2 className={styles.sectionHeading}>{children}</h2>,
+    h3: ({ children }) => <h3 className={styles.subHeading}>{children}</h3>,
     p: ({ children }) => {
       // Filter out HTML comments (PLACEHOLDER markers)
-      const text = typeof children === 'string' ? children : '';
-      if (text.includes('PLACEHOLDER')) return null;
+      const text = typeof children === "string" ? children : "";
+      if (text.includes("PLACEHOLDER")) return null;
       return <p>{children}</p>;
     },
     strong: ({ children }) => (
       <strong className={styles.bold}>{children}</strong>
     ),
     hr: () => <div className={styles.divider} />,
-    em: ({ children }) => (
-      <em className={styles.italic}>{children}</em>
-    ),
+    em: ({ children }) => <em className={styles.italic}>{children}</em>,
     a: ({ href, children }) => {
       // PDF links → render as download button
       if (href && /\.pdf$/i.test(href)) {
@@ -270,7 +278,7 @@ const BlogPost = () => {
         );
       }
       // Internal links
-      if (href && href.startsWith('/')) {
+      if (href && href.startsWith("/")) {
         return <Link to={href}>{children}</Link>;
       }
       // External links
@@ -280,6 +288,19 @@ const BlogPost = () => {
         </a>
       );
     },
+    // Table renderers (GFM tables)
+    table: ({ children }) => (
+      <div className={styles.tableWrapper}>
+        <table className={styles.table}>{children}</table>
+      </div>
+    ),
+    thead: ({ children }) => <thead className={styles.thead}>{children}</thead>,
+    th: ({ children }) => <th className={styles.th}>{children}</th>,
+    td: ({ children }) => <td className={styles.td}>{children}</td>,
+    // List renderers
+    ul: ({ children }) => <ul className={styles.list}>{children}</ul>,
+    ol: ({ children }) => <ol className={styles.listOrdered}>{children}</ol>,
+    li: ({ children }) => <li className={styles.listItem}>{children}</li>,
   };
 
   return (
@@ -298,11 +319,11 @@ const BlogPost = () => {
         {/* Breadcrumb */}
         <nav className={styles.breadcrumb} aria-label="Breadcrumb">
           <Link to="/" className={styles.breadcrumbLink}>
-            {translate('blog.home') || 'Home'}
+            {translate("blog.home") || "Home"}
           </Link>
           <span className={styles.breadcrumbSep}>→</span>
           <Link to="/blog" className={styles.breadcrumbLink}>
-            {translate('menu.blog') || 'Blog'}
+            {translate("menu.blog") || "Blog"}
           </Link>
           <span className={styles.breadcrumbSep}>→</span>
           <span className={styles.breadcrumbCurrent}>{meta.title}</span>
@@ -332,13 +353,15 @@ const BlogPost = () => {
           <div className={styles.headerMeta}>
             <time dateTime={post.date}>{formatDate(post.date)}</time>
             <span className={styles.readTime}>
-              {meta.readingTime || 5} {translate('blog.minRead') || 'min read'}
+              {meta.readingTime || 5} {translate("blog.minRead") || "min read"}
             </span>
           </div>
           <h1 className={styles.title}>{meta.title}</h1>
           <div className={styles.tags}>
             {(meta.tags || []).map((tag) => (
-              <span key={tag} className={styles.tag}>{tag}</span>
+              <span key={tag} className={styles.tag}>
+                {tag}
+              </span>
             ))}
           </div>
         </motion.header>
@@ -350,7 +373,7 @@ const BlogPost = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <ReactMarkdown components={components}>
+          <ReactMarkdown remarkPlugins={[remarkGfm]} components={components}>
             {content}
           </ReactMarkdown>
         </motion.div>
@@ -363,20 +386,21 @@ const BlogPost = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
         >
           <h3 className={styles.ctaTitle}>
-            {translate('blog.ctaTitle') || 'Want to work together?'}
+            {translate("blog.ctaTitle") || "Want to work together?"}
           </h3>
           <p className={styles.ctaText}>
-            {translate('blog.ctaText') || 'I\'m available for children\'s book illustration, branding, and visual design projects.'}
+            {translate("blog.ctaText") ||
+              "I'm available for children's book illustration, branding, and visual design projects."}
           </p>
           <Link to="/#services" className={styles.ctaButton}>
-            {translate('blog.ctaButton') || 'View Services'}
+            {translate("blog.ctaButton") || "View Services"}
           </Link>
         </motion.div>
 
         {/* Back to Blog */}
         <div className={styles.backWrap}>
           <Link to="/blog" className={styles.backLink}>
-            ← {translate('blog.backToBlog') || 'Back to Blog'}
+            ← {translate("blog.backToBlog") || "Back to Blog"}
           </Link>
         </div>
       </article>
